@@ -1,0 +1,1641 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zdx">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="门牌制作题目描述本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。 小蓝要为一条街的住户制作门牌号。 这条街一共有 $2020$ 位住户，门牌号从 $1$ 到 $2020$ 编号。 小蓝制作门牌的方法是先制作 $0$ 到 $9$ 这几个数字字符，最后根据需要将字符粘贴到门牌上，例如门牌 1017 需要依次粘贴字符 $1、0、1、7$，即需要 $1$ 个字符 $0$，$2$ 个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥题目汇总1-20">
+<meta property="og:url" content="http://zdx-1.github.io/2024/03/15/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/index.html">
+<meta property="og:site_name" content="Zdx-1">
+<meta property="og:description" content="门牌制作题目描述本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。 小蓝要为一条街的住户制作门牌号。 这条街一共有 $2020$ 位住户，门牌号从 $1$ 到 $2020$ 编号。 小蓝制作门牌的方法是先制作 $0$ 到 $9$ 这几个数字字符，最后根据需要将字符粘贴到门牌上，例如门牌 1017 需要依次粘贴字符 $1、0、1、7$，即需要 $1$ 个字符 $0$，$2$ 个">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zdx-1.github.io/images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024924.jpg">
+<meta property="article:published_time" content="2024-03-15T09:12:45.000Z">
+<meta property="article:modified_time" content="2024-04-23T04:37:49.748Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://zdx-1.github.io/images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024924.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>蓝桥题目汇总1-20 - Zdx-1</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Zdx-1</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="蓝桥题目汇总1-20"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        zdx
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-15 17:12" pubdate>
+          2024年3月15日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          48 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">蓝桥题目汇总1-20</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年4月23日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="门牌制作"><a href="#门牌制作" class="headerlink" title="门牌制作"></a>门牌制作</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>小蓝要为一条街的住户制作门牌号。</p>
+<p>这条街一共有 $2020$ 位住户，门牌号从 $1$ 到 $2020$ 编号。</p>
+<p>小蓝制作门牌的方法是先制作 $0$ 到 $9$ 这几个数字字符，最后根据需要将字符粘贴到门牌上，例如门牌 1017 需要依次粘贴字符 $1、0、1、7$，即需要 $1$ 个字符 $0$，$2$ 个字符 $1$，$1$ 个字符 $7$。</p>
+<p>请问要制作所有的 $1$ 到 $2020$ 号门牌，总共需要多少个字符 $2$？</p>
+<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><ul>
+<li>最大运行时间：1s</li>
+<li>最大运行内存: 128M</li>
+</ul>
+<h3 id="常规思路"><a href="#常规思路" class="headerlink" title="常规思路"></a>常规思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">s=[]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2021</span>):<br>    s.append(i)<br>s=<span class="hljs-built_in">str</span>(s)<br><span class="hljs-built_in">print</span>(s.count(<span class="hljs-string">&quot;2&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">s=<span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2021</span>):s+=<span class="hljs-built_in">str</span>(i)<br><span class="hljs-built_in">print</span>(s.count(<span class="hljs-string">&quot;2&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<p>似乎熟悉了python之后，用python求解也很快。</p>
+<h3 id="简单方法"><a href="#简单方法" class="headerlink" title="简单方法"></a>简单方法</h3><h4 id="使用excel的功能"><a href="#使用excel的功能" class="headerlink" title="使用excel的功能"></a>使用excel的功能</h4><p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/image-20240312203337676.png" srcset="/img/loading.gif" lazyload alt="image-20240312203337676"></p>
+<h5 id="使用序列"><a href="#使用序列" class="headerlink" title="使用序列"></a>使用序列</h5><p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/image-20240312203422558.png" srcset="/img/loading.gif" lazyload alt="image-20240312203422558"></p>
+<p>使用快捷键CTRL+H，唤出替换，替换所有的2。</p>
+<p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/image-20240312203629711.png" srcset="/img/loading.gif" lazyload alt="image-20240312203629711"></p>
+<p>可以快速得到结果624，准确又省时间。</p>
+<h1 id="迷宫"><a href="#迷宫" class="headerlink" title="迷宫"></a>迷宫</h1><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>X 星球的一处迷宫游乐场建在某个小山坡上。它是由 $10 \times 10$ 相互连通的小房间组成的。</p>
+<p>房间的地板上写着一个很大的字母。我们假设玩家是面朝上坡的方向站立，则：</p>
+<ul>
+<li>$L$ 表示走到左边的房间，</li>
+<li>$R$ 表示走到右边的房间，</li>
+<li>$U$ 表示走到上坡方向的房间，</li>
+<li>$D$ 表示走到下坡方向的房间。</li>
+</ul>
+<p>X 星球的居民有点懒，不愿意费力思考。他们更喜欢玩运气类的游戏。这个游戏也是如此！</p>
+<p>开始的时候，直升机把 $100$ 名玩家放入一个个小房间内。玩家一定要按照地上的字母移动。</p>
+<p>迷宫地图如下：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">UDDLUULRUL  </span><br><span class="hljs-attribute">UURLLLRRRU  </span><br><span class="hljs-attribute">RRUURLDLRD  </span><br><span class="hljs-attribute">RUDDDDUUUU  </span><br><span class="hljs-attribute">URUDLLRRUU  </span><br><span class="hljs-attribute">DURLRLDLRL  </span><br><span class="hljs-attribute">ULLURLLRDU  </span><br><span class="hljs-attribute">RDLULLRDDD  </span><br><span class="hljs-attribute">UUDDUDUDLL  </span><br><span class="hljs-attribute">ULRDLUURRR</span>  <br></code></pre></td></tr></table></figure>
+
+<p>请你计算一下，最后，有多少玩家会走出迷宫，而不是在里边兜圈子？</p>
+<p>如果你还没明白游戏规则，可以参看下面一个简化的 4x4 迷宫的解说图：</p>
+<p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/uid1580206-20210317-1615963493412.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">str</span>=<span class="hljs-string">&#x27;UDDLUULRULUURLLLRRRURRUURLDLRDRUDDDDUUUUURUDLLRRUUDURLRLDLRLULLURLLRDURDLULLRDDDUUDDUDUDLLULRDLUURRR&#x27;</span><br><span class="hljs-built_in">sum</span>=<span class="hljs-number">0</span> <span class="hljs-comment">#计算有几个人出来</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>  a=i//<span class="hljs-number">10</span> <span class="hljs-comment">#一个点的坐标（a，b）</span><br>  b=i%<span class="hljs-number">10</span><br>  c = [&#123;a:b&#125;] <span class="hljs-comment">#用于存放经过的点，若重复经过，说明走不出去了</span><br>  <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">str</span>[a*<span class="hljs-number">10</span>+b]==<span class="hljs-string">&#x27;U&#x27;</span>):<br>      a=a-<span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> (<span class="hljs-built_in">str</span>[a*<span class="hljs-number">10</span>+b]==<span class="hljs-string">&#x27;D&#x27;</span>):<br>      a=a+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> (<span class="hljs-built_in">str</span>[a*<span class="hljs-number">10</span>+b]==<span class="hljs-string">&#x27;L&#x27;</span>):<br>      b=b-<span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>      b=b+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span>(&#123;a:b&#125; <span class="hljs-keyword">in</span> c):<br>      <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">if</span>(&#123;a:b&#125; <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> c):<br>      c.append(&#123;a:b&#125;)<br>    <span class="hljs-keyword">if</span>(a&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> a&gt;<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> b&lt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> b&gt;<span class="hljs-number">9</span>):<br>      <span class="hljs-built_in">sum</span>+=<span class="hljs-number">1</span><br>      <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sum</span>)<br></code></pre></td></tr></table></figure>
+
+<p>DFS解法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">x,y</span>):<br>  <span class="hljs-keyword">if</span> <span class="hljs-number">0</span>&lt;=x&lt;<span class="hljs-number">10</span> <span class="hljs-keyword">and</span> <span class="hljs-number">0</span>&lt;=y&lt;<span class="hljs-number">10</span>: <br>    <span class="hljs-keyword">if</span> v[x][y] == <span class="hljs-number">0</span>:<br>      v[x][y] = <span class="hljs-number">1</span>   <span class="hljs-comment">#打上标识，证明此处已走过</span><br>      <span class="hljs-keyword">if</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&#x27;U&#x27;</span>:<br>        flag = dfs(x-<span class="hljs-number">1</span>,y)<br>      <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&#x27;D&#x27;</span>:<br>        flag = dfs(x+<span class="hljs-number">1</span>,y)<br>      <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&#x27;L&#x27;</span>:<br>        flag = dfs(x,y-<span class="hljs-number">1</span>)<br>      <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&#x27;R&#x27;</span>:<br>        flag = dfs(x,y+<span class="hljs-number">1</span>)<br>      v[x][y] = <span class="hljs-number">0</span>  <span class="hljs-comment">#按层返回，清除标识</span><br>      <span class="hljs-keyword">return</span> flag  <br>    <span class="hljs-keyword">else</span>:  <span class="hljs-comment">#如果回到已经走过的地方，说明发生循环，直接返回0标识走不出去</span><br>      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>  <span class="hljs-keyword">else</span>:      <span class="hljs-comment">#超限说明走出去了  返回1</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br><br>n = <span class="hljs-number">0</span><br><span class="hljs-built_in">map</span> = [<span class="hljs-built_in">list</span>(<span class="hljs-built_in">input</span>()) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)] <span class="hljs-comment">#读入迷宫</span><br>v = [[<span class="hljs-number">0</span>]*<span class="hljs-number">10</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)]  <span class="hljs-comment">#列表v用来标识该点是否重复经过，避免循环</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):<br>  <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):<br>    n += dfs(i,j)   <span class="hljs-comment">#对每一个人进行走出迷宫的模拟，n记录最后能走出的人的总数</span><br><span class="hljs-built_in">print</span>(n)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#深度dfs递归</span><br><span class="hljs-built_in">map</span> = [<span class="hljs-string">&#x27;UDDLUULRUL&#x27;</span>,<br>       <span class="hljs-string">&#x27;UURLLLRRRU&#x27;</span>,<br>       <span class="hljs-string">&#x27;RRUURLDLRD&#x27;</span>,<br>       <span class="hljs-string">&#x27;RUDDDDUUUU&#x27;</span>,<br>       <span class="hljs-string">&#x27;URUDLLRRUU&#x27;</span>,<br>       <span class="hljs-string">&#x27;DURLRLDLRL&#x27;</span>,<br>       <span class="hljs-string">&#x27;ULLURLLRDU&#x27;</span>,<br>       <span class="hljs-string">&#x27;RDLULLRDDD&#x27;</span>,<br>       <span class="hljs-string">&#x27;UUDDUDUDLL&#x27;</span>,<br>       <span class="hljs-string">&#x27;ULRDLUURRR&#x27;</span>]<span class="hljs-comment">#这里字符串元素要用单引号括起，用双引号，后面会提示数组越界</span><br>count = <span class="hljs-number">0</span><br>tablist = [[<span class="hljs-number">0</span>] * <span class="hljs-number">10</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)]<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">x, y</span>):<br>    <span class="hljs-keyword">if</span> x &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> x &gt; <span class="hljs-number">9</span> <span class="hljs-keyword">or</span> y &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> y &gt; <span class="hljs-number">9</span>:  <span class="hljs-comment"># 走出迷宫</span><br>        <span class="hljs-keyword">global</span> count<br>        count += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">if</span> tablist[x][y] == <span class="hljs-number">1</span>:  <span class="hljs-comment"># 已走过</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br>    tablist[x][y] = <span class="hljs-number">1</span>  <span class="hljs-comment"># 若之前没走过，则标记走过</span><br><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&quot;U&quot;</span>:<br>        find(x - <span class="hljs-number">1</span>, y)<span class="hljs-comment">#递归</span><br>    <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&quot;D&quot;</span>:<br>        find(x + <span class="hljs-number">1</span>, y)<br>    <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&quot;L&quot;</span>:<br>        find(x, y - <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">elif</span> <span class="hljs-built_in">map</span>[x][y] == <span class="hljs-string">&quot;R&quot;</span>:<br>        find(x, y + <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)):<br>        tablist = [[<span class="hljs-number">0</span>] * <span class="hljs-number">10</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)]<span class="hljs-comment">#遍历每个坐标起点开始前都先清零</span><br>        find(i, j)<br><br><span class="hljs-built_in">print</span>(count)<br></code></pre></td></tr></table></figure>
+
+<h1 id="星期一"><a href="#星期一" class="headerlink" title="星期一"></a>星期一</h1><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>整个 $20$ 世纪（$1901$ 年 $1$ 月 $1$ 日至 $2000$ 年 $12$ 月 $31$ 日之间），一共有多少个星期一？(不要告诉我你不知道今天是星期几)</p>
+<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><p>直接用 Python datetime 库求解，第 6 行可以输出某个日期是星期几。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span>* <br>dt1=datetime(<span class="hljs-number">1901</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>) <br>dt2=datetime(<span class="hljs-number">2000</span>,<span class="hljs-number">12</span>,<span class="hljs-number">31</span>) <br><span class="hljs-built_in">print</span>(dt1.weekday()) <span class="hljs-comment"># 周一为0，周二为1... </span><br>td=dt2-dt1 <br><span class="hljs-built_in">print</span>(td.days//<span class="hljs-number">7</span>)<br></code></pre></td></tr></table></figure>
+
+<h1 id="乘积尾零"><a href="#乘积尾零" class="headerlink" title="乘积尾零"></a>乘积尾零</h1><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>如下的 $10$ 行数据，每行有 $10$ 个整数，请你求出它们的乘积的末尾有多少个零？</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">5650 4542 3554 473 946 4114 3871 9073 90 4329 2758 7949 6113 5659 5245 7432 3051 4434 6704 3594 9937 1173 6866 3397 4759 7557 3070 2287 1453 9899 1486 5722 3135 1170 4014 5510 5120 729 2880 9019 2049 698 4582 4346 4427 646 9742 7340 1230 7683 5693 7015 6887 7381 4172 4341 2909 2027 7355 5649 6701 6645 1671 5978 2704 9926 295 3125 3878 6785 2066 4247 4800 1578 6652 4616 1113 6205 3264 2915 3966 5291 2904 1285 2193 1428 2265 8730 9436 7074 689 5510 8243 6114 337 4096 8199 7313 3685 211<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><p>将字符串转换成表格，先计算乘积，然后结果由int整数型转换成str字符型，再存入列表中，这时候使用pop方法和列表切片，简单的遍历一下，就能得到结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python">s=<span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">5650 4542 3554 473 946 4114 3871 9073 90 4329 </span><br><span class="hljs-string">2758 7949 6113 5659 5245 7432 3051 4434 6704 3594 </span><br><span class="hljs-string">9937 1173 6866 3397 4759 7557 3070 2287 1453 9899 </span><br><span class="hljs-string">1486 5722 3135 1170 4014 5510 5120 729 2880 9019 </span><br><span class="hljs-string">2049 698 4582 4346 4427 646 9742 7340 1230 7683 </span><br><span class="hljs-string">5693 7015 6887 7381 4172 4341 2909 2027 7355 5649 </span><br><span class="hljs-string">6701 6645 1671 5978 2704 9926 295 3125 3878 6785 </span><br><span class="hljs-string">2066 4247 4800 1578 6652 4616 1113 6205 3264 2915 </span><br><span class="hljs-string">3966 5291 2904 1285 2193 1428 2265 8730 9436 7074 </span><br><span class="hljs-string">689 5510 8243 6114 337 4096 8199 7313 3685 211 </span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>cnt=<span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> s.split():cnt*=<span class="hljs-built_in">int</span>(i)<br>cnt,res = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">str</span>(cnt)),<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> cnt[::-<span class="hljs-number">1</span>]:<br>    <span class="hljs-keyword">if</span> i == <span class="hljs-string">&#x27;0&#x27;</span>:<br>        cnt.pop()<br>        res+=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>(res)<br></code></pre></td></tr></table></figure>
+
+<p>当然，也可以不使用列表</p>
+<p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/236f300ccb9673d4fc3b0c7790de774a-0.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+<h1 id="付账问题"><a href="#付账问题" class="headerlink" title="付账问题"></a>付账问题</h1><h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>几个人一起出去吃饭是常有的事。但在结帐的时候，常常会出现一些争执。</p>
+<p>现在有 $n$ 个人出去吃饭，他们总共消费了 $S$ 元。其中第 $i$ 个人带了 $a_i$元。幸运的是，所有人带的钱的总数是足够付账的，但现在问题来了：每个人分别要出多少钱呢？</p>
+<p>为了公平起见，我们希望在总付钱量恰好为 $S$ 的前提下，最后每个人付的钱的标准差最小。这里我们约定，每个人支付的钱数可以是任意非负实数，即可以不是 1 分钱的整数倍。你需要输出最小的标准差是多少。</p>
+<p>标准差的介绍：标准差是多个数与它们平均数差值的平方平均数，一般用于刻画这些数之间的”偏差有多大”。形式化地说，设第 $i$ 个人付的钱为 $b_i$ 元，那么标准差为 :</p>
+<p>$S&#x3D;\sqrt{\frac{1}{n}\sum_{i&#x3D;1}^{n}(b_i-\frac{1}{n}\sum_{i&#x3D;1}^{n}b_i)^{2}}$</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行包含两个整数 $n、S$；</p>
+<p>第二行包含 $n$ 个非负整数 $a_1, \cdots, a_n$。</p>
+<p>其中，$n  \leq  5 \times 10^5, 0  \leq  a_i  \leq  10^9$ 。</p>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出最小的标准差，四舍五入保留 4 位小数。</p>
+<p>保证正确答案在加上或减去 $10^{−9}$ 后不会导致四舍五入的结果发生变化。</p>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 2333 <br>666 666 666 666 666<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">0.0000<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> *<br>n, s = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split()))<br>a.sort()<br>avg = s/n<br><span class="hljs-built_in">sum</span> = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>     <span class="hljs-keyword">if</span> a[i]*(n-i) &lt; s:<br>          <span class="hljs-built_in">sum</span> += <span class="hljs-built_in">pow</span>(a[i]-avg,<span class="hljs-number">2</span>)<br>          s -= a[i]<br>     <span class="hljs-keyword">else</span>:<br>          cur_avg = s/(n-i);      <span class="hljs-comment">#更新平均出钱数</span><br>          <span class="hljs-built_in">sum</span> += <span class="hljs-built_in">pow</span>(cur_avg-avg,<span class="hljs-number">2</span>)*(n-i)<br>          <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#123;:.4f&#125;&quot;</span>.<span class="hljs-built_in">format</span>(sqrt(<span class="hljs-built_in">sum</span>/(n))))<br></code></pre></td></tr></table></figure>
+
+<h1 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h1><h3 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h3><p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/wm.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+<p>上图给出了一个数字三角形。从三角形的顶部到底部有很多条不同的路径。对于每条路径，把路径上面的数加起来可以得到一个和，你的任务就是找到最大的和（路径上的每一步只可沿左斜线向下或右斜线向下走）。</p>
+<h3 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入的第一行包含一个整数 $N\ (1 \leq N \leq 100)$，表示三角形的行数。</p>
+<p>下面的 $N$ 行给出数字三角形。数字三角形上的数都是 $0$ 至 $99$ 之间的整数。</p>
+<h3 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一个整数，表示答案。</p>
+<h3 id="输入输出样例-1"><a href="#输入输出样例-1" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 <br>7 <br>3 8<br>8 1 0<br>2 7 4 4<br>4 5 2 6 5<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">30<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="42点问题"><a href="#42点问题" class="headerlink" title="42点问题"></a>42点问题</h1><h3 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h3><p>请你设计一个程序对该问题进行解答。</p>
+<p>众所周知在扑克牌中，有一个老掉牙的游戏叫做 $24$ 点，选取 $4$ 张牌进行加减乘除，看是否能得出 $24$ 这个答案。</p>
+<p>现在小蓝同学发明了一个新游戏，他从扑克牌中依次抽出6张牌，注意不是一次抽出，进行计算，看是否能够组成 $42$ 点,满足输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
+<p>最先抽出来的牌作为第一个操作数，抽出牌做第二个操作数，运算结果再当作第一个操作数，继续进行操作。</p>
+<p>注：除不尽的情况保留整数，而且扑克牌的四张 $10$ 都丢了，不会出现 $10$。</p>
+<p>请设计一个程序对该问题进行解答。</p>
+<h3 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述"></a>输入描述</h3><p>输出仅一行包含 $6$ 个字符。</p>
+<p>保证字符 $\in$ <code>3 4 5 6 7 8 9 10 J Q K A 2</code>。</p>
+<h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述"></a>输出描述</h3><p>若给出到字符能够组成 $42$ 点 , 满足输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
+<h3 id="输入输出样例-2"><a href="#输入输出样例-2" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">K A Q 6 2 3<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">YES<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h3><ul>
+<li>$K\times  A&#x3D;K$ 即 $13\times 1&#x3D;13$</li>
+<li>$13&#x2F;12&#x3D;1$ 保留整数</li>
+<li>$1+6&#x3D;7$</li>
+<li>$7*2&#x3D;14$</li>
+<li>$14*3&#x3D;42$</li>
+</ul>
+<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="数的划分"><a href="#数的划分" class="headerlink" title="数的划分"></a>数的划分</h1><h3 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h3><p>将整数 $n$ 分成 $k$ 份，且每份不能为空，任意两份不能相同(不考虑顺序)。</p>
+<p>例如：$n&#x3D;7，k&#x3D;3$，下面三种分法被认为是相同的。</p>
+<p>$1，1，5; 1，5，1; 5，1，1;$</p>
+<p>问有多少种不同的分法。</p>
+<h3 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入一行，$2$ 个整数 $n,k\ (6 \leq n  \leq  200，2  \leq  k  \leq  6)$。</p>
+<h3 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一个整数，即不同的分法。</p>
+<h3 id="输入输出样例-3"><a href="#输入输出样例-3" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">7 3<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="数的计算"><a href="#数的计算" class="headerlink" title="数的计算"></a>数的计算</h1><h3 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个自然数 $n\ (n \leq 1000)$，我们对此自然数按照如下方法进行处理:</p>
+<ol>
+<li><p>不作任何处理;</p>
+</li>
+<li><p>在它的左边加上一个自然数,但该自然数不能超过原数的一半;</p>
+</li>
+<li><p>加上数后,继续按此规则进行处理,直到不能再加自然数为止。</p>
+</li>
+</ol>
+<p>问总共可以产生多少个数。</p>
+<h3 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入一个正整数 $n$。</p>
+<h3 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一个整数，表示答案。</p>
+<h3 id="输入输出样例-4"><a href="#输入输出样例-4" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1-1"><a href="#示例-1-1" class="headerlink" title="示例 1"></a>示例 1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">6<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">6<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="N皇后问题"><a href="#N皇后问题" class="headerlink" title="N皇后问题"></a>N皇后问题</h1><h3 id="题目描述-9"><a href="#题目描述-9" class="headerlink" title="题目描述"></a>题目描述</h3><p>在 $N\times N$ 的方格棋盘放置了 $N$ 个皇后，使得它们不相互攻击（即任意 $2$ 个皇后不允许处在同一排，同一列，也不允许处在与棋盘边框成 $45$ 角的斜线上。你的任务是，对于给定的 $N$，求出有多少种合法的放置方法。</p>
+<h3 id="输入描述-5"><a href="#输入描述-5" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入中有一个正整数 $N≤10$，表示棋盘和皇后的数量</p>
+<h3 id="输出描述-5"><a href="#输出描述-5" class="headerlink" title="输出描述"></a>输出描述</h3><p>为一个正整数，表示对应输入行的皇后的不同放置数量。</p>
+<h3 id="输入输出样例-5"><a href="#输入输出样例-5" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1-2"><a href="#示例-1-2" class="headerlink" title="示例 1"></a>示例 1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">5<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">10<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="路径之谜"><a href="#路径之谜" class="headerlink" title="路径之谜"></a>路径之谜</h1><h3 id="题目描述-10"><a href="#题目描述-10" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明冒充 $X$ 星球的骑士，进入了一个奇怪的城堡。</p>
+<p>城堡里边什么都没有，只有方形石头铺成的地面。</p>
+<p>假设城堡地面是 $n \times n$ 个方格。如下图所示。</p>
+<p><img src="/./../images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/uid1580206-20210202-1612248935564.png" srcset="/img/loading.gif" lazyload alt="图1"></p>
+<p>按习俗，骑士要从西北角走到东南角。可以横向或纵向移动，但不能斜着走，也不能跳跃。每走到一个新方格，就要向正北方和正西方各射一箭。（城堡的西墙和北墙内各有 $n$ 个靶子）同一个方格只允许经过一次。但不必走完所有的方格。如果只给出靶子上箭的数目，你能推断出骑士的行走路线吗？有时是可以的，比如上图中的例子。</p>
+<p>本题的要求就是已知箭靶数字，求骑士的行走路径（测试数据保证路径唯一）</p>
+<h3 id="输入描述-6"><a href="#输入描述-6" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行一个整数 $N$ ($0  \leq  N  \leq  20$)，表示地面有 $N \times N$ 个方格。</p>
+<p>第二行 $N$ 个整数，空格分开，表示北边的箭靶上的数字（自西向东）</p>
+<p>第三行 $N$ 个整数，空格分开，表示西边的箭靶上的数字（自北向南）</p>
+<h3 id="输出描述-6"><a href="#输出描述-6" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一行若干个整数，表示骑士路径。</p>
+<p>为了方便表示，我们约定每个小格子用一个数字代表，从西北角开始编号: 0,1,2,3 $\cdots$</p>
+<p>比如，上图中的方块编号为：</p>
+<p>0 1 2 3</p>
+<p>4 5 6 7</p>
+<p>8 9 10 11</p>
+<p>12 13 14 15</p>
+<h3 id="输入输出样例-6"><a href="#输入输出样例-6" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br>2 4 3 4<br>4 3 3 3<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">0 4 5 1 2 3 7 11 10 9 13 14 15<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-10"><a href="#运行限制-10" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h1 id="最大数字"><a href="#最大数字" class="headerlink" title="最大数字"></a>最大数字</h1><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个正整数 $N$ 。你可以对 $N$ 的任意一位数字执行任意次以下 2 种操 作：</p>
+<ol>
+<li><p>将该位数字加 1 。如果该位数字已经是 9 , 加 1 之后变成 0 。</p>
+</li>
+<li><p>将该位数字减 1 。如果该位数字已经是 0 , 减 1 之后变成 9 。</p>
+</li>
+</ol>
+<p>你现在总共可以执行 1 号操作不超过 $A$ 次, 2 号操作不超过 $B$ 次。 请问你最大可以将 $N$ 变成多少?</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行包含 3 个整数: $N, A, B$ 。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>一个整数代表答案。</p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">123 1 2<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">933<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明-1"><a href="#样例说明-1" class="headerlink" title="样例说明"></a>样例说明</h3><p>对百位数字执行 2 次 2 号操作, 对十位数字执行 1 次 1 号操作。</p>
+<h3 id="评测用例规模与约定"><a href="#评测用例规模与约定" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30 %$ 的数据, $1 \leq N \leq 100 ; 0 \leq A, B \leq 10$。</p>
+<p>对于 $100 %$ 的数据, $1 \leq N \leq 10^{17} ; 0 \leq A, B \leq 100$</p>
+<h3 id="运行限制-11"><a href="#运行限制-11" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>512M</td>
+</tr>
+</tbody></table>
+<h1 id="长草"><a href="#长草" class="headerlink" title="长草"></a>长草</h1><h3 id="题目描述-11"><a href="#题目描述-11" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明有一块空地，他将这块空地划分为 $n$ 行 $m$ 列的小块，每行和每列的长度都为 1。</p>
+<p>小明选了其中的一些小块空地，种上了草，其他小块仍然保持是空地。</p>
+<p>这些草长得很快，每个月，草都会向外长出一些，如果一个小块种了草，则它将向自己的上、下、左、右四小块空地扩展，</p>
+<p>这四小块空地都将变为有草的小块。请告诉小明，$k$ 个月后空地上哪些地方有草。</p>
+<h3 id="输入描述-7"><a href="#输入描述-7" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入的第一行包含两个整数 $n, m$。</p>
+<p>接下来 $n$ 行，每行包含 $m$ 个字母，表示初始的空地状态，字母之间没有空格。如果为小数点，表示为空地，如果字母为 $g$，表示种了草。</p>
+<p>接下来包含一个整数 $k$。 其中，$2   \leq   n, m   \leq   1000，1   \leq   k   \leq   1000$。</p>
+<h3 id="输出描述-7"><a href="#输出描述-7" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出 $n$ 行，每行包含 $m$ 个字母，表示 $k$ 个月后空地的状态。如果为小数点，表示为空地，如果字母为 $g$，表示长了草。</p>
+<h3 id="输入输出样例-7"><a href="#输入输出样例-7" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">4 5 <br>.g...<br>.....<br>..g..<br>.....<br>2<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">gggg.<br>gggg.<br>ggggg <br>.ggg.<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-12"><a href="#运行限制-12" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h1 id="走迷宫"><a href="#走迷宫" class="headerlink" title="走迷宫"></a>走迷宫</h1><h3 id="题目描述-12"><a href="#题目描述-12" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个 $N\times M$ 的网格迷宫 $G$。$G$ 的每个格子要么是道路，要么是障碍物（道路用 $1$ 表示，障碍物用 $0$ 表示）。</p>
+<p>已知迷宫的入口位置为 $(x_1,y_1)$，出口位置为 $(x_2 , y_2)$。问从入口走到出口，最少要走多少个格子。</p>
+<h3 id="输入描述-8"><a href="#输入描述-8" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入第 $1$ 行包含两个正整数 $N,M$，分别表示迷宫的大小。</p>
+<p>接下来输入一个 $N\times M$ 的矩阵。若 $G_{i,j}&#x3D;1$ 表示其为道路，否则表示其为障碍物。</p>
+<p>最后一行输入四个整数 $x_1,y_1,x_2,y_2$，表示入口的位置和出口的位置。</p>
+<p>$1\leq N,M\leq10^2$，$0\leq G_{i,j}\leq 1$，$1\leq x_1,x_2\leq N$，$1\leq y_1,y_2\leq M$。</p>
+<h3 id="输出描述-8"><a href="#输出描述-8" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出仅一行，包含一个整数表示答案。</p>
+<p>若无法从入口到出口，则输出 $-1$。</p>
+<h3 id="输入输出样例-8"><a href="#输入输出样例-8" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1-3"><a href="#示例-1-3" class="headerlink" title="示例 1"></a>示例 1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 5<br>1 0 1 1 0 <br>1 1 0 1 1 <br>0 1 0 1 1 <br>1 1 1 1 1 <br>1 0 0 0 1<br>1 1 5 5<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">8<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-13"><a href="#运行限制-13" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="迷宫-1"><a href="#迷宫-1" class="headerlink" title="迷宫"></a>迷宫</h1><h3 id="题目描述-13"><a href="#题目描述-13" class="headerlink" title="题目描述"></a>题目描述</h3><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
+<p>下图给出了一个迷宫的平面图，其中标记为 $1$ 的为障碍，标记为 $0$ 的为可以通行的地方。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">010000 <br>000100<br>001001 <br>110000<br></code></pre></td></tr></table></figure>
+
+<p>迷宫的入口为左上角，出口为右下角，在迷宫中，只能从一个位置走到这 个它的上、下、左、右四个方向之一。</p>
+<p>对于上面的迷宫，从入口开始，可以按 <code>DRRURRDDDR</code> 的顺序通过迷宫， 一共 $10$ 步。其中 $D、U、L、R$ 分别表示向下、向上、向左、向右走。 对于下面这个更复杂的迷宫（$30$ 行 $50$ 列），请找出一种通过迷宫的方式，其使用的步数最少，在步数最少的前提下，请找出字典序最小的一个作为答案。</p>
+<p>请注意在字典序中 $D&lt;L&lt;R&lt;U$。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs txt">01010101001011001001010110010110100100001000101010 <br>00001000100000101010010000100000001001100110100101 <br>01111011010010001000001101001011100011000000010000 <br>01000000001010100011010000101000001010101011001011 <br>00011111000000101000010010100010100000101100000000 <br>11001000110101000010101100011010011010101011110111 <br>00011011010101001001001010000001000101001110000000 <br>10100000101000100110101010111110011000010000111010 <br>00111000001010100001100010000001000101001100001001 <br>11000110100001110010001001010101010101010001101000 <br>00010000100100000101001010101110100010101010000101 <br>11100100101001001000010000010101010100100100010100 <br>00000010000000101011001111010001100000101010100011 <br>10101010011100001000011000010110011110110100001000 <br>10101010100001101010100101000010100000111011101001 <br>10000000101100010000101100101101001011100000000100 <br>10101001000000010100100001000100000100011110101001 <br>00101001010101101001010100011010101101110000110101 <br>11001010000100001100000010100101000001000111000010 <br>00001000110000110101101000000100101001001000011101 <br>10100101000101000000001110110010110101101010100001 <br>00101000010000110101010000100010001001000100010101 <br>10100001000110010001000010101001010101011111010010 <br>00000100101000000110010100101001000001000000000010 <br>11010000001001110111001001000011101001011011101000 <br>00000110100010001000100000001000011101000000110011 <br>10101000101000100010001111100010101001010000001000 <br>10000010100101001010110000000100101010001011101000 <br>00111100001000010000000110111000000001000000001011 <br>10000001100111010111010001000110111010101101111000<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-14"><a href="#运行限制-14" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h1 id="公共抽签"><a href="#公共抽签" class="headerlink" title="公共抽签"></a>公共抽签</h1><h3 id="题目描述-14"><a href="#题目描述-14" class="headerlink" title="题目描述"></a>题目描述</h3><p>小$A$的学校，蓝桥杯的参赛名额非常有限，只有 $m$ 个名额，但是共有 $n$ 个人报名。</p>
+<p>作为老师非常苦恼，他不知道该让谁去，他在寻求一个绝对公平的方式。</p>
+<p>于是他准备让大家抽签决定，即 $m$ 个签是去，剩下的是不去。</p>
+<p>小 $A$ 非常想弄明白最后的抽签结果会有多少种不同到情况，请你设计一个程序帮帮小 $A$！</p>
+<h3 id="输入描述-9"><a href="#输入描述-9" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入第一行包含两个字符 $n,m$，其含义如题所述。</p>
+<p>接下来第二行到第 $n+1$ 行每行包含一个字符串 $S$ ，表示个人名。</p>
+<p>$1\leq m\leq n\leq 15$。</p>
+<h3 id="输出描述-9"><a href="#输出描述-9" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出共若干行，每行包含 $m$ 个字符串，表示该结果被选中到人名（需按字符串的输入顺序大小对结果进行排序）。</p>
+<h3 id="输入输出样例-9"><a href="#输入输出样例-9" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 2 <br>xiaowang<br>xiaoA <br>xiaoli<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">xiaowang xiaoA<br>xiaowang xiaoli<br>xiaoA xiaoli<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-15"><a href="#运行限制-15" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="座次问题"><a href="#座次问题" class="headerlink" title="座次问题"></a>座次问题</h1><h3 id="题目描述-15"><a href="#题目描述-15" class="headerlink" title="题目描述"></a>题目描述</h3><p>小 $A$ 的学校，老师好不容易解决了蓝桥杯的报名问题，现在老师又犯愁了。</p>
+<p>现在有 $N$ 位同学参加比赛，但是老师想给他们排座位，但是排列方式太多了。</p>
+<p>老师非常想弄明白最后的排座次的结果是什么样子的，到底有多少种结果。</p>
+<p>请设计一个程序帮助老师。</p>
+<p>最后输出各种情况的人名即可，一行一种情况，每种情况的名字按照报名即输入顺序排序。</p>
+<h3 id="输入描述-10"><a href="#输入描述-10" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入第一行包含一个整数 $N$。</p>
+<p>接下来 $N$ 行每行包含一个字符串 $S_i$，表示人名。</p>
+<p>$1\leq N \leq 10$，$\sum\limits_{i&#x3D;1}^{N} |S_i| \leq 10^2$。</p>
+<h3 id="输出描述-10"><a href="#输出描述-10" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出共若干行，每行输出各种情况的人名。一行一种情况，每种情况的名字按照报名即输入顺序排序。</p>
+<h3 id="输入输出样例-10"><a href="#输入输出样例-10" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-6"><a href="#示例-6" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 <br>xiaowang<br>xiaoA <br>xiaoli<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">xiaowang xiaoA xiaoli<br>xiaowang xiaoli xiaoA <br>xiaoA xiaowang xiaoli<br>xiaoA xiaoli xiaowang <br>xiaoli xiaowang xiaoA<br>xiaoli xiaoA xiaowang<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-16"><a href="#运行限制-16" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="CLZ银行问题"><a href="#CLZ银行问题" class="headerlink" title="CLZ银行问题"></a>CLZ银行问题</h1><h3 id="题目描述-16"><a href="#题目描述-16" class="headerlink" title="题目描述"></a>题目描述</h3><p>$CLZ$ 银行只有两个接待窗口，$VIP$ 窗口和普通窗口，$VIP$ 用户进入 $VIP$ 窗口排队，剩下的进入普通窗口排队。现有 $M$ 次操作，操作有四种类型，如下：</p>
+<ul>
+<li><code>IN name V</code>：表示一名叫 <code>name</code> 的用户到 $VIP$ 窗口排队</li>
+<li><code>OUT V</code>：表示 $VIP$ 窗口队头的用户离开排队</li>
+<li><code>IN name N</code>：表示一名叫 <code>name</code> 的用户到普通窗口排队</li>
+<li><code>OUT N</code>：表示普通窗口队头的用户离开排队</li>
+</ul>
+<p>求 $M$ 次操作结束后 $VIP$ 窗口队列和普通窗口队列中的姓名。</p>
+<h3 id="输入描述-11"><a href="#输入描述-11" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行是一个整数 $M（1\leq M \leq 1000）$，表示一共有 $M$ 次操作。</p>
+<p>第二行到第 $M+1$ 行输入操作，格式如下：</p>
+<ul>
+<li><code>IN name V</code></li>
+<li><code>OUT V</code></li>
+<li><code>IN name N</code></li>
+<li><code>OUT N</code></li>
+</ul>
+<h3 id="输出描述-11"><a href="#输出描述-11" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出 $M$ 次操作后 $VIP$ 窗口队列和普通窗口队列中的姓名（从头到尾），先输出 $VIP$ 窗口队列后输出普通窗口队列。</p>
+<h3 id="输入输出样例-11"><a href="#输入输出样例-11" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1-4"><a href="#示例-1-4" class="headerlink" title="示例 1"></a>示例 1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 <br>IN xiaoming N <br>IN Adel V <br>IN laozhao N<br>OUT N <br>IN CLZ V<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">Adel<br>CLZ<br>laozhao<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-17"><a href="#运行限制-17" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>128M</td>
+</tr>
+</tbody></table>
+<h1 id="费里的语言"><a href="#费里的语言" class="headerlink" title="费里的语言"></a>费里的语言</h1><h3 id="题目描述-17"><a href="#题目描述-17" class="headerlink" title="题目描述"></a>题目描述</h3><p>小发明家弗里想创造一种新的语言，众所周知，发明一门语言是非常困难的，首先你就要克服一个困难就是，有大量的单词需要处理，现在弗里求助你帮他写一款程序，判断是否出现重复的两个单词。</p>
+<h3 id="输入描述-12"><a href="#输入描述-12" class="headerlink" title="输入描述"></a>输入描述</h3><p>第 $1$ 行，输入 $N$，代表共计创造了多少个单词。</p>
+<p>第 $2$ 行至第 $N+1$ 行，输入 $N$ 个单词。</p>
+<p>$1\leq N \leq 10^4$，保证字符串的总输入量不超过 $10^6$。</p>
+<h3 id="输出描述-12"><a href="#输出描述-12" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出仅一行。若有重复的单词，就输出重复单词，没有重复单词，就输出 <code>NO</code>，多个重复单词输出最先出现的。</p>
+<h3 id="输入输出样例-12"><a href="#输入输出样例-12" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt">6<br>1fagas <br>dsafa32j <br>lkiuopybncv<br>hfgdjytr <br>cncxfg <br>sdhrest<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">NO<br></code></pre></td></tr></table></figure>
+
+<h4 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 <br>sdfggfds<br>fgsdhsdf<br>dsfhsdhr <br>sdfhdfh <br>sdfggfds<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">sdfggfds<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-18"><a href="#运行限制-18" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>3s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>3s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>3s</td>
+<td>512M</td>
+</tr>
+</tbody></table>
+<h1 id="快递分拣"><a href="#快递分拣" class="headerlink" title="快递分拣"></a>快递分拣</h1><h3 id="题目描述-18"><a href="#题目描述-18" class="headerlink" title="题目描述"></a>题目描述</h3><p>蓝桥王国的每个快递都包含两个参数：1.快递单号 2.快递城市。</p>
+<p>小李是蓝桥王国的一名快递员，每天的快递分拣让他苦不堪言。</p>
+<p>于是他想要你帮他设计一个程序用于快递的分拣（将不同快递按城市信息分开）。</p>
+<h3 id="输入描述-13"><a href="#输入描述-13" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入第一行包含一个整数 $N$,表示快递的个数。</p>
+<p>接下来第 $2 \sim N+1$ 行每行包含一个字符串 $S$ 和一个字符串 $P$，分别快递单号以及快递对应的城市。</p>
+<p>$1\leq N \leq 10^3$，保证数据量不超过 $10^6$。</p>
+<h3 id="输出描述-13"><a href="#输出描述-13" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出共若干行。按城市的输入顺序依次输出城市的名称以及城市的快递个数，以及该城市的所有快递单号（单号按照输入顺序排序）。</p>
+<h3 id="输入输出样例-13"><a href="#输入输出样例-13" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-7"><a href="#示例-7" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>输入</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 <br>10124214 北京<br>12421565 上海<br>sdafasdg213 天津<br>fasdfga124 北京 <br>145252 上海 <br>235wtdfsg 济南 <br>3242356fgdfsg 成都<br>23423 武汉 <br>23423565f 沈阳 <br>1245dfwfs 成都<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs txt">北京 2 <br>10124214 fasdfga124 <br>上海 2 <br>12421565 145252 <br>天津 1 <br>sdafasdg213<br>济南 1 <br>235wtdfsg <br>成都 2 <br>3242356fgdfsg <br>1245dfwfs <br>武汉 1 <br>23423 <br>沈阳 1 <br>23423565f<br></code></pre></td></tr></table></figure>
+
+<h3 id="运行限制-19"><a href="#运行限制-19" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%88%B7%E9%A2%98/" class="category-chain-item">刷题</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%88%B7%E9%A2%98/%E8%93%9D%E6%A1%A5/" class="category-chain-item">蓝桥</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="print-no-link">#蓝桥杯</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>蓝桥题目汇总1-20</div>
+      <div>http://zdx-1.github.io/2024/03/15/蓝桥题目汇总1-20/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zdx</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" title="python内置函数">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python内置函数</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/13/%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F/" title="案例：学生信息查询系统">
+                        <span class="hidden-mobile">案例：学生信息查询系统</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="蓝桥">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="手算与思维题课程伊始，我们先要讲一下蓝桥杯相关的注意事项。 比赛流程赛程： 省赛 决赛  省赛一等奖参加决赛 比赛时长 $4$ 小时 竞赛形式： 个人赛，一人一机，全程机考 答题过程中无法访问互联网 不允许携带任何电子、纸质资料  参赛选手机器环境 X86 兼容机器，内存不小于 1G，硬盘不小于 60G 操作系统：Windows7、Windows8 或 Windows10。 C&#x2F;C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手算与思维题">
+<meta property="og:url" content="http://zdx-1.github.io/2024/03/10/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/index.html">
+<meta property="og:site_name" content="Zdx-1">
+<meta property="og:description" content="手算与思维题课程伊始，我们先要讲一下蓝桥杯相关的注意事项。 比赛流程赛程： 省赛 决赛  省赛一等奖参加决赛 比赛时长 $4$ 小时 竞赛形式： 个人赛，一人一机，全程机考 答题过程中无法访问互联网 不允许携带任何电子、纸质资料  参赛选手机器环境 X86 兼容机器，内存不小于 1G，硬盘不小于 60G 操作系统：Windows7、Windows8 或 Windows10。 C&#x2F;C++">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A517002/image-20240316082418710.png">
+<meta property="article:published_time" content="2024-03-10T08:02:14.000Z">
+<meta property="article:modified_time" content="2024-03-31T12:55:04.272Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯备赛">
+<meta property="article:tag" content="手算与思维题">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A517002/image-20240316082418710.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>手算与思维题 - Zdx-1</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Zdx-1</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="手算与思维题"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        蓝桥
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-10 16:02" pubdate>
+          2024年3月10日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          23 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">手算与思维题</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年3月31日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="手算与思维题"><a href="#手算与思维题" class="headerlink" title="手算与思维题"></a>手算与思维题</h2><p>课程伊始，我们先要讲一下蓝桥杯相关的注意事项。</p>
+<h2 id="比赛流程"><a href="#比赛流程" class="headerlink" title="比赛流程"></a>比赛流程</h2><h3 id="赛程："><a href="#赛程：" class="headerlink" title="赛程："></a>赛程：</h3><ul>
+<li>省赛</li>
+<li>决赛</li>
+</ul>
+<p>省赛一等奖参加决赛</p>
+<p>比赛时长 $4$ 小时</p>
+<h3 id="竞赛形式："><a href="#竞赛形式：" class="headerlink" title="竞赛形式："></a>竞赛形式：</h3><ul>
+<li>个人赛，一人一机，全程机考</li>
+<li>答题过程中无法访问互联网</li>
+<li>不允许携带任何电子、纸质资料</li>
+</ul>
+<h3 id="参赛选手机器环境"><a href="#参赛选手机器环境" class="headerlink" title="参赛选手机器环境"></a>参赛选手机器环境</h3><ul>
+<li>X86 兼容机器，内存不小于 1G，硬盘不小于 60G 操作系统：Windows7、Windows8 或 Windows10。</li>
+<li>C&#x2F;C++ 开发环境：Dev-cpp 5.4.0 C&#x2F;C++ API 帮助文档</li>
+<li>Java 开发环境：JDK 1.8 Eclipse-java-2020-06 API 帮助文档</li>
+<li>Python 环境：Python 3.8.6 IDLE（Python 自带编辑器）</li>
+</ul>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><ul>
+<li><p>结果填空 把答案直接通过网页提交，不要书写多余的内容。填空题每题 $5$ 分。</p>
+</li>
+<li><p>程序设计 每道题目多个测试数据，$20% \sim 40%$ 是弱测试数据，其他是强测试数据。 题量大、时间紧张，难题往往不会做或来不及用高效算法编码，此时可以用暴力方法编程得 $20% \sim 40%$ 的分数。 程序设计题每题 $10% ~25%$ 分。</p>
+</li>
+</ul>
+<h3 id="评分方式"><a href="#评分方式" class="headerlink" title="评分方式"></a>评分方式</h3><p>评分：全部使用机器自动评分</p>
+<p><strong>对于结果填空题，题目保证只有唯一解，选手的结果只有和解完全相同才得分，出现格式错误或有多余内容时不得分。</strong></p>
+<p>对于编程大题，评测系统将使用多个评测数据来测试程序。每个评测数据有对应的分数。选手所提交的程序将分别用每个评测数据作为输入来运行。对于某个评测数据，如果选手程序的输出与正确答案是匹配的，则选手获得该评测数据的分数。</p>
+<h2 id="知识点梳理"><a href="#知识点梳理" class="headerlink" title="知识点梳理"></a>知识点梳理</h2><p>（1）思维题（杂题）：不需要算法和数据结构，只需要逻辑、推理的题目，难度可难可易。考察思维能力和编码能力，只能通过大量做题来提高。</p>
+<p>（2）BFS 搜索和 DFS 搜索：也就是暴力搜索。这是非常基本的算法，是基础中的基础。</p>
+<p>（3）动态规划：线性 DP，以及一些 DP 应用，例如状态压缩 DP、树形 DP 等。</p>
+<p>（4）简单数学和简单数论。</p>
+<p>（5）简单的字符串处理、输入输出，简单图论。</p>
+<p>（6）基本算法：例如排序、排列、二分、倍增、差分、贪心。</p>
+<p>（7）基本数据结构：队列、栈、链表、二叉树等。</p>
+<h2 id="技巧：手算"><a href="#技巧：手算" class="headerlink" title="技巧：手算"></a>技巧：手算</h2><ul>
+<li>应用场合：填空题</li>
+<li>手算的目的：减少做题时间，省下时间做编程题。</li>
+</ul>
+<p>手段：</p>
+<ul>
+<li>不编码，或者只做部分编码</li>
+<li>用推理获得答案</li>
+<li>用软件工具帮助计算</li>
+</ul>
+<p>方法：</p>
+<ul>
+<li>巧用编辑器</li>
+<li>心算手数</li>
+<li>巧用 Excel</li>
+<li>巧用 Python</li>
+</ul>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><h4 id="1-门牌制作-2020-年第十一届蓝桥杯省赛，填空题"><a href="#1-门牌制作-2020-年第十一届蓝桥杯省赛，填空题" class="headerlink" title="1. 门牌制作 2020 年第十一届蓝桥杯省赛，填空题"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/592/learning/">1. 门牌制作 2020 年第十一届蓝桥杯省赛，填空题</a></h4><p><strong>问题描述：</strong> 从 $1$ 到 $2020$ 的所有数字中，共有多少个 $2$？</p>
+<ul>
+<li>先编码连续打印出 $1$ $\sim$ $2020$ 这 $2020$ 个数字</li>
+<li>然后粘贴到任何一个编辑器中</li>
+<li>选查询或替换功能，查找或替换字符 “$2$”，共 $624$ 次，就是答案。</li>
+</ul>
+<p><strong>简单直接，不用思考</strong></p>
+<h4 id="2-迷宫-2017-年第八届蓝桥杯省赛，填空题"><a href="#2-迷宫-2017-年第八届蓝桥杯省赛，填空题" class="headerlink" title="2. 迷宫 2017 年第八届蓝桥杯省赛，填空题"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/641/learning/">2. 迷宫 2017 年第八届蓝桥杯省赛，填空题</a></h4><p><strong>问题描述：</strong> 给出一个迷宫，问迷宫内的人有多少能走出来。迷宫如右图所示：每个位置上有一个人，共 $100$ 人。每个位置有指示牌，$L$ 表示向左走，$R$ 表示向右走，$U$ 表示向上走，$D$ 表示向下走。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c">UDDLUULRUL<br>   UURLLLRRRU <br>   RRUURLDLRD <br>   RUDDDDUUUU <br>   URUDLLRRUU <br>   DURLRLDLRL <br>   ULLURLLRDU <br>   RDLULLRDDD <br>   UUDDUDUDLL <br>   ULRDLUURRR<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>正解：DFS 搜索，编码 10 分钟。</li>
+<li>技巧：直接用手画图标记 3-5 分钟。</li>
+</ul>
+<h4 id="3-星期一-2017-年第八届蓝桥杯省赛，填空题"><a href="#3-星期一-2017-年第八届蓝桥杯省赛，填空题" class="headerlink" title="3. 星期一 2017 年第八届蓝桥杯省赛，填空题"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/611/learning/">3. 星期一 2017 年第八届蓝桥杯省赛，填空题</a></h4><p><strong>问题描述：</strong> 整个 20 世纪（$1901$ 年 $1$ 月 $1$ 日至 $2000$ 年 $12$ 月 $31$ 日之间），一共有多少个星期一？</p>
+<p><strong>思路：</strong> 用 Excel，在一个格子里输入日期 $1901$ 年 $1$ 月 $1$ 日，另一个格子输入 $2000$ 年 $12$ 月 $31$ 日，然后两个格子相减得 $36524$ 天，除以 $7$ 得 $5217.7$ 周。</p>
+<p>再看 $1901$ 年 $1$ 月 $1$ 日是星期几。</p>
+<p>用 Excel 点 $1901$ 年 $1$ 月 $1$ 日这一格的“设置单元格式-数字-日期-星期三”，点击“确定”，得“星期二”，即 $1901$ 年 $1$ 月 $1$ 日是星期二，$36524$ 是 $5217$ 周多几天，最后几天没有星期一，说明答案就是 $5217$。</p>
+<p>也可以直接利用 Excel“单元格格式”对话框得出 $2000$ 年 $12$ 月 $31$ 日刚好是星期天，从星期二至星期天之间没有星期一。</p>
+<h3 id="巧用-Python"><a href="#巧用-Python" class="headerlink" title="巧用 Python"></a>巧用 Python</h3><p><strong>填空题遇到字符、大数字、日期问题，Python 是首选。</strong></p>
+<p>•即使参加 C&#x2F;C++、Java 组比赛，也要学一些 Python，以方便手算，或用来做对比测试。</p>
+<p>•这几种语言的编译器，在比赛机器上都有。</p>
+<p>•写 Python 代码既简单又快，代码长度一般比 C&#x2F;C++、Java 短很多。例如 30 行的 C++代码，用 Python 写只需要 20 行。</p>
+<p><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/611/learning/">3. 星期一 2017 年第八届蓝桥杯省赛，填空题</a></p>
+<p><strong>问题描述：</strong> 整个 20 世纪(1901 年 1 月 1 日至 2000 年 12 月 31 日之间)，一共有多少个星期一？</p>
+<p><strong>直接用 Python datetime 库求解，第 4 行可以输出某个日期是星期几。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span>* <br>dt1=datetime(<span class="hljs-number">1901</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>) <br>dt2=datetime(<span class="hljs-number">2000</span>,<span class="hljs-number">12</span>,<span class="hljs-number">31</span>) <br><span class="hljs-built_in">print</span>(dt1.weekday()) <span class="hljs-comment"># 周一为0，周二为1... </span><br>td=dt2-dt1 <br><span class="hljs-built_in">print</span>(td.days//<span class="hljs-number">7</span>)<br></code></pre></td></tr></table></figure>
+
+<p>相对应的使用 C++同样可以完成，但是编码复杂：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span> </span><br>using namespace <span class="hljs-built_in">std</span>; <br><span class="hljs-type">int</span> res; <span class="hljs-comment">//先判断润年 </span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">is_r</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span>&#123; <br>    <span class="hljs-keyword">if</span>((n % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; n % <span class="hljs-number">100</span> != <span class="hljs-number">0</span>) || n % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <br>&#125; <br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123; <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1901</span>;i &lt;= <span class="hljs-number">2000</span>;i ++) <br>        <span class="hljs-keyword">if</span>(is_r(i)) res += <span class="hljs-number">366</span>; <br>    <span class="hljs-keyword">else</span> res += <span class="hljs-number">365</span>; <br>    <span class="hljs-type">int</span> x = res / <span class="hljs-number">7</span>; <br>    <span class="hljs-built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="hljs-built_in">endl</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/612/learning/">4. 乘积尾零 2018 年第九届蓝桥杯省赛</a></p>
+<p>【问题描述】 给出 $100$ 个整数（这里省略题目给的 $100$ 个数），问它们乘积的末尾有多少个零。</p>
+<p>最简单题解：</p>
+<ul>
+<li>直接连乘：几千位的大数</li>
+<li>然后统计末尾的 $0$</li>
+</ul>
+<p><img src="/./../images/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/236f300ccb9673d4fc3b0c7790de774a-0.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+<p>但是 C++ 装不下这么大的数字，所以要进行处理：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> cnt2=<span class="hljs-number">0</span>,cnt5=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">10</span>;i++) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=<span class="hljs-number">10</span>;j++) &#123; <br>            <span class="hljs-type">int</span> x; <br>            cin&gt;&gt;x;<br>            <span class="hljs-keyword">while</span> (x%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>) cnt2++,x/=<span class="hljs-number">2</span>; <br>            <span class="hljs-keyword">while</span> (x%<span class="hljs-number">5</span>==<span class="hljs-number">0</span>) cnt5++,x/=<span class="hljs-number">5</span>; <br>        &#125; <br>    &#125; <br>    cout&lt;&lt;<span class="hljs-built_in">min</span>(cnt2,cnt5)&lt;&lt;<span class="hljs-string">&#x27;\n&#x27;</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>发现编码时间变长了，如果填空题且 Java 学的好一点的，可以直接 Python 编程出结果。</p>
+<h2 id="思维题"><a href="#思维题" class="headerlink" title="思维题"></a>思维题</h2><ul>
+<li>不需要涉及某种算法的题目。</li>
+<li>只要学过编程语言，就能够解答。</li>
+<li>主要考核学生的思维、逻辑和编码能力，强调脑筋急转弯的解决方式。</li>
+<li>这类题目包括模拟题、构造题、思维题以及找规律题，统称为“思维题（杂题）”。</li>
+<li>每年蓝桥杯都会设置这类题目，而且可能有多道，是考试中的重要得分点。</li>
+<li>杂题涵盖了各种难度，有些可能相对简单，而另一些可能相对较难。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/174/learning/">5. 付账问题 2018 年第九届蓝桥杯省赛，lanqiaoOJ 题号 174</a></p>
+<p>【题目描述】</p>
+<p>现在有 $n$ 个人出去吃饭，他们总共消费了 $S$ 元。其中第 $i$ 个人带了 $a_i$元。幸运的是，所有人带的钱的总数是足够付账的，但现在问题来了：每个人分别要出多少钱呢？</p>
+<p>为了公平起见，我们希望在总付钱量恰好为 $S$ 的前提下，最后每个人付的钱的标准差最小。这里我们约定，每个人支付的钱数可以是任意非负实数，即可以不是 1 分钱的整数倍。你需要输出最小的标准差是多少。</p>
+<p>标准差的介绍：标准差是多个数与它们平均数差值的平方平均数，一般用于刻画这些数之间的”偏差有多大”。形式化地说，设第 $i$ 个人付的钱为 $b_i$ 元，那么标准差为 :</p>
+<p>$\sqrt{\frac{1}{n}\Sigma_{i&#x3D;1}^{n}(b_{i}-\frac{1}{n}\Sigma_{i&#x3D;1}^{n}b_{i})^{2}}$</p>
+<p><strong>解决思路：</strong></p>
+<p>如果每个人携带的钱足够多，每个人平均支付相同的金额，即 $b_i &#x3D; \frac{S}{n} &#x3D; \text{avg}$，那么标准差 $X$ 为 $0$。</p>
+<p>然而，总会有人的钱不够，这时我们考虑两种情况：</p>
+<p>（1）第 $i$ 个人携带的钱不足以达到平均数 $\text{avg}$，那么他只能支付他所携带的全部钱 $a_i$。</p>
+<p>（2）第 $i$ 个人携带的钱超过平均数 $\text{avg}$，那么他可以支付多一些。</p>
+<p><strong>解决步骤：</strong></p>
+<p>（1）对 $a_i$ 进行从小到大的排序；</p>
+<p>（2）前一部分人的钱不足以支付平均数，因此他们每个人支付所有携带的钱；</p>
+<p>（3）从总支付数中减去前一部分人支付的钱，得到剩余金额 $S’$，以及后一部分人的平均支付数 $\text{avg}’$。</p>
+<p>（4）后一部分人携带的钱较多，他们可以支付多一些。这部分人又可以分为两类：</p>
+<ul>
+<li>（i）相对富裕但仍然不足以支付 $\text{avg}’$ 的人，他们需要支付所有携带的钱；</li>
+<li>（ii）非常富裕的人，无论如何摊分，他们都有余额。</li>
+</ul>
+<p>由于前面一部分人不足以支付 $\text{avg}$，因此后面足够支付 $\text{avg}’$ 的人不能只支付 $\text{avg}$。相反，他们应该尽可能地每个人支付相同的金额。</p>
+<p>因为有人支付不足，总有人支付过多，由于是标准差（方差的平方根），因此每个人支付的金额差距越小越好。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> M = <span class="hljs-number">5e5</span>;<br><span class="hljs-type">long</span> <span class="hljs-type">long</span> a[M];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> n;  <span class="hljs-type">long</span> <span class="hljs-type">long</span> s;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %lld&quot;</span>,&amp;n,&amp;s);<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)  <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;a[i]);<br><br>    <span class="hljs-built_in">sort</span>(a+<span class="hljs-number">1</span>,a+n+<span class="hljs-number">1</span>);       <span class="hljs-comment">//排序，从小到大</span><br><br>    <span class="hljs-type">double</span> avg = <span class="hljs-number">1.0</span>*s/n;  <span class="hljs-comment">//平均值</span><br>    <span class="hljs-type">double</span> sum = <span class="hljs-number">0.0</span>;<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(a[i]*(n+<span class="hljs-number">1</span>-i) &lt; s)&#123;<br><span class="hljs-comment">//需要把钱全拿出的人：</span><br><span class="hljs-comment">//（1）钱不够平均数的，（2）钱够平均数，但也不是很多的</span><br>            sum += (a[i]-avg)*(a[i]-avg);<br>            s -= a[i];            <span class="hljs-comment">//更新剩余钱数</span><br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;      <br><span class="hljs-comment">//不用把钱全拿出的人：非常有钱，不管怎么平均都够</span><br>            <span class="hljs-type">double</span> cur_avg = <span class="hljs-number">1.0</span>*s/(n+<span class="hljs-number">1</span>-i);    <br><span class="hljs-comment">//更新平均出钱数</span><br>            sum += (cur_avg-avg)*(cur_avg-avg)*(n+<span class="hljs-number">1</span>-i);<br>            <span class="hljs-keyword">break</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.4lf&quot;</span>,<span class="hljs-built_in">sqrt</span>(sum/n));<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> *<br>n, s = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split()))<br>a.sort()<br>avg = s/n<br><span class="hljs-built_in">sum</span> = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>     <span class="hljs-keyword">if</span> a[i]*(n-i) &lt; s:<br>          <span class="hljs-built_in">sum</span> += <span class="hljs-built_in">pow</span>(a[i]-avg,<span class="hljs-number">2</span>)<br>          s -= a[i]<br>     <span class="hljs-keyword">else</span>:<br>          cur_avg = s/(n-i);      <span class="hljs-comment">#更新平均出钱数</span><br>          <span class="hljs-built_in">sum</span> += <span class="hljs-built_in">pow</span>(cur_avg-avg,<span class="hljs-number">2</span>)*(n-i)<br>          <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#123;:.4f&#125;&quot;</span>.<span class="hljs-built_in">format</span>(sqrt(<span class="hljs-built_in">sum</span>/(n))))<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.io.FileNotFoundException;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String args[])</span> &#123;<br>        <span class="hljs-type">int</span> n;<br>        <span class="hljs-type">long</span> S;<br>        <span class="hljs-type">double</span> ans=<span class="hljs-number">0</span>,avg;<br>        Scanner input=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        n=input.nextInt();<br>        S=input.nextLong();<br>        <span class="hljs-type">long</span> a[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">long</span>[n];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)        <br>            a[i]=input.nextLong();<br>        Arrays.sort(a);<br>        avg=(<span class="hljs-type">double</span>)S/n;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++) &#123;<br>            <span class="hljs-keyword">if</span>(S&lt;=(n-i)*a[i]) &#123;<br>                ans += (n-i)*Math.pow((<span class="hljs-type">double</span>)S/(n-i)-avg,<span class="hljs-number">2</span>);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            ans += Math.pow(a[i]-avg,<span class="hljs-number">2</span>);<br>            S -= a[i];<br>        &#125;<br>        System.out.printf(<span class="hljs-string">&quot;%.4f\n&quot;</span>,Math.sqrt(ans/n));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AFNote/" class="category-chain-item">蓝桥杯Note</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="print-no-link">#蓝桥杯备赛</a>
+      
+        <a href="/tags/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/" class="print-no-link">#手算与思维题</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>手算与思维题</div>
+      <div>http://zdx-1.github.io/2024/03/10/手算与思维题/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>蓝桥</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/03/10/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/" title="递推法与递归法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">递推法与递归法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/10/hexo%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="hexo存在问题解决方案">
+                        <span class="hidden-mobile">hexo存在问题解决方案</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

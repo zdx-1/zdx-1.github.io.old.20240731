@@ -1,0 +1,912 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="蓝桥">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="[TOC]8a143f69d05e2054793e049e53e43fd4 递推法与递归法递推法： 递推法是一种在数学和其他领域广泛应用的重要方法，它在计算机科学中被用作一种关键的数值求解算法。 知识点：  递推算法 递归算法  递推算法的特点递推法的核心在于找到递推关系式。这种方法可以将复杂的计算过程转化为简单的重复步骤，充分利用计算机在运行程序时的时间局部性和空间局部性。 递推算法的思想：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="递推法与递归法">
+<meta property="og:url" content="http://zdx-1.github.io/2024/03/10/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/index.html">
+<meta property="og:site_name" content="Zdx-1">
+<meta property="og:description" content="[TOC]8a143f69d05e2054793e049e53e43fd4 递推法与递归法递推法： 递推法是一种在数学和其他领域广泛应用的重要方法，它在计算机科学中被用作一种关键的数值求解算法。 知识点：  递推算法 递归算法  递推算法的特点递推法的核心在于找到递推关系式。这种方法可以将复杂的计算过程转化为简单的重复步骤，充分利用计算机在运行程序时的时间局部性和空间局部性。 递推算法的思想：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A517002/image-20240316082418710.png">
+<meta property="article:published_time" content="2024-03-10T08:34:00.000Z">
+<meta property="article:modified_time" content="2024-05-21T16:56:01.633Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯备赛">
+<meta property="article:tag" content="递推法和递归法">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A517002/image-20240316082418710.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>递推法与递归法 - Zdx-1</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Zdx-1</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="递推法与递归法"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        蓝桥
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-10 16:34" pubdate>
+          2024年3月10日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          32 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">递推法与递归法</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年5月22日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>[TOC]8a143f69d05e2054793e049e53e43fd4</p>
+<h2 id="递推法与递归法"><a href="#递推法与递归法" class="headerlink" title="递推法与递归法"></a>递推法与递归法</h2><p><strong>递推法：</strong></p>
+<p>递推法是一种在数学和其他领域广泛应用的重要方法，它在计算机科学中被用作一种关键的数值求解算法。</p>
+<p><strong>知识点：</strong></p>
+<ul>
+<li>递推算法</li>
+<li>递归算法</li>
+</ul>
+<h2 id="递推算法的特点"><a href="#递推算法的特点" class="headerlink" title="递推算法的特点"></a>递推算法的特点</h2><p>递推法的核心在于找到递推关系式。这种方法可以将复杂的计算过程转化为简单的重复步骤，充分利用计算机在运行程序时的时间局部性和空间局部性。</p>
+<p><strong>递推算法的思想：</strong></p>
+<ol>
+<li>首先找到各个相邻数据项之间的递推关系；</li>
+<li>递推关系避开了求通项公式的麻烦，尤其是对于那些难以或无法求解通项公式的题目；</li>
+<li>将复杂问题分解为若干步骤的简单运算；</li>
+<li>一般来说，递推算法可以视为一种特殊的迭代算法。</li>
+</ol>
+<p><strong>递推算法解题的基本思路：</strong></p>
+<ol>
+<li>将复杂计算转换为简单重复运算；</li>
+<li>通过找到递推关系式进行简化运算；</li>
+<li>利用计算机的特性，减少运行时间。</li>
+</ol>
+<p><strong>递推算法的一般步骤：</strong></p>
+<ol>
+<li>根据题目确定数据项，并找到符合要求的递推关系式；</li>
+<li>根据递推关系式设计递推程序；</li>
+<li>根据题目找到递推的终点；</li>
+<li>单次查询可以不进行存储，多次查询都要进行存储；</li>
+<li>按要求输出答案即可。</li>
+</ol>
+<p><strong>递归算法：</strong></p>
+<p>递归算法是一种自顶向下的算法，它通过不断地直接或间接调用自身的函数，通过每次改变变量完成多个过程的重复计算，直到到达边界之后，结束调用。</p>
+<p>与递推法相似的是，递归与递推都是将一个复杂过程分解为几个简单重复步骤进行计算。</p>
+<p>递归算法的实现的核心是分治策略，即分而治之，将复杂过程分解为规模较小的同类问题，通过解决若干个小问题，进而解决整个复杂问题。</p>
+<p><strong>递归算法的思想：</strong></p>
+<ol>
+<li>将复杂计算过程转换为简单重复子过程；</li>
+<li>找到递归公式，即能够将大问题转化为小问题的公式；</li>
+<li>自上而下计算，在返回完成递归过程。</li>
+</ol>
+<p><strong>递归算法设计的一般步骤：</strong></p>
+<ol>
+<li>根据题目设计递归函数中的运算部分；</li>
+<li>根据题目找到递归公式，题目可能会隐含给出，也可能需要自己进行推导；</li>
+<li>找到递归出口，即递归的终止条件。</li>
+</ol>
+<p>递归法和递推法的思路已经给大家讲解得差不多了，接下来我们将结合真实的大赛题目进行讲解。这将有助于我们更好地理解和应用这两种方法。</p>
+<h3 id="斐波纳契数列-fibonacci-问题"><a href="#斐波纳契数列-fibonacci-问题" class="headerlink" title="斐波纳契数列 fibonacci 问题"></a>斐波纳契数列 fibonacci 问题</h3><p>在一定情况下，同一个问题可以使用用递归也可以使用递推解答。一般一个问题的递推关系和递归关系都好求的话就都可以解题。</p>
+<p>当然如果题目只有一个关系好求，那就最好采用关系好求的办法。</p>
+<p><strong>题目描述:</strong></p>
+<p>斐波那契数列（Fibonacci sequence），又称黄金分割数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”。</p>
+<p>指的是这样一个数列：$0、1、1、2、3、5、8、13、21、34、…$</p>
+<p>在数学上，斐波那契数列以如下被以递推的方法定义：$F(0)&#x3D;0$，$F(1)&#x3D;1$，$F(n)&#x3D;F(n - 1)+F(n - 2)$（$n ≥ 2，n ∈ N^*$）</p>
+<p>请求出该数列中第 $n$ 个数字（$n$ 从$1$开始计数）是多少。</p>
+<p><strong>样例:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs txt">输入样例<br><br>样例1输入<br>6<br><br>样例2输入<br>4<br><br>输出样例<br><br>样例1输出<br>8<br><br>样例2输出<br>3<br></code></pre></td></tr></table></figure>
+
+<p>对于上面的样例我们进行了如下计算；</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs txt">[0]=0<br><br>[1]=1<br><br>[2]=0+1<br><br>[3]=1+1=2<br><br>[4]=1+2=3<br><br>[5]=2+3=5<br><br>[6]=5+3=8 <br></code></pre></td></tr></table></figure>
+
+<p><strong>运行限制:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">1. 最大运行时间：1s<br>2. 最大运行内存：128M<br></code></pre></td></tr></table></figure>
+
+<p><strong>题目解析：</strong></p>
+<ul>
+<li>这个题给出递推式 $F(n) &#x3D; F(n-1) + F(n-2)$</li>
+<li>转化为可用的递推关系，即$F(n) + F(n+1) &#x3D; F(n+2)$</li>
+</ul>
+<p>这一通过从 $n&#x3D;1$ 开始循环即可完成递推，当然也可以使用递归法。</p>
+<p>首先我们写找出递归式，$F(n)&#x3D; F(n-1) + F(n-2)$。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c">F(n)= F(n<span class="hljs-number">-1</span>) + F(n<span class="hljs-number">-2</span>)<br>    = F(n<span class="hljs-number">-2</span>)+F(n<span class="hljs-number">-3</span>)+F(n<span class="hljs-number">-3</span>)+F(n<span class="hljs-number">-4</span>)<br><span class="hljs-comment">//重复调用</span><br></code></pre></td></tr></table></figure>
+
+<p>这样我们找到了递归式，然后我们应该找到递归出口。</p>
+<p>我们可以知道 $F(n)&#x3D;0 n&#x3D;0 ,F(n)&#x3D;1 n&#x3D;1$ 这就是递归出口，能让递归停止的条件。</p>
+<p>递归算法的通用框架如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">do</span>(a,b,c...)<br>&#123;<br>    <span class="hljs-comment">//递归终止条件，即出口</span><br>    <span class="hljs-keyword">if</span>(a==? ,b==? ,....) <span class="hljs-keyword">return</span><br><br>    <span class="hljs-comment">//递归条件</span><br>    <span class="hljs-keyword">if</span>(条件<span class="hljs-number">1</span>)<br>        <span class="hljs-built_in">do</span>(参数<span class="hljs-number">1</span>)<br><br>    <span class="hljs-built_in">else</span>(条件<span class="hljs-number">2</span>)<br>        <span class="hljs-built_in">do</span>(参数<span class="hljs-number">2</span>)<br><br>&#125;<br><br>如本题，各子式间存在计算关系，可以化为：<br><br><span class="hljs-built_in">do</span>(a)<br>&#123;<br>    <span class="hljs-keyword">if</span>(a==<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">if</span>(a==<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">do</span>(a<span class="hljs-number">-1</span>)+<span class="hljs-built_in">do</span>(a<span class="hljs-number">-2</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这道题不是多次询问问题，不需要存储直接计算的复杂度是最低的。</p>
+<h4 id="答案解析"><a href="#答案解析" class="headerlink" title="答案解析"></a>答案解析</h4><p>C++ 代码：</p>
+<ul>
+<li>递推算法代码</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>    <span class="hljs-type">int</span> x=<span class="hljs-number">0</span>; <span class="hljs-comment">//F(n)</span><br>    <span class="hljs-type">int</span> y=<span class="hljs-number">1</span>; <span class="hljs-comment">//F(n+1)</span><br>    <span class="hljs-type">int</span> ans; <span class="hljs-comment">//F(n+2）</span><br><br>    cin&gt;&gt;n;<br><br>    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>) ans=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>) ans=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++)<br>        &#123;<br>            ans=x+y;<br>            x=y;<br>            y=ans;<br>        &#125;<br>    &#125;<br>    cout&lt;&lt;ans&lt;&lt;endl;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>递归算法代码</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">fn</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//递归出口1</span><br>    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>    <span class="hljs-comment">//递归出口2</span><br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span> )<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">fn</span>(n<span class="hljs-number">-1</span>)+<span class="hljs-built_in">fn</span>(n<span class="hljs-number">-2</span>); <span class="hljs-comment">//递归关系式</span><br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>    <span class="hljs-type">int</span> ans;<br>    cin&gt;&gt;n;<br>    ans=<span class="hljs-built_in">fn</span>(n);<br>    cout&lt;&lt;ans&lt;&lt;endl;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>Python 解题代码</strong></p>
+<ul>
+<li>递推算法代码：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    n =<span class="hljs-built_in">int</span>( <span class="hljs-built_in">input</span>())<br><br>    x=<span class="hljs-number">0</span> <span class="hljs-comment"># F(n)</span><br>    y=<span class="hljs-number">1</span> <span class="hljs-comment">#F(n+1)</span><br>    ans=<span class="hljs-number">0</span> <span class="hljs-comment">#F(n+2）</span><br><br>    <span class="hljs-keyword">if</span> n==<span class="hljs-number">0</span> :<br>        ans=<span class="hljs-number">0</span><br><br>    <span class="hljs-keyword">elif</span> n==<span class="hljs-number">1</span>:<br>        ans=<span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (n-<span class="hljs-number">1</span>):<br><br>            ans=x+y<br>            x=y<br>            y=ans<br><br>    <span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>递归算法代码：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-comment"># 递归出口1</span><br>    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br><br>    <span class="hljs-comment"># 递归出口2</span><br>    <span class="hljs-keyword">elif</span> n == <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> f(n - <span class="hljs-number">1</span>) + f(n - <span class="hljs-number">2</span>)  <span class="hljs-comment"># 递归关系式</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    ans = f(n)<br>    <span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+<p><strong>Java 解题代码</strong></p>
+<p>递推算法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>        <span class="hljs-type">int</span> x=<span class="hljs-number">0</span>; <span class="hljs-comment">//F(n)</span><br>        <span class="hljs-type">int</span> y=<span class="hljs-number">1</span>; <span class="hljs-comment">//F(n+1)</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; <span class="hljs-comment">//F(n+2）</span><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br>        n = in.nextInt();<br><br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>) ans=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>) ans=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++)<br>            &#123;<br>                ans=x+y;<br>                x=y;<br>                y=ans;<br>            &#125;<br>        &#125;<br><br>        System.out.println(ans);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>递归算法代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>    <span class="hljs-keyword">static</span>  <span class="hljs-type">int</span> <span class="hljs-title function_">fn</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>            <span class="hljs-comment">//递归出口2</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span> )<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br><br>        <span class="hljs-keyword">else</span><br>            <span class="hljs-keyword">return</span> fn(n-<span class="hljs-number">1</span>)+fn(n-<span class="hljs-number">2</span>); <span class="hljs-comment">//递归关系式</span><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br>        n = in.nextInt();<br><br>        ans=fn(n);<br><br>        System.out.println(ans);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="存储型的递推与递归"><a href="#存储型的递推与递归" class="headerlink" title="存储型的递推与递归"></a>存储型的递推与递归</h3><p>我们在开始就讲过题目十分存储和非存储的，上面那个题目就是此询问，如果改为多次询问我们该怎么办，我们会采用存储的方式，存储的方式适用于大部分的的多次查询问题。</p>
+<p>我们看一下修改后的题目。</p>
+<p><strong>题目描述：</strong></p>
+<p>斐波那契数列（Fibonacci sequence），又称黄金分割数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”。</p>
+<p>指的是这样一个数列：$0、1、1、2、3、5、8、13、21、34、…$</p>
+<p>在数学上，斐波那契数列以如下被以递推的方法定义：$F(0)&#x3D;0$，$F(1)&#x3D;1$，$F(n)&#x3D;F(n - 1)+F(n - 2)$（$n ≥ 2，n ∈ N^*$）</p>
+<p>我们将进行M次查询，每次输入一个$N$，其中$n$小于$30$。</p>
+<p>请求出该数列中第$n$个数字（$n$从$1$开始计数）是多少?</p>
+<p><strong>样例:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs txt">输入样例<br><br>样例1输入：<br><br>6<br>4<br>2<br>7<br>8<br>8<br>10<br><br>样例2输入：<br><br>8<br>13<br>23<br>14<br>17<br>24<br>16<br>10<br>11<br><br>输出样例<br><br>样例1输出：<br><br>3<br>1<br>13<br>21<br>21<br>55<br><br>样例2输出：<br><br>233<br>28657<br>377<br>1597<br>46368<br>987<br>55<br>89<br></code></pre></td></tr></table></figure>
+
+<p><strong>运行限制:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">1. 最大运行时间：1s 2. 最大运行内存：128M<br></code></pre></td></tr></table></figure>
+
+<p><strong>题目解析：</strong></p>
+<p>这道题跟上面一道题的算法原理相同，只是增加了多次查询的复杂度，所以仅需修改这一点即可。</p>
+<p>再有的是有的同学担心自己的输入输出是在一个屏幕上的，评测的时候会不会出现问题。</p>
+<p><img src="/./../images/%E9%80%92%E6%8E%A8%E6%B3%95%E4%B8%8E%E9%80%92%E5%BD%92%E6%B3%95/40a8cde4be1c5946317ab844a61f697f-0.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+<p>类似这样的情况，这一点是不用担心的，只要不是交互题，评测机的输入与输出是分开的，只有你的输出会用来跟答案比较，所以我们只用关心我们的输出即可。</p>
+<p>比如有一道题让你计算 $x+y$ 的值，如果你知道每答案，就可以直接输出，都不用进行读入。</p>
+<p>然后我们来看一下需要多次询问的题目该怎么解决。</p>
+<h4 id="答案解析-1"><a href="#答案解析-1" class="headerlink" title="答案解析"></a>答案解析</h4><p>C++ 代码：</p>
+<ul>
+<li>递推算法代码</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> F[<span class="hljs-number">35</span>];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    F[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br><br>    F[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=<span class="hljs-number">30</span>;i++)<br>    &#123;<br>        F[i]=F[i<span class="hljs-number">-1</span>]+F[i<span class="hljs-number">-2</span>];<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-type">int</span> m; <span class="hljs-comment">//m次查询</span><br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>    <span class="hljs-built_in">init</span>();<br><br>    cin&gt;&gt;m;<br><br>    <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)&#123;<br>        m-=<span class="hljs-number">1</span>;<br>        cin&gt;&gt;n;<br>        cout&lt;&lt;F[n]&lt;&lt;endl;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>存储答案的递推法，才是最常使用的递推法。</p>
+<ul>
+<li>递归算法代码</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> F[<span class="hljs-number">35</span>];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">fn</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//递归出口1</span><br>    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)<br>    &#123;<br>        F[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-comment">//递归出口2</span><br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span> )<br>    &#123;<br>        F[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        F[n]=<span class="hljs-built_in">fn</span>(n<span class="hljs-number">-1</span>)+<span class="hljs-built_in">fn</span>(n<span class="hljs-number">-2</span>);<br>        <span class="hljs-keyword">return</span> F[n]; <span class="hljs-comment">//递归关系式</span><br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> m; <span class="hljs-comment">//m次查询</span><br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br><br>    <span class="hljs-built_in">fn</span>(<span class="hljs-number">30</span>);<br>    cin&gt;&gt;m;<br><br>    <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)&#123;<br>        m-=<span class="hljs-number">1</span>;<br>        cin&gt;&gt;n;<br>        cout&lt;&lt;F[n]&lt;&lt;endl;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>Python 解题代码</strong></p>
+<p>递推算法代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python">F = [<span class="hljs-number">0</span>]*<span class="hljs-number">35</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">init</span>():<br><br>    F[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span><br>    F[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-number">30</span>):<br>        F[i] = F[i-<span class="hljs-number">1</span>]+F[i-<span class="hljs-number">2</span>]<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    m = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    init()<br>    <span class="hljs-keyword">while</span> m &gt; <span class="hljs-number">0</span>:<br>        m -= <span class="hljs-number">1</span><br>        n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>        <span class="hljs-built_in">print</span>(F[n])<br>    <span class="hljs-comment"># print(F)</span><br></code></pre></td></tr></table></figure>
+
+<p>递归算法代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><br>F = [<span class="hljs-number">0</span>] * <span class="hljs-number">35</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-comment"># 递归出口1</span><br>    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:<br>        F[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-comment"># 递归出口2</span><br>    <span class="hljs-keyword">elif</span> n == <span class="hljs-number">1</span>:<br>        F[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        F[n] = f(n - <span class="hljs-number">1</span>) + f(n - <span class="hljs-number">2</span>) <span class="hljs-comment"># 递归关系式</span><br>        <span class="hljs-keyword">return</span> F[n]<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    m = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    f(<span class="hljs-number">30</span>)<br>    <span class="hljs-keyword">while</span> m &gt; <span class="hljs-number">0</span>:<br>        m -= <span class="hljs-number">1</span><br>        n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>        <span class="hljs-built_in">print</span>(F[n])<br>    <span class="hljs-comment"># print(F)</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Java 解题代码</strong></p>
+<p>递推算法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> []F=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">35</span>];<br><br>    <span class="hljs-keyword">static</span>  <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span><br>    &#123;<br>        F[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        F[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=<span class="hljs-number">30</span>;i++)<br>        &#123;<br>            F[i]=F[i-<span class="hljs-number">1</span>]+F[i-<span class="hljs-number">2</span>];<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">int</span> m; <span class="hljs-comment">//m次查询</span><br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>        init();<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        m = in.nextInt();<br>        <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)&#123;<br><br>            m-=<span class="hljs-number">1</span>;<br><br>            n= in.nextInt();<br><br>            System.out.println(F[n]);<br>        &#125;<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>递归算法代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> []F=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">35</span>];<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fn</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span><br>    &#123;<br>        <span class="hljs-comment">//递归出口1</span><br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)<br>        &#123;<br><br>            F[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br><br>        <span class="hljs-comment">//递归出口2</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span> )<br>        &#123;<br>            F[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            F[n]=fn(n-<span class="hljs-number">1</span>)+fn(n-<span class="hljs-number">2</span>);<br>            <span class="hljs-keyword">return</span> F[n]; <span class="hljs-comment">//递归关系式</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">int</span> m; <span class="hljs-comment">//m次查询</span><br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//第几个数</span><br>        fn(<span class="hljs-number">30</span>);<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        m = in.nextInt();<br>        <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)&#123;<br>            m-=<span class="hljs-number">1</span>;<br>            n= in.nextInt();<br>            System.out.println(F[n]);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="数字三角形问题"><a href="#数字三角形问题" class="headerlink" title="数字三角形问题"></a>数字三角形问题</h3><p><strong>题目描述:</strong></p>
+<p>xxxxxxxxxx27 1import java.io.FileNotFoundException;2import java.util.Arrays;3import java.util.Scanner;4public class Main {5public static void main(String args[]) {6        int n;7        long S;8        double ans&#x3D;0,avg;9        Scanner input&#x3D;new Scanner(System.in);10        n&#x3D;input.nextInt();11        S&#x3D;input.nextLong();12        long a[]&#x3D;new long[n];13        for(int i&#x3D;0;i&lt;n;i++)        14            a[i]&#x3D;input.nextLong();15        Arrays.sort(a);16        avg&#x3D;(double)S&#x2F;n;17        for(int i&#x3D;0;i&lt;n;i++) {18            if(S&lt;&#x3D;(n-i)*a[i]) {19                ans +&#x3D; (n-i)*Math.pow((double)S&#x2F;(n-i)-avg,2);20                break;21            }22            ans +&#x3D; Math.pow(a[i]-avg,2);23            S -&#x3D; a[i];24        }25        System.out.printf(“%.4f\n”,Math.sqrt(ans&#x2F;n));26    }27}java</p>
+<p>如图数字三角形。如下所示为一个数字三角形。请编一个程序计算从顶到底的某处的一条路径，使该路径所经过的数字总和最大。只要求输出总和。 　</p>
+<ol>
+<li>一步可沿左斜线向下或右斜线向下走；</li>
+<li>三角形行数小于等于 $100$；</li>
+<li>三角形中的数字为 $0，1，…，99$；</li>
+</ol>
+<p>测试数据通过键盘逐行输入。</p>
+<p>如上例数据应以样例所示格式输入：</p>
+<p><strong>样例:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs txt">输入：<br><br>5<br>7<br>3 8<br>8 1 0<br>2 7 4 4<br>4 5 2 6 5<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">输出：<br><br>30<br></code></pre></td></tr></table></figure>
+
+<p><strong>运行限制:</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">1. 最大运行时间：1s<br>2. 最大运行内存：128M<br></code></pre></td></tr></table></figure>
+
+<p><strong>题目分析:</strong></p>
+<p>解决该题目的方式有很多，包括动态规划， 枚举都可以解决这个问题。</p>
+<p>我们从递推的思想出发，假设我们从顶层沿着某条路径已经走到了第 $i$ 层，正向着 $i+1$ 层前进， 两条可行路径中我们肯定会选择最大的方向前进，为此我们可以采用递推中的反向递推，即逆推的方式解决，设 $a[i][j]$ 存放从 $i,j$ 出发到达第 $n$ 层的最大值。</p>
+<p>我们可以写出递推式：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">a[i][j] = max&#123;a[i][j]+a[i+1][j]，a[i][j]+a[i+1][j+1]&#125;<br></code></pre></td></tr></table></figure>
+
+<p>则 逆推到出发点 $a[1][1]$ 为题目所求答案，即第一层到第 $N$ 层的最大值。</p>
+<h4 id="答案解析-2"><a href="#答案解析-2" class="headerlink" title="答案解析"></a>答案解析</h4><p>C++ 代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//n层</span><br>    <span class="hljs-type">int</span> a[<span class="hljs-number">101</span>][<span class="hljs-number">101</span>]; <span class="hljs-comment">//路径矩阵</span><br>    cin&gt;&gt;n;<br><br>    <span class="hljs-comment">//输入数字三角形的值</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>; i&lt;=n; i++)<br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>; j&lt;=i; j++)<br>        &#123;<br><br>        cin&gt;&gt;a[i][j]; <span class="hljs-comment">//输入原始数据</span><br><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">//递推开始</span><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=n<span class="hljs-number">-1</span>; i&gt;=<span class="hljs-number">1</span>; i--)<span class="hljs-comment">//从最后一层逆推</span><br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>; j&lt;=i; j++)<br>        &#123;<br><br>            <span class="hljs-keyword">if</span> (a[i+<span class="hljs-number">1</span>][j]&gt;=a[i+<span class="hljs-number">1</span>][j+<span class="hljs-number">1</span>])<br>                a[i][j]+=a[i+<span class="hljs-number">1</span>][j];     <span class="hljs-comment">//路径选择</span><br><br>            <span class="hljs-keyword">else</span><br>                a[i][j]+=a[i+<span class="hljs-number">1</span>][j+<span class="hljs-number">1</span>];<br>        &#125;<br>    &#125;<br><br>    cout&lt;&lt;a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]&lt;&lt;endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>Python 解题代码</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [[<span class="hljs-number">0</span>] * <span class="hljs-number">101</span>] * <span class="hljs-number">101</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>  n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><br>  <span class="hljs-comment"># 输入数字三角形的值</span><br>  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>      a[i] = <span class="hljs-built_in">input</span>().split()<br>      a[i] = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, a[i]))  <span class="hljs-comment"># split 分割后都是 字符 这里是转化成数字</span><br>  <span class="hljs-comment">#</span><br>  <span class="hljs-comment"># for i in range(1, n + 1):</span><br>  <span class="hljs-comment">#     print(a[i])</span><br><br> <span class="hljs-comment"># a = list(map(int, a)) # split 分割后都是 字符 这里是转化成数字</span><br><br>  <span class="hljs-comment"># 递推开始</span><br><br>  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>):<br>      <span class="hljs-comment"># 最后一层逆推</span><br>      <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, i):<br><br>          <span class="hljs-comment"># 路径选择</span><br>          <span class="hljs-keyword">if</span> a[i + <span class="hljs-number">1</span>][j] &gt;= a[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>]:<br>              a[i][j] += a[i + <span class="hljs-number">1</span>][j]<br><br>          <span class="hljs-keyword">else</span>:<br>              a[i][j] += a[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>]<br><br>  <span class="hljs-comment"># for i in range(1, n + 1):</span><br>  <span class="hljs-comment">#     print(a[i])</span><br><br>  <span class="hljs-built_in">print</span>(a[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+
+<p><strong>Java 解题代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>  <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> [][]a=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">101</span>][<span class="hljs-number">101</span>];<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>      <span class="hljs-type">int</span> n;<br>      <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>      n = in.nextInt();<br><br>      <span class="hljs-comment">//输入数字三角形的值</span><br>      <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>; i&lt;=n; i++)<br>      &#123;<br>          <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>; j&lt;=i; j++)<br>          &#123;<br>              a[i][j]=in.nextInt(); <span class="hljs-comment">//输入原始数据</span><br>          &#125;<br>      &#125;<br><br>      <span class="hljs-comment">//递推开始</span><br><br>      <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=n-<span class="hljs-number">1</span>; i&gt;=<span class="hljs-number">1</span>; i--)<span class="hljs-comment">//从最后一层逆推</span><br>      &#123;<br><br>          <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>; j&lt;=i; j++)<br>          &#123;<br>              <span class="hljs-keyword">if</span> (a[i+<span class="hljs-number">1</span>][j]&gt;=a[i+<span class="hljs-number">1</span>][j+<span class="hljs-number">1</span>])<br>                  a[i][j]+=a[i+<span class="hljs-number">1</span>][j];     <span class="hljs-comment">//路径选择</span><br><br>              <span class="hljs-keyword">else</span>  a[i][j]+=a[i+<span class="hljs-number">1</span>][j+<span class="hljs-number">1</span>];<br>          &#125;<br>      &#125;<br>      System.out.println(a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们这节课讲了递推与递归的知识点，并且也讲了何时采用递归设计程序，何时采用递推设计程序。对于多次询问的题目，也为大家展示了一种解决方法。</p>
+<p>对于递推算法，我们覆盖了正推和逆推两种方式。无论是递推和递归的关键在于找到关系式。</p>
+<p>希望同学能够独立完成题目进行练习。并且在后面的学习中会多次用到递归与递推设计其他算法。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AFNote/" class="category-chain-item">蓝桥杯Note</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="print-no-link">#蓝桥杯备赛</a>
+      
+        <a href="/tags/%E9%80%92%E6%8E%A8%E6%B3%95%E5%92%8C%E9%80%92%E5%BD%92%E6%B3%95/" class="print-no-link">#递推法和递归法</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>递推法与递归法</div>
+      <div>http://zdx-1.github.io/2024/03/10/递推法与递归法/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>蓝桥</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/03/10/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" title="搜索算法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">搜索算法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/10/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/" title="手算与思维题">
+                        <span class="hidden-mobile">手算与思维题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
