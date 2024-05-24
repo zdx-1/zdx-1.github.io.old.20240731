@@ -16,12 +16,12 @@
   <meta name="author" content="zdx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前缀和前缀和是： 1sum[i]&#x3D;a[0]+a[1]+……+a[i] 前缀和的性质1234#第一条性质用于处理前缀和sum[i]&#x3D;sum[i-1]+a[i]#第二条性质可以在O（1）的时间内求出区间和a[l]+……+a[r]&#x3D;sum[r]-sum[l-1] 前缀和的目的就是快速求出区间之和 12345def get_sum(sum,l,r):    if l&#x3D;&#x3D;0:        return s">
+    <meta name="description" content="前缀和前缀和是： 1sum[i]&#x3D;a[0]+a[1]+……+a[i]  前缀和的性质1234#第一条性质用于处理前缀和sum[i]&#x3D;sum[i-1]+a[i]#第二条性质可以在O（1）的时间内求出区间和a[l]+……+a[r]&#x3D;sum[r]-sum[l-1]  前缀和的目的就是快速求出区间之和 12345def get_sum(sum,l,r):    if l&#x3D;&#x3D;0:        return">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法学习笔记">
 <meta property="og:url" content="http://zdx-1.github.io/2024/03/31/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Zdx-1">
-<meta property="og:description" content="前缀和前缀和是： 1sum[i]&#x3D;a[0]+a[1]+……+a[i] 前缀和的性质1234#第一条性质用于处理前缀和sum[i]&#x3D;sum[i-1]+a[i]#第二条性质可以在O（1）的时间内求出区间和a[l]+……+a[r]&#x3D;sum[r]-sum[l-1] 前缀和的目的就是快速求出区间之和 12345def get_sum(sum,l,r):    if l&#x3D;&#x3D;0:        return s">
+<meta property="og:description" content="前缀和前缀和是： 1sum[i]&#x3D;a[0]+a[1]+……+a[i]  前缀和的性质1234#第一条性质用于处理前缀和sum[i]&#x3D;sum[i-1]+a[i]#第二条性质可以在O（1）的时间内求出区间和a[l]+……+a[r]&#x3D;sum[r]-sum[l-1]  前缀和的目的就是快速求出区间之和 12345def get_sum(sum,l,r):    if l&#x3D;&#x3D;0:        return">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A517002/image-20240316082418710.png">
 <meta property="article:published_time" content="2024-03-31T01:20:07.000Z">
@@ -301,9 +301,12 @@
                 
                 <h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><p>前缀和是：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">sum</span>[i]=a[<span class="hljs-number">0</span>]+a[<span class="hljs-number">1</span>]+……+a[i]<br></code></pre></td></tr></table></figure>
+
 <h2 id="前缀和的性质"><a href="#前缀和的性质" class="headerlink" title="前缀和的性质"></a>前缀和的性质</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#第一条性质用于处理前缀和</span><br><span class="hljs-built_in">sum</span>[i]=<span class="hljs-built_in">sum</span>[i-<span class="hljs-number">1</span>]+a[i]<br><span class="hljs-comment">#第二条性质可以在O（1）的时间内求出区间和</span><br>a[l]+……+a[r]=<span class="hljs-built_in">sum</span>[r]-<span class="hljs-built_in">sum</span>[l-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
+
 <p>前缀和的目的就是快速求出区间之和</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_sum</span>(<span class="hljs-params"><span class="hljs-built_in">sum</span>,l,r</span>):<br>    <span class="hljs-keyword">if</span> l==<span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>[r]<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>[r]-<span class="hljs-built_in">sum</span>[l-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
