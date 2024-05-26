@@ -16,12 +16,12 @@
   <meta name="author" content="zdx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="HEXO插件问题添加一行数据 $$123456$$​ 如果图片，公式显示错误1npm install hexo-renderer-marked --save    图片显示关联插件1npm install hexo-renderer-marked --save  该插件在卸载情况会出现图片不显示 HEXO插件问题Hexo更改主题后启动服务器，界面显如下字符:1extends includes&#x2F;la">
+    <meta name="description" content="HEXO插件问题添加一行数据 123456​ 如果图片，公式显示错误1npm install hexo-renderer-marked --save 图片显示关联插件1npm install hexo-renderer-marked --save 该插件在卸载情况会出现图片不显示 HEXO插件问题Hexo更改主题后启动服务器，界面显如下字符:1extends includes&#x2F;layout.pug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo存在问题解决方案">
 <meta property="og:url" content="http://zdx-1.github.io/2024/03/10/hexo%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="Zdx-1">
-<meta property="og:description" content="HEXO插件问题添加一行数据 $$123456$$​ 如果图片，公式显示错误1npm install hexo-renderer-marked --save    图片显示关联插件1npm install hexo-renderer-marked --save  该插件在卸载情况会出现图片不显示 HEXO插件问题Hexo更改主题后启动服务器，界面显如下字符:1extends includes&#x2F;la">
+<meta property="og:description" content="HEXO插件问题添加一行数据 123456​ 如果图片，公式显示错误1npm install hexo-renderer-marked --save 图片显示关联插件1npm install hexo-renderer-marked --save 该插件在卸载情况会出现图片不显示 HEXO插件问题Hexo更改主题后启动服务器，界面显如下字符:1extends includes&#x2F;layout.pug">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-10T01:49:03.000Z">
 <meta property="article:modified_time" content="2024-05-26T06:22:29.403Z">
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          847 字
+          666 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          8 分钟
+          6 分钟
         
       </span>
     
@@ -298,43 +298,30 @@
               <div class="markdown-body">
                 
                 <h1 id="HEXO插件问题"><a href="#HEXO插件问题" class="headerlink" title="HEXO插件问题"></a>HEXO插件问题</h1><p>添加一行数据</p>
-<p>$$123456$$​</p>
+<p><script type="math/tex">123456</script>​</p>
 <h2 id="如果图片，公式显示错误"><a href="#如果图片，公式显示错误" class="headerlink" title="如果图片，公式显示错误"></a>如果图片，公式显示错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-renderer-marked --save<br></code></pre></td></tr></table></figure>
-
-
-
 <h2 id="图片显示关联插件"><a href="#图片显示关联插件" class="headerlink" title="图片显示关联插件"></a>图片显示关联插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-renderer-marked --save<br></code></pre></td></tr></table></figure>
-
 <p>该插件在卸载情况会出现图片不显示</p>
 <h2 id="HEXO插件问题-1"><a href="#HEXO插件问题-1" class="headerlink" title="HEXO插件问题"></a>HEXO插件问题</h2><h3 id="Hexo更改主题后启动服务器，界面显如下字符"><a href="#Hexo更改主题后启动服务器，界面显如下字符" class="headerlink" title="Hexo更改主题后启动服务器，界面显如下字符:"></a>Hexo更改主题后启动服务器，界面显如下字符:</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">extends</span> <span class="hljs-keyword">includes</span><span class="hljs-regexp">/layout.pug block content include includes/</span>recent-posts.pug <span class="hljs-keyword">include</span> <span class="hljs-keyword">includes</span>/partial<br></code></pre></td></tr></table></figure>
-
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案:"></a>解决方案:</h3><h3 id="执行如下命令"><a href="#执行如下命令" class="headerlink" title="执行如下命令"></a>执行如下命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">下载对应的插件驱动</span><br>npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive<br><span class="hljs-meta prompt_">#</span><span class="language-bash">清除缓存</span><br>hexo clean<br><span class="hljs-meta prompt_">#</span><span class="language-bash">生成静态文件即可</span><br>hexo g<br></code></pre></td></tr></table></figure>
-
 <h2 id="HEXO公式无法正常显示"><a href="#HEXO公式无法正常显示" class="headerlink" title="HEXO公式无法正常显示"></a>HEXO公式无法正常显示</h2><h4 id="更换Hexo的markdown渲染引擎"><a href="#更换Hexo的markdown渲染引擎" class="headerlink" title="更换Hexo的markdown渲染引擎"></a>更换Hexo的markdown渲染引擎</h4><p>先后执行下面的两条命令，第一条表示将默认的渲染引擎hexo-renderer-marked卸载，第二条命令是安装hexo-renderer-kramed渲染引擎，此渲染引擎修改了hexo-renderer-marked渲染引擎的一些bug。</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua">npm uninstall hexo-renderer-marked <span class="hljs-comment">--save</span><br>npm install hexo-renderer-kramed <span class="hljs-comment">--save</span><br>npm install hexo-<span class="hljs-built_in">math</span> <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
-
 <h4 id="修改node-modules-kramed-lib-rules-inline-js文件"><a href="#修改node-modules-kramed-lib-rules-inline-js文件" class="headerlink" title="修改node_modules\kramed\lib\rules\inline.js文件"></a>修改node_modules\kramed\lib\rules\inline.js文件</h4><p>hexo-renderer-marked渲染引擎仍然存在一些语义冲突问题，到博客的根目录下，找到node_modules\kramed\lib\rules\inline.js，把第11行的escape变量的值做相应的修改：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br>  <span class="hljs-attr">escape</span>: <span class="hljs-regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span>,<br></code></pre></td></tr></table></figure>
-
-<p>这一步是在原基础上取消了对,{,}的转义(escape)。</p>
+<p>这一步是在原基础上取消了对\,{,}的转义(escape)。</p>
 <p>同时把第20行的em变量也要做相应的修改。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br>  <span class="hljs-attr">em</span>: <span class="hljs-regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,<br></code></pre></td></tr></table></figure>
-
-<h4 id="在主题中开启mathjax开关"><a href="#在主题中开启mathjax开关" class="headerlink" title="在主题中开启mathjax开关"></a>在主题中开启mathjax开关</h4><p>到博客根目录下，找到themes&#x2F;next&#x2F;_config.yml，把math默认的flase修改为true，具体如下：</p>
+<h4 id="在主题中开启mathjax开关"><a href="#在主题中开启mathjax开关" class="headerlink" title="在主题中开启mathjax开关"></a>在主题中开启mathjax开关</h4><p>到博客根目录下，找到themes/next/_config.yml，把math默认的flase修改为true，具体如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Math Equations Render Support</span><br><span class="hljs-attr">math:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">per_page:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></td></tr></table></figure>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 数学公式显示问题</span><br><span class="hljs-attr">mathjax:</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">none</span> <span class="hljs-comment"># 或 &#x27;ams&#x27; 或 &#x27;all&#x27;</span><br>  <span class="hljs-attr">single_dollars:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 启用单个美元符号作为内联（行内）数学公式定界符</span><br>  <span class="hljs-attr">cjk_width:</span> <span class="hljs-number">0.9</span> <span class="hljs-comment"># 相对 CJK 字符宽度</span><br>  <span class="hljs-attr">normal_width:</span> <span class="hljs-number">0.6</span> <span class="hljs-comment"># 相对正常（等宽）宽度</span><br>  <span class="hljs-attr">append_css:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 将 CSS 添加到每个页面</span><br>  <span class="hljs-attr">every_page:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 如果为 true，那么无论每篇文章的前题中的 `mathjax` 设置如何，每页都将由 mathjax 呈现</span><br>  <span class="hljs-attr">per_page:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">cdn:</span> <span class="hljs-string">//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML</span><br></code></pre></td></tr></table></figure>
-
-
 <h4 id="在文章的Front-matter里打开mathjax开关"><a href="#在文章的Front-matter里打开mathjax开关" class="headerlink" title="在文章的Front-matter里打开mathjax开关"></a>在文章的Front-matter里打开mathjax开关</h4><p>如果你写的文章里面用到了数学公式，需要在文章Front-matter里打开mathjax开关。如果用不到数学公式，则不需要管它。</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs md">---<br>title: index.html<br>date: 2018-12-5 01:30:30<br>tags:<br><span class="hljs-section">mathjax: true</span><br><span class="hljs-section">--</span><br></code></pre></td></tr></table></figure>
-
 <h4 id="重启hexo"><a href="#重启hexo" class="headerlink" title="重启hexo"></a>重启hexo</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <span class="hljs-comment">#清除缓存文件</span><br>hexo g -d  <span class="hljs-comment">#生成并部署hexo</span><br></code></pre></td></tr></table></figure>
-
 <p>到这里，hexo中无法显示数学公式的问题就得到解决了！</p>
 <p>如果还不行</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangqingchuan92/article/details/114265007?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-0-114265007-blog-120452165.235%5Ev43%5Epc_blog_bottom_relevance_base2&spm=1001.2101.3001.4242.1&utm_relevant_index=3">【个人网站搭建】hexo框架下支持显示MathJax数学公式_hexo使用mathjax显示公式-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangqingchuan92/article/details/114265007?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-0-114265007-blog-120452165.235^v43^pc_blog_bottom_relevance_base2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">【个人网站搭建】hexo框架下支持显示MathJax数学公式_hexo使用mathjax显示公式-CSDN博客</a></p>
 <p><a target="_blank" rel="noopener" href="https://monkey0105.github.io/2017/09/21/hexo-mathjax/">Hexo博客数学公式显示 | Dreamland (monkey0105.github.io)</a></p>
-<h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h4><p>[成功解决在hexo中无法显示数学公式的问题 | 初心 (runninggump.github.io)](<a target="_blank" rel="noopener" href="https://runninggump.github.io/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/#:~:text=%E5%89%8D%E8%A8%80%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%9C%A8%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B%E6%B8%B2%E6%9F%93%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E6%97%B6%E5%80%99%E6%98%AF%E4%BC%9A%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E3%80%82%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%88%AA%E5%9B%BE%E6%98%AF%E6%88%91%E7%9A%84%E5%85%88%E5%89%8D%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93%E9%94%99%E8%AF%AF%EF%BC%9A">https://runninggump.github.io/2018/12/05/成功解决在hexo中无法显示数学公式的问题/#:~:text=前言基于Hexo搭建的个人博客，在默认情况下渲染数学公式的时候是会出现问题的。下面的截图是我的先前的博客中出现的公式渲染错误：</a> 经过了一波百度操作后，成功将问题解决，下面是解决后的截图：,下面我将我的操作写在下面，供需要的人参考。 解决步骤更换Hexo的markdown渲染引擎先后执行下面的两条命令，第一条表示将默认的渲染引擎hexo-renderer-marked卸载，第二条命令是安装hex)</p>
+<h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h4><p><a target="_blank" rel="noopener" href="https://runninggump.github.io/2018/12/05/成功解决在hexo中无法显示数学公式的问题/#:~:text=前言基于Hexo搭建的个人博客，在默认情况下渲染数学公式的时候是会出现问题的。下面的截图是我的先前的博客中出现的公式渲染错误： 经过了一波百度操作后，成功将问题解决，下面是解决后的截图：,下面我将我的操作写在下面，供需要的人参考。 解决步骤更换Hexo的markdown渲染引擎先后执行下面的两条命令，第一条表示将默认的渲染引擎hexo-renderer-marked卸载，第二条命令是安装hex">成功解决在hexo中无法显示数学公式的问题 | 初心 (runninggump.github.io)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7ab21c7f0674">在Hexo中渲染MathJax数学公式</a></p>
 
                 
