@@ -1,0 +1,1329 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zdx">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第十四届Python大学C组跑步计划问题描述小蓝计划在某天的日期中出现 $1$ 时跑 $5$ 千米，否则只跑 $1$ 千米。注意日期中出现 $1$ 不仅指年月日也指星期。 请问按照小蓝的计划，$2023$ 年小蓝总共会跑步锻炼多少千米?例如，$5$ 月 $1$ 日、$1$ 月 $13$ 日、$11$ 月 $5$ 日、$4$ 月 $3$ 日 (星期一) 小蓝会跑 $5$ 千米，而 $5$ 月 $23">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥杯国赛试题解析">
+<meta property="og:url" content="http://zdx-1.github.io/2024/05/26/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/index.html">
+<meta property="og:site_name" content="Zdx-1">
+<meta property="og:description" content="第十四届Python大学C组跑步计划问题描述小蓝计划在某天的日期中出现 $1$ 时跑 $5$ 千米，否则只跑 $1$ 千米。注意日期中出现 $1$ 不仅指年月日也指星期。 请问按照小蓝的计划，$2023$ 年小蓝总共会跑步锻炼多少千米?例如，$5$ 月 $1$ 日、$1$ 月 $13$ 日、$11$ 月 $5$ 日、$4$ 月 $3$ 日 (星期一) 小蓝会跑 $5$ 千米，而 $5$ 月 $23">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/uid2479109-20240516-1715843529436.png">
+<meta property="article:published_time" content="2024-05-26T11:02:40.000Z">
+<meta property="article:modified_time" content="2024-05-27T12:30:36.772Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://zdx-1.github.io/images/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/uid2479109-20240516-1715843529436.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>蓝桥杯国赛试题解析 - Zdx-1</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Zdx-1</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="蓝桥杯国赛试题解析"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        zdx
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-26 19:02" pubdate>
+          2024年5月26日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          46 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">蓝桥杯国赛试题解析</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年5月27日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="第十四届Python大学C组"><a href="#第十四届Python大学C组" class="headerlink" title="第十四届Python大学C组"></a>第十四届Python大学C组</h1><h2 id="跑步计划"><a href="#跑步计划" class="headerlink" title="跑步计划"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17113/learning">跑步计划</a></h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>小蓝计划在某天的日期中出现 $1$ 时跑 $5$ 千米，否则只跑 $1$ 千米。注意日期中出现 $1$ 不仅指年月日也指星期。</p>
+<p>请问按照小蓝的计划，$2023$ 年小蓝总共会跑步锻炼多少千米?例如，$5$ 月 $1$ 日、$1$ 月 $13$ 日、$11$ 月 $5$ 日、$4$ 月 $3$ 日 (星期一) 小蓝会跑 $5$ 千米，而 $5$ 月 $23$ 日小蓝会跑 $1$ 千米 (示例日期均为 $2023$ 年)</p>
+<h3 id="答案提交"><a href="#答案提交" class="headerlink" title="答案提交"></a>答案提交</h3><p>这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。</p>
+<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 714  |  总提交次数: 778  |  通过率: 91.8%</p>
+<p>难度: 中等   标签: 2023, 国赛, 日期问题</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<br>bt = datetime.date(<span class="hljs-number">2023</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br>c = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">366</span>):<br>    bt += datetime.timedelta(days=<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;1&#x27;</span> <span class="hljs-keyword">in</span> bt.isoformat() <span class="hljs-keyword">or</span> bt.isoweekday() == <span class="hljs-number">1</span>:<br>        c += <span class="hljs-number">5</span><br>    <span class="hljs-keyword">else</span>:<br>        c += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(c)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">sun = <span class="hljs-number">0</span><br><span class="hljs-keyword">import</span> datetime<br>a = datetime.date(<span class="hljs-number">2023</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">366</span>):<br>  <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;1&#x27;</span> <span class="hljs-keyword">in</span> a.strftime(<span class="hljs-string">&quot;%m%d%w&quot;</span>) :sun+=<span class="hljs-number">4</span><br>  sun+=<span class="hljs-number">1</span><br>  a += datetime.timedelta(days = <span class="hljs-number">1</span>)<br><span class="hljs-built_in">print</span>(sun)<br></code></pre></td></tr></table></figure>
+
+<h2 id="混乘数字"><a href="#混乘数字" class="headerlink" title="混乘数字"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17121/learning">混乘数字</a></h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>混乘数字的定义如下: 对于一个正整数 $n$，如果存在正整数 $a, b$，使得 $n &#x3D; a \times b$，而且 $a$ 和 $b$ 的十进制数位中每个数字出现的次数之和与 $n$ 中对应数字出现次数相同，则称 $n$ 为混乘数字。</p>
+<p>例如，对于正整数 $n &#x3D; 126$，存在 $a &#x3D; 6$, $b &#x3D; 21$ 满足条件，因此 $126$ 是一个混乘数字。</p>
+<p>又如，对于正整数 $n &#x3D; 180225$，存在 $a &#x3D; 225$, $b &#x3D; 801$ 满足条件，因此 $180225$ 是一个混乘数字。</p>
+<p>请你帮助计算出，$1 \sim 1000000$ (含)之间一共有多少个数字是混乘数字。</p>
+<h3 id="答案提交-1"><a href="#答案提交-1" class="headerlink" title="答案提交"></a>答案提交</h3><p>这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。</p>
+<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict<br><span class="hljs-comment"># 混乘数字：</span><br><span class="hljs-comment"># 条件1：a * b == n</span><br><span class="hljs-comment"># 条件2：a、b一定是n的因子</span><br><span class="hljs-comment"># 条件3：且a、b中各个数字出现次数 == n中各个数字出现次数</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">isHunc</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;返回True代表是混乘数字&quot;&quot;&quot;</span><br>    <span class="hljs-comment"># 1. 求n中每个数字出现次数</span><br>    nums = defaultdict(<span class="hljs-built_in">int</span>)<br>    <span class="hljs-keyword">for</span> kwd <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span>(<span class="hljs-built_in">str</span>(n)):<br>        nums[kwd] += <span class="hljs-number">1</span><br>    <span class="hljs-comment"># 2. 开启暴力美学</span><br>    <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-built_in">int</span>(math.sqrt(n)) + <span class="hljs-number">1</span>):    <span class="hljs-comment"># 两个因子相乘，绝对有一个因子&lt;= 开平方后的值</span><br>        <span class="hljs-comment"># 判断是否符合条件1、2</span><br>        <span class="hljs-keyword">if</span> n % a == <span class="hljs-number">0</span>:<br>            b = n // a<br>            <span class="hljs-comment"># 判断是否符合条件3</span><br>            <span class="hljs-keyword">if</span> cnt_dy(a, b, nums):<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">cnt_dy</span>(<span class="hljs-params">a, b, nums</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;符合条件3 返回 True&quot;&quot;&quot;</span><br>    <span class="hljs-comment"># nums是可变对象，形参改变实参也会改变，我们需要将他的值复制，这样才不对原始数据造成更改</span><br>    now = nums.copy()<br>    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">str</span>(a):<br>        now[k] -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> now[k] &lt; <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">str</span>(b):<br>        now[k] -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> now[k] &lt; <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-comment"># 判断字典中是否还有值</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">sum</span>(now.values()) != <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>ans = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">125</span>, <span class="hljs-number">1000001</span>):<br>     <span class="hljs-keyword">if</span> isHunc(i):<br>         ans += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">import</span> math<br>count = <span class="hljs-number">0</span><br><br><span class="hljs-comment"># for i in range(1,1000001):</span><br><span class="hljs-comment">#   for j in range(2,int(math.sqrt(i))+1):</span><br><span class="hljs-comment">#     if i % j == 0:</span><br><span class="hljs-comment">#       if sorted(str(i)) == sorted(str(j)+str(i//j)):</span><br><span class="hljs-comment">#         count += 1</span><br><span class="hljs-comment">#         break</span><br><span class="hljs-comment">#   if i % 100000 == 0:</span><br><span class="hljs-comment">#     print(i,count)</span><br><br><span class="hljs-comment"># print(count)</span><br><span class="hljs-built_in">print</span>(<span class="hljs-number">590</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="整数变换"><a href="#整数变换" class="headerlink" title="整数变换"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17151/learning">整数变换</a></h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>小蓝有一个整数 $n$。每分钟，小蓝的数都会发生变化，变为上一分钟的数减去上一分钟的数的各个数位和。</p>
+<p>例如，如果小蓝开始时的数为 $23$，则下一分钟变为 $23 − (2 + 3) &#x3D; 18$，再下一分钟变为 $18 − (1 + 8) &#x3D; 9$，再下一分钟变为 $9 − 9 &#x3D; 0$，共经过了 $3$ 分钟变为 $0$。</p>
+<p>给定一个正整数，请问这个数多少分钟后变为 $0$。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一行包含一个整数 $n$。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数，表示答案。</p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">23<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">3<br></code></pre></td></tr></table></figure>
+
+<h3 id="评测用例规模与约定"><a href="#评测用例规模与约定" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30%$ 的评测用例，$1 ≤ n ≤ 1000$;</p>
+<p>对于 $60%$ 的评测用例，$1 ≤ n ≤ 10^6$;</p>
+<p>对于所有评测用例，$1 ≤ n ≤ 10^9$。</p>
+<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><p>这道题目需要使用pypy3，否则会超时</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs py">n = <span class="hljs-built_in">input</span>()<br>int_n = <span class="hljs-built_in">int</span>(n)<br>ans = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> int_n &gt; <span class="hljs-number">0</span>:<br>    s = <span class="hljs-built_in">sum</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">list</span>(<span class="hljs-built_in">str</span>(int_n))))<br>    int_n -= s<br>    ans += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17115/learning">定时任务</a></h2><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>Cron 表达式在定时任务中经常被使用，在这里我们用了一种简化后的版本 SimpleCron 表达式：SimpleCron 表达式是一个具有时间含义的字符串，字符串以 $4$ 个空格隔开，分为 $5$ 个域，格式为 $X X X X X$，其中 $X$ 是一个域的占位符。$5$ 个域从左至右依次为秒 $(0 - 59)$、分钟 $(0 - 59)$、小时 $(0 - 23)$、日期 $(1 - 31)$、月份 $(1 - 12)$，其中括号内为他们各自的取值范围。同时域内取值也可以使用一些特殊字符（每个域内只能使用一种特殊字符）:</p>
+<ol>
+<li>特殊字符 $*$ （ASCII 码为 $42$）表示所有可能的值。例如：在分钟域内表示每一分钟；在日期域内表示月内的每一天。</li>
+<li>特殊字符 $,$ （ASCII 码为 $44$）表示列出枚举值。例如：在秒域内，$3,20$ 表示分别在 $3$ 秒和 $20$ 秒执行一次任务。</li>
+<li>特殊字符 $-$ （ASCII 码为 $45$）表示范围，可以视为连续的若干个枚举值。例如：$1-5$ 等价于 $1,2,3,4,5$。</li>
+</ol>
+<p>例如，$4 2 1,3,15 1-31 *$ 表示的含义是每个月份中的每一天中的 $01:02:04$、$03:02:04$、$15:02:04$ 这三个时刻各执行一次，在 $2023$ 年一共会执行 $1095$ 次。</p>
+<p>现在给出你一个合法的 SimpleCron 表达式，其中用到的所有数字均没有前导零。请问在 $2023$ 一整年当中，使用了这个表达式的定时任务总计会执行多少次?</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一行，包含一个 SimpleCron 字符串。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行，包含一个整数表示答案。</p>
+<h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h3><p><span>4 </span><span>2</span> <span>1</span>,<span>3</span>,<span>15</span> <span>1</span>-<span>31</span> *</p>
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出"></a>样例输出</h3><p><span>1095</span></p>
+<h3 id="评测用例规模与约定-1"><a href="#评测用例规模与约定-1" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于所有评测用例，$0 ≤$ 秒域的取值 $≤ 59$，$0 ≤$ 分钟域的取值 $≤ 59$，$0 ≤$ 小时域的取值 $≤ 23$，$1 ≤$ 日期域的取值 $≤ 31$，$1 ≤$ 月份域的取值 $≤ 12$。</p>
+<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 181  |  总提交次数: 251  |  通过率: 72.1%</p>
+<p>难度: 中等   标签: 2023, 国赛, 日期问题</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> datetime<br><br>time = <span class="hljs-built_in">input</span>().split()<br>a = [[<span class="hljs-number">0</span>, <span class="hljs-number">59</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">59</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">23</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">31</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">12</span>]]<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>): <span class="hljs-comment"># 先得到对应时间点，哪些时间有任务</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;*&#x27;</span> <span class="hljs-keyword">in</span> time[i]:<br>        time[i] = <span class="hljs-built_in">range</span>(a[i][<span class="hljs-number">0</span>], a[i][<span class="hljs-number">1</span>] + <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;-&#x27;</span> <span class="hljs-keyword">in</span> time[i]:<br>        l, r = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, time[i].split(<span class="hljs-string">&#x27;-&#x27;</span>))<br>        time[i] = <span class="hljs-built_in">range</span>(l, r + <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;,&#x27;</span> <span class="hljs-keyword">in</span> time[i]:<br>        time[i] = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, time[i].split(<span class="hljs-string">&#x27;,&#x27;</span>)))<br>    <span class="hljs-keyword">else</span>:<br>        time[i] = [<span class="hljs-built_in">int</span>(time[i])]<br><br>s, f, h, d, m = time<br><br>days = <span class="hljs-built_in">len</span>(s) * <span class="hljs-built_in">len</span>(f) * <span class="hljs-built_in">len</span>(h) <span class="hljs-comment">#一天的任务次数可以直接求得</span><br><br>start = datetime.date(<span class="hljs-number">2023</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br>end = datetime.date(<span class="hljs-number">2024</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br>t = datetime.timedelta(days=<span class="hljs-number">1</span>)<br><br>cnt = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> start &lt; end: <span class="hljs-comment">#按天遍历</span><br>    _, M, D = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">str</span>(start).split(<span class="hljs-string">&#x27;-&#x27;</span>))<br><br>    <span class="hljs-keyword">if</span> M <span class="hljs-keyword">in</span> m <span class="hljs-keyword">and</span> D <span class="hljs-keyword">in</span> d:<span class="hljs-comment">#满足累加每天的任务</span><br>        cnt += days<br>    start += t<br><br><span class="hljs-built_in">print</span>(cnt)<br></code></pre></td></tr></table></figure>
+
+<h2 id="2023"><a href="#2023" class="headerlink" title="2023"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17116/learning">2023</a></h2><h3 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定 $n$, $m$，请求出所有 $n$ 位十进制整数中有多少个数中恰好出现了 $m$ 个 $2023$。</p>
+<p>例如 $00202312023$ 是一个 $11$ 位的出现了 $2$ 个 $2023$ 的十进制整数。由于结果可能很大，请输出答案对 $998244353$ 取模的结果。</p>
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一行包含两个整数 $n$, $m$，用一个空格分隔。</p>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行包含一个整数表示答案。</p>
+<h3 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入"></a>样例输入</h3><p><span>5 </span><span>1</span></p>
+<h3 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">20<br></code></pre></td></tr></table></figure>
+
+<h3 id="评测用例规模与约定-2"><a href="#评测用例规模与约定-2" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $40%$ 的评测用例，$n ≤ 10^5$，$m ≤ 10$；</p>
+<p>对于所有评测用例，$4 ≤ n ≤ 10^5$，$0 ≤ 4m ≤ n$。</p>
+<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 34  |  总提交次数: 232  |  通过率: 14.7%</p>
+<p>难度: 中等   标签: 2023, 国赛, 排列组合, 二项式定理</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h3 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">quickpow</span>(<span class="hljs-params">a, n, mod</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    快速幂算法，计算 a 的 n 次幂对 mod 取模的结果</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    ans = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> n:<br>        <span class="hljs-keyword">if</span> n &amp; <span class="hljs-number">1</span>:<br>            ans = ans * a % mod<br>        a = a * a % mod<br>        n &gt;&gt;= <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> ans<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">C</span>(<span class="hljs-params">m, n, fact, inv, mod</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    计算组合数 C(m, n) % mod 的值</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">return</span> fact[n] * inv[m] % mod * inv[n - m] % mod<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fact_init</span>(<span class="hljs-params">mod</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    初始化阶乘数组和逆元数组</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    fact = [<span class="hljs-number">0</span>] * (<span class="hljs-number">100001</span>)<br>    inv = [<span class="hljs-number">0</span>] * (<span class="hljs-number">100001</span>)<br>    fact[<span class="hljs-number">0</span>] = inv[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">100001</span>):<br>        fact[i] = fact[i - <span class="hljs-number">1</span>] * i % mod<br>        inv[i] = inv[i - <span class="hljs-number">1</span>] * quickpow(i, mod - <span class="hljs-number">2</span>, mod) % mod<br>    <span class="hljs-keyword">return</span> fact, inv<br><br><br>n, m = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>k = n // <span class="hljs-number">4</span><br>ans = <span class="hljs-number">0</span><br>mod = <span class="hljs-number">998244353</span><br>fact, inv = fact_init(mod)<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m, k + <span class="hljs-number">1</span>):<br>    ans += (-<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> (i - m) % <span class="hljs-number">2</span> <span class="hljs-keyword">else</span> <span class="hljs-number">1</span>) * C(m, i, fact, inv, mod) * C(i, n - <span class="hljs-number">3</span> * i, fact, inv, mod) * quickpow(<span class="hljs-number">10</span>, n - <span class="hljs-number">4</span> * i, mod)<br>    ans %= mod<br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/./../images/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9B%BD%E8%B5%9B%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/uid2479109-20240516-1715843529436.png" srcset="/img/loading.gif" lazyload alt="二项式反演"></p>
+<h2 id="最大算式"><a href="#最大算式" class="headerlink" title="最大算式"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17129/learning">最大算式</a></h2><h3 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定 $n$ 个非负整数 $A_i$ ，你可以在不改变这些数顺序的前提下任意在他们之间插入 $+,*,(,)$ 四种符号 。</p>
+<p>请问在得到的算式合法的前提下，算式的结果最大可以是多少?</p>
+<p>由于结果很大，你只需要输出答案对 $10^9+7$ 取模的结果即可。</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入的第一行包含一个整数 $n$ 。</p>
+<p>第二行包含 $n$ 个整数，分别表示 $A_1, A_2, \cdots, A_n$ ，相邻两个整数之间使用一个空格分隔。</p>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一行包含一个整数表示答案。</p>
+<h3 id="样例输入-3"><a href="#样例输入-3" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">7 1 2 1 1 1 2 1<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例输出-3"><a href="#样例输出-3" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">27<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h3><p>$(1+2)\times(1+1+1)\times(2+1)&#x3D;27$ .</p>
+<h3 id="评测用例规模"><a href="#评测用例规模" class="headerlink" title="评测用例规模"></a>评测用例规模</h3><p>对于 $40%$ 的评测用例， $n \leq 5000$ ；</p>
+<p>对于所有评测用例， $1 \leq n \leq 10^5$ ， $0 \leq A_i \leq 10^9$ 。</p>
+<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 22  |  总提交次数: 38  |  通过率: 57.9%</p>
+<p>难度: 中等   标签: 2023, 贪心, 国赛, 数学</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h3 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> sys<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">x</span>):<br>    <span class="hljs-keyword">if</span> m[i]==<span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">if</span> s[-<span class="hljs-number">1</span>]==<span class="hljs-number">2</span>:<br>            s[-<span class="hljs-number">1</span>]+=<span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> s[-<span class="hljs-number">1</span>]&gt;m[i+<span class="hljs-number">1</span>] <span class="hljs-keyword">and</span> m[i+<span class="hljs-number">1</span>]!=<span class="hljs-number">0</span>:<br>            m[i+<span class="hljs-number">1</span>]+=<span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            s[-<span class="hljs-number">1</span>]+=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        s.append(m[i])<br>n=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>m=<span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split()))<br>s=[]<br><span class="hljs-keyword">if</span> m[<span class="hljs-number">0</span>]==<span class="hljs-number">1</span>:<br>    m[<span class="hljs-number">1</span>]+=<span class="hljs-number">1</span><br><span class="hljs-keyword">else</span>:<br>    s.append(m[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n-<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">if</span> m[i]!=<span class="hljs-number">0</span>:<br>        find(i)<br><span class="hljs-keyword">if</span> m[-<span class="hljs-number">1</span>]==<span class="hljs-number">1</span>:<br>    s[-<span class="hljs-number">1</span>]+=<span class="hljs-number">1</span><br><span class="hljs-keyword">elif</span> m[-<span class="hljs-number">1</span>]!=<span class="hljs-number">0</span>:<br>    s.append(m[-<span class="hljs-number">1</span>])<br>k=<span class="hljs-number">1</span><br>num=<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> s:<br>    k=k*j<br>num+=k<br><span class="hljs-built_in">print</span>(num%<span class="hljs-number">1000000007</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="躲炮弹"><a href="#躲炮弹" class="headerlink" title="躲炮弹"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17123/learning/">躲炮弹</a></h2><h3 id="问题描述-6"><a href="#问题描述-6" class="headerlink" title="问题描述"></a>问题描述</h3><p>小蓝正在玩一个躲炮弹的游戏。游戏中有一个人物和一个炮塔，它们的初始距离为 $n$。</p>
+<p>炮塔可能选择在区间 $[L, R]$ 上的任意一个整数 $x$，然后发射的炮弹会飞向小蓝操控的人物。但炮弹只会在飞出 $x$ 的倍数的距离($x, 2x, 3x, \ldots$)时落地，然后弹回到空中。如果小蓝操控的人物恰好站在了炮弹落地的位置，那么游戏就会结束。</p>
+<p>小蓝只能在炮弹发射前移动他的人物，每移动一步，可以使得人物和炮塔的距离增加 $1$ 或者减少 $1$。他想知道最少要移动多少步才能保证自己的人物一定能躲过炮弹。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一行包含三个整数 $n, L, R$，相邻的整数之间使用一个空格分隔。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行包含一个整数，表示小蓝操纵的人物最少需要移动的步数。</p>
+<h3 id="样例输入-4"><a href="#样例输入-4" class="headerlink" title="样例输入"></a>样例输入</h3><p><span>10 </span><span>2</span> <span>13</span></p>
+<h3 id="样例输出-4"><a href="#样例输出-4" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">7<br></code></pre></td></tr></table></figure>
+
+<h3 id="评测用例规模与约定-3"><a href="#评测用例规模与约定-3" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $40%$ 的评测用例，$n, L, R \leq 10^6$；</p>
+<p>对于所有评测用例，$1 \leq n, L, R \leq 10^9$，$2 \leq L \leq R$。</p>
+<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 38  |  总提交次数: 94  |  通过率: 40.4%</p>
+<p>难度: 中等   标签: 2023, 国赛, 质因子分解</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h3 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs python">n, L, R = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">case 1: ans在n的右边 或者就是n</span><br><span class="hljs-string">case 2: n大于R ans在n-1到R+1之间</span><br><span class="hljs-string">case 3: ans在l-1这个位置</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-comment"># 找出当前数的所有质因数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pr_</span>(<span class="hljs-params">xx</span>):<br>    pr = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-built_in">int</span>(xx ** <span class="hljs-number">0.5</span>) + <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">while</span> xx % i == <span class="hljs-number">0</span>:<br>            pr.append(i)<br>            xx //= i<br>    <span class="hljs-keyword">if</span> xx &gt; <span class="hljs-number">1</span>: pr.append(xx)<br>    <span class="hljs-keyword">return</span> pr<br><span class="hljs-comment"># 如果当前x是质数或者x除以x的质因子的值小于low 则当前位置是安全位置</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">judge</span>(<span class="hljs-params">x, low</span>):<br>    nums = pr_(x)<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(nums) == <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> x<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> nums:<br>            <span class="hljs-comment"># 安全位置一定满足这一个条件 但是满足条件的不一定是安全位置</span><br>            <span class="hljs-comment"># 但我们可以保证最近的一个安全位置的前面一定不存在错误位置</span><br>            <span class="hljs-keyword">if</span> x // j &lt; low:<br>                <span class="hljs-keyword">return</span> x<br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span><br>ans = <span class="hljs-number">0</span><br><span class="hljs-comment"># case 1</span><br>res = <span class="hljs-built_in">max</span>(R + <span class="hljs-number">1</span>, n)<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    new_seat = judge(res, L)<br>    <span class="hljs-keyword">if</span> new_seat != -<span class="hljs-number">1</span>:<br>        ans = res - n<br>        <span class="hljs-keyword">break</span><br>    res += <span class="hljs-number">1</span><br><span class="hljs-comment"># case 2</span><br>res = n - <span class="hljs-number">1</span><br><span class="hljs-keyword">while</span> res &gt; R:<br>    new_seat = judge(res, L)<br>    <span class="hljs-keyword">if</span> new_seat != -<span class="hljs-number">1</span>:<br>        ans = <span class="hljs-built_in">min</span>(n - res, ans)<br>        <span class="hljs-keyword">break</span><br>    res -= <span class="hljs-number">1</span><br><span class="hljs-comment"># case 3 and 1, 2</span><br><span class="hljs-comment"># 如果n在L的特别左边是会返回负数的 所以要特判</span><br><span class="hljs-keyword">if</span> n &lt; L:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;0&#x27;</span>)<br><span class="hljs-keyword">elif</span> n == L:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;1&#x27;</span>)<br><span class="hljs-keyword">else</span>:  <br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">min</span>(n - L + <span class="hljs-number">1</span>, ans))<br></code></pre></td></tr></table></figure>
+
+<h2 id="走方格"><a href="#走方格" class="headerlink" title="走方格"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17118/learning/">走方格</a></h2><h3 id="问题描述-7"><a href="#问题描述-7" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个 $N$ 行 $N$ 列的方格，第 $i$ 行第 $j$ 列的方格坐标为 $(i, j)$，高度为 $H_{i, j}$。小蓝从左上角坐标 $(0, 0)$ 出发，目的地是右下角坐标 $(N - 1, N - 1)$。</p>
+<p>当小蓝位于第 $r$ 行第 $c$ 列时，他有如下的移动方式:</p>
+<ol>
+<li>若 $r + 1 &lt; N$，可以移动到 $(r + 1, c)$，花费 $1$ 秒;</li>
+<li>若 $c + 1 &lt; N$，可以移动到 $(r, c + 1)$，花费 $1$ 秒;</li>
+<li>对于任意整数 $L$，若 $H_{r,c} &gt; H_{r,c+1} &gt; \dots &gt; H_{r,c+L}$，可以移动到 $(r, c + L)$，花费 $1$ 秒;</li>
+<li>对于任意整数 $L$，若 $H_{r,c} &gt; H_{r,c-1} &gt; \dots &gt; H_{r,c-L}$，可以移动到 $(r, c - L)$，花费 $1$ 秒。</li>
+</ol>
+<p>现在给出方格，请问小蓝从 $(0, 0)$ 移动到 $(N - 1, N - 1)$ 最少需要多少秒?</p>
+<h3 id="输入格式-4"><a href="#输入格式-4" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入的第一行包含一个整数 $N$ 表示方格大小。</p>
+<p>接下来 $N$ 行，每行包含 $N$ 个整数，表示每个方格上的数字。</p>
+<h3 id="输出格式-4"><a href="#输出格式-4" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数表示答案。</p>
+<h3 id="样例输入-5"><a href="#样例输入-5" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>0 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>8 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>9 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="样例输出-5"><a href="#样例输出-5" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">5<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明-1"><a href="#样例说明-1" class="headerlink" title="样例说明"></a>样例说明</h3><p>移动顺序为: $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (3,0) \rightarrow (3,2) \rightarrow (3,3)$，其中坐标 $(3,0)$、$(3,1)$、$(3,2)$ 处的数字分别为 $9 &gt; 8 &gt; 0$，所以可以花费 $1$ 秒从 $(3,0)$ 移动到 $(3, 2)$。</p>
+<h3 id="评测用例规模与约定-4"><a href="#评测用例规模与约定-4" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $20%$ 的评测用例，$1 \leq N \leq 10$；</p>
+<p>对于 $50%$ 的评测用例，$1 \leq N \leq 100$；</p>
+<p>对于所有评测用例，$1 \leq N \leq 1000$，$0 \leq H_{i,j} \leq 100$。</p>
+<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>5s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<h3 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> *<br><span class="hljs-comment"># 请在此输入您的代码</span><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>nums = [[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n) ]<br>f = [[inf <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>)]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>  nums[i] = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split()))<br><span class="hljs-comment">#可以倒着走</span><br>f[n-<span class="hljs-number">1</span>][n] = -<span class="hljs-number">1</span><br>f[n][n-<span class="hljs-number">1</span>] = -<span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>  <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>    <span class="hljs-comment">#先更新自己</span><br>    f[i][j] = <span class="hljs-built_in">min</span>(f[i][j],f[i+<span class="hljs-number">1</span>][j]+<span class="hljs-number">1</span>,f[i][j+<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>)<br><br>    <span class="hljs-comment">#然后更新捷径，要连续大于两个的才算捷径</span><br>    <span class="hljs-comment">#看横向有无捷径,跳过你左边的,i不变</span><br>    <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(j,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>      <span class="hljs-keyword">if</span> l-<span class="hljs-number">1</span> &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> nums[i][l-<span class="hljs-number">1</span>] &gt; nums[i][l]:<br>        f[i][l-<span class="hljs-number">1</span>] = <span class="hljs-built_in">min</span>(f[i][l-<span class="hljs-number">1</span>],f[i][j] +<span class="hljs-number">1</span>)<br>      <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">break</span><br>    <span class="hljs-comment">#看纵向有无捷径，j不变</span><br>    <span class="hljs-comment"># for r in range(i,-1,-1):</span><br>    <span class="hljs-comment">#   if r-1 &gt;= 0 and nums[r-1][j] &gt; nums[r][j]:</span><br>    <span class="hljs-comment">#     f[r-1][j] = min(f[r-1][j],f[i][j] +1)</span><br>    <span class="hljs-comment">#   else:</span><br>    <span class="hljs-comment">#     break</span><br><br><span class="hljs-built_in">print</span>(f[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> sys<br><br>n=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>mp=[<span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split())) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br>inf=<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;inf&#x27;</span>)<br>dp=[[<span class="hljs-number">0</span>]*n <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)] <span class="hljs-comment">#到x,y花费的最少步数</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    dp[i][<span class="hljs-number">0</span>]=i <span class="hljs-comment">#第i行第一个数为i</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n):<br>        dp[i][j]=inf<br>        <span class="hljs-keyword">if</span> i&gt;<span class="hljs-number">0</span>:<br>            dp[i][j]=<span class="hljs-built_in">min</span>(dp[i][j],dp[i-<span class="hljs-number">1</span>][j]+<span class="hljs-number">1</span>) <span class="hljs-comment">#从上往下走一格</span><br>            <br>        k=j<br>        <span class="hljs-keyword">while</span> mp[i][k]&lt;mp[i][k-<span class="hljs-number">1</span>] <span class="hljs-keyword">and</span> k&gt;=<span class="hljs-number">1</span>:<br>            dp[i][j]=<span class="hljs-built_in">min</span>(dp[i][j],dp[i][k-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>) <span class="hljs-comment">#从左往右走，且判断是否满足题目第三个条件</span><br>            k-=<span class="hljs-number">1</span><br>            <br>        dp[i][j]=<span class="hljs-built_in">min</span>(dp[i][j],dp[i][j-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>) <span class="hljs-comment">#从左往右走一格</span><br><br><span class="hljs-built_in">print</span>(dp[-<span class="hljs-number">1</span>][-<span class="hljs-number">1</span>])<br><br><span class="hljs-comment">#题目第四个条件会增加步数，不能减少，会多走一步</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="等腰三角形"><a href="#等腰三角形" class="headerlink" title="等腰三角形"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17131/learning/">等腰三角形</a></h2><h3 id="问题描述-8"><a href="#问题描述-8" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个包含 $n$ 个数的序列 $A_i$ ，每次操作可以选择其中任意一个数将其 $+1$ 或 $-1$ 。</p>
+<p>我们要让这个序列满足能够从中任选三个数，这三个数对应长度的三条边总能组成一个等腰三角形。问最少需要多少次操作才能让序列满足条件。</p>
+<h3 id="输入描述-1"><a href="#输入描述-1" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入的第一行包含一个整数 $n$ 。</p>
+<p>第二行包含 $n$ 个整数，分别表示 $A_1, A_2, \cdots, A_n$ ，相邻两个整数之间使用一个空格分隔。</p>
+<h3 id="输出描述-1"><a href="#输出描述-1" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出一行包含一个整数，表示最少的操作次数。</p>
+<h3 id="样例输入-6"><a href="#样例输入-6" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">5 3 3 5 7 7<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例输出-6"><a href="#样例输出-6" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">3<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明-2"><a href="#样例说明-2" class="headerlink" title="样例说明"></a>样例说明</h3><p>将原序列修改为 $4,4,4,7,7$ 即可。</p>
+<h3 id="评测用例规模-1"><a href="#评测用例规模-1" class="headerlink" title="评测用例规模"></a>评测用例规模</h3><p>对于 $40%$ 的评测用例， $n \leq 5000$ ， $A_i \leq 5000$ ；</p>
+<p>对于 $70%$ 的评测用例， $n \leq 2\times 10^5$ ， $A_i \leq 10^6$ ；</p>
+<p>对于所有评测用例， $1 \leq n \leq 2\times 10^5$ ， $1 \leq A_i \leq 10^9$ 。w</p>
+<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 7  |  总提交次数: 69  |  通过率: 10.1%</p>
+<p>难度: 中等   标签: 2023, 国赛, 数学, 分类讨论</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h2 id="单词分类"><a href="#单词分类" class="headerlink" title="单词分类"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17126/learning/">单词分类</a></h2><h3 id="问题描述-9"><a href="#问题描述-9" class="headerlink" title="问题描述"></a>问题描述</h3><p>在遥远的 $\text{LQ}$ 国，只存在三种字符：$\text{l、q }$和 $\text{b}$ (ASCII 码分别为 $108、113、98$)，所有的单词都由这三种字符组合而来。小蓝为了更加快速的记忆单词，决定将词典上所有的单词按照单词前缀将其分为 $K$ 类，具体的要求是:</p>
+<ol>
+<li>选出 $K$ 个不同的单词前缀作为 $K$ 类；</li>
+<li>对于字典上的每个单词，只能属于 $K$ 类中的某一个类，不能同时属于多个类；</li>
+<li>对于 $K$ 类中的每个类，至少包含有一个单词。</li>
+</ol>
+<p>现在已知字典上一共有 $N$ 个单词，小蓝想要知道将这 $N$ 个单词按照上述要求分为 $K$ 类，一共有多少种不同的方案。两个方案不同指的是两个方案各自选出的 $K$ 个单词前缀不完全相同。答案可能过大，所以你需要将答案对 $1000000007$ (即 $10^9 + 7$)取模后输出。</p>
+<h3 id="输入格式-5"><a href="#输入格式-5" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入的第一行包含两个整数 $N$ 和 $K$；</p>
+<p>接下来 $N$ 行，每行包含一个单词，由 $\text{l、q、b}$ 三种字符组成。</p>
+<h3 id="输出格式-5"><a href="#输出格式-5" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数表示答案。答案可能很大，请输出答案对 $1000000007$ 取模的值。</p>
+<h3 id="样例输入-7"><a href="#样例输入-7" class="headerlink" title="样例输入"></a>样例输入</h3><p><span>4</span> <span>2</span><br><span>lqb</span><br><span>lql</span><br><span>qqq</span><br><span>qql</span></p>
+<h3 id="样例输出-7"><a href="#样例输出-7" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">4<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例说明-3"><a href="#样例说明-3" class="headerlink" title="样例说明"></a>样例说明</h3><p>方案 1：$\text{l&#x3D;lqb,lql、q&#x3D;qqq,qql}$; 方案 2：$\text{lq&#x3D;lqb,lql、q&#x3D;qqq,qql}$; 方案 3：$\text{l&#x3D;lqb,lql、qq&#x3D;qqq,qql}$; 方案 4：$\text{lq&#x3D;lqb,lql、qq&#x3D;qqq,qql}$。</p>
+<p>以方案 1 为例，他表示选出的两类对应的前缀分别是 $\text{l}$ 和 $text{q}$，属于前缀 $\text{l}$ 的单词有 $\text{lqb、lql}$，属于前缀 $\text{q}$ 的单词有 $\text{qqq、qql}$，方案 1 将四个单词按照前缀分成了两类，且每类至少包含一个单词，每个单词仅属于一类，所以方案 1 满足题意。</p>
+<h3 id="评测用例规模与约定-5"><a href="#评测用例规模与约定-5" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30%$ 的评测用例，$1 \leq N \leq 10$，$1 \leq K \leq 5$；</p>
+<p>对于 $50%$ 的评测用例，$1 \leq N \leq 50$，$1 \leq K \leq 10$；</p>
+<p>对于所有评测用例，$1 \leq N \leq 200$，$1 \leq K \leq 100$，$1 \leq$ 单词长度 $\leq 10$。</p>
+<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>最大运行时间</th>
+<th>最大运行内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C++</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>2s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>PyPy3</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>3s</td>
+<td>256M</td>
+</tr>
+</tbody></table>
+<p>总通过次数: 9  |  总提交次数: 28  |  通过率: 32.1%</p>
+<p>难度: 中等   标签: 2023, 字典树, 国赛, 动态规划</p>
+<p>版权声明</p>
+<p>部分题目由用户贡献，若您是著作权持有人，请与我们联系。</p>
+<h1 id="第十四届Python大学B组"><a href="#第十四届Python大学B组" class="headerlink" title="第十四届Python大学B组"></a>第十四届Python大学B组</h1><h2 id="弹珠堆放"><a href="#弹珠堆放" class="headerlink" title="弹珠堆放"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17142/learning/">弹珠堆放</a></h2><h2 id="划分"><a href="#划分" class="headerlink" title="划分"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17143/learning/">划分</a></h2><h2 id="偶串"><a href="#偶串" class="headerlink" title="偶串"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17144/learning/">偶串</a></h2><h2 id="交易账本"><a href="#交易账本" class="headerlink" title="交易账本"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17145/learning/">交易账本</a></h2><h2 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17146/learning/">背包问题</a></h2><h2 id="翻转"><a href="#翻转" class="headerlink" title="翻转"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/18427/learning/">翻转</a></h2><h2 id="最大阶梯"><a href="#最大阶梯" class="headerlink" title="最大阶梯"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17147/learning/">最大阶梯</a></h2><h2 id="最长回文前后缀"><a href="#最长回文前后缀" class="headerlink" title="最长回文前后缀"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17148/learning/">最长回文前后缀</a></h2><h2 id="贸易航线"><a href="#贸易航线" class="headerlink" title=" 贸易航线"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17149/learning/"> 贸易航线</a></h2><h2 id="困局"><a href="#困局" class="headerlink" title="困局"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17150/learning/">困局</a></h2><h1 id="第十四届Python大学A组"><a href="#第十四届Python大学A组" class="headerlink" title="第十四届Python大学A组"></a>第十四届Python大学A组</h1><h2 id="跑步计划-1"><a href="#跑步计划-1" class="headerlink" title="跑步计划"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17113/learning/">跑步计划</a></h2><h2 id="残缺的数字"><a href="#残缺的数字" class="headerlink" title="残缺的数字"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17114/learning/">残缺的数字</a></h2><h2 id="整数变换-1"><a href="#整数变换-1" class="headerlink" title="整数变换"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17151/learning/">整数变换</a></h2><h2 id="2023-1"><a href="#2023-1" class="headerlink" title="2023"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17116/learning/">2023</a></h2><h2 id="火车运输"><a href="#火车运输" class="headerlink" title="火车运输"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17117/learning/">火车运输</a></h2><h2 id="走方格-1"><a href="#走方格-1" class="headerlink" title="走方格"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17118/learning/">走方格</a></h2><h2 id="等腰三角形-1"><a href="#等腰三角形-1" class="headerlink" title="等腰三角形"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17131/learning/">等腰三角形</a></h2><h2 id="彩色二叉树"><a href="#彩色二叉树" class="headerlink" title="彩色二叉树"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17124/learning/">彩色二叉树</a></h2><h2 id="选段排序"><a href="#选段排序" class="headerlink" title="选段排序"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17120/learning/">选段排序</a></h2><h2 id="最长同类子串"><a href="#最长同类子串" class="headerlink" title="最长同类子串"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17141/learning/">最长同类子串</a></h2><h1 id="第十四届Java大学C组"><a href="#第十四届Java大学C组" class="headerlink" title="第十四届Java大学C组"></a>第十四届Java大学C组</h1><h2 id="跑步计划-2"><a href="#跑步计划-2" class="headerlink" title="跑步计划"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17113/learning/">跑步计划</a></h2><h2 id="混乘数字-1"><a href="#混乘数字-1" class="headerlink" title="混乘数字"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17121/learning/">混乘数字</a></h2><h2 id="整数变换-2"><a href="#整数变换-2" class="headerlink" title="整数变换"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17151/learning/">整数变换</a></h2><h2 id="定时任务-1"><a href="#定时任务-1" class="headerlink" title="定时任务"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17115/learning/">定时任务</a></h2><h2 id="2023-2"><a href="#2023-2" class="headerlink" title="2023"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17116/learning/">2023</a></h2><h2 id="最大算式-1"><a href="#最大算式-1" class="headerlink" title="最大算式"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17130/learning/">最大算式</a></h2><h2 id="火车运输-1"><a href="#火车运输-1" class="headerlink" title="火车运输"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17117/learning/">火车运输</a></h2><h2 id="走方格-2"><a href="#走方格-2" class="headerlink" title="走方格"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17118/learning/">走方格</a></h2><h2 id="彩色二叉树-1"><a href="#彩色二叉树-1" class="headerlink" title="彩色二叉树"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17124/learning/">彩色二叉树</a></h2><h2 id="单词分类-1"><a href="#单词分类-1" class="headerlink" title="单词分类"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17126/learning/">单词分类</a></h2><h1 id="第十四届Java大学B组"><a href="#第十四届Java大学B组" class="headerlink" title="第十四届Java大学B组"></a>第十四届Java大学B组</h1><h2 id="互质"><a href="#互质" class="headerlink" title="互质"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17132/learning/">互质</a></h2><h2 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17133/learning/">逆元</a></h2><h2 id="玩具"><a href="#玩具" class="headerlink" title="玩具"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17134/learning/">玩具</a></h2><h2 id="不完整的算式"><a href="#不完整的算式" class="headerlink" title="不完整的算式"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17135/learning/">不完整的算式</a></h2><h2 id="星球"><a href="#星球" class="headerlink" title="星球"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17136/learning/">星球</a></h2><h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17137/learning/">序列</a></h2><h2 id="电动车"><a href="#电动车" class="headerlink" title="电动车"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17138/learning/">电动车</a></h2><h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/6251/learning/">游戏</a></h2><h2 id="非对称二叉树"><a href="#非对称二叉树" class="headerlink" title="非对称二叉树"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17139/learning/">非对称二叉树</a></h2><h2 id="数和游戏"><a href="#数和游戏" class="headerlink" title="数和游戏"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17140/learning/">数和游戏</a></h2><h1 id="第十四届Java大学A组"><a href="#第十四届Java大学A组" class="headerlink" title="第十四届Java大学A组"></a>第十四届Java大学A组</h1><h2 id="X质数"><a href="#X质数" class="headerlink" title="X质数"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17128/learning/">X质数</a></h2><h2 id="残缺的数字-1"><a href="#残缺的数字-1" class="headerlink" title="残缺的数字"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17114/learning/">残缺的数字</a></h2><h2 id="整数变换-3"><a href="#整数变换-3" class="headerlink" title="整数变换"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17151/learning/">整数变换</a></h2><h2 id="最大算式-2"><a href="#最大算式-2" class="headerlink" title="最大算式"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17130/learning/">最大算式</a></h2><h2 id="躲炮弹-1"><a href="#躲炮弹-1" class="headerlink" title="躲炮弹"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17123/learning/">躲炮弹</a></h2><h2 id="等腰三角形-2"><a href="#等腰三角形-2" class="headerlink" title="等腰三角形"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17131/learning/">等腰三角形</a></h2><h2 id="连续数组"><a href="#连续数组" class="headerlink" title="连续数组"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17125/learning/">连续数组</a></h2><h2 id="质数排序"><a href="#质数排序" class="headerlink" title="质数排序"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17119/learning/">质数排序</a></h2><h2 id="单词分类-2"><a href="#单词分类-2" class="headerlink" title="单词分类"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17126/learning/">单词分类</a></h2><h2 id="游戏的得分"><a href="#游戏的得分" class="headerlink" title="游戏的得分"></a><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17127/learning/">游戏的得分</a></h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%88%B7%E9%A2%98/" class="category-chain-item">刷题</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%88%B7%E9%A2%98/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B/" class="category-chain-item">蓝桥国赛</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="print-no-link">#蓝桥杯</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>蓝桥杯国赛试题解析</div>
+      <div>http://zdx-1.github.io/2024/05/26/蓝桥杯国赛试题解析/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zdx</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/24/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" title="蓝桥国赛知识梳理">
+                        <span class="hidden-mobile">蓝桥国赛知识梳理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
