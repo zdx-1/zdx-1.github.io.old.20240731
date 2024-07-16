@@ -1,43 +1,117 @@
-<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>python网络爬虫 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
-  font-family: Bender;
-  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
-}
-@font-face {
-  font-family: BenderLight;
-  src: local('BenderLight'), url("/font/BenderLight.ttf");
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
- document.documentElement.setAttribute('theme-mode', 'light')
-if (window.localStorage.getItem('theme-mode') === 'dark')
- document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
- --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
- --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: '确认'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
-window.mermaid = mermaid;
-code.paintMermaid();
-</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
-lightGallery(document.getElementById('post-bg'), {
-  plugins: [lgZoom,lgThumbnail],
-  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
- cacheBust: false,
- selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
- switches: {'article': Pjax.switches.sideBySide},
- switchesOptions: {
-   'article': {
-     classNames: {
-       remove: "pjax-out",
-       add: "pjax-in"
-     }
-   }
- }
-});
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>python网络爬虫</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-16T07:44:56.000Z" id="date"> 2024-07-16</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-16T10:16:57.584Z" id="updated"> 2024-07-16</time></div></span></div></div><hr><div id="post-content"><h1 id="第1章-爬虫介绍"><a href="#第1章-爬虫介绍" class="headerlink" title="第1章 爬虫介绍"></a>第1章 爬虫介绍</h1><h2 id="爬虫用途"><a href="#爬虫用途" class="headerlink" title="爬虫用途"></a>爬虫用途</h2><p class='item-img' data-src='./../images/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/image-20240716154602815.png'><img src="./../images/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/image-20240716154602815.png" alt="image-20240716154602815"></p>
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="learn" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>python网络爬虫 |  Zdx-1</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-python网络爬虫"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  python网络爬虫
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/07/16/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" class="article-date">
+  <time datetime="2024-07-16T07:44:56.000Z" itemprop="datePublished">2024-07-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python%E7%88%AC%E8%99%AB/">python爬虫</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">458</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="第1章-爬虫介绍"><a href="#第1章-爬虫介绍" class="headerlink" title="第1章 爬虫介绍"></a>第1章 爬虫介绍</h1><h2 id="爬虫用途"><a href="#爬虫用途" class="headerlink" title="爬虫用途"></a>爬虫用途</h2><p><img src="./../images/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/image-20240716154602815.png" alt="image-20240716154602815"></p>
 <h2 id="爬虫分类"><a href="#爬虫分类" class="headerlink" title="爬虫分类"></a>爬虫分类</h2><h3 id="按照使用场景："><a href="#按照使用场景：" class="headerlink" title="按照使用场景："></a>按照使用场景：</h3><h4 id="通用爬虫"><a href="#通用爬虫" class="headerlink" title="通用爬虫"></a>通用爬虫</h4><h5 id="全网爬虫"><a href="#全网爬虫" class="headerlink" title="全网爬虫"></a>全网爬虫</h5><p>从一些种子url扩展到整个WEB爬虫，是搜索引擎的重要组成部分</p>
 <h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><ul>
 <li>爬取范围广</li>
@@ -70,4 +144,511 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <li>通过AJAX请求才能获取数据，动态生成的数据</li>
 <li>登录之后才能访问的数据</li>
 </ul>
-<h5 id="爬取深层网页的爬虫"><a href="#爬取深层网页的爬虫" class="headerlink" title="爬取深层网页的爬虫"></a>爬取深层网页的爬虫</h5><h1 id="第2章-爬虫的实现原理和技术"><a href="#第2章-爬虫的实现原理和技术" class="headerlink" title="第2章 爬虫的实现原理和技术"></a>第2章 爬虫的实现原理和技术</h1><h1 id="第3章-网页请求原理"><a href="#第3章-网页请求原理" class="headerlink" title="第3章 网页请求原理"></a>第3章 网页请求原理</h1><h1 id="第4章-抓取网页数据"><a href="#第4章-抓取网页数据" class="headerlink" title="第4章 抓取网页数据"></a>第4章 抓取网页数据</h1><h1 id="第5章-数据解析"><a href="#第5章-数据解析" class="headerlink" title="第5章 数据解析"></a>第5章 数据解析</h1><h1 id="第6章-并发下载"><a href="#第6章-并发下载" class="headerlink" title="第6章 并发下载"></a>第6章 并发下载</h1><h1 id="第7章-抓取动态内容"><a href="#第7章-抓取动态内容" class="headerlink" title="第7章 抓取动态内容"></a>第7章 抓取动态内容</h1><h1 id="第8章-图像识别与文字处理"><a href="#第8章-图像识别与文字处理" class="headerlink" title="第8章 图像识别与文字处理"></a>第8章 图像识别与文字处理</h1><h1 id="第9章-存储爬虫数据"><a href="#第9章-存储爬虫数据" class="headerlink" title="第9章 存储爬虫数据"></a>第9章 存储爬虫数据</h1><h1 id="第10章-初识爬虫框架Scrapy"><a href="#第10章-初识爬虫框架Scrapy" class="headerlink" title="第10章 初识爬虫框架Scrapy"></a>第10章 初识爬虫框架Scrapy</h1><h1 id="第11章-Scrapy终端与核心组件"><a href="#第11章-Scrapy终端与核心组件" class="headerlink" title="第11章 Scrapy终端与核心组件"></a>第11章 Scrapy终端与核心组件</h1><h1 id="第12章-自动抓取网页的爬虫CrawlSpider"><a href="#第12章-自动抓取网页的爬虫CrawlSpider" class="headerlink" title="第12章 自动抓取网页的爬虫CrawlSpider"></a>第12章 自动抓取网页的爬虫CrawlSpider</h1><h1 id="第13章-Scrapy-Redis分布式爬虫"><a href="#第13章-Scrapy-Redis分布式爬虫" class="headerlink" title="第13章 Scrapy-Redis分布式爬虫"></a>第13章 Scrapy-Redis分布式爬虫</h1><div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/07/16/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">← 下一篇 Flask开发入门</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/07/11/NanUI%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/">NanUI使用文档 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%88%AC%E8%99%AB%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">第1章 爬虫介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%94%A8%E9%80%94"><span class="toc-number">1.1.</span> <span class="toc-text">爬虫用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">爬虫分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">按照使用场景：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">通用爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E7%BD%91%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.1.1.1.</span> <span class="toc-text">全网爬虫</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.1.1.2.</span> <span class="toc-text">特点：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%9A%E7%84%A6%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">聚焦爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.1.2.1.</span> <span class="toc-text">主题爬虫</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A-1"><span class="toc-number">1.2.1.2.2.</span> <span class="toc-text">特点：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E7%88%AC%E5%8F%96%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">按爬取方式：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%AF%E7%A7%AF%E5%BC%8F%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">累积式爬虫</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E9%87%8F%E5%BC%8F%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">增量式爬虫</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E7%88%AC%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%AD%98%E5%9C%A8%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.2.3.</span> <span class="toc-text">按爬取页面存在的方式：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%B1%82%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">表层网络爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A1%A8%E5%B1%82%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.2.3.1.1.</span> <span class="toc-text">表层页面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%88%AC%E5%8F%96%E8%A1%A8%E5%B1%82%E9%A1%B5%E9%9D%A2%E7%9A%84%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.3.1.2.</span> <span class="toc-text">爬取表层页面的爬虫</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E5%B1%82%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">深层网络爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%B1%E5%B1%82%E7%BD%91%E9%A1%B5"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">深层网页</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%88%AC%E5%8F%96%E6%B7%B1%E5%B1%82%E7%BD%91%E9%A1%B5%E7%9A%84%E7%88%AC%E8%99%AB"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">爬取深层网页的爬虫</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%88%AC%E8%99%AB%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E5%92%8C%E6%8A%80%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text">第2章 爬虫的实现原理和技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%BD%91%E9%A1%B5%E8%AF%B7%E6%B1%82%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">第3章 网页请求原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E6%95%B0%E6%8D%AE"><span class="toc-number">4.</span> <span class="toc-text">第4章 抓取网页数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">第5章 数据解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD"><span class="toc-number">6.</span> <span class="toc-text">第6章 并发下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0-%E6%8A%93%E5%8F%96%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9"><span class="toc-number">7.</span> <span class="toc-text">第7章 抓取动态内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E4%B8%8E%E6%96%87%E5%AD%97%E5%A4%84%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text">第8章 图像识别与文字处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC9%E7%AB%A0-%E5%AD%98%E5%82%A8%E7%88%AC%E8%99%AB%E6%95%B0%E6%8D%AE"><span class="toc-number">9.</span> <span class="toc-text">第9章 存储爬虫数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC10%E7%AB%A0-%E5%88%9D%E8%AF%86%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6Scrapy"><span class="toc-number">10.</span> <span class="toc-text">第10章 初识爬虫框架Scrapy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0-Scrapy%E7%BB%88%E7%AB%AF%E4%B8%8E%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="toc-number">11.</span> <span class="toc-text">第11章 Scrapy终端与核心组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC12%E7%AB%A0-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E7%9A%84%E7%88%AC%E8%99%ABCrawlSpider"><span class="toc-number">12.</span> <span class="toc-text">第12章 自动抓取网页的爬虫CrawlSpider</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC13%E7%AB%A0-Scrapy-Redis%E5%88%86%E5%B8%83%E5%BC%8F%E7%88%AC%E8%99%AB"><span class="toc-number">13.</span> <span class="toc-text">第13章 Scrapy-Redis分布式爬虫</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+<h5 id="爬取深层网页的爬虫"><a href="#爬取深层网页的爬虫" class="headerlink" title="爬取深层网页的爬虫"></a>爬取深层网页的爬虫</h5><h1 id="第2章-爬虫的实现原理和技术"><a href="#第2章-爬虫的实现原理和技术" class="headerlink" title="第2章 爬虫的实现原理和技术"></a>第2章 爬虫的实现原理和技术</h1><h1 id="第3章-网页请求原理"><a href="#第3章-网页请求原理" class="headerlink" title="第3章 网页请求原理"></a>第3章 网页请求原理</h1><h1 id="第4章-抓取网页数据"><a href="#第4章-抓取网页数据" class="headerlink" title="第4章 抓取网页数据"></a>第4章 抓取网页数据</h1><h1 id="第5章-数据解析"><a href="#第5章-数据解析" class="headerlink" title="第5章 数据解析"></a>第5章 数据解析</h1><h1 id="第6章-并发下载"><a href="#第6章-并发下载" class="headerlink" title="第6章 并发下载"></a>第6章 并发下载</h1><h1 id="第7章-抓取动态内容"><a href="#第7章-抓取动态内容" class="headerlink" title="第7章 抓取动态内容"></a>第7章 抓取动态内容</h1><h1 id="第8章-图像识别与文字处理"><a href="#第8章-图像识别与文字处理" class="headerlink" title="第8章 图像识别与文字处理"></a>第8章 图像识别与文字处理</h1><h1 id="第9章-存储爬虫数据"><a href="#第9章-存储爬虫数据" class="headerlink" title="第9章 存储爬虫数据"></a>第9章 存储爬虫数据</h1><h1 id="第10章-初识爬虫框架Scrapy"><a href="#第10章-初识爬虫框架Scrapy" class="headerlink" title="第10章 初识爬虫框架Scrapy"></a>第10章 初识爬虫框架Scrapy</h1><h1 id="第11章-Scrapy终端与核心组件"><a href="#第11章-Scrapy终端与核心组件" class="headerlink" title="第11章 Scrapy终端与核心组件"></a>第11章 Scrapy终端与核心组件</h1><h1 id="第12章-自动抓取网页的爬虫CrawlSpider"><a href="#第12章-自动抓取网页的爬虫CrawlSpider" class="headerlink" title="第12章 自动抓取网页的爬虫CrawlSpider"></a>第12章 自动抓取网页的爬虫CrawlSpider</h1><h1 id="第13章-Scrapy-Redis分布式爬虫"><a href="#第13章-Scrapy-Redis分布式爬虫" class="headerlink" title="第13章 Scrapy-Redis分布式爬虫"></a>第13章 Scrapy-Redis分布式爬虫</h1> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/07/16/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/07/16/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Flask开发入门
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/07/11/NanUI%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">NanUI使用文档</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> zdx
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+<script>
+  const password = "65535";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

@@ -1,43 +1,113 @@
-<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kivy中文说明文档v1.0 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
-  font-family: Bender;
-  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
-}
-@font-face {
-  font-family: BenderLight;
-  src: local('BenderLight'), url("/font/BenderLight.ttf");
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
- document.documentElement.setAttribute('theme-mode', 'light')
-if (window.localStorage.getItem('theme-mode') === 'dark')
- document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
- --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
- --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: '确认'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
-window.mermaid = mermaid;
-code.paintMermaid();
-</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
-lightGallery(document.getElementById('post-bg'), {
-  plugins: [lgZoom,lgThumbnail],
-  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
- cacheBust: false,
- selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
- switches: {'article': Pjax.switches.sideBySide},
- switchesOptions: {
-   'article': {
-     classNames: {
-       remove: "pjax-out",
-       add: "pjax-in"
-     }
-   }
- }
-});
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Kivy中文说明文档v1.0</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-09T13:45:29.000Z" id="date"> 2024-07-09</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-09T14:34:02.822Z" id="updated"> 2024-07-09</time></div></span></div></div><hr><div id="post-content"><h1 id="Kivy简介"><a href="#Kivy简介" class="headerlink" title="Kivy简介"></a>Kivy简介</h1><p>Kivy是Python的Gui的一种。</p>
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="learn" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Kivy中文说明文档v1.0 |  Zdx-1</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Kivy中文说明文档v1-0"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Kivy中文说明文档v1.0
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/07/09/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/" class="article-date">
+  <time datetime="2024-07-09T13:45:29.000Z" itemprop="datePublished">2024-07-09</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">14.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">60 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Kivy简介"><a href="#Kivy简介" class="headerlink" title="Kivy简介"></a>Kivy简介</h1><p>Kivy是Python的Gui的一种。</p>
 <p>网上关于使用python进行ui设计的文档很少，因此为了自己方便，也为了这个领域的发展，于是编写初稿。</p>
 <p><strong>注</strong>：本版本是在windows环境下使用的，后期其他系统可能会添加。</p>
 <p><a target="_blank" rel="noopener" href="https://cycleuser.gitbooks.io/kivy-guide-chinese/content/00-Kivy-CN.html">参考文献</a></p>
@@ -85,7 +155,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>下面的代码就是上述思路的最小化实现：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> kivy<br>kivy.require(<span class="hljs-string">&#x27;1.0.6&#x27;</span>) <span class="hljs-comment"># 注意要把这个版本号改变成你现有的Kivy版本号!</span><br><br><span class="hljs-keyword">from</span> kivy.app <span class="hljs-keyword">import</span> App <span class="hljs-comment"># 译者注：这里就是从kivy.app包里面导入App类</span><br><span class="hljs-keyword">from</span> kivy.uix.label <span class="hljs-keyword">import</span> Label <span class="hljs-comment"># 译者注：这里是从kivy.uix.label包中导入Label控件，这里都注意开头字母要大写</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApp</span>(<span class="hljs-title class_ inherited__">App</span>):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build</span>(<span class="hljs-params">self</span>): <span class="hljs-comment"># 译者注：这里是实现build()方法</span><br>        <span class="hljs-keyword">return</span> Label(text=<span class="hljs-string">&#x27;Hello world&#x27;</span>) <span class="hljs-comment"># 译者注：在这个方法里面使用了Label控件</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    MyApp().run() <span class="hljs-comment"># 译者注：这里就是运行了。</span><br></code></pre></td></tr></table></figure>
 <p>把上面的代码以文本形式复制到一个文本文件中，保存成py文件，例如main.py，然后运行，就行了。</p>
-<p class='item-img' data-src='./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221042996.png'><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221042996.png" alt="运行截图"></p>
+<p><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221042996.png" alt="运行截图"></p>
 <h2 id="Kivy应用的生命周期"><a href="#Kivy应用的生命周期" class="headerlink" title="Kivy应用的生命周期"></a>Kivy应用的生命周期</h2><p>如上图所示，不论什么用途和目的，咱们应用的入口都是这个run()方法，在本文的样例代码中，就是“MyApp().run()”。</p>
 <p>下面就一行一行开始详细解释了：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> kivy.app <span class="hljs-keyword">import</span> App<br></code></pre></td></tr></table></figure>
@@ -116,10 +186,10 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <li>Android 下面要运行还需要一些复杂的文件，所以等以后深入了之后再给讲解这部分了。</li>
 </ul>
 <p>这个应用运行之后的具体效果就是下面图片所示这样，会打开一个窗口，然后展示出一个Label，上面写着文本‘Hello World’，这个Label会覆盖该窗口的全部区域。就这样了。</p>
-<p class='item-img' data-src='./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/quickstart.png'><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/quickstart.png" alt="img"></p>
+<p><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/quickstart.png" alt="img"></p>
 <h2 id="修改定制这个应用"><a href="#修改定制这个应用" class="headerlink" title="修改定制这个应用"></a>修改定制这个应用</h2><p>增加一个用户名/密码输入的页面</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> kivy.app <span class="hljs-keyword">import</span> App<br><span class="hljs-keyword">from</span> kivy.uix.gridlayout <span class="hljs-keyword">import</span> GridLayout<br><span class="hljs-keyword">from</span> kivy.uix.label <span class="hljs-keyword">import</span> Label<br><span class="hljs-keyword">from</span> kivy.uix.textinput <span class="hljs-keyword">import</span> TextInput<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">LoginScreen</span>(<span class="hljs-title class_ inherited__">GridLayout</span>):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, **kwargs</span>):<br>        <span class="hljs-built_in">super</span>(LoginScreen, self).__init__(**kwargs)<br>        self.cols = <span class="hljs-number">2</span><br>        self.add_widget(Label(text=<span class="hljs-string">&#x27;User Name&#x27;</span>))<br>        self.username = TextInput(multiline=<span class="hljs-literal">False</span>)<br>        self.add_widget(self.username)<br>        self.add_widget(Label(text=<span class="hljs-string">&#x27;password&#x27;</span>))<br>        self.password = TextInput(password=<span class="hljs-literal">True</span>, multiline=<span class="hljs-literal">False</span>)<br>        self.add_widget(self.password)<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApp</span>(<span class="hljs-title class_ inherited__">App</span>):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> LoginScreen()<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    MyApp().run()<br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221537055.png'><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221537055.png" alt="运行截图"></p>
+<p><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/image-20240709221537055.png" alt="运行截图"></p>
 <p>在下面这行代码中，我们导入了一种名为Gridlayout的布局：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> kivy.uix.gridlayout <span class="hljs-keyword">import</span> GridLayout<br></code></pre></td></tr></table></figure>
 <p>这个类被我们用作基类来制作根控件LoginScreen，在如下代码中进行了定义：</p>
@@ -131,7 +201,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs Python">self.cols = <span class="hljs-number">2</span><br>self.add_widget(Label(text=<span class="hljs-string">&#x27;User Name&#x27;</span>))<br>self.username = TextInput(multiline=<span class="hljs-literal">False</span>)<br>self.add_widget(self.username)<br>self.add_widget(Label(text=<span class="hljs-string">&#x27;password&#x27;</span>))<br>self.password = TextInput(password=<span class="hljs-literal">True</span>, multiline=<span class="hljs-literal">False</span>)<br>self.add_widget(self.password)<br></code></pre></td></tr></table></figure>
 <p>上面的代码中，我们让GridLayout来管理子控件，把子控件设置为两栏，然后加上用户名和密码的Label字符显示控件和TextInput字符输入控件。</p>
 <p>运行上面的代码，得到的窗口效果大概如下图：</p>
-<p class='item-img' data-src='./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/guide_customize_step1.png'><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/guide_customize_step1.png" alt="img"></p>
+<p><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/guide_customize_step1.png" alt="img"></p>
 <p>尝试着重新缩放一下窗口大小，你会发现上面的控件会相对整个窗口的尺寸而自行调整大小，并不需要人为去操作了。这是因为这些控件都使用了默认的尺寸。</p>
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a target="_blank" rel="noopener" href="https://kivy.org/docs/guide/environment.html">英文原文</a></p>
 <p>Kivy的初始化和很多行为都可以通过各种环境变量来控制。</p>
@@ -329,7 +399,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><p><a target="_blank" rel="noopener" href="https://kivy.org/docs/guide/architecture.html">英文原文</a></p>
 <p>本章我们将从软件工程的角度，来简单介绍一下Kivy的设计。这对于理解各个部分如何配合工作会有帮助。如果你只关注代码，可能有时候会遇到这样一种情况，就是你已经有了一个初步的想法了，但具体怎么去实现可能还是一头雾水，所以本章就针对这种情况，来更深入地讲解一下Kivy的一些基本思想。你也可以先跳过这一章，等以后再翻回来看，不过我们建议开发者还是先看一下这些内容比较好，起码可以快速略读一下有个印象。</p>
 <p>Kivy包含的若干个模块，我们将对这些模块一一进行简要说明。下面这幅图是Kivy整个架构的概括图示：</p>
-<p class='item-img' data-src='./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/architecture.png'><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/architecture.png" alt="../_images/architecture.png"></p>
+<p><img src="./../images/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/architecture.png" alt="../_images/architecture.png"></p>
 <h2 id="核心模块和输入模块"><a href="#核心模块和输入模块" class="headerlink" title="核心模块和输入模块"></a>核心模块和输入模块</h2><p>对理解Kivy的设计内涵，模块化和抽象化的思想是至关重要的。我们试图把各种基本的任务进行抽象，比如打开窗口、显示图像和文本、播放音频、从摄像头获取图像、拼写校正等等。我们将这些部分称为<strong>核心</strong>任务。这样也使得API接口用起来比较简单，扩展起来也容易。更重要的是，这种思路可以让Kivy应用在运行的时候，使用各个运行平台所提供的对应功能的API接口。例如，在苹果的MacOS操作系统、Linux操作系统和Windows操作系统中，就都有各自不同的原生API接口提供各种核心功能。所以就有一部分代码，调用这些不同接口中的某一个，一方面与操作系统进行通信，另一方面与Kivy进行交互，起到中间人的角色，我们称之为<strong>核心模块</strong>。针对不同的操作系统平台要使用各自对应的核心模块，这样的好处是达到一种均衡状态，既能够充分利用操作系统提供的功能，又能尽量提高开发效率。（译者注：我的理解是这样大家平时不用针对不同操作系统去学习和使用各自的API，而只要专心使用Kivy的核心模块进行调用就行了。）这也允许用户来自由选择，使用Kivy提供的核心模块，或者直接使用各个操作系统的API接口。此外，由于使用了各个平台所提供的链接库文件，我们大大减小了Kivy发型版本的体积，也使得打包发布更加容易。这有助于将Kivy应用移植到其他平台。比如Android平台上的Kivy应用就体现了这一特性的好处了。</p>
 <p>在输入模块这部分，我们也遵循了同样的思路。<strong>输入模块</strong>，是一段代码，用于针对各种输入设备提供支持，比如苹果公司的Trackpad触摸板，TUIO多点触摸设备，或者是鼠标模拟器等等。如果你需要对某一种新的输入设备添加支持，只需要提供一个新的类，用这个类来读取输入设备的数据，然后传递给Kivy基本事件，就可以了。</p>
 <h2 id="图形接口"><a href="#图形接口" class="headerlink" title="图形接口"></a>图形接口</h2><p>Kivy的图形接口是对OpenGL的抽象。在最底层，Kivy使用OpenGL的命令来进行硬件加速的图形绘制。不过写OpenGL的代码可还是挺复杂的，新手就更难以迅速掌握了。所以我们就提供了一系列的图形接口，利用这些接口可以很简单地进行图形绘制，这些接口中用到了例如画布Canvas、矩形Rectangle等几何概念，比OpenGL里面简单不少。</p>
@@ -416,7 +486,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>索引值小的控件会被绘制在索引值大的控件之上。一定要记住，默认值是 0 ，所以后添加的控件总会在所有控件的最顶层，除非指定了索引值。</p>
 <h2 id="整理布局"><a href="#整理布局" class="headerlink" title="整理布局"></a>整理布局</h2><p><a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout">布局 <code>layout</code></a>是一种特别的控件，它会控制自己子控件的尺寸和位置。有各种不同的布局，这些布局分别为子控件提供拜托你个的自动组织整理。这些布局使用<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint">尺寸推测 <code>size_hint</code></a>和<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint">位置推测 <code>pos_hint</code></a>这两个属性来决定<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children">子控件<code>children</code></a>的<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size">尺寸 <code>size</code></a> 和 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos">位置<code>pos</code></a>。</p>
 <p><strong>盒式布局 BoxLayout</strong>: 所有控件充满整个空间，以互相挨着的方块的方式来分布，横着或者竖着排列都可以。子控件的 size_hint 属性可以用来改变每个子控件的比例，也可以设置为固定尺寸。</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/boxlayout1.gif'><img src="https://kivy.org/docs/_images/boxlayout1.gif" alt="../_images/boxlayout1.gif"> <img src="https://kivy.org/docs/_images/gridlayout1.gif" alt="../_images/gridlayout1.gif" class='item-img' data-src='https://kivy.org/docs/_images/gridlayout1.gif'><img src="https://kivy.org/docs/_images/gridlayout1.gif" alt="../_images/gridlayout1.gif"> <img src="https://kivy.org/docs/_images/anchorlayout1.gif" alt="../_images/anchorlayout1.gif" class='item-img' data-src='https://kivy.org/docs/_images/anchorlayout1.gif'><img src="https://kivy.org/docs/_images/anchorlayout1.gif" alt="../_images/anchorlayout1.gif"></p>
+<p><img src="https://kivy.org/docs/_images/boxlayout1.gif" alt="../_images/boxlayout1.gif"> <img src="https://kivy.org/docs/_images/gridlayout1.gif" alt="../_images/gridlayout1.gif"> <img src="https://kivy.org/docs/_images/stacklayout1.gif" alt="../_images/stacklayout1.gif"> <img src="https://kivy.org/docs/_images/anchorlayout1.gif" alt="../_images/anchorlayout1.gif"><img src="https://kivy.org/docs/_images/floatlayout1.gif" alt="../_images/floatlayout1.gif"></p>
 <p><strong>网格布局 GridLayout</strong>: 以一张网格的方式来安排控件。你必须指定好网格的维度，确定好分成多少格，这样 Kivy 才能计算出每个元素的尺寸并且确定如何安排这些元素的位置。</p>
 <p><strong>栈状布局 StackLayout</strong>: 挨着放一个个控件，彼此邻近，在某一个维度上有固定大小，而使它们填充整个空间。 这适合用来显示相同预定义大小的子控件。</p>
 <p><strong>锚式布局 AnchorLayout</strong>: 一种非常简单的布局，只关注子控件的位置。 将子控件放在布局的边界位置。 不支持size_hint。</p>
@@ -439,15 +509,15 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>加载 Kivy 目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-variable">$KIVYDIR</span>/examples/demo/kivycatalog<br>python main.py<br></code></pre></td></tr></table></figure>
 <p>把上面代码中的 $KIVYDIR 替换成你的 Kivy 安装位置。在左边点击标注有 Box Layout 的按钮。 然后将上面的代码粘贴到窗口右侧的编辑器内。</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/size_hint[B].jpg'><img src="https://kivy.org/docs/_images/size_hint[B].jpg" alt="../_images/size_hint[B].jpg"></p>
+<p><img src="https://kivy.org/docs/_images/size_hint[B].jpg" alt="../_images/size_hint[B].jpg"></p>
 <p>然后你就可以看到上图这样的界面了，这个按钮 Button 会占据整个布局<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size">尺寸 <code>size</code></a>的 100%。</p>
 <p>修改<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code>size_hint_x</code></a>/<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code>size_hint_y</code></a> 为 .5 这就会把<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget">控件 <code>Widget</code></a> 调整为<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout">布局 <code>layout</code></a> 的50% <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width">宽度 <code>width</code></a>/<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.height" title="kivy.uix.widget.Widget.height">高度 <code>height</code></a>。</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/size_hint[b_].jpg'><img src="https://kivy.org/docs/_images/size_hint[b_].jpg" alt="../_images/size_hint[b_].jpg"></p>
+<p><img src="https://kivy.org/docs/_images/size_hint[b_].jpg" alt="../_images/size_hint[b_].jpg"></p>
 <p>这时候效果如上图所示，虽然我们已经同时指定了 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code>size_hint_x</code></a> 和 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code>size_hint_y</code></a> 为 .5，但似乎只有对 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code>size_hint_x</code></a> 的修改起作用了。这是因为在<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout">盒式布局 <code>boxlayout</code></a>中，当<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code>orientation</code></a>被设置为竖直方向（vertical） 的时候，<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code>size_hint_y</code></a> 由布局来控制，而如果<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code>orientation</code></a> 被设置为水平方向（horizontal）的时候， <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code>size_hint_x</code></a> 由布局来控制，所以这些情况手动设定就无效了。 这些受控维度的尺寸，是根据<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children">子控件 <code>children</code></a> 在 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code>盒式布局 boxlayout</code></a>中的总编号来计算的。在上面的例子中，这个子控件的<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code>size_hint_y</code></a> 是受控的(.5/.5 = 1)。所以，这里控件就占据了上层布局的整个高度。</p>
 <p>接下来咱们再添加一个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button">按钮 <code>Button</code></a>到这个 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout">布局 <code>layout</code></a>看看有什么效果。</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/size_hint[bb].jpg'><img src="https://kivy.org/docs/_images/size_hint[bb].jpg" alt="../_images/size_hint[bb].jpg"></p>
+<p><img src="https://kivy.org/docs/_images/size_hint[bb].jpg" alt="../_images/size_hint[bb].jpg"></p>
 <p><a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout">盒式布局 <code>boxlayout</code></a> 默认对其所有的<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children">子控件 <code>children</code></a>分配了等大的空间。在咱们这个例子里面，比例是50-50，因为有两个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children">子控件 <code>children</code></a>。那么接下来咱们就对其中的一个子控件设置一下 size_hint，然后看看效果怎么样。</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/size_hint[oB].jpg'><img src="https://kivy.org/docs/_images/size_hint[oB].jpg" alt="../_images/size_hint[oB].jpg"></p>
+<p><img src="https://kivy.org/docs/_images/size_hint[oB].jpg" alt="../_images/size_hint[oB].jpg"></p>
 <p>从上图可以看出，如果一个子控件有了一个指定的 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code>size_hint</code></a>，这就会决定该<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget">控件 <code>Widget</code></a>使用<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout">盒式布局 <code>boxlayout</code></a>提供的空间中的多大比例，来作为自己的<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size">尺寸 <code>size</code></a> 。在我们这个例子中，第一个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button">按钮 <code>Button</code></a> 的<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code>size_hint_x</code></a>设置为了 .5。那么这个控件分配到的空间计算方法如下：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-keyword">first</span> child&#x27;s size_hint divided <span class="hljs-keyword">by</span><br><span class="hljs-keyword">first</span> child&#x27;s size_hint + <span class="hljs-keyword">second</span> child&#x27;s size_hint + ...n(no <span class="hljs-keyword">of</span> children)<br><br><span class="hljs-number">.5</span>/(<span class="hljs-number">.5</span>+<span class="hljs-number">1</span>) = <span class="hljs-number">.333</span>...<br></code></pre></td></tr></table></figure>
 <p>盒式布局 BoxLayout 的剩余<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width">宽度 <code>width</code></a>会分配给另外的一个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children">子控件 <code>children</code></a>。在我们这个例子中，这就意味着第二个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button">按钮 <code>Button</code></a> 会占据整个<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout">布局 <code>layout</code></a>的 66.66% <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width">宽度 <code>width</code></a> 。</p>
@@ -457,7 +527,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>咱们用下面 kivycatalog 中的代码来可视化地理解一下<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code>pos_hint</code></a>：</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">FloatLayout:<br>    Button:<br>        text: <span class="hljs-variable">&lt;span&gt;</span><span class="hljs-string">&quot;We Will&quot;</span><span class="hljs-variable">&lt;/span&gt;</span><br>        pos: <span class="hljs-variable">&lt;span&gt;</span>100<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>100<span class="hljs-variable">&lt;/span&gt;</span><br>        size_hint: <span class="hljs-variable">&lt;span&gt;</span>.2<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>.4<span class="hljs-variable">&lt;/span&gt;</span><br>    Button:<br>        text: <span class="hljs-variable">&lt;span&gt;</span><span class="hljs-string">&quot;Wee Wiill&quot;</span><span class="hljs-variable">&lt;/span&gt;</span><br>        pos: <span class="hljs-variable">&lt;span&gt;</span>200<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>200<span class="hljs-variable">&lt;/span&gt;</span><br>        size_hint: <span class="hljs-variable">&lt;span&gt;</span>.4<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>.2<span class="hljs-variable">&lt;/span&gt;</span><br><br>    Button:<br>        text: <span class="hljs-variable">&lt;span&gt;</span><span class="hljs-string">&quot;ROCK YOU!!&quot;</span><span class="hljs-variable">&lt;/span&gt;</span><br>        pos_hint: &#123;<span class="hljs-variable">&lt;span&gt;</span>&#x27;x&#x27;<span class="hljs-variable">&lt;/span&gt;</span>: <span class="hljs-variable">&lt;span&gt;</span>.3<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>&#x27;y&#x27;<span class="hljs-variable">&lt;/span&gt;</span>: <span class="hljs-variable">&lt;span&gt;</span>.6<span class="hljs-variable">&lt;/span&gt;</span>&#125;<br>        size_hint: <span class="hljs-variable">&lt;span&gt;</span>.5<span class="hljs-variable">&lt;/span&gt;</span>, <span class="hljs-variable">&lt;span&gt;</span>.2<span class="hljs-variable">&lt;/span&gt;</span><br></code></pre></td></tr></table></figure>
 <p>这份代码的输出效果如下图所示：</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/pos_hint.jpg'><img src="https://kivy.org/docs/_images/pos_hint.jpg" alt="../_images/pos_hint.jpg"></p>
+<p><img src="https://kivy.org/docs/_images/pos_hint.jpg" alt="../_images/pos_hint.jpg"></p>
 <p>说了半天<a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code>size_hint</code></a>，你不妨自己试试探索一下 <a target="_blank" rel="noopener" href="https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code>pos_hint</code></a>，来理解一下这个属性对控件位置的效果。</p>
 <h2 id="给布局添加背景"><a href="#给布局添加背景" class="headerlink" title="给布局添加背景"></a>给布局添加背景</h2><p>关于布局，有一个问题经常被问道：</p>
 <p>“怎么给一个布局添加背景图片/颜色/视频/等等……”</p>
@@ -481,7 +551,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>使用 Kv 语言：</p>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs xquery"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy.app <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> App<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy.uix.floatlayout <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> FloatLayout<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy.uix.boxlayout <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> BoxLayout<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy<span class="hljs-built_in">.lang</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> Builder<br><br><br>Builder.load_string(<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x27;&#x27;&#x27;</span><br><span class="language-xml"><span class="hljs-symbol">&amp;lt;</span>CustomLayout<span class="hljs-symbol">&amp;gt;</span></span><br><span class="language-xml">    canvas.before:</span><br><span class="language-xml">        Color:</span><br><span class="language-xml">            rgba: 0, 1, 0, 1</span><br><span class="language-xml">        Rectangle:</span><br><span class="language-xml">            pos: self.pos</span><br><span class="language-xml">            size: self.size</span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-symbol">&amp;lt;</span>RootWidget<span class="hljs-symbol">&amp;gt;</span></span><br><span class="language-xml">    CustomLayout:</span><br><span class="language-xml">        AsyncImage:</span><br><span class="language-xml">            source: &#x27;http://www.everythingzoomer.com/wp-content/uploads/2013/01/Monday-joke-289x277.jpg&#x27;</span><br><span class="language-xml">            size_hint: 1, .5</span><br><span class="language-xml">            pos_hint: </span><span class="language-xquery">&#123;<span class="hljs-string">&#x27;center_x&#x27;</span>:.<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;center_y&#x27;</span>: .<span class="hljs-number">5</span>&#125;</span><span class="language-xml"></span><br><span class="language-xml">    AsyncImage:</span><br><span class="language-xml">        source: &#x27;http://www.stuffistumbledupon.com/wp-content/uploads/2012/05/Have-you-seen-this-dog-because-its-awesome-meme-puppy-doggy.jpg&#x27;</span><br><span class="language-xml">    CustomLayout</span><br><span class="language-xml">        AsyncImage:</span><br><span class="language-xml">            source: &#x27;http://www.stuffistumbledupon.com/wp-content/uploads/2012/04/Get-a-Girlfriend-Meme-empty-wallet.jpg&#x27;</span><br><span class="language-xml">            size_hint: 1, .5</span><br><span class="language-xml">            pos_hint: </span><span class="language-xquery">&#123;<span class="hljs-string">&#x27;center_x&#x27;</span>:.<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;center_y&#x27;</span>: .<span class="hljs-number">5</span>&#125;</span><span class="language-xml"></span><br><span class="language-xml">&#x27;&#x27;&#x27;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>class<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>RootWidget<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(BoxLayout)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>pass<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>class<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>CustomLayout<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(FloatLayout)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>pass<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>class<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>MainApp<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(App)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br><br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>def<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>build<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(self)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>        <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>return<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> RootWidget()<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>if<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> __name_<span class="hljs-number">_</span> == <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x27;__main__&#x27;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>:<br>    MainApp().run()<br></code></pre></td></tr></table></figure>
 <p>上面这两个应用的效果都如下图所示：</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/custom_layout_background.png'><img src="https://kivy.org/docs/_images/custom_layout_background.png" alt="../_images/custom_layout_background.png"></p>
+<p><img src="https://kivy.org/docs/_images/custom_layout_background.png" alt="../_images/custom_layout_background.png"></p>
 <p>在自定义布局类中定义了背景之后，就是要确保在自定义布局的各个实例中使用到这个新特性。</p>
 <p>首先，要在<strong>全局上</strong>增加一个图形或者颜色给内置的 Kivy 布局的背景，这就需要将所用布局的默认 Kv 规则进行覆盖。</p>
 <p>就拿网格布局 GridLayout 举例吧：</p>
@@ -489,7 +559,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>接下来把这段代码放到一个 Kivy 应用里面：</p>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs xquery"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy.app <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> App<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy.uix.floatlayout <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> FloatLayout<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>from<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> kivy<span class="hljs-built_in">.lang</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> Builder<br><br><br>Builder.load_string(<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x27;&#x27;&#x27;</span><br><span class="language-xml"><span class="hljs-symbol">&amp;lt;</span>GridLayout<span class="hljs-symbol">&amp;gt;</span></span><br><span class="language-xml">    canvas.before:</span><br><span class="language-xml">        BorderImage:</span><br><span class="language-xml">            # BorderImage behaves like the CSS BorderImage</span><br><span class="language-xml">            border: 10, 10, 10, 10</span><br><span class="language-xml">            source: &#x27;../examples/widgets/sequenced_images/data/images/button_white.png&#x27;</span><br><span class="language-xml">            pos: self.pos</span><br><span class="language-xml">            size: self.size</span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-symbol">&amp;lt;</span>RootWidget<span class="hljs-symbol">&amp;gt;</span></span><br><span class="language-xml">    GridLayout:</span><br><span class="language-xml">        size_hint: .9, .9</span><br><span class="language-xml">        pos_hint: </span><span class="language-xquery">&#123;<span class="hljs-string">&#x27;center_x&#x27;</span>: .<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;center_y&#x27;</span>: .<span class="hljs-number">5</span>&#125;</span><span class="language-xml"></span><br><span class="language-xml">        rows:1</span><br><span class="language-xml">        Label:</span><br><span class="language-xml">            text: &quot;I don&#x27;t suffer from insanity, I enjoy every minute of it&quot;</span><br><span class="language-xml">            text_size: self.width-20, self.height-20</span><br><span class="language-xml">            valign: &#x27;top&#x27;</span><br><span class="language-xml">        Label:</span><br><span class="language-xml">            text: &quot;When I was born I was so surprised; I didn&#x27;t speak for a year and a half.&quot;</span><br><span class="language-xml">            text_size: self.width-20, self.height-20</span><br><span class="language-xml">            valign: &#x27;middle&#x27;</span><br><span class="language-xml">            halign: &#x27;center&#x27;</span><br><span class="language-xml">        Label:</span><br><span class="language-xml">            text: &quot;A consultant is someone who takes a subject you understand and makes it sound confusing&quot;</span><br><span class="language-xml">            text_size: self.width-20, self.height-20</span><br><span class="language-xml">            valign: &#x27;bottom&#x27;</span><br><span class="language-xml">            halign: &#x27;justify&#x27;</span><br><span class="language-xml">&#x27;&#x27;&#x27;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>class<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>RootWidget<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(FloatLayout)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>pass<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>class<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>MainApp<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(App)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br><br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>def<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>build<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(self)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="language-xml">:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>        <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>return<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> RootWidget()<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>if<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span> __name_<span class="hljs-number">_</span> == <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x27;__main__&#x27;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>:<br>    MainApp().run()<br></code></pre></td></tr></table></figure>
 <p>效果大概如下图所示：</p>
-<p class='item-img' data-src='https://kivy.org/docs/_images/global_background.png'><img src="https://kivy.org/docs/_images/global_background.png" alt="../_images/global_background.png"></p>
+<p><img src="https://kivy.org/docs/_images/global_background.png" alt="../_images/global_background.png"></p>
 <p>我们已经对网格布局 GridLayout 类的规则进行了覆盖，所以接下来在应用中使用这个类就都会显示那幅图片了。</p>
 <p><strong>动画背景</strong>怎么弄呢？</p>
 <p>就像在矩形Rectangle/ 边界图像BorderImage /椭圆Ellipse/等里面添加设置绘图指令一样，可以用一个特定的纹理属性 texture ：</p>
@@ -529,4 +599,511 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>或者也可以清空Canvas画布然后重新画：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyWidget</span>(<span class="hljs-title class_ inherited__">Widget</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, **kwargs</span>):<br>        <span class="hljs-built_in">super</span>(MyWidget, self).__init__(**kwargs)<br>        self.draw_my_stuff()<br><br>        self.bind(pos=self.draw_my_stuff)<br>        self.bind(size=self.draw_my_stuff)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">draw_my_stuff</span>(<span class="hljs-params">self</span>):<br>        self.canvas.clear()<br><br>        <span class="hljs-keyword">with</span> self.canvas:<br>            self.rect = Rectangle(pos=self.pos, size=self.size)<br></code></pre></td></tr></table></figure>
 <p>要注意更新指令的方法是更好的选择，因为这样减少了开销，并且避免了创建新指令。</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/07/11/NanUI%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/">← 下一篇 NanUI使用文档</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/07/09/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">Ubuntu部署记录 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kivy%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">Kivy简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="toc-number">2.1.</span> <span class="toc-text">安装前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">安装过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-number">3.</span> <span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kivy%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%90%AD%E5%BB%BA"><span class="toc-number">3.1.</span> <span class="toc-text">Kivy环境安装搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8"><span class="toc-number">3.2.</span> <span class="toc-text">创建一个应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kivy%E5%BA%94%E7%94%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">3.3.</span> <span class="toc-text">Kivy应用的生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%BA%94%E7%94%A8"><span class="toc-number">3.4.</span> <span class="toc-text">运行应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%9A%E5%88%B6%E8%BF%99%E4%B8%AA%E5%BA%94%E7%94%A8"><span class="toc-number">3.5.</span> <span class="toc-text">修改定制这个应用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">4.</span> <span class="toc-text">环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E6%8E%A7%E5%88%B6"><span class="toc-number">4.1.</span> <span class="toc-text">路径控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F"><span class="toc-number">4.1.0.1.</span> <span class="toc-text">特别注意</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.2.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%AE%9AKivy-core%E6%A0%B8%E5%BF%83%EF%BC%8C%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="toc-number">4.3.</span> <span class="toc-text">限定Kivy.core核心，使用特定版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%8D%95%E4%BD%8D"><span class="toc-number">4.4.</span> <span class="toc-text">设置单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E8%BE%93%E5%87%BA"><span class="toc-number">4.5.</span> <span class="toc-text">图形输出</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%BE%E5%88%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE"><span class="toc-number">5.1.</span> <span class="toc-text">找到配置文件位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text">本地配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E7%90%86%E8%A7%A3%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-number">5.3.</span> <span class="toc-text">详细理解配置项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84"><span class="toc-number">6.</span> <span class="toc-text">架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97%E5%92%8C%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97"><span class="toc-number">6.1.</span> <span class="toc-text">核心模块和输入模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%8E%A5%E5%8F%A3"><span class="toc-number">6.2.</span> <span class="toc-text">图形接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97"><span class="toc-number">6.3.</span> <span class="toc-text">核心模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIX%EF%BC%88%E6%8E%A7%E4%BB%B6%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%89"><span class="toc-number">6.4.</span> <span class="toc-text">UIX（控件和布局）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">6.5.</span> <span class="toc-text">模块化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E4%BA%8B%E4%BB%B6%EF%BC%88Touches%EF%BC%89"><span class="toc-number">6.6.</span> <span class="toc-text">输入事件（Touches）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E8%B0%83%E5%BA%A6"><span class="toc-number">6.7.</span> <span class="toc-text">控件和事件调度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A7%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">控件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E4%BB%B6%E7%AE%80%E4%BB%8B"><span class="toc-number">7.1.</span> <span class="toc-text">控件简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%8E%A7%E4%BB%B6%E6%A0%91"><span class="toc-number">7.2.</span> <span class="toc-text">操作控件树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F-1"><span class="toc-number">7.2.0.1.</span> <span class="toc-text">特别注意</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E6%8E%A7%E4%BB%B6%E6%A0%91"><span class="toc-number">7.3.</span> <span class="toc-text">遍历控件树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E4%BB%B6%E7%B4%A2%E5%BC%95Z"><span class="toc-number">7.4.</span> <span class="toc-text">控件索引Z</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E7%90%86%E5%B8%83%E5%B1%80"><span class="toc-number">7.5.</span> <span class="toc-text">整理布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%B8%83%E5%B1%80%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF"><span class="toc-number">7.6.</span> <span class="toc-text">给布局添加背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80%E8%A7%84%E5%88%99-%E7%B1%BB%E5%A2%9E%E5%8A%A0%E8%83%8C%E6%99%AF%E8%89%B2"><span class="toc-number">7.6.1.</span> <span class="toc-text">给自定义布局规则&#x2F;类增加背景色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%8A%B6%E5%B8%83%E5%B1%80"><span class="toc-number">7.7.</span> <span class="toc-text">网状布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BA%E5%AF%B8%E5%92%8C%E4%BD%8D%E7%BD%AE%E5%BA%A6%E9%87%8F"><span class="toc-number">7.8.</span> <span class="toc-text">尺寸和位置度量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%B1%8F%E5%B9%95%E7%AE%A1%E7%90%86%E5%99%A8%E8%BF%9B%E8%A1%8C%E5%B1%8F%E5%B9%95%E5%88%86%E5%89%B2"><span class="toc-number">7.9.</span> <span class="toc-text">使用屏幕管理器进行屏幕分割</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2"><span class="toc-number">8.</span> <span class="toc-text">图形</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%91%E8%80%85%E5%89%8D%E8%A8%80"><span class="toc-number">8.1.</span> <span class="toc-text">译者前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8BCanvas"><span class="toc-number">8.2.</span> <span class="toc-text">简介Canvas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%8C%87%E4%BB%A4"><span class="toc-number">8.3.</span> <span class="toc-text">环境指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E6%8C%87%E4%BB%A4"><span class="toc-number">8.4.</span> <span class="toc-text">绘图指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="toc-number">8.5.</span> <span class="toc-text">操作指令</span></a></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/07/09/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/07/11/NanUI%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            NanUI使用文档
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/07/09/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Ubuntu部署记录</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> zdx
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+<script>
+  const password = "65535";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

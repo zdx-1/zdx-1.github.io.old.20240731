@@ -1,43 +1,117 @@
-<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Flask开发入门 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
-  font-family: Bender;
-  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
-}
-@font-face {
-  font-family: BenderLight;
-  src: local('BenderLight'), url("/font/BenderLight.ttf");
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
- document.documentElement.setAttribute('theme-mode', 'light')
-if (window.localStorage.getItem('theme-mode') === 'dark')
- document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
- --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
- --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: '确认'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
-window.mermaid = mermaid;
-code.paintMermaid();
-</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
-lightGallery(document.getElementById('post-bg'), {
-  plugins: [lgZoom,lgThumbnail],
-  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
- cacheBust: false,
- selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
- switches: {'article': Pjax.switches.sideBySide},
- switchesOptions: {
-   'article': {
-     classNames: {
-       remove: "pjax-out",
-       add: "pjax-in"
-     }
-   }
- }
-});
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Flask开发入门</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-16T10:43:18.000Z" id="date"> 2024-07-16</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-16T15:57:04.023Z" id="updated"> 2024-07-16</time></div></span></div></div><hr><div id="post-content"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>对于springboot+vue、asp.net还是其他一些技术，我们实现网页都需要较长的学习时间，因此，为了快速开发，满足需求，我参考Python的Flask编写了这篇文章。</p>
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="learn" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Flask开发入门 |  Zdx-1</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Flask开发入门"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Flask开发入门
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/07/16/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/" class="article-date">
+  <time datetime="2024-07-16T10:43:18.000Z" itemprop="datePublished">2024-07-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python-Flask/">python Flask</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">5.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">24 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>对于springboot+vue、asp.net还是其他一些技术，我们实现网页都需要较长的学习时间，因此，为了快速开发，满足需求，我参考Python的Flask编写了这篇文章。</p>
 <p>我使用的是flask+mysql的web网页集成开发。</p>
 <p>参考文献如下：</p>
 <p> Flask<a target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/3.0.x/">官方文档</a></p>
@@ -63,11 +137,11 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <blockquote>
 <p>新建一个项目，然后创建一个基于本地python解释器的虚拟环境（防止污染本地环境）</p>
 </blockquote>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716190809782.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716190809782.png" alt="配置完成的结构"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716190809782.png" alt="配置完成的结构"></p>
 <h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><font title="green">在main.py中编写以下代码，这样你就成功拥有了第一个Flask应用</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br><br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Welcome to My Watchlist!&#x27;</span><br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716195136906.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716195136906.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716195136906.png" alt="运行截图"></p>
 <h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>如上面所见，我们成功初始化了一个flask项目，那么我们都做了什么呢？</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br>app = Flask(__name__)<br></code></pre></td></tr></table></figure>
 <blockquote alt='info'>
@@ -93,17 +167,17 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <h3 id="1-route内部的url都可以运行在部署的端口上，其编写规则是以斜线-作为开头。"><a href="#1-route内部的url都可以运行在部署的端口上，其编写规则是以斜线-作为开头。" class="headerlink" title="1.route内部的url都可以运行在部署的端口上，其编写规则是以斜线 /作为开头。"></a>1.route内部的url都可以运行在部署的端口上，其<font title="red">编写规则是以斜线 /作为开头</font>。</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/login&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Welcome !!!&#x27;</span><br></code></pre></td></tr></table></figure>
 <h3 id="2-对于一个函数，可以附加多个装饰器-app-route-‘-‘-。"><a href="#2-对于一个函数，可以附加多个装饰器-app-route-‘-‘-。" class="headerlink" title="2.对于一个函数，可以附加多个装饰器@app.route(‘/‘)。"></a>2.对于一个函数，可以附加多个装饰器@app.route(‘/‘)。</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/login&#x27;</span></span>)</span><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/admin&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">open</span>(html_path+<span class="hljs-string">&quot;login.html&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>).read()<br></code></pre></td></tr></table></figure>
 <h3 id="3-对于-app-route-‘-‘-，我们还可以定义变量。"><a href="#3-对于-app-route-‘-‘-，我们还可以定义变量。" class="headerlink" title="3.对于@app.route(‘/‘)，我们还可以定义变量。"></a>3.对于@app.route(‘/‘)，我们还可以定义变量。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/user/&lt;username&gt;&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">user_page</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;欢迎你&#x27;</span> + username<br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716203426816.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716203426816.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716203426816.png" alt="运行截图"></p>
 <blockquote>
 <p>用户输入的数据会包含恶意代码，所以不能直接作为响应返回，需要使用 MarkupSafe（Flask 的依赖之一）提供的 <code>escape()</code> 函数对 <code>name</code> 变量进行转义处理，比如把 <code>&lt;</code> 转换成 <code>&lt;</code>。这样在返回响应时浏览器就不会把它们当做代码执行。</p>
 </blockquote>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">from</span> markupsafe <span class="hljs-keyword">import</span> escape<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/user/&lt;username&gt;&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">user_page</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;User: <span class="hljs-subst">&#123;escape(username)&#125;</span>&#x27;</span><br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716204946382.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716204946382.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716204946382.png" alt="运行截图"></p>
 <h3 id="视图函数的一些技巧"><a href="#视图函数的一些技巧" class="headerlink" title="视图函数的一些技巧"></a>视图函数的一些技巧</h3><p><kbd>我们可以通过url查看使用哪个函数</kbd></p>
 <p>作为代表某个路由的端点（endpoint），同时用来生成视图函数对应的 URL。</p>
 <p>对于程序内的 URL,Flask 提供了一个 <code>url_for</code> 函数来生成 URL，它接受的第一个参数就是端点值，默认为视图函数的名称</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> url_for<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/test&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">test_url_for</span>():<br>    <span class="hljs-comment"># 下面是一些调用示例（请访问 http://localhost:5000/test 后在命令行窗口查看输出的 URL）：</span><br>    <span class="hljs-built_in">print</span>(url_for(<span class="hljs-string">&#x27;login&#x27;</span>))  <span class="hljs-comment"># 生成 login 视图函数对应的 URL，将会输出：/admin</span><br>    <span class="hljs-comment"># 注意下面两个调用是如何生成包含 URL 变量的 URL 的</span><br>    <span class="hljs-built_in">print</span>(url_for(<span class="hljs-string">&#x27;user_page&#x27;</span>, username=<span class="hljs-string">&#x27;greyli&#x27;</span>))  <span class="hljs-comment"># 输出：/user/greyli</span><br>    <span class="hljs-built_in">print</span>(url_for(<span class="hljs-string">&#x27;user_page&#x27;</span>, username=<span class="hljs-string">&#x27;peter&#x27;</span>))  <span class="hljs-comment"># 输出：/user/peter</span><br>    <span class="hljs-built_in">print</span>(url_for(<span class="hljs-string">&#x27;test_url_for&#x27;</span>))  <span class="hljs-comment"># 输出：/test</span><br>    <span class="hljs-comment"># 下面这个调用传入了多余的关键字参数，它们会被作为查询字符串附加到 URL 后面。</span><br>    <span class="hljs-built_in">print</span>(url_for(<span class="hljs-string">&#x27;test_url_for&#x27;</span>, num=<span class="hljs-number">2</span>))  <span class="hljs-comment"># 输出：/test?num=2</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Test page&#x27;</span><br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716205528576.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716205528576.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716205528576.png" alt="运行截图"></p>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>我导入一个html文件，然后返回这个html页面</p>
 <blockquote>
 <p>main.py</p>
@@ -116,7 +190,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <blockquote>
 <p>运行截图</p>
 </blockquote>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716210315287.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716210315287.png" alt="初始化的登录页面"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716210315287.png" alt="初始化的登录页面"></p>
 <h1 id="二、HTML模板"><a href="#二、HTML模板" class="headerlink" title="二、HTML模板"></a>二、HTML模板</h1><p>在一般的 Web 程序里，访问一个地址通常会返回一个包含各类信息的 HTML 页面。</p>
 <p>因为我们的程序是动态的，页面中的某些信息需要根据不同的情况来进行调整，比如对登录和未登录用户显示不同的信息，所以页面需要在用户访问时根据程序逻辑动态生成。</p>
 <p>我们把包含变量和运算逻辑的 HTML 或其他格式的文本叫做<strong>模板</strong>，执行这些变量替换和逻辑计算工作的过程被称为<strong>渲染</strong>，这个工作我们使用模板渲染引擎——Jinja2 来完成。</p>
@@ -146,7 +220,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>为了更好的表示这个视图函数的作用，我们把原来的函数名 <code>login</code> 改为 <code>index</code>，意思是“索引”，即主页。</p>
 <p>在传入 <code>render_template()</code> 函数的关键字参数中，左边的 <code>movies</code> 是模板中使用的变量名称，右边的 <code>movies</code> 则是该变量指向的实际对象。这里传入模板的 <code>name</code> 是字符串，<code>movies</code> 是列表，但能够在模板里使用的不只这两种 Python 数据结构，你也可以传入元组、字典、函数等。</p>
 <p><code>render_template()</code> 函数在调用时会识别并执行 index.html 里所有的 Jinja2 语句，返回渲染好的模板内容。在返回的页面中，变量会被替换为实际的值（包括定界符），语句（及定界符）则会在执行后被移除（注释也会一并移除）。</p>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716214913074.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716214913074.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716214913074.png" alt="运行截图"></p>
 <h1 id="三、静态文件"><a href="#三、静态文件" class="headerlink" title="三、静态文件"></a>三、静态文件</h1><p>静态文件（static files）和我们的模板概念相反，指的是内容不需要动态生成的文件。比如图片、CSS 文件和 JavaScript 脚本等。</p>
 <p>在 Flask 中，我们需要创建一个 static 文件夹来保存静态文件，它应该和程序模块、templates 文件夹在同一目录层级。</p>
 <h2 id="生成静态文件-URL"><a href="#生成静态文件-URL" class="headerlink" title="生成静态文件 URL"></a>生成静态文件 URL</h2><p>在 HTML 文件里，引入这些静态文件需要给出资源所在的 URL。为了更加灵活，这些文件的 URL 可以通过 Flask 提供的 <code>url_for()</code> 函数来生成。</p>
@@ -185,13 +259,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>最后要为对应的元素设置 <code>class</code> 属性值，以便和对应的 CSS 定义关联起来：</p>
 <p><em>templates/index.html：添加 class 属性</em></p>
 <figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Avatar&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">url_for</span>(<span class="hljs-name">&#x27;static&#x27;</span>, <span class="hljs-attr">filename</span>=<span class="hljs-string">&#x27;images/avatar.png&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span></span><br><span class="language-xml">    </span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">name</span> &#125;&#125;</span><span class="language-xml">&#x27;s Watchlist</span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span><br><span class="language-xml">...</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;movie-list&quot;</span>&gt;</span></span><br><span class="language-xml">    ...</span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Walking Totoro&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;totoro&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">url_for</span>(<span class="hljs-name">&#x27;static&#x27;</span>, <span class="hljs-attr">filename</span>=<span class="hljs-string">&#x27;images/totoro.gif&#x27;</span>) &#125;&#125;</span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716222523545.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716222523545.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716222523545.png" alt="运行截图"></p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/totoro.gif'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/totoro.gif" alt="totoro"></th>
-<th class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/avatar.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/avatar.png" alt="avatar"></th>
+<th><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/totoro.gif" alt="totoro"></th>
+<th><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/avatar.png" alt="avatar"></th>
 </tr>
 </thead>
 <tbody>
@@ -207,14 +281,521 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <h2 id="使用MySQL数据库"><a href="#使用MySQL数据库" class="headerlink" title="使用MySQL数据库"></a>使用MySQL数据库</h2><p><kbd>在python中，可以使用pymysql库进行数据库操作</kbd></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装pymysql</span><br>pip install pymysql<br></code></pre></td></tr></table></figure>
 <p>在mysql数据库中新建</p>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235643515.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235643515.png" alt="image-20240716235643515"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235643515.png" alt="image-20240716235643515"></p>
 <p>编写一个mysql配置类</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> pymysql<br><span class="hljs-keyword">from</span> pymysql <span class="hljs-keyword">import</span> cursors<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">DbConfig</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        self.conn = pymysql.connect(<br>            host=<span class="hljs-string">&#x27;127.0.0.1&#x27;</span>,  <span class="hljs-comment"># 主机名（或IP地址）</span><br>            port=<span class="hljs-number">3306</span>,  <span class="hljs-comment"># 端口号，默认为3306</span><br>            user=<span class="hljs-string">&#x27;root&#x27;</span>,  <span class="hljs-comment"># 用户名</span><br>            password=<span class="hljs-string">&#x27;123456&#x27;</span>,  <span class="hljs-comment"># 密码</span><br>            charset=<span class="hljs-string">&#x27;utf8mb4&#x27;</span>,  <span class="hljs-comment"># 设置字符编码</span><br>            autocommit=<span class="hljs-literal">True</span>,  <span class="hljs-comment"># 自动提交更改</span><br>            database=<span class="hljs-string">&#x27;flask_study&#x27;</span>,  <span class="hljs-comment"># 数据库名称</span><br>            cursorclass=cursors.DictCursor  <span class="hljs-comment"># 转换成字典格式输出</span><br>        )<br>        self.cursor = self.conn.cursor()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findUser</span>(<span class="hljs-params">self</span>):<br>        self.cursor.execute(<span class="hljs-string">&#x27;select * from user where id=1&#x27;</span>)<br>        users = self.cursor.fetchall()<br>        <span class="hljs-keyword">return</span> users<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findMovies</span>(<span class="hljs-params">self</span>):<br>        self.cursor.execute(<span class="hljs-string">&#x27;select * from movies&#x27;</span>)<br>        movies = self.cursor.fetchall()<br>        <span class="hljs-keyword">return</span> movies<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__del__</span>(<span class="hljs-params">self</span>):<br>        self.cursor.close()<br>        self.conn.close()<br></code></pre></td></tr></table></figure>
 <p>在使用数据的时候可以像下面这样写</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py">name = DbConfig().findUser()[<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;username&#x27;</span>]<br>movies = DbConfig().findMovies()<br></code></pre></td></tr></table></figure>
 <p>完整的代码：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> pymysql<br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, render_template<br><span class="hljs-keyword">from</span> pymysql <span class="hljs-keyword">import</span> cursors<br><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">DbConfig</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        self.conn = pymysql.connect(<br>            host=<span class="hljs-string">&#x27;127.0.0.1&#x27;</span>,  <span class="hljs-comment"># 主机名（或IP地址）</span><br>            port=<span class="hljs-number">3306</span>,  <span class="hljs-comment"># 端口号，默认为3306</span><br>            user=<span class="hljs-string">&#x27;root&#x27;</span>,  <span class="hljs-comment"># 用户名</span><br>            password=<span class="hljs-string">&#x27;123456&#x27;</span>,  <span class="hljs-comment"># 密码</span><br>            charset=<span class="hljs-string">&#x27;utf8mb4&#x27;</span>,  <span class="hljs-comment"># 设置字符编码</span><br>            autocommit=<span class="hljs-literal">True</span>,  <span class="hljs-comment"># 自动提交更改</span><br>            database=<span class="hljs-string">&#x27;flask_study&#x27;</span>,  <span class="hljs-comment"># 数据库名称</span><br>            cursorclass=cursors.DictCursor  <span class="hljs-comment"># 转换成字典格式输出</span><br>        )<br>        self.cursor = self.conn.cursor()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findUser</span>(<span class="hljs-params">self</span>):<br>        self.cursor.execute(<span class="hljs-string">&#x27;select * from user where id=1&#x27;</span>)<br>        users = self.cursor.fetchall()<br>        <span class="hljs-keyword">return</span> users<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findMovies</span>(<span class="hljs-params">self</span>):<br>        self.cursor.execute(<span class="hljs-string">&#x27;select * from movies&#x27;</span>)<br>        movies = self.cursor.fetchall()<br>        <span class="hljs-keyword">return</span> movies<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__del__</span>(<span class="hljs-params">self</span>):<br>        self.cursor.close()<br>        self.conn.close()<br><br><br>app = Flask(__name__)<br><br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    name = DbConfig().findUser()[<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;username&#x27;</span>]<br>    movies = DbConfig().findMovies()<br>    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">&#x27;index.html&#x27;</span>, name=name, movies=movies)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run(debug=<span class="hljs-literal">True</span>)<br><br></code></pre></td></tr></table></figure>
-<p class='item-img' data-src='./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235252644.png'><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235252644.png" alt="运行截图"></p>
+<p><img src="./../images/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/image-20240716235252644.png" alt="运行截图"></p>
 <p>大体上就是这个样子了</p>
 <p>这种开发满足了基本需求，开发周期短，但是想要好看的页面，可以使用json数据做一个前后端分离或者整合的项目。</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/07/17/PyQt%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">← 下一篇 PyQt应用开发</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/07/16/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/">python网络爬虫 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Flask"><span class="toc-number">2.0.1.</span> <span class="toc-text">安装Flask</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAFlask%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">一、你的第一个Flask应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.1.</span> <span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-number">3.2.</span> <span class="toc-text">编写代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-number">3.3.</span> <span class="toc-text">代码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99"><span class="toc-number">3.3.1.</span> <span class="toc-text">装饰器的一些使用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-route%E5%86%85%E9%83%A8%E7%9A%84url%E9%83%BD%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8C%E5%9C%A8%E9%83%A8%E7%BD%B2%E7%9A%84%E7%AB%AF%E5%8F%A3%E4%B8%8A%EF%BC%8C%E5%85%B6%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99%E6%98%AF%E4%BB%A5%E6%96%9C%E7%BA%BF-%E4%BD%9C%E4%B8%BA%E5%BC%80%E5%A4%B4%E3%80%82"><span class="toc-number">3.3.2.</span> <span class="toc-text">1.route内部的url都可以运行在部署的端口上，其编写规则是以斜线 &#x2F;作为开头。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%B9%E4%BA%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%99%84%E5%8A%A0%E5%A4%9A%E4%B8%AA%E8%A3%85%E9%A5%B0%E5%99%A8-app-route-%E2%80%98-%E2%80%98-%E3%80%82"><span class="toc-number">3.3.3.</span> <span class="toc-text">2.对于一个函数，可以附加多个装饰器@app.route(‘&#x2F;‘)。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AF%B9%E4%BA%8E-app-route-%E2%80%98-%E2%80%98-%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%98%E5%8F%AF%E4%BB%A5%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E3%80%82"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.对于@app.route(‘&#x2F;‘)，我们还可以定义变量。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7"><span class="toc-number">3.3.5.</span> <span class="toc-text">视图函数的一些技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B"><span class="toc-number">3.4.</span> <span class="toc-text">举例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81HTML%E6%A8%A1%E6%9D%BF"><span class="toc-number">4.</span> <span class="toc-text">二、HTML模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">模板基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%B8%BB%E9%A1%B5%E6%A8%A1%E6%9D%BF"><span class="toc-number">4.2.</span> <span class="toc-text">编写主页模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E8%99%9A%E6%8B%9F%E6%95%B0%E6%8D%AE"><span class="toc-number">4.3.</span> <span class="toc-text">准备虚拟数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E4%B8%BB%E9%A1%B5%E6%A8%A1%E6%9D%BF"><span class="toc-number">4.4.</span> <span class="toc-text">渲染主页模板</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">三、静态文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6-URL"><span class="toc-number">5.1.</span> <span class="toc-text">生成静态文件 URL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-Favicon"><span class="toc-number">5.2.</span> <span class="toc-text">添加 Favicon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="toc-number">5.3.</span> <span class="toc-text">添加图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-CSS"><span class="toc-number">5.4.</span> <span class="toc-text">添加 CSS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">6.</span> <span class="toc-text">四、数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-SQLAlchemy-%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">6.1.</span> <span class="toc-text">使用 SQLAlchemy 操作数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8MySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">6.2.</span> <span class="toc-text">使用MySQL数据库</span></a></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/07/16/Flask%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-Flask/" rel="tag">python Flask</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/07/17/PyQt%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            PyQt应用开发
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/07/16/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">python网络爬虫</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> zdx
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+<script>
+  const password = "65535";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

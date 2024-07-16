@@ -1,43 +1,117 @@
-<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>二分算法 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
-  font-family: Bender;
-  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
-}
-@font-face {
-  font-family: BenderLight;
-  src: local('BenderLight'), url("/font/BenderLight.ttf");
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
- document.documentElement.setAttribute('theme-mode', 'light')
-if (window.localStorage.getItem('theme-mode') === 'dark')
- document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
- --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
- --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: '确认'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
-window.mermaid = mermaid;
-code.paintMermaid();
-</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
-lightGallery(document.getElementById('post-bg'), {
-  plugins: [lgZoom,lgThumbnail],
-  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
- cacheBust: false,
- selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
- switches: {'article': Pjax.switches.sideBySide},
- switchesOptions: {
-   'article': {
-     classNames: {
-       remove: "pjax-out",
-       add: "pjax-in"
-     }
-   }
- }
-});
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>二分算法</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-11T12:16:41.000Z" id="date"> 2024-03-11</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-04-24T12:02:02.000Z" id="updated"> 2024-04-24</time></div></span></div></div><hr><div id="post-content"><h2 id="二分查找算法"><a href="#二分查找算法" class="headerlink" title="二分查找算法"></a>二分查找算法</h2><h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="learn" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>二分算法 |  Zdx-1</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-二分算法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  二分算法
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/11/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" class="article-date">
+  <time datetime="2024-03-11T12:16:41.000Z" itemprop="datePublished">2024-03-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AFNote/">蓝桥杯Note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">4.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">20 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="二分查找算法"><a href="#二分查找算法" class="headerlink" title="二分查找算法"></a>二分查找算法</h2><h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
 <li>二分查找原理讲解</li>
 <li>在单调递增序列 <code>a</code> 中查找 <code>x</code> 或 <code>x</code> 的后继</li>
 <li>在单调递增序列 <code>a</code> 中查找 <code>x</code> 或 <code>x</code> 的前驱</li>
@@ -58,7 +132,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <li>二分答案的问题往往有固定的问法，例如：令最大值最小（最小值最大），求满足条件的最大（小）值等。</li>
 </ol>
 <p><strong>折半查找一般过程：</strong></p>
-<p class='item-img' data-src='./../images/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/83f052e54f7e7907738ba7730a9b3297-0.png'><img src="./../images/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/83f052e54f7e7907738ba7730a9b3297-0.png" alt="图片描述"></p>
+<p><img src="./../images/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/83f052e54f7e7907738ba7730a9b3297-0.png" alt="图片描述"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Step 1:<br><br>假设存在一个有序数组：<br>下标[ 0   1   2   3   4   5   6   7   8    9    10   11   12 ]<br>数据[ 7   14  18  21  23  29  31  35   38   42   46   49  52 ]<br>      ↑                                                   ↑<br>    low=0                                              high=12<br><br>                            mid=(low+high)/2<br>                            mid=(0+12)/2<br>                            mid=6<br>                            [mid]=31 &gt; 14，所以选择左半部分<br><br>操作：<br>    此时令low不变，high=mid-1=5<br><br>Step 2:<br><br>下标[ 0   1   2   3   4   5   6   7   8    9    10   11   12 ]<br>数据[ 7   14  18  21  23  29  31  35   38   42   46   49  52 ]<br>      ↑                   ↑<br>   low=0                 high=5<br><br>            mid=(low+high)/2<br>            mid=(0+6)/2<br>            mid=3<br>            [mid]=21 &gt; 14，所以选择左半部分<br><br>操作：<br>    此时令low不变，high=mid-1=2<br><br>Step 3:<br><br>下标[ 0   1   2   3   4   5   6   7   8    9    10   11   12 ]<br>数据[ 7   14  18  21  23  29  31  35   38   42   46   49  52 ]<br>      ↑       ↑<br>   low=0    high=2<br><br>            mid=(low+high)/2<br>            mid=(0+2)/2<br>            mid=1<br>            [mid]=14 = 14  找到答案<br><br>操作：<br>    返回下标<br></code></pre></td></tr></table></figure>
 <p>这个文本看起来更加清晰，修正了一些不规范的表达。</p>
 <h3 id="整数二分法常用算法模板"><a href="#整数二分法常用算法模板" class="headerlink" title="整数二分法常用算法模板"></a>整数二分法常用算法模板</h3><h4 id="C-语言描述"><a href="#C-语言描述" class="headerlink" title="C++ 语言描述"></a>C++ 语言描述</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// 在单调递增序列a中查找&gt;=x的数中最小的一个（即x或x的后继）</span><br><span class="hljs-keyword">while</span> (low &lt; high)<br>&#123;<br>    <span class="hljs-type">int</span> mid = (low + high) / <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span> (a[mid] &gt;= x)<br>        high = mid;<br><br>    <span class="hljs-keyword">else</span><br>        low = mid + <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-comment">// 在单调递增序列a中查找&lt;=x的数中最大的一个（即x或x的前驱）</span><br><span class="hljs-keyword">while</span> (low &lt; high)<br>&#123;<br>    <span class="hljs-type">int</span> mid = (low + high + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br><br>    <span class="hljs-keyword">if</span> (a[mid] &lt;= x)<br>        low = mid;<br><br>    <span class="hljs-keyword">else</span><br>        high = mid - <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -163,4 +237,511 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p><strong>Java 实现</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>  <span class="hljs-keyword">static</span> <span class="hljs-type">double</span> n, l, r, mid;<br>  <span class="hljs-keyword">static</span> <span class="hljs-type">double</span> <span class="hljs-variable">eps</span> <span class="hljs-operator">=</span> <span class="hljs-number">1e-8</span>;<br><br>  <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">pd</span><span class="hljs-params">(<span class="hljs-type">double</span> a, <span class="hljs-type">int</span> m)</span> &#123;<br>      <span class="hljs-type">double</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>      <span class="hljs-keyword">while</span> (m &gt; <span class="hljs-number">0</span>) &#123;<br>          c = c * a;<br>          m--;<br>      &#125;<br><br>      <span class="hljs-keyword">if</span> (c &gt;= n)<br>          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>      <span class="hljs-keyword">else</span><br>          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>  &#125;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>      <span class="hljs-type">int</span> m;<br>      <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span><span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>      n=in.nextDouble();<br>      m=in.nextInt();<br><span class="hljs-comment">//设置二分边界</span><br>      l = <span class="hljs-number">0</span>;<br>      r = n;<br><span class="hljs-comment">//实数二分</span><br>      <span class="hljs-keyword">while</span> (l + eps &lt; r) &#123;<br>          <span class="hljs-type">double</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> (l + r) / <span class="hljs-number">2</span>;<br>          <span class="hljs-keyword">if</span> (pd(mid, m))<br>              r = mid;<br>          <span class="hljs-keyword">else</span><br>              l = mid;<br>      &#125;<br>      System.out.println(String.format(<span class="hljs-string">&quot;%.7f&quot;</span>,l));<br>  <span class="hljs-comment">/*</span><br><span class="hljs-comment">   关于string.format 的应用</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">  double num = 123.4567899;</span><br><span class="hljs-comment">  System.out.print(String.format(&quot;%f %n&quot;, num)); // 123.456790</span><br><span class="hljs-comment">  System.out.print(String.format(&quot;%a %n&quot;, num)); // 0x1.edd3c0bb46929p6</span><br><span class="hljs-comment">  System.out.print(String.format(&quot;%g %n&quot;, num)); // 123.457</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">  可用标识：</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">        -，在最小宽度内左对齐,不可以与0标识一起使用。</span><br><span class="hljs-comment">        0，若内容长度不足最小宽度，则在左边用0来填充。</span><br><span class="hljs-comment">        #，对8进制和16进制，8进制前添加一个0,16进制前添加0x。</span><br><span class="hljs-comment">        +，结果总包含一个+或-号。</span><br><span class="hljs-comment">        空格，正数前加空格，负数前加-号。</span><br><span class="hljs-comment">        ,，只用与十进制，每3位数字间用,分隔。</span><br><span class="hljs-comment">        (，若结果为负数，则用括号括住，且不显示符号。</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">  可用转换符：</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">        b，布尔类型，只要实参为非false的布尔类型，均格式化为字符串true，否则为字符串false。</span><br><span class="hljs-comment">        n，平台独立的换行符, 也可通过System.getProperty(&quot;line.separator&quot;)获取。</span><br><span class="hljs-comment">        f，浮点数型（十进制）。显示9位有效数字，且会进行四舍五入。如99.99。</span><br><span class="hljs-comment">        a，浮点数型（十六进制）。</span><br><span class="hljs-comment">        e，指数类型。如9.38e+5。</span><br><span class="hljs-comment">        g，浮点数型（比%f，%a长度短些，显示6位有效数字，且会进行四舍五入）</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">   */</span><br><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>二分的题目主要是必须要求是单调的，一般会有条件等字眼。做这种题目主要还是找到递增或者递减的序列，然后关于序列的判定条件。或者通过观察时间复杂度来看是否可以使用二分，二分法的题目相对来说比较明显，设计起来也比较简单，模板不用死记硬背，理解一下，很快就可以独立写出来。</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/11/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">← 下一篇 贪心算法</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/11/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">二分查找算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.0.1.</span> <span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E8%AE%B2%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">二分查找算法讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86%E6%B3%95%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF"><span class="toc-number">2.1.</span> <span class="toc-text">整数二分法常用算法模板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">C++ 语言描述</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B7%A7%E5%85%8B%E5%8A%9B"><span class="toc-number">2.2.</span> <span class="toc-text">分巧克力</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="toc-number">2.2.1.</span> <span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%AD%94"><span class="toc-number">2.2.2.</span> <span class="toc-text">代码解答</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#M-%E6%AC%A1%E6%96%B9%E6%A0%B9"><span class="toc-number">3.</span> <span class="toc-text">M 次方根</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90-1"><span class="toc-number">3.0.1.</span> <span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%AD%94-1"><span class="toc-number">3.0.2.</span> <span class="toc-text">代码解答</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/03/11/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" rel="tag">二分算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/03/11/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            贪心算法
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/03/11/%E5%B9%B6%E6%9F%A5%E9%9B%86/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">并查集</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> zdx
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+<script>
+  const password = "65535";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>
