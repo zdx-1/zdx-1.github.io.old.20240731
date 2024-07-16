@@ -1,360 +1,70 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="zdx">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="zdx-BookShop介绍ASP.NET应用系统设计与开发实战项目BookShop，完整项目在BookShop目录下 项目演示当当网上书店首页 当当网图书分类显示按照图书分类 按照出版品牌商 当当网图书详情页 当当网新增订单演示 当当网用户登录 当当网个人信息 当当网购物车 搜索功能演示 后台管理系统用户登录 管理员用户管理用户信息查询  后端新增用户  管理员图书分类管理 管理员出版社管理 管">
-<meta property="og:type" content="article">
-<meta property="og:title" content="BookShop说明文档">
-<meta property="og:url" content="http://zdx-1.github.io/2024/05/22/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/index.html">
-<meta property="og:site_name" content="Zdx-1">
-<meta property="og:description" content="zdx-BookShop介绍ASP.NET应用系统设计与开发实战项目BookShop，完整项目在BookShop目录下 项目演示当当网上书店首页 当当网图书分类显示按照图书分类 按照出版品牌商 当当网图书详情页 当当网新增订单演示 当当网用户登录 当当网个人信息 当当网购物车 搜索功能演示 后台管理系统用户登录 管理员用户管理用户信息查询  后端新增用户  管理员图书分类管理 管理员出版社管理 管">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522141242224-1716370269691-1.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145038514.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145159148.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174033577.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145321335.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145345736-1716370269692-2.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145651681-1716370269692-3.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145707070-1716370269692-4.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174110277-1716370269692-5.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174213598-1716370269692-6.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174250589-1716370269692-7.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174350714.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173310694-1716370269692-21.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173504064-1716370269692-8.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173549044-1716370269692-9.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150356339-1716370269692-10.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150526547-1716370269692-11.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173639044-1716370269692-12.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173728364-1716370269692-13.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173804161-1716370269692-14.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150125276-1716370269692-16.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145943193-1716370269692-15.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173834433-1716370269692-17.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150240729-1716370269692-18.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160917117-1716370269692-19.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160655322-1716370269692-20.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160732222-1716370269692-22.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160615465-1716370269692-23.png">
-<meta property="og:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160151327-1716370269692-24.png">
-<meta property="article:published_time" content="2024-05-22T09:08:26.000Z">
-<meta property="article:modified_time" content="2024-05-22T09:31:20.000Z">
-<meta property="article:author" content="zdx">
-<meta property="article:tag" content="ASP.NET">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://zdx-1.github.io/images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522141242224-1716370269691-1.png">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>BookShop说明文档 - Zdx-1</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Zdx-1</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="BookShop说明文档"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        zdx
-      </span>
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-22 17:08" pubdate>
-          2024年5月22日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          976 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          9 分钟
-        
-      </span>
-    
-
-    
-    
-      
-        <span id="busuanzi_container_page_pv" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="busuanzi_value_page_pv"></span> 次
-        </span>
-        
-      
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">BookShop说明文档</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于 2024年5月22日 下午
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="zdx-BookShop"><a href="#zdx-BookShop" class="headerlink" title="zdx-BookShop"></a>zdx-BookShop</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>ASP.NET应用系统设计与开发实战项目BookShop，完整项目在BookShop目录下</p>
-<h2 id="项目演示"><a href="#项目演示" class="headerlink" title="项目演示"></a>项目演示</h2><h3 id="当当网上书店首页"><a href="#当当网上书店首页" class="headerlink" title="当当网上书店首页"></a>当当网上书店首页</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522141242224-1716370269691-1.png" srcset="/img/loading.gif" lazyload alt="image-20240522141242224"></p>
-<h3 id="当当网图书分类显示"><a href="#当当网图书分类显示" class="headerlink" title="当当网图书分类显示"></a>当当网图书分类显示</h3><h4 id="按照图书分类"><a href="#按照图书分类" class="headerlink" title="按照图书分类"></a>按照图书分类</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145038514.png" srcset="/img/loading.gif" lazyload alt="image-20240522145038514"></p>
-<h4 id="按照出版品牌商"><a href="#按照出版品牌商" class="headerlink" title="按照出版品牌商"></a>按照出版品牌商</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145159148.png" srcset="/img/loading.gif" lazyload alt="image-20240522145159148"></p>
-<h3 id="当当网图书详情页"><a href="#当当网图书详情页" class="headerlink" title="当当网图书详情页"></a>当当网图书详情页</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174033577.png" srcset="/img/loading.gif" lazyload alt="image-20240517174033577"></p>
-<h3 id="当当网新增订单演示"><a href="#当当网新增订单演示" class="headerlink" title="当当网新增订单演示"></a>当当网新增订单演示</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145321335.png" srcset="/img/loading.gif" lazyload alt="image-20240522145321335"><br><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145345736-1716370269692-2.png" srcset="/img/loading.gif" lazyload alt="image-20240522145345736"><br><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145651681-1716370269692-3.png" srcset="/img/loading.gif" lazyload alt="image-20240522145651681"><br><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145707070-1716370269692-4.png" srcset="/img/loading.gif" lazyload alt="image-20240522145707070"></p>
-<h3 id="当当网用户登录"><a href="#当当网用户登录" class="headerlink" title="当当网用户登录"></a>当当网用户登录</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174110277-1716370269692-5.png" srcset="/img/loading.gif" lazyload alt="image-20240517174110277"></p>
-<h3 id="当当网个人信息"><a href="#当当网个人信息" class="headerlink" title="当当网个人信息"></a>当当网个人信息</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174213598-1716370269692-6.png" srcset="/img/loading.gif" lazyload alt="image-20240517174213598"></p>
-<h3 id="当当网购物车"><a href="#当当网购物车" class="headerlink" title="当当网购物车"></a>当当网购物车</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174250589-1716370269692-7.png" srcset="/img/loading.gif" lazyload alt="image-20240517174250589"></p>
-<h3 id="搜索功能演示"><a href="#搜索功能演示" class="headerlink" title="搜索功能演示"></a>搜索功能演示</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174350714.png" srcset="/img/loading.gif" lazyload alt="image-20240517174350714"></p>
-<h3 id="后台管理系统用户登录"><a href="#后台管理系统用户登录" class="headerlink" title="后台管理系统用户登录"></a>后台管理系统用户登录</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173310694-1716370269692-21.png" srcset="/img/loading.gif" lazyload alt="image-20240517173310694"></p>
-<h3 id="管理员用户管理"><a href="#管理员用户管理" class="headerlink" title="管理员用户管理"></a>管理员用户管理</h3><h4 id="用户信息查询"><a href="#用户信息查询" class="headerlink" title="用户信息查询"></a>用户信息查询</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173504064-1716370269692-8.png" srcset="/img/loading.gif" lazyload alt="image-20240517173504064"></p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173549044-1716370269692-9.png" srcset="/img/loading.gif" lazyload alt="image-20240517173549044"></p>
-<h4 id="后端新增用户"><a href="#后端新增用户" class="headerlink" title="后端新增用户"></a>后端新增用户</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150356339-1716370269692-10.png" srcset="/img/loading.gif" lazyload alt="image-20240522150356339"></p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150526547-1716370269692-11.png" srcset="/img/loading.gif" lazyload alt="image-20240522150526547"></p>
-<h3 id="管理员图书分类管理"><a href="#管理员图书分类管理" class="headerlink" title="管理员图书分类管理"></a>管理员图书分类管理</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173639044-1716370269692-12.png" srcset="/img/loading.gif" lazyload alt="image-20240517173639044"></p>
-<h3 id="管理员出版社管理"><a href="#管理员出版社管理" class="headerlink" title="管理员出版社管理"></a>管理员出版社管理</h3><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173728364-1716370269692-13.png" srcset="/img/loading.gif" lazyload alt="image-20240517173728364"></p>
-<h3 id="管理员图书管理"><a href="#管理员图书管理" class="headerlink" title="管理员图书管理"></a>管理员图书管理</h3><h4 id="图书分类查询"><a href="#图书分类查询" class="headerlink" title="图书分类查询"></a>图书分类查询</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173804161-1716370269692-14.png" srcset="/img/loading.gif" lazyload alt="image-20240517173804161"></p>
-<h4 id="添加图书信息"><a href="#添加图书信息" class="headerlink" title="添加图书信息"></a>添加图书信息</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150125276-1716370269692-16.png" srcset="/img/loading.gif" lazyload alt="image-20240522150125276"></p>
-<h4 id="修改图书信息"><a href="#修改图书信息" class="headerlink" title="修改图书信息"></a>修改图书信息</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145943193-1716370269692-15.png" srcset="/img/loading.gif" lazyload alt="image-20240522145943193"></p>
-<h3 id="管理员订单管理"><a href="#管理员订单管理" class="headerlink" title="管理员订单管理"></a>管理员订单管理</h3><h4 id="订单管理列表"><a href="#订单管理列表" class="headerlink" title="订单管理列表"></a>订单管理列表</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173834433-1716370269692-17.png" srcset="/img/loading.gif" lazyload alt="image-20240517173834433"></p>
-<h4 id="订单详细信息"><a href="#订单详细信息" class="headerlink" title="订单详细信息"></a>订单详细信息</h4><p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150240729-1716370269692-18.png" srcset="/img/loading.gif" lazyload alt="image-20240522150240729"></p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BookShop说明文档 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>BookShop说明文档</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-05-22T09:08:26.000Z" id="date"> 2024-05-22</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-05-22T09:31:20.000Z" id="updated"> 2024-05-22</time></div></span></div></div><hr><div id="post-content"><h1 id="zdx-BookShop"><a href="#zdx-BookShop" class="headerlink" title="zdx-BookShop"></a>zdx-BookShop</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>ASP.NET应用系统设计与开发实战项目BookShop，完整项目在BookShop目录下</p>
+<h2 id="项目演示"><a href="#项目演示" class="headerlink" title="项目演示"></a>项目演示</h2><h3 id="当当网上书店首页"><a href="#当当网上书店首页" class="headerlink" title="当当网上书店首页"></a>当当网上书店首页</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522141242224-1716370269691-1.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522141242224-1716370269691-1.png" alt="image-20240522141242224"></p>
+<h3 id="当当网图书分类显示"><a href="#当当网图书分类显示" class="headerlink" title="当当网图书分类显示"></a>当当网图书分类显示</h3><h4 id="按照图书分类"><a href="#按照图书分类" class="headerlink" title="按照图书分类"></a>按照图书分类</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145038514.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145038514.png" alt="image-20240522145038514"></p>
+<h4 id="按照出版品牌商"><a href="#按照出版品牌商" class="headerlink" title="按照出版品牌商"></a>按照出版品牌商</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145159148.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145159148.png" alt="image-20240522145159148"></p>
+<h3 id="当当网图书详情页"><a href="#当当网图书详情页" class="headerlink" title="当当网图书详情页"></a>当当网图书详情页</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174033577.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174033577.png" alt="image-20240517174033577"></p>
+<h3 id="当当网新增订单演示"><a href="#当当网新增订单演示" class="headerlink" title="当当网新增订单演示"></a>当当网新增订单演示</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145321335.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145321335.png" alt="image-20240522145321335"><br class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145345736-1716370269692-2.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145345736-1716370269692-2.png" alt="image-20240522145345736"><br class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145651681-1716370269692-3.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145651681-1716370269692-3.png" alt="image-20240522145651681"><br class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145707070-1716370269692-4.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145707070-1716370269692-4.png" alt="image-20240522145707070"></p>
+<h3 id="当当网用户登录"><a href="#当当网用户登录" class="headerlink" title="当当网用户登录"></a>当当网用户登录</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174110277-1716370269692-5.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174110277-1716370269692-5.png" alt="image-20240517174110277"></p>
+<h3 id="当当网个人信息"><a href="#当当网个人信息" class="headerlink" title="当当网个人信息"></a>当当网个人信息</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174213598-1716370269692-6.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174213598-1716370269692-6.png" alt="image-20240517174213598"></p>
+<h3 id="当当网购物车"><a href="#当当网购物车" class="headerlink" title="当当网购物车"></a>当当网购物车</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174250589-1716370269692-7.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174250589-1716370269692-7.png" alt="image-20240517174250589"></p>
+<h3 id="搜索功能演示"><a href="#搜索功能演示" class="headerlink" title="搜索功能演示"></a>搜索功能演示</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174350714.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517174350714.png" alt="image-20240517174350714"></p>
+<h3 id="后台管理系统用户登录"><a href="#后台管理系统用户登录" class="headerlink" title="后台管理系统用户登录"></a>后台管理系统用户登录</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173310694-1716370269692-21.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173310694-1716370269692-21.png" alt="image-20240517173310694"></p>
+<h3 id="管理员用户管理"><a href="#管理员用户管理" class="headerlink" title="管理员用户管理"></a>管理员用户管理</h3><h4 id="用户信息查询"><a href="#用户信息查询" class="headerlink" title="用户信息查询"></a>用户信息查询</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173504064-1716370269692-8.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173504064-1716370269692-8.png" alt="image-20240517173504064"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173549044-1716370269692-9.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173549044-1716370269692-9.png" alt="image-20240517173549044"></p>
+<h4 id="后端新增用户"><a href="#后端新增用户" class="headerlink" title="后端新增用户"></a>后端新增用户</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150356339-1716370269692-10.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150356339-1716370269692-10.png" alt="image-20240522150356339"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150526547-1716370269692-11.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150526547-1716370269692-11.png" alt="image-20240522150526547"></p>
+<h3 id="管理员图书分类管理"><a href="#管理员图书分类管理" class="headerlink" title="管理员图书分类管理"></a>管理员图书分类管理</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173639044-1716370269692-12.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173639044-1716370269692-12.png" alt="image-20240517173639044"></p>
+<h3 id="管理员出版社管理"><a href="#管理员出版社管理" class="headerlink" title="管理员出版社管理"></a>管理员出版社管理</h3><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173728364-1716370269692-13.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173728364-1716370269692-13.png" alt="image-20240517173728364"></p>
+<h3 id="管理员图书管理"><a href="#管理员图书管理" class="headerlink" title="管理员图书管理"></a>管理员图书管理</h3><h4 id="图书分类查询"><a href="#图书分类查询" class="headerlink" title="图书分类查询"></a>图书分类查询</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173804161-1716370269692-14.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173804161-1716370269692-14.png" alt="image-20240517173804161"></p>
+<h4 id="添加图书信息"><a href="#添加图书信息" class="headerlink" title="添加图书信息"></a>添加图书信息</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150125276-1716370269692-16.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150125276-1716370269692-16.png" alt="image-20240522150125276"></p>
+<h4 id="修改图书信息"><a href="#修改图书信息" class="headerlink" title="修改图书信息"></a>修改图书信息</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145943193-1716370269692-15.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522145943193-1716370269692-15.png" alt="image-20240522145943193"></p>
+<h3 id="管理员订单管理"><a href="#管理员订单管理" class="headerlink" title="管理员订单管理"></a>管理员订单管理</h3><h4 id="订单管理列表"><a href="#订单管理列表" class="headerlink" title="订单管理列表"></a>订单管理列表</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173834433-1716370269692-17.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240517173834433-1716370269692-17.png" alt="image-20240517173834433"></p>
+<h4 id="订单详细信息"><a href="#订单详细信息" class="headerlink" title="订单详细信息"></a>订单详细信息</h4><p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150240729-1716370269692-18.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522150240729-1716370269692-18.png" alt="image-20240522150240729"></p>
 <h2 id="项目特点"><a href="#项目特点" class="headerlink" title="项目特点"></a>项目特点</h2><h4 id="使用Common类库统一管理DBHelper"><a href="#使用Common类库统一管理DBHelper" class="headerlink" title="使用Common类库统一管理DBHelper"></a>使用Common类库统一管理DBHelper</h4><p>具体内容请参考项目对应代码，此处举例</p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160917117-1716370269692-19.png" srcset="/img/loading.gif" lazyload alt="image-20240522160917117"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160917117-1716370269692-19.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160917117-1716370269692-19.png" alt="image-20240522160917117"></p>
 <h4 id="采用MD5加密用户密码信息"><a href="#采用MD5加密用户密码信息" class="headerlink" title="采用MD5加密用户密码信息"></a>采用MD5加密用户密码信息</h4><p>可以有效防止数据库泄露用户密码信息泄露的情况</p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160655322-1716370269692-20.png" srcset="/img/loading.gif" lazyload alt="image-20240522160655322"></p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160732222-1716370269692-22.png" srcset="/img/loading.gif" lazyload alt="image-20240522160732222"></p>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160615465-1716370269692-23.png" srcset="/img/loading.gif" lazyload alt="image-20240522160615465"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160655322-1716370269692-20.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160655322-1716370269692-20.png" alt="image-20240522160655322"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160732222-1716370269692-22.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160732222-1716370269692-22.png" alt="image-20240522160732222"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160615465-1716370269692-23.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160615465-1716370269692-23.png" alt="image-20240522160615465"></p>
 <h2 id="软件架构"><a href="#软件架构" class="headerlink" title="软件架构"></a>软件架构</h2><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><ul>
 <li><p>BookShop.WebUI：ASP.NET MVC Web应用程序项目，包含视图、控制器、路由等。</p>
 </li>
@@ -367,7 +77,7 @@
 <li><p>BookShop.BLL：业务逻辑层（BLL）类库项目，包含业务规则和服务。</p>
 </li>
 </ul>
-<p><img src="/./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160151327-1716370269692-24.png" srcset="/img/loading.gif" lazyload alt="image-20240522160151327"></p>
+<p class='item-img' data-src='./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160151327-1716370269692-24.png'><img src="./../images/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/image-20240522160151327-1716370269692-24.png" alt="image-20240522160151327"></p>
 <h3 id="Common类库"><a href="#Common类库" class="headerlink" title="Common类库"></a>Common类库</h3><ul>
 <li>数据库连接字符串管理：在Common类库中，可以定义一个配置管理器类，用于从配置文件（如web.config或appsettings.json）中读取和解析数据库连接字符串。</li>
 <li>数据库提供程序工厂：创建一个数据库提供程序工厂类，该类能够根据配置的连接字符串类型（如SQL Server、MySQL等）创建和返回相应的数据库上下文或连接对象。</li>
@@ -381,8 +91,7 @@
 </li>
 <li><p>MySQL连接字符串：在web.config配置文件中添加MySQL数据库的连接字符串。</p>
 </li>
-<li><p>MySQL提供程序：在Common类库中实现或集成MySQL数据库提供程序（如使用MySQL Connector&#x2F;NET）。</p>
-</li>
+<li>MySQL提供程序：在Common类库中实现或集成MySQL数据库提供程序（如使用MySQL Connector/NET）。</li>
 </ul>
 <h3 id="业务逻辑层（BLL）"><a href="#业务逻辑层（BLL）" class="headerlink" title="业务逻辑层（BLL）"></a>业务逻辑层（BLL）</h3><ul>
 <li>服务类：在BookShop.BLL项目中，创建服务类（如BookService、AuthorService等），这些类将调用数据访问层中的接口来执行业务逻辑。服务类应该是无状态的，并且只应包含与业务逻辑相关的代码。</li>
@@ -393,7 +102,7 @@
 </ul>
 <h2 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h2><ol>
 <li>拉取项目</li>
-<li>运行安装BookShop&#x2F;mysql-connection-net文件夹中的文件，并添加引用</li>
+<li>运行安装BookShop/mysql-connection-net文件夹中的文件，并添加引用</li>
 <li>添加mybookshop数据库，运行mysql脚本</li>
 <li>清理并重新生成解决方案</li>
 <li>运行项目</li>
@@ -401,449 +110,10 @@
 <h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><ol>
 <li><p>本项目使用.net4.5.2，可以向上兼容</p>
 </li>
-<li><p>在项目运行前请安装BookShop&#x2F;mysql-connection-net文件夹中的文件，并添加引用</p>
+<li><p>在项目运行前请安装BookShop/mysql-connection-net文件夹中的文件，并添加引用</p>
 </li>
 <li><p>测试账号信息如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">测试账号</th>
-<th align="center">测试用户类型</th>
-<th align="center">密码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">admin</td>
-<td align="center">管理员</td>
-<td align="center">123456</td>
-</tr>
-<tr>
-<td align="center">jingjing</td>
-<td align="center">普通用户</td>
-<td align="center">jingjing</td>
-</tr>
-<tr>
-<td align="center">bobo</td>
-<td align="center">VIP用户</td>
-<td align="center">123456</td>
-</tr>
-</tbody></table>
+<p>| 测试账号 | 测试用户类型 |   密码   |<br>| :———: | :—————: | :———: |<br>|  admin   |    管理员    |  123456  |<br>| jingjing |   普通用户   | jingjing |<br>|   bobo   |   VIP用户    |  123456  |</p>
 </li>
 </ol>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ASP-NET%E5%AD%A6%E4%B9%A0/" class="category-chain-item">ASP.NET学习</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/ASP-NET/" class="print-no-link">#ASP.NET</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>BookShop说明文档</div>
-      <div>http://zdx-1.github.io/2024/05/22/BookShop说明文档/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>zdx</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年5月22日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/05/24/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" title="蓝桥国赛知识梳理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">蓝桥国赛知识梳理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/05/06/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/" title="树形动态规划问题解析&amp;树上背包问题研究">
-                        <span class="hidden-mobile">树形动态规划问题解析&amp;树上背包问题研究</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-</body>
-</html>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/05/24/%E8%93%9D%E6%A1%A5%E5%9B%BD%E8%B5%9B%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">← Next 蓝桥国赛知识梳理</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/05/06/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/">树形动态规划问题解析&amp;树上背包问题研究 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#zdx-BookShop"><span class="toc-number">1.</span> <span class="toc-text">zdx-BookShop</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%BC%94%E7%A4%BA"><span class="toc-number">1.2.</span> <span class="toc-text">项目演示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E4%B8%8A%E4%B9%A6%E5%BA%97%E9%A6%96%E9%A1%B5"><span class="toc-number">1.2.1.</span> <span class="toc-text">当当网上书店首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB%E6%98%BE%E7%A4%BA"><span class="toc-number">1.2.2.</span> <span class="toc-text">当当网图书分类显示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">按照图书分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E5%87%BA%E7%89%88%E5%93%81%E7%89%8C%E5%95%86"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">按照出版品牌商</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E5%9B%BE%E4%B9%A6%E8%AF%A6%E6%83%85%E9%A1%B5"><span class="toc-number">1.2.3.</span> <span class="toc-text">当当网图书详情页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E6%96%B0%E5%A2%9E%E8%AE%A2%E5%8D%95%E6%BC%94%E7%A4%BA"><span class="toc-number">1.2.4.</span> <span class="toc-text">当当网新增订单演示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="toc-number">1.2.5.</span> <span class="toc-text">当当网用户登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.6.</span> <span class="toc-text">当当网个人信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E5%BD%93%E7%BD%91%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="toc-number">1.2.7.</span> <span class="toc-text">当当网购物车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA"><span class="toc-number">1.2.8.</span> <span class="toc-text">搜索功能演示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="toc-number">1.2.9.</span> <span class="toc-text">后台管理系统用户登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.10.</span> <span class="toc-text">管理员用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.10.1.</span> <span class="toc-text">用户信息查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7"><span class="toc-number">1.2.10.2.</span> <span class="toc-text">后端新增用户</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.11.</span> <span class="toc-text">管理员图书分类管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E5%87%BA%E7%89%88%E7%A4%BE%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.12.</span> <span class="toc-text">管理员出版社管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.13.</span> <span class="toc-text">管理员图书管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.13.1.</span> <span class="toc-text">图书分类查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E4%B9%A6%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.13.2.</span> <span class="toc-text">添加图书信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%9B%BE%E4%B9%A6%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.13.3.</span> <span class="toc-text">修改图书信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.14.</span> <span class="toc-text">管理员订单管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86%E5%88%97%E8%A1%A8"><span class="toc-number">1.2.14.1.</span> <span class="toc-text">订单管理列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.14.2.</span> <span class="toc-text">订单详细信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%89%B9%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">项目特点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Common%E7%B1%BB%E5%BA%93%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86DBHelper"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">使用Common类库统一管理DBHelper</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%87%E7%94%A8MD5%E5%8A%A0%E5%AF%86%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">采用MD5加密用户密码信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text">软件架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.1.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Common%E7%B1%BB%E5%BA%93"><span class="toc-number">1.4.2.</span> <span class="toc-text">Common类库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE%E5%B1%82%EF%BC%88DAL%EF%BC%89"><span class="toc-number">1.4.3.</span> <span class="toc-text">数据访问层（DAL）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E6%95%B0%E6%8D%AE%E6%BA%90%E5%A4%84%E7%90%86"><span class="toc-number">1.4.4.</span> <span class="toc-text">MySQL数据源处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E5%B1%82%EF%BC%88BLL%EF%BC%89"><span class="toc-number">1.4.5.</span> <span class="toc-text">业务逻辑层（BLL）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8C%E8%A7%86%E5%9B%BE"><span class="toc-number">1.4.6.</span> <span class="toc-text">控制器和视图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B"><span class="toc-number">1.5.</span> <span class="toc-text">安装教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.6.</span> <span class="toc-text">使用说明</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

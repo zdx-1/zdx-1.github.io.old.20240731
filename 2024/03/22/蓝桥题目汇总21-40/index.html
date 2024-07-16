@@ -1,305 +1,43 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="zdx">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="大学里到树木要打药题目描述教室外有 $N$ 棵树（树的编号从 $0\sim N-1$），根据不同的位置和树种，学校要对其上不同的药。 因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。 对于树的药是成区间分布，比如 $3 \sim 5$ 号的树靠近下水道，所以他们要用驱蚊虫的药， $20 \sim 26$ 号的树，他们排水不好，容易涝所以要给他们用点促进根系的药 $\cdots$">
-<meta property="og:type" content="article">
-<meta property="og:title" content="蓝桥题目汇总21-40">
-<meta property="og:url" content="http://zdx-1.github.io/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/index.html">
-<meta property="og:site_name" content="Zdx-1">
-<meta property="og:description" content="大学里到树木要打药题目描述教室外有 $N$ 棵树（树的编号从 $0\sim N-1$），根据不同的位置和树种，学校要对其上不同的药。 因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。 对于树的药是成区间分布，比如 $3 \sim 5$ 号的树靠近下水道，所以他们要用驱蚊虫的药， $20 \sim 26$ 号的树，他们排水不好，容易涝所以要给他们用点促进根系的药 $\cdots$">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://zdx-1.github.io/images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024924.jpg">
-<meta property="article:published_time" content="2024-03-22T01:13:27.000Z">
-<meta property="article:modified_time" content="2024-04-24T05:14:30.000Z">
-<meta property="article:author" content="zdx">
-<meta property="article:tag" content="蓝桥杯">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://zdx-1.github.io/images/%E7%BC%96%E7%A8%8B1-%E9%97%A8%E7%89%8C%E5%88%B6%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024924.jpg">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>蓝桥题目汇总21-40 - Zdx-1</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Zdx-1</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="蓝桥题目汇总21-40"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        zdx
-      </span>
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-22 09:13" pubdate>
-          2024年3月22日 上午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          6.2k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          52 分钟
-        
-      </span>
-    
-
-    
-    
-      
-        <span id="busuanzi_container_page_pv" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="busuanzi_value_page_pv"></span> 次
-        </span>
-        
-      
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">蓝桥题目汇总21-40</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于 2024年4月24日 下午
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="大学里到树木要打药"><a href="#大学里到树木要打药" class="headerlink" title="大学里到树木要打药"></a>大学里到树木要打药</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>教室外有 $N$ 棵树（树的编号从 $0\sim N-1$），根据不同的位置和树种，学校要对其上不同的药。</p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>蓝桥题目汇总21-40 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>蓝桥题目汇总21-40</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-03-22T01:13:27.000Z" id="date"> 2024-03-22</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-04-24T05:14:30.000Z" id="updated"> 2024-04-24</time></div></span></div></div><hr><div id="post-content"><h1 id="大学里到树木要打药"><a href="#大学里到树木要打药" class="headerlink" title="大学里到树木要打药"></a>大学里到树木要打药</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>教室外有 $N$ 棵树（树的编号从 $0\sim N-1$），根据不同的位置和树种，学校要对其上不同的药。</p>
 <p>因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。</p>
 <p>对于树的药是成区间分布，比如 $3 \sim 5$ 号的树靠近下水道，所以他们要用驱蚊虫的药， $20 \sim 26$ 号的树，他们排水不好，容易涝所以要给他们用点促进根系的药 $\cdots$诸如此类。</p>
 <p>每种不同的药要花不同的钱。</p>
@@ -312,21 +50,21 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">500 3 <br>150 300 4<br>100 200 20 <br>470 471 19<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2662<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
 <th>最大运行时间</th>
-<th>xxxxxxxxxx15 1import os2import sys3​4# 请在此输入您的代码5n &#x3D; int(input())6a &#x3D; list(map(int, input().split()))7a.sort()8b &#x3D; []9c &#x3D; []10for i in range(n):11    if a[i] % 2 &#x3D;&#x3D; 0:12        b.append(a[i])13    else:14        c.append(a[i])15print(“ “.join(map(str, c)),” “.join(map(str,b)))python</th>
+<th>xxxxxxxxxx15 1import os2import sys3​4# 请在此输入您的代码5n = int(input())6a = list(map(int, input().split()))7a.sort()8b = []9c = []10for i in range(n):11    if a[i] % 2 == 0:12        b.append(a[i])13    else:14        c.append(a[i])15print(“ “.join(map(str, c)),” “.join(map(str,b)))python</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -346,7 +84,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="大学里的树木要维护"><a href="#大学里的树木要维护" class="headerlink" title="大学里的树木要维护"></a>大学里的树木要维护</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>教室外有 $N$ 棵树（树的编号从 $1\sim N$），根据不同的位置和树种，学校已经对其进行了多年的维护。</p>
 <p>因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。</p>
 <p>由于已经维护了多年，每一个树都由学校的园艺人员进行了维护费用的统计。</p>
@@ -362,13 +102,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 3<br>7 5 6 4 2 5 0 8 5 3<br>1 5<br>2 6<br>3 7<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">24<br>22<br>17<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -376,7 +115,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -396,7 +136,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="合根植物"><a href="#合根植物" class="headerlink" title="合根植物"></a>合根植物</h1><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>$w$ 星球的一个种植园，被分成 $m \times n$ 个小格子（东西方向 $m$ 行，南北方向 $n$ 列）。每个格子里种了一株合根植物。</p>
 <p>这种植物有个特点，它的根可能会沿着南北或东西方向伸展，从而与另一个格子的植物合成为一体。</p>
 <p>如果我们告诉你哪些小格子间出现了连根现象，你能说出这个园中一共有多少株合根植物吗？</p>
@@ -406,24 +148,22 @@
 <p>格子的编号一行一行，从上到下，从左到右编号。</p>
 <p>比如：$5 \times 4$ 的小格子，编号：</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">1 2 3 4 <br>5 6 7 8<br>9 10 11 12<br>13 14 15 16 <br>17 18 19 20<br></code></pre></td></tr></table></figure>
-
 <h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出植物数量。</p>
 <h3 id="输入输出样例-2"><a href="#输入输出样例-2" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><blockquote>
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 4<br>16 <br>2 3 <br>1 5<br>5 9<br>4 8 <br>7 8<br>9 10<br>10 11<br>11 12 <br>10 14<br>12 16 <br>14 18<br>17 18<br>15 19<br>19 20<br>9 13<br>13 17<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">5<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>样例说明</p>
 </blockquote>
 <p>其合根情况参考下图：</p>
-<p><img src="/./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210202-1612249467438.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<p class='item-img' data-src='./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210202-1612249467438.png'><img src="./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210202-1612249467438.png" alt=""></p>
+<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -431,7 +171,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>2s</td>
 <td>256M</td>
@@ -451,8 +192,10 @@
 <td>2s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
-<h1 id="修改数组"><a href="#修改数组" class="headerlink" title="修改数组"></a>修改数组</h1><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个长度为 $N$ 的数组 $A &#x3D; [A_1,A_2,··· ,A_N]$，数组中有可能有重复出现的整数。</p>
+</tbody>
+</table>
+</div>
+<h1 id="修改数组"><a href="#修改数组" class="headerlink" title="修改数组"></a>修改数组</h1><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个长度为 $N$ 的数组 $A = [A_1,A_2,··· ,A_N]$，数组中有可能有重复出现的整数。</p>
 <p>现在小明要按以下方法将其修改为没有重复整数的数组。小明会依次修改$A_2,A_3,··· ,A_N$。</p>
 <p>当修改 $A_i$ 时，小明会检查 $A_i$ 是否在 $A_1$ ∼ $A_i−1$ 中出现过。如果出现过，则小明会给 $A_i$ 加上 1 ；如果新的 $A_i$ 仍在之前出现过，小明会持续给 $A_i$ 加 1 ，直 到 $A_i$ 没有在 $A_1$ ∼ $A_i−1$ 中出现过。</p>
 <p>当 $A_N$ 也经过上述修改之后，显然 $A$ 数组中就没有重复的整数了。</p>
@@ -465,13 +208,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 <br>2 1 1 3 4<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2 1 3 4 5<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -479,7 +221,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -499,7 +242,9 @@
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="分巧克力"><a href="#分巧克力" class="headerlink" title="分巧克力"></a>分巧克力</h1><h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>儿童节那天有 K 位小朋友到小明家做客。小明拿出了珍藏的巧克力招待小朋友们。</p>
 <p>小明一共有 $N$ 块巧克力，其中第 $i$ 块是 $H_i \times Wi$ 的方格组成的长方形。为了公平起见，</p>
 <p>小明需要从这 $N$ 块巧克力中切出 K 块巧克力分给小朋友们。切出的巧克力需要满足：</p>
@@ -519,13 +264,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">2 10 <br>6 5<br>5 6<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -533,7 +277,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>2s</td>
 <td>256M</td>
@@ -553,7 +298,9 @@
 <td>2s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="M次方根"><a href="#M次方根" class="headerlink" title="M次方根"></a>M次方根</h1><h3 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h3><p>小$A$最近在学高等数学，他发现了一道题，求三次根号下 $27$。</p>
 <p>现在已知，小$A$开始计算，$1$ 的三次方得 $1$， $2$ 的三次方得 $8$ ，$3$ 的三次方得 $27$，然后他很高兴的填上了 $3$。接着他要求 $5$ 次根号下 $164$。</p>
 <p>然后他开始 $1$ 的三次方得 $1$， $2$ 的三次方得 $8$ ，$3$ 的三次方得$27\cdots$</p>
@@ -570,13 +317,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">27 3<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3.0000000<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -584,7 +330,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -604,7 +351,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="找零问题"><a href="#找零问题" class="headerlink" title="找零问题"></a>找零问题</h1><h3 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h3><p>蓝桥商店的老板需要找零 $n$ 元钱。</p>
 <p>钱币的面额有：$100$ 元、$50$ 元、$20$ 元、$5$ 元、$1$ 元，问如何找零使得所需钱币的数量最少？</p>
 <p>注意：$n$ 可能为 $0$，也能为几百元（别问，问就是来着里微信提现来了）</p>
@@ -615,13 +364,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">365<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">100:3 50:1 20:0 5:3 1:0<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -629,7 +377,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -649,10 +398,11 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="小B的宿舍"><a href="#小B的宿舍" class="headerlink" title="小B的宿舍"></a>小B的宿舍</h1><h3 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h3><p>小B的宿舍楼沿着走廊南北向的两边各有 $200$ 个房间，如下所示：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">[房间1][房间3][房间5][房间7][房间9 ]...[房间399]<br>---------------------------------------------- 走廊 ---------------------------------------------- <br>[房间2][房间4][房间6][房间8][房间10]...[房间400]<br></code></pre></td></tr></table></figure>
-
 <p>最近，由于转专业和专业分流的原因，宿舍将迎来新的调整，以便组成新的班级后方便管理。</p>
 <p>但是由于走廊狭窄，走廊里只能通过一个搬运的物品（可以同向也可以反向），因此必须指定高效的搬运计划。</p>
 <p>老师给了每位同学下达了以下要求，让同学们体现收拾好行李，然后给每位同学 $10$ 分钟的时间搬运。</p>
@@ -667,13 +417,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 <br>4<br>10 20<br>30 40<br>50 60<br>70 80 <br>2<br>1 3<br>2 200<br>3<br>10 100 <br>20 80<br>30 50<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">10<br>10<br>20<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -681,7 +430,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -701,8 +451,10 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
-<h1 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h1><h3 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h3><p><img src="/./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210224-1614154063705.png" srcset="/img/loading.gif" lazyload alt="图片描述"></p>
+</tbody>
+</table>
+</div>
+<h1 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h1><h3 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h3><p class='item-img' data-src='./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210224-1614154063705.png'><img src="./../images/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/uid1580206-20210224-1614154063705.png" alt="图片描述"></p>
 <p>上图给出了一个数字三角形。从三角形的顶部到底部有很多条不同的路径。对于每条路径，把路径上面的数加起来可以得到一个和，你的任务就是找到最大的和。</p>
 <p>路径上的每一步只能从一个数走到下一层和它最近的左边的那个数或者右 边的那个数。此外，向左下走的次数与向右下走的次数相差不能超过 1。</p>
 <h3 id="输入描述-8"><a href="#输入描述-8" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入的第一行包含一个整数 $N\ (1 \leq N \leq 100)$，表示三角形的行数。</p>
@@ -712,13 +464,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 <br>7 <br>3 8<br>8 1 0<br>2 7 4 4 <br>4 5 2 6 5<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">27<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -726,7 +477,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -746,7 +498,9 @@
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="游戏中的学问"><a href="#游戏中的学问" class="headerlink" title="游戏中的学问"></a>游戏中的学问</h1><h3 id="题目描述-9"><a href="#题目描述-9" class="headerlink" title="题目描述"></a>题目描述</h3><p>大家应该都见过很多人手拉手围着篝火跳舞的场景吧？一般情况下，大家手拉手跳舞总是会围成一个大圈，每个人的左手拉着旁边朋友的右手，右手拉着另一侧朋友的左手。</p>
 <p>不过，如果每一个人都随机的拉住两个不同人的手，然后再慢慢散开，事情就变得有趣多了——此时大家依旧会形成圈，不过却可能会形成多个独立的圈。当然这里我们依然要求一个人的右手只能拉另一个人的左手，反之亦然。</p>
 <p>班里一共有 $N$ 个同学，由 $1$ 到 $N$ 编号。Will 想知道，究竟有多少种本质不同的拉手方案，使得最终大家散开后恰好形成 $k$ 个圈呢？</p>
@@ -758,13 +512,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 1 1000000009<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -772,7 +525,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>2s</td>
 <td>128M</td>
@@ -792,7 +546,9 @@
 <td>2s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="跳跃"><a href="#跳跃" class="headerlink" title="跳跃"></a>跳跃</h1><h3 id="题目描述-10"><a href="#题目描述-10" class="headerlink" title="题目描述"></a>题目描述</h3><p>小蓝在一个 $n$ 行 $m$ 列的方格图中玩一个游戏。</p>
 <p>开始时，小蓝站在方格图的左上角，即第 $1$ 行第 $1$ 列。</p>
 <p>小蓝可以在方格图上走动，走动时，如果当前在第 $r$ 行第 $c$ 列，他不能走到行号比 $r$ 小的行，也不能走到列号比 $c$ 小的列。同时，他一步走的直线距离不超过 $3$。</p>
@@ -808,13 +564,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 5<br>-4 -5 -10 -3 1<br>7 5 -9 3 -10<br>10 -2 6 -10 -4<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">15<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-10"><a href="#运行限制-10" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-10"><a href="#运行限制-10" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -822,7 +577,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -842,7 +598,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="小明的背包1"><a href="#小明的背包1" class="headerlink" title="小明的背包1"></a>小明的背包1</h1><h3 id="题目描述-11"><a href="#题目描述-11" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明有一个容量为 $V$ 的背包。</p>
 <p>这天他去商场购物，商场一共有 $N$ 件物品，第 $i$ 件物品的体积为 $w_i$，价值为 $v_i$。</p>
 <p>小明想知道在购买的物品总体积不超过 $V$ 的情况下所能获得的最大价值为多少，请你帮他算算。</p>
@@ -854,13 +612,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 20 <br>1 6<br>2 5<br>3 8<br>5 15<br>3 3<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">37<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-11"><a href="#运行限制-11" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-11"><a href="#运行限制-11" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -868,7 +625,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -888,7 +646,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="小明的背包2"><a href="#小明的背包2" class="headerlink" title="小明的背包2"></a>小明的背包2</h1><h3 id="题目描述-12"><a href="#题目描述-12" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明有一个容量为 $V$ 的背包。</p>
 <p>这天他去商场购物，商场一共有 $N$ 种物品，第 $i$ 种物品的体积为 $w_i$，价值为 $v_i$，每种物品都有无限多个。</p>
 <p>小明想知道在购买的物品总体积不超过 $V$ 的情况下所能获得的最大价值为多少，请你帮他算算。</p>
@@ -900,13 +660,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">5 20<br>1 6 <br>2 5<br>3 8<br>5 15 <br>3 3<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">120<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-12"><a href="#运行限制-12" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-12"><a href="#运行限制-12" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -914,7 +673,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -934,7 +694,9 @@
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="小明的背包3"><a href="#小明的背包3" class="headerlink" title="小明的背包3"></a>小明的背包3</h1><h3 id="题目描述-13"><a href="#题目描述-13" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明有一个容量为 $V$ 的背包。</p>
 <p>这天他去商场购物，商场一共有 $N$ 种物品，第 $i$ 种物品的体积为 $w_i$，价值为 $v_i$，数量为 $s_i$。</p>
 <p>小明想知道在购买的物品总体积不超过 $V$ 的情况下所能获得的最大价值为多少，请你帮他算算。</p>
@@ -946,13 +708,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 30 <br>1 2 3 <br>4 5 6<br>7 8 9<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">39<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-13"><a href="#运行限制-13" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-13"><a href="#运行限制-13" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -960,7 +721,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -980,7 +742,9 @@
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="蓝肽子序列"><a href="#蓝肽子序列" class="headerlink" title="蓝肽子序列"></a>蓝肽子序列</h1><h3 id="题目描述-14"><a href="#题目描述-14" class="headerlink" title="题目描述"></a>题目描述</h3><p>L 星球上的生物由蛋蓝质组成，每一种蛋蓝质由一类称为蓝肽的物资首尾连接成一条长链后折叠而成。</p>
 <p>生物学家小乔正在研究 L 星球上的蛋蓝质。她拿到两个蛋蓝质的蓝肽序列，想通过这两条蓝肽序列的共同特点来分析两种蛋蓝质的相似性。</p>
 <p>具体的，一个蓝肽可以使用 $1$ 至 $5$ 个英文字母表示，其中第一个字母大写，后面的字母小写。一个蛋蓝质的蓝肽序列可以用蓝肽的表示顺序拼接而成。</p>
@@ -994,13 +758,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">LanQiaoBei <br>LanTaiXiaoQiao<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-14"><a href="#运行限制-14" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-14"><a href="#运行限制-14" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1008,7 +771,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -1028,7 +792,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="合唱队形"><a href="#合唱队形" class="headerlink" title="合唱队形"></a>合唱队形</h1><h3 id="题目描述-15"><a href="#题目描述-15" class="headerlink" title="题目描述"></a>题目描述</h3><p>$N$ 位同学站成一排，音乐老师要请其中的 $(N-K)$ 位同学出列，使得剩下的 $K$ 位同学排成合唱队形。</p>
 <p>合唱队形是指这样的一种队形：设 $K$ 位同学从左到右依次编号为 $1，2，\cdots K$，他们的身高分别为 $T_1，T_2，\cdots，T_K$， 则他们的身高满足 $T_1&lt; \cdots &lt; T_i&gt; T_{i+1}&gt; \cdots &gt;T_K(1 \leq i \leq K)$。</p>
 <p>你的任务是，已知所有 $N$ 位同学的身高，计算最少需要几位同学出列，可以使得剩下的同学排成合唱队形。</p>
@@ -1040,13 +806,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">8<br>186 186 150 200 160 130 197 220<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-15"><a href="#运行限制-15" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-15"><a href="#运行限制-15" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1054,7 +819,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -1074,7 +840,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="最优包含"><a href="#最优包含" class="headerlink" title="最优包含"></a>最优包含</h1><h3 id="题目描述-16"><a href="#题目描述-16" class="headerlink" title="题目描述"></a>题目描述</h3><p>我们称一个字符串 $S$ 包含字符串 $T$ 是指 $T$ 是 $S$ 的一个子序列，即可以从字符串 $S$ 中抽出若干个字符，它们按原来的顺序组合成一个新的字符串与 $T$ 完全一样。</p>
 <p>给定两个字符串 $S$ 和 $T$，请问最少修改 $S$ 中的多少个字符，能使 $S$ 包含 $T$ ？</p>
 <p>其中，$1 \leq |T| \leq |S| \leq 1000$。</p>
@@ -1086,13 +854,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">ABCDEABCD<br>XAABZ<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-16"><a href="#运行限制-16" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-16"><a href="#运行限制-16" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1100,7 +867,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -1120,7 +888,9 @@
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h1><p><strong>本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。</strong></p>
 <p>小蓝学习了最短路径之后特别高兴，他定义了一个特别的图，希望找到图 中的最短路径。</p>
 <p>小蓝的图由 2021 个结点组成，依次编号 1 至 2021。</p>
@@ -1128,7 +898,8 @@
 <p>例如：结点 1 和结点 23 之间没有边相连；结点 3 和结点 24 之间有一条无 向边，长度为 24；结点 15 和结点 25 之间有一条无向边，长度为 75。</p>
 <p>请计算，结点 1 和结点 2021 之间的最短路径长度是多少。</p>
 <p>提示：建议使用计算机编程解决问题。</p>
-<h3 id="运行限制-17"><a href="#运行限制-17" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-17"><a href="#运行限制-17" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1136,7 +907,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -1156,7 +928,9 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="蓝桥王国"><a href="#蓝桥王国" class="headerlink" title="蓝桥王国"></a>蓝桥王国</h1><h3 id="题目描述-17"><a href="#题目描述-17" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明是蓝桥王国的王子，今天是他登基之日。</p>
 <p>在即将成为国王之前，老国王给他出了道题，他想要考验小明是否有能力管理国家。</p>
 <p>题目的内容如下：</p>
@@ -1170,13 +944,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 3<br>1 2 1 <br>1 3 5<br>2 3 2<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">0 1 3<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-18"><a href="#运行限制-18" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-18"><a href="#运行限制-18" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1184,7 +957,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>2s</td>
 <td>512M</td>
@@ -1204,7 +978,9 @@
 <td>2s</td>
 <td>512M</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="随机数据下的最短路问题"><a href="#随机数据下的最短路问题" class="headerlink" title="随机数据下的最短路问题"></a>随机数据下的最短路问题</h1><h3 id="题目描述-18"><a href="#题目描述-18" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定 $N$ 个点和 $M$ 条单向道路，每条道路都连接着两个点，每个点都有自己编号，分别为 $1\sim N$ 。</p>
 <p>问你从 $S$ 点出发，到达每个点的最短路径为多少。</p>
 <h3 id="输入描述-18"><a href="#输入描述-18" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入第一行包含三个正整数 $N,M,S$。</p>
@@ -1216,13 +992,12 @@
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">3 3 1<br>1 2 1 <br>1 3 5<br>2 3 2<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">0 1 3<br></code></pre></td></tr></table></figure>
-
-<h3 id="运行限制-19"><a href="#运行限制-19" class="headerlink" title="运行限制"></a>运行限制</h3><table>
+<h3 id="运行限制-19"><a href="#运行限制-19" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>语言</th>
@@ -1230,7 +1005,8 @@
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -1250,428 +1026,7 @@
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody></table>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%88%B7%E9%A2%98/" class="category-chain-item">刷题</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%88%B7%E9%A2%98/%E8%93%9D%E6%A1%A5/" class="category-chain-item">蓝桥</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="print-no-link">#蓝桥杯</a>
-      
-    </div>
-  
+</tbody>
+</table>
 </div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>蓝桥题目汇总21-40</div>
-      <div>http://zdx-1.github.io/2024/03/22/蓝桥题目汇总21-40/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>zdx</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年3月22日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB41-52/" title="蓝桥题目汇总41-52">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">蓝桥题目汇总41-52</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" title="python内置函数">
-                        <span class="hidden-mobile">python内置函数</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-</body>
-</html>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB41-52/">← Next 蓝桥题目汇总41-52</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">python内置函数 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E9%87%8C%E5%88%B0%E6%A0%91%E6%9C%A8%E8%A6%81%E6%89%93%E8%8D%AF"><span class="toc-number">1.</span> <span class="toc-text">大学里到树木要打药</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E9%87%8C%E7%9A%84%E6%A0%91%E6%9C%A8%E8%A6%81%E7%BB%B4%E6%8A%A4"><span class="toc-number">1.1.</span> <span class="toc-text">大学里的树木要维护</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.1.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.1.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="toc-number">1.1.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-1"><span class="toc-number">1.1.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%88%E6%A0%B9%E6%A4%8D%E7%89%A9"><span class="toc-number">2.</span> <span class="toc-text">合根植物</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">2.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">2.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">2.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-2"><span class="toc-number">2.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-2"><span class="toc-number">2.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">修改数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">3.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">3.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">3.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-3"><span class="toc-number">3.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">3.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-3"><span class="toc-number">3.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E5%B7%A7%E5%85%8B%E5%8A%9B"><span class="toc-number">4.</span> <span class="toc-text">分巧克力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">4.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">4.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">4.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-4"><span class="toc-number">4.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">4.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-4"><span class="toc-number">4.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#M%E6%AC%A1%E6%96%B9%E6%A0%B9"><span class="toc-number">5.</span> <span class="toc-text">M次方根</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">5.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">5.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">5.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-5"><span class="toc-number">5.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-5"><span class="toc-number">5.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-5"><span class="toc-number">5.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">找零问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">6.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">6.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">6.0.3.</span> <span class="toc-text">输出描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-6"><span class="toc-number">6.0.3.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-6"><span class="toc-number">6.0.4.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8FB%E7%9A%84%E5%AE%BF%E8%88%8D"><span class="toc-number">7.</span> <span class="toc-text">小B的宿舍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">7.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">7.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">7.0.3.</span> <span class="toc-text">输出描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-7"><span class="toc-number">7.0.3.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-7"><span class="toc-number">7.0.4.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-number">8.</span> <span class="toc-text">数字三角形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-8"><span class="toc-number">8.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-8"><span class="toc-number">8.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-8"><span class="toc-number">8.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-6"><span class="toc-number">8.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-8"><span class="toc-number">8.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-8"><span class="toc-number">8.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E5%AD%A6%E9%97%AE"><span class="toc-number">9.</span> <span class="toc-text">游戏中的学问</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-9"><span class="toc-number">9.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-9"><span class="toc-number">9.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-9"><span class="toc-number">9.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-7"><span class="toc-number">9.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">9.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-9"><span class="toc-number">9.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%B3%E8%B7%83"><span class="toc-number">10.</span> <span class="toc-text">跳跃</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-10"><span class="toc-number">10.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-10"><span class="toc-number">10.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-10"><span class="toc-number">10.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-8"><span class="toc-number">10.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-1"><span class="toc-number">10.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-10"><span class="toc-number">10.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E6%98%8E%E7%9A%84%E8%83%8C%E5%8C%851"><span class="toc-number">11.</span> <span class="toc-text">小明的背包1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-11"><span class="toc-number">11.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-11"><span class="toc-number">11.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-11"><span class="toc-number">11.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-9"><span class="toc-number">11.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-2"><span class="toc-number">11.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-11"><span class="toc-number">11.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E6%98%8E%E7%9A%84%E8%83%8C%E5%8C%852"><span class="toc-number">12.</span> <span class="toc-text">小明的背包2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-12"><span class="toc-number">12.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-12"><span class="toc-number">12.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-12"><span class="toc-number">12.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-10"><span class="toc-number">12.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-3"><span class="toc-number">12.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-12"><span class="toc-number">12.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E6%98%8E%E7%9A%84%E8%83%8C%E5%8C%853"><span class="toc-number">13.</span> <span class="toc-text">小明的背包3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-13"><span class="toc-number">13.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-13"><span class="toc-number">13.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-13"><span class="toc-number">13.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-11"><span class="toc-number">13.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-4"><span class="toc-number">13.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-13"><span class="toc-number">13.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%93%9D%E8%82%BD%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">14.</span> <span class="toc-text">蓝肽子序列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-14"><span class="toc-number">14.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-14"><span class="toc-number">14.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-14"><span class="toc-number">14.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-12"><span class="toc-number">14.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-9"><span class="toc-number">14.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-14"><span class="toc-number">14.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%88%E5%94%B1%E9%98%9F%E5%BD%A2"><span class="toc-number">15.</span> <span class="toc-text">合唱队形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-15"><span class="toc-number">15.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-15"><span class="toc-number">15.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-15"><span class="toc-number">15.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-13"><span class="toc-number">15.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-5"><span class="toc-number">15.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-15"><span class="toc-number">15.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E5%8C%85%E5%90%AB"><span class="toc-number">16.</span> <span class="toc-text">最优包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-16"><span class="toc-number">16.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-16"><span class="toc-number">16.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-16"><span class="toc-number">16.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-14"><span class="toc-number">16.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-10"><span class="toc-number">16.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-16"><span class="toc-number">16.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84"><span class="toc-number">17.</span> <span class="toc-text">路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-17"><span class="toc-number">17.0.1.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%93%9D%E6%A1%A5%E7%8E%8B%E5%9B%BD"><span class="toc-number">18.</span> <span class="toc-text">蓝桥王国</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-17"><span class="toc-number">18.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-17"><span class="toc-number">18.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-17"><span class="toc-number">18.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-15"><span class="toc-number">18.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-6"><span class="toc-number">18.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-18"><span class="toc-number">18.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%8D%AE%E4%B8%8B%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98"><span class="toc-number">19.</span> <span class="toc-text">随机数据下的最短路问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-18"><span class="toc-number">19.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-18"><span class="toc-number">19.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-18"><span class="toc-number">19.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-16"><span class="toc-number">19.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1-7"><span class="toc-number">19.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-19"><span class="toc-number">19.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

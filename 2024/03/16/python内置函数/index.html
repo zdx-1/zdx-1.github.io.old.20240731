@@ -1,305 +1,43 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <link rel="icon" href="/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016024946.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="知乎小编4548">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下abs() dict() help() min() setattr() all() dir() hex() next() slice">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python内置函数">
-<meta property="og:url" content="http://zdx-1.github.io/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/index.html">
-<meta property="og:site_name" content="Zdx-1">
-<meta property="og:description" content="本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下abs() dict() help() min() setattr() all() dir() hex() next() slice">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://zdx-1.github.io/images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-f75a048a464c1f64e7b0d0ec8d7d92ef_1440w.jpeg">
-<meta property="article:published_time" content="2024-03-16T09:52:58.000Z">
-<meta property="article:modified_time" content="2024-03-21T13:37:56.000Z">
-<meta property="article:author" content="zdx">
-<meta property="article:tag" content="Python">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://zdx-1.github.io/images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-f75a048a464c1f64e7b0d0ec8d7d92ef_1440w.jpeg">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>python内置函数 - Zdx-1</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zdx-1.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Zdx-1</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231016025055.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="python内置函数"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        知乎小编4548
-      </span>
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-16 17:52" pubdate>
-          2024年3月16日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          2.7k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          23 分钟
-        
-      </span>
-    
-
-    
-    
-      
-        <span id="busuanzi_container_page_pv" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="busuanzi_value_page_pv"></span> 次
-        </span>
-        
-      
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">python内置函数</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于 2024年3月21日 晚上
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <p>本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！<br>内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。<br>截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下<br>abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() ﬁlter() issubclass() pow() super() bytes() ﬂoat() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set()<br><strong>和数字相关</strong><br><strong>1. 数据类型</strong>  </p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>python内置函数 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>python内置函数</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-03-16T09:52:58.000Z" id="date"> 2024-03-16</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-03-21T13:37:56.000Z" id="updated"> 2024-03-21</time></div></span></div></div><hr><div id="post-content"><p>本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！<br>内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。<br>截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下<br>abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() ﬁlter() issubclass() pow() super() bytes() ﬂoat() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set()<br><strong>和数字相关</strong><br><strong>1. 数据类型</strong>  </p>
 <ul>
 <li>bool : 布尔型(True,False)</li>
 <li>int : 整型(整数)</li>
@@ -332,25 +70,25 @@
 <li>reversed() 将一个序列翻转, 返回翻转序列的迭代器</li>
 <li>slice() 列表的切片</li>
 </ul>
-<p>lst &#x3D; “你好啊” it &#x3D; reversed(lst) # 不会改变原列表. 返回一个迭代器, 设计上的一个规则 print(list(it)) #[‘啊’, ‘好’, ‘你’] lst &#x3D; [1, 2, 3, 4, 5, 6, 7] print(lst[1:3:1]) #[2,3] s &#x3D; slice(1, 3, 1) # 切片用的 print(lst[s]) #[2,3]<br>（3）字符串  </p>
+<p>lst = “你好啊” it = reversed(lst) # 不会改变原列表. 返回一个迭代器, 设计上的一个规则 print(list(it)) #[‘啊’, ‘好’, ‘你’] lst = [1, 2, 3, 4, 5, 6, 7] print(lst[1:3:1]) #[2,3] s = slice(1, 3, 1) # 切片用的 print(lst[s]) #[2,3]<br>（3）字符串  </p>
 <ul>
 <li>str() 将数据转化成字符串</li>
 </ul>
-<p>print(str(123)+’456’) #123456 format() 与具体数据相关, 用于计算各种小数, 精算等. s &#x3D; “hello world!” print(format(s, “^20”)) #剧中 print(format(s, “&lt;20”)) #左对齐 print(format(s, “&gt;20”)) #右对齐 # hello world! # hello world! # hello world! print(format(3, ‘b’ )) # 二进制:11 print(format(97, ‘c’ )) # 转换成unicode字符:a print(format(11, ‘d’ )) # ⼗进制:11 print(format(11, ‘o’ )) # 八进制:13 print(format(11, ‘x’ )) # 十六进制(⼩写字母):b print(format(11, ‘X’ )) # 十六进制(大写字母):B print(format(11, ‘n’ )) # 和d⼀样:11 print(format(11)) # 和d⼀样:11 print(format(123456789, ‘e’ )) # 科学计数法. 默认保留6位小数:1.234568e+08 print(format(123456789, ‘0.2e’ )) # 科学计数法. 保留2位小数(小写):1.23e+08 print(format(123456789, ‘0.2E’ )) # 科学计数法. 保留2位小数(大写):1.23E+08 print(format(1.23456789, ‘f’ )) # 小数点计数法. 保留6位小数:1.234568 print(format(1.23456789, ‘0.2f’ )) # 小数点计数法. 保留2位小数:1.23 print(format(1.23456789, ‘0.10f’)) # 小数点计数法. 保留10位小数:1.2345678900 print(format(1.23456789e+3, ‘F’)) # 小数点计数法. 很大的时候输出INF:1234.567890  </p>
+<p>print(str(123)+’456’) #123456 format() 与具体数据相关, 用于计算各种小数, 精算等. s = “hello world!” print(format(s, “^20”)) #剧中 print(format(s, “<20")) #左对齐 print(format(s, ">20”)) #右对齐 # hello world! # hello world! # hello world! print(format(3, ‘b’ )) # 二进制:11 print(format(97, ‘c’ )) # 转换成unicode字符:a print(format(11, ‘d’ )) # ⼗进制:11 print(format(11, ‘o’ )) # 八进制:13 print(format(11, ‘x’ )) # 十六进制(⼩写字母):b print(format(11, ‘X’ )) # 十六进制(大写字母):B print(format(11, ‘n’ )) # 和d⼀样:11 print(format(11)) # 和d⼀样:11 print(format(123456789, ‘e’ )) # 科学计数法. 默认保留6位小数:1.234568e+08 print(format(123456789, ‘0.2e’ )) # 科学计数法. 保留2位小数(小写):1.23e+08 print(format(123456789, ‘0.2E’ )) # 科学计数法. 保留2位小数(大写):1.23E+08 print(format(1.23456789, ‘f’ )) # 小数点计数法. 保留6位小数:1.234568 print(format(1.23456789, ‘0.2f’ )) # 小数点计数法. 保留2位小数:1.23 print(format(1.23456789, ‘0.10f’)) # 小数点计数法. 保留10位小数:1.2345678900 print(format(1.23456789e+3, ‘F’)) # 小数点计数法. 很大的时候输出INF:1234.567890  </p>
 <ul>
 <li>bytes() 把字符串转化成bytes类型</li>
 </ul>
-<p>bs &#x3D; bytes(“今天吃饭了吗”, encoding&#x3D;”utf-8”) print(bs) #b’\xe4\xbb\x8a\xe5\xa4\xa9\xe5\x90\x83\xe9\xa5\xad\xe4\xba\x86\xe5\x90\x97’ bytearray() 返回一个新字节数组. 这个数字的元素是可变的, 并且每个元素的值得范围是[0,256) ret &#x3D; bytearray(“alex” ,encoding &#x3D;’utf-8’) print(ret[0]) #97 print(ret) #bytearray(b’alex’) ret[0] &#x3D; 65 #把65的位置A赋值给ret[0] print(str(ret)) #bytearray(b’Alex’)  </p>
+<p>bs = bytes(“今天吃饭了吗”, encoding=”utf-8”) print(bs) #b’\\xe4\\xbb\\x8a\\xe5\\xa4\\xa9\\xe5\\x90\\x83\\xe9\\xa5\\xad\\xe4\\xba\\x86\\xe5\\x90\\x97’ bytearray() 返回一个新字节数组. 这个数字的元素是可变的, 并且每个元素的值得范围是[0,256) ret = bytearray(“alex” ,encoding =’utf-8’) print(ret[0]) #97 print(ret) #bytearray(b’alex’) ret[0] = 65 #把65的位置A赋值给ret[0] print(str(ret)) #bytearray(b’Alex’)  </p>
 <ul>
 <li>ord() 输入字符找带字符编码的位置</li>
 <li>chr() 输入位置数字找出对应的字符</li>
 <li>ascii() 是ascii码中的返回该值 不是就返回u</li>
 </ul>
-<p>print(ord(‘a’)) # 字母a在编码表中的码位:97 print(ord(‘中’)) # ‘中’字在编码表中的位置:20013 print(chr(65)) # 已知码位,求字符是什么:A print(chr(19999)) #丟 for i in range(65536): #打印出0到65535的字符 print(chr(i), end&#x3D;” “) print(ascii(“@”)) #‘@’  </p>
+<p>print(ord(‘a’)) # 字母a在编码表中的码位:97 print(ord(‘中’)) # ‘中’字在编码表中的位置:20013 print(chr(65)) # 已知码位,求字符是什么:A print(chr(19999)) #丟 for i in range(65536): #打印出0到65535的字符 print(chr(i), end=” “) print(ascii(“@”)) #’@’  </p>
 <ul>
 <li>repr() 返回一个对象的string形式</li>
 </ul>
-<p>s &#x3D; “今天\n吃了%s顿\t饭” % 3 print(s)#今天# 吃了3顿 饭 print(repr(s)) # 原样输出,过滤掉转义字符 \n \t \r 不管百分号% #’今天\n吃了3顿\t饭’<br><strong>2. 数据集合</strong>  </p>
+<p>s = “今天\\n吃了%s顿\\t饭” % 3 print(s)#今天# 吃了3顿 饭 print(repr(s)) # 原样输出,过滤掉转义字符 \\n \\t \\r 不管百分号% #’今天\\n吃了3顿\\t饭’<br><strong>2. 数据集合</strong>  </p>
 <ul>
 <li>字典：dict 创建一个字典</li>
 <li>集合：set 创建一个集合</li>
@@ -360,17 +98,17 @@
 <li>len() 返回一个对象中的元素的个数</li>
 <li>sorted() 对可迭代对象进行排序操作 (lamda)</li>
 </ul>
-<p>语法：sorted(Iterable, key&#x3D;函数(排序规则), reverse&#x3D;False)  </p>
+<p>语法：sorted(Iterable, key=函数(排序规则), reverse=False)  </p>
 <ul>
 <li>Iterable: 可迭代对象</li>
 <li>key: 排序规则(排序函数), 在sorted内部会将可迭代对象中的每一个元素传递给这个函数的参数. 根据函数运算的结果进行排序</li>
 <li>reverse: 是否是倒叙. True: 倒叙, False: 正序</li>
 </ul>
-<p>lst &#x3D; [5,7,6,12,1,13,9,18,5] lst.sort() # sort是list里面的一个方法 print(lst) #[1, 5, 5, 6, 7, 9, 12, 13, 18] ll &#x3D; sorted(lst) # 内置函数. 返回给你一个新列表 新列表是被排序的 print(ll) #[1, 5, 5, 6, 7, 9, 12, 13, 18] l2 &#x3D; sorted(lst,reverse&#x3D;True) #倒序 print(l2) #[18, 13, 12, 9, 7, 6, 5, 5, 1] #根据字符串长度给列表排序 lst &#x3D; [‘one’, ‘two’, ‘three’, ‘four’, ‘five’, ‘six’] def f(s): return len(s) l1 &#x3D; sorted(lst, key&#x3D;f, ) print(l1) #[‘one’, ‘two’, ‘six’, ‘four’, ‘five’, ‘three’]  </p>
+<p>lst = [5,7,6,12,1,13,9,18,5] lst.sort() # sort是list里面的一个方法 print(lst) #[1, 5, 5, 6, 7, 9, 12, 13, 18] ll = sorted(lst) # 内置函数. 返回给你一个新列表 新列表是被排序的 print(ll) #[1, 5, 5, 6, 7, 9, 12, 13, 18] l2 = sorted(lst,reverse=True) #倒序 print(l2) #[18, 13, 12, 9, 7, 6, 5, 5, 1] #根据字符串长度给列表排序 lst = [‘one’, ‘two’, ‘three’, ‘four’, ‘five’, ‘six’] def f(s): return len(s) l1 = sorted(lst, key=f, ) print(l1) #[‘one’, ‘two’, ‘six’, ‘four’, ‘five’, ‘three’]  </p>
 <ul>
 <li>enumerate() 获取集合的枚举对象</li>
 </ul>
-<p>lst &#x3D; [‘one’,’two’,’three’,’four’,’five’] for index, el in enumerate(lst,1): # 把索引和元素一起获取,索引默认从0开始. 可以更改 print(index) print(el) # 1 # one # 2 # two # 3 # three # 4 # four # 5 # five  </p>
+<p>lst = [‘one’,’two’,’three’,’four’,’five’] for index, el in enumerate(lst,1): # 把索引和元素一起获取,索引默认从0开始. 可以更改 print(index) print(el) # 1 # one # 2 # two # 3 # three # 4 # four # 5 # five  </p>
 <ul>
 <li>all() 可迭代对象中全部是True, 结果才是True</li>
 <li>any() 可迭代对象中有一个是True, 结果就是True</li>
@@ -379,45 +117,45 @@
 <ul>
 <li>zip() 函数用于将可迭代的对象作为参数, 将对象中对应的元素打包成一个元组, 然后返回由这些元组组成的列表. 如果各个迭代器的元素个数不一致, 则返回列表长度与最短的对象相同</li>
 </ul>
-<p>lst1 &#x3D; [1, 2, 3, 4, 5, 6] lst2 &#x3D; [‘醉乡民谣’, ‘驴得水’, ‘放牛班的春天’, ‘美丽人生’, ‘辩护人’, ‘被嫌弃的松子的一生’] lst3 &#x3D; [‘美国’, ‘中国’, ‘法国’, ‘意大利’, ‘韩国’, ‘日本’] print(zip(lst1, lst1, lst3)) #&lt;zip object at 0x00000256CA6C7A88&gt; for el in zip(lst1, lst2, lst3): print(el) # (1, ‘醉乡民谣’, ‘美国’) # (2, ‘驴得水’, ‘中国’) # (3, ‘放牛班的春天’, ‘法国’) # (4, ‘美丽人生’, ‘意大利’) # (5, ‘辩护人’, ‘韩国’) # (6, ‘被嫌弃的松子的一生’, ‘日本’)  </p>
+<p>lst1 = [1, 2, 3, 4, 5, 6] lst2 = [‘醉乡民谣’, ‘驴得水’, ‘放牛班的春天’, ‘美丽人生’, ‘辩护人’, ‘被嫌弃的松子的一生’] lst3 = [‘美国’, ‘中国’, ‘法国’, ‘意大利’, ‘韩国’, ‘日本’] print(zip(lst1, lst1, lst3)) #<zip object at 0x00000256CA6C7A88> for el in zip(lst1, lst2, lst3): print(el) # (1, ‘醉乡民谣’, ‘美国’) # (2, ‘驴得水’, ‘中国’) # (3, ‘放牛班的春天’, ‘法国’) # (4, ‘美丽人生’, ‘意大利’) # (5, ‘辩护人’, ‘韩国’) # (6, ‘被嫌弃的松子的一生’, ‘日本’)  </p>
 <ul>
 <li>fiter() 过滤 (lamda)</li>
 </ul>
-<p>语法：fiter(function. Iterable)<br>function: 用来筛选的函数. 在ﬁlter中会自动的把iterable中的元素传递给function. 然后根据function返回的True或者False来判断是否保留留此项数据 , Iterable: 可迭代对象<br>def func(i): # 判断奇数 return i % 2 &#x3D;&#x3D; 1 lst &#x3D; [1,2,3,4,5,6,7,8,9] l1 &#x3D; filter(func, lst) #l1是迭代器 print(l1) #&lt;filter object at 0x000001CE3CA98AC8&gt; print(list(l1)) #[1, 3, 5, 7, 9]  </p>
+<p>语法：fiter(function. Iterable)<br>function: 用来筛选的函数. 在ﬁlter中会自动的把iterable中的元素传递给function. 然后根据function返回的True或者False来判断是否保留留此项数据 , Iterable: 可迭代对象<br>def func(i): # 判断奇数 return i % 2 == 1 lst = [1,2,3,4,5,6,7,8,9] l1 = filter(func, lst) #l1是迭代器 print(l1) #<filter object at 0x000001CE3CA98AC8> print(list(l1)) #[1, 3, 5, 7, 9]  </p>
 <ul>
 <li>map() 会根据提供的函数对指定序列列做映射(lamda)</li>
 </ul>
-<p>语法 : map(function, iterable)<br>可以对可迭代对象中的每一个元素进行映射. 分别去执行 function<br>def f(i): return i lst &#x3D; [1,2,3,4,5,6,7,] it &#x3D; map(f, lst) # 把可迭代对象中的每一个元素传递给前面的函数进行处理. 处理的结果会返回成迭代器print(list(it)) #[1, 2, 3, 4, 5, 6, 7]<br><strong>和作用域相关</strong>  </p>
+<p>语法 : map(function, iterable)<br>可以对可迭代对象中的每一个元素进行映射. 分别去执行 function<br>def f(i): return i lst = [1,2,3,4,5,6,7,] it = map(f, lst) # 把可迭代对象中的每一个元素传递给前面的函数进行处理. 处理的结果会返回成迭代器print(list(it)) #[1, 2, 3, 4, 5, 6, 7]<br><strong>和作用域相关</strong>  </p>
 <ul>
 <li>locals() 返回当前作用域中的名字</li>
 <li>globals() 返回全局作用域中的名字</li>
 </ul>
-<p>def func(): a &#x3D; 10 print(locals()) # 当前作用域中的内容 print(globals()) # 全局作用域中的内容 print(“今天内容很多”) func() # {‘a’: 10} # {‘__name__‘: ‘__main__‘, ‘__doc__‘: None, ‘__package__‘: None, ‘__loader__‘: # &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000026F8D566080&gt;, # ‘__spec__‘: None, ‘__annotations__‘: {}, ‘__builtins__‘: &lt;module ‘builtins’ # (built-in)&gt;, ‘__file__‘: ‘D:&#x2F;pycharm&#x2F;练习&#x2F;week03&#x2F;new14.py’, ‘__cached__‘: None, # ‘func’: &lt;function func at 0x0000026F8D6B97B8&gt;} # 今天内容很多<br><strong>和迭代器生成器相关</strong>  </p>
+<p>def func(): a = 10 print(locals()) # 当前作用域中的内容 print(globals()) # 全局作用域中的内容 print(“今天内容很多”) func() # {‘a’: 10} # {‘__name__‘: ‘__main__‘, ‘__doc__‘: None, ‘__package__‘: None, ‘__loader__‘: # &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000026F8D566080&gt;, # ‘__spec__‘: None, ‘__annotations__‘: {}, ‘__builtins__‘: <module 'builtins' # (built-in)>, ‘__file__‘: ‘D:/pycharm/练习/week03/new14.py’, ‘__cached__‘: None, # ‘func’: <function func at 0x0000026F8D6B97B8>} # 今天内容很多<br><strong>和迭代器生成器相关</strong>  </p>
 <ul>
 <li>range() 生成数据</li>
 <li>next() 迭代器向下执行一次, 内部实际使⽤用了__ next__()⽅方法返回迭代器的下一个项目</li>
 <li>iter() 获取迭代器, 内部实际使用的是__ iter__()⽅方法来获取迭代器</li>
 </ul>
-<p>for i in range(15,-1,-5): print(i) # 15 # 10 # 5 # 0 lst &#x3D; [1,2,3,4,5] it &#x3D; iter(lst) # __iter__()获得迭代器 print(it.__next__()) #1 print(next(it)) #2 __next__() print(next(it)) #3 print(next(it)) #4<br><strong>字符串类型代码的执行</strong>  </p>
+<p>for i in range(15,-1,-5): print(i) # 15 # 10 # 5 # 0 lst = [1,2,3,4,5] it = iter(lst) # __iter__()获得迭代器 print(it.__next__()) #1 print(next(it)) #2 __next__() print(next(it)) #3 print(next(it)) #4<br><strong>字符串类型代码的执行</strong>  </p>
 <ul>
 <li>eval() 执行字符串类型的代码. 并返回最终结果</li>
 <li>exec() 执行字符串类型的代码</li>
 <li>compile() 将字符串类型的代码编码. 代码对象能够通过exec语句来执行或者eval()进行求值</li>
 </ul>
-<p>s1 &#x3D; input(“请输入a+b:”) #输入:8+9 print(eval(s1)) # 17 可以动态的执行代码. 代码必须有返回值 s2 &#x3D; “for i in range(5): print(i)” a &#x3D; exec(s2) # exec 执行代码不返回任何内容 # 0 # 1 # 2 # 3 # 4 print(a) #None # 动态执行代码 exec(“”” def func(): print(“ 我是周杰伦”) “”” ) func() #我是周杰伦 code1 &#x3D; “for i in range(3): print(i)” com &#x3D; compile(code1, “”, mode&#x3D;”exec”) # compile并不会执行你的代码.只是编译 exec(com) # 执行编译的结果 # 0 # 1 # 2 code2 &#x3D; “5+6+7” com2 &#x3D; compile(code2, “”, mode&#x3D;”eval”) print(eval(com2)) # 18 code3 &#x3D; “name &#x3D; input(‘请输入你的名字:’)” #输入:hello com3 &#x3D; compile(code3, “”, mode&#x3D;”single”) exec(com3) print(name) #hello<br><strong>输入输出</strong>  </p>
+<p>s1 = input(“请输入a+b:”) #输入:8+9 print(eval(s1)) # 17 可以动态的执行代码. 代码必须有返回值 s2 = “for i in range(5): print(i)” a = exec(s2) # exec 执行代码不返回任何内容 # 0 # 1 # 2 # 3 # 4 print(a) #None # 动态执行代码 exec(“”” def func(): print(“ 我是周杰伦”) “”” ) func() #我是周杰伦 code1 = “for i in range(3): print(i)” com = compile(code1, “”, mode=”exec”) # compile并不会执行你的代码.只是编译 exec(com) # 执行编译的结果 # 0 # 1 # 2 code2 = “5+6+7” com2 = compile(code2, “”, mode=”eval”) print(eval(com2)) # 18 code3 = “name = input(‘请输入你的名字:’)” #输入:hello com3 = compile(code3, “”, mode=”single”) exec(com3) print(name) #hello<br><strong>输入输出</strong>  </p>
 <ul>
 <li>print() : 打印输出</li>
 <li>input() : 获取用户输出的内容</li>
 </ul>
-<p>print(“hello”, “world”, sep&#x3D;”*“, end&#x3D;”@”) # sep:打印出的内容用什么连接,end:以什么为结尾 #hello*world@<br><strong>内存相关</strong><br>hash() : 获取到对象的哈希值(int, str, bool, tuple). hash算法:(1) 目的是唯一性 (2) dict 查找效率非常高, hash表.用空间换的时间 比较耗费内存<br>s &#x3D; ‘alex’print(hash(s)) #-168324845050430382lst &#x3D; [1, 2, 3, 4, 5]print(hash(lst)) #报错,列表是不可哈希的 id() : 获取到对象的内存地址s &#x3D; ‘alex’print(id(s)) #2278345368944<br><strong>文件操作相关</strong>  </p>
+<p>print(“hello”, “world”, sep=”*“, end=”@”) # sep:打印出的内容用什么连接,end:以什么为结尾 #hello*world@<br><strong>内存相关</strong><br>hash() : 获取到对象的哈希值(int, str, bool, tuple). hash算法:(1) 目的是唯一性 (2) dict 查找效率非常高, hash表.用空间换的时间 比较耗费内存<br>s = ‘alex’print(hash(s)) #-168324845050430382lst = [1, 2, 3, 4, 5]print(hash(lst)) #报错,列表是不可哈希的 id() : 获取到对象的内存地址s = ‘alex’print(id(s)) #2278345368944<br><strong>文件操作相关</strong>  </p>
 <ul>
 <li>open() : 用于打开一个文件, 创建一个文件句柄</li>
 </ul>
-<p>f &#x3D; open(‘file’,mode&#x3D;’r’,encoding&#x3D;’utf-8’) f.read() f.close()<br><strong>模块相关</strong>  </p>
+<p>f = open(‘file’,mode=’r’,encoding=’utf-8’) f.read() f.close()<br><strong>模块相关</strong>  </p>
 <ul>
 <li>__ import__() : 用于动态加载类和函数</li>
 </ul>
-<p># 让用户输入一个要导入的模块 import os name &#x3D; input(“请输入你要导入的模块:”) __import__(name) # 可以动态导入模块<br><strong>帮 助</strong>  </p>
+<p># 让用户输入一个要导入的模块 import os name = input(“请输入你要导入的模块:”) __import__(name) # 可以动态导入模块<br><strong>帮 助</strong>  </p>
 <ul>
 <li>help() : 函数用于查看函数或模块用途的详细说明</li>
 </ul>
@@ -425,427 +163,11 @@
 <ul>
 <li>callable() : 用于检查一个对象是否是可调用的. 如果返回True, object有可能调用失败, 但如果返回False. 那调用绝对不会成功</li>
 </ul>
-<p>a &#x3D; 10 print(callable(a)) #False 变量a不能被调用 # def f(): print(“hello”) print(callable(f)) # True 函数是可以被调用的<br><strong>查看内置属性</strong>  </p>
+<p>a = 10 print(callable(a)) #False 变量a不能被调用 # def f(): print(“hello”) print(callable(f)) # True 函数是可以被调用的<br><strong>查看内置属性</strong>  </p>
 <ul>
 <li>dir() : 查看对象的内置属性, 访问的是对象中的__dir__()方法</li>
 </ul>
 <p>print(dir(tuple)) #查看元组的方法</p>
 <p><strong>我是猿子，一起加油！</strong></p>
-<p><img src="/./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg" srcset="/img/loading.gif" lazyload></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Python/" class="category-chain-item">Python</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>python内置函数</div>
-      <div>http://zdx-1.github.io/2024/03/16/python内置函数/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>知乎小编4548</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年3月16日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/" title="蓝桥题目汇总21-40">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">蓝桥题目汇总21-40</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/03/15/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/" title="蓝桥题目汇总1-20">
-                        <span class="hidden-mobile">蓝桥题目汇总1-20</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-</body>
-</html>
+<p class='item-img' data-src='./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg'><img src="./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg" alt=""></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/">← Next 蓝桥题目汇总21-40</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/15/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/">蓝桥题目汇总1-20 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
