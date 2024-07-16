@@ -1,115 +1,43 @@
-<!DOCTYPE html>
-
-
-<html lang="zh-CN">
-  
-
-    <head>
-      <meta charset="utf-8" />
-        
-      <meta name="description" content="learn" />
-      
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>python内置函数 |  Zdx-1</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
-      
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
-        }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-python内置函数"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  python内置函数
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2024-03-16T09:52:58.000Z" itemprop="datePublished">2024-03-16</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.8k</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">12 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！<br>内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。<br>截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下<br>abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() ﬁlter() issubclass() pow() super() bytes() ﬂoat() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set()<br><strong>和数字相关</strong><br><strong>1. 数据类型</strong>  </p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>python内置函数 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>python内置函数</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-03-16T09:52:58.000Z" id="date"> 2024-03-16</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-03-21T13:37:56.000Z" id="updated"> 2024-03-21</time></div></span></div></div><hr><div id="post-content"><p>本文将这68个内置函数综合整理为12大类，正在学习Python基础的读者一定不要错过，建议收藏学习！<br>内置函数就是Python给你提供的，拿来直接用的函数，比如print.，input等。<br>截止到python版本3.6.2 ，python一共提供了68个内置函数，具体如下<br>abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() ﬁlter() issubclass() pow() super() bytes() ﬂoat() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set()<br><strong>和数字相关</strong><br><strong>1. 数据类型</strong>  </p>
 <ul>
 <li>bool : 布尔型(True,False)</li>
 <li>int : 整型(整数)</li>
@@ -142,25 +70,25 @@
 <li>reversed() 将一个序列翻转, 返回翻转序列的迭代器</li>
 <li>slice() 列表的切片</li>
 </ul>
-<p>lst = “你好啊” it = reversed(lst) # 不会改变原列表. 返回一个迭代器, 设计上的一个规则 print(list(it)) #[‘啊’, ‘好’, ‘你’] lst = [1, 2, 3, 4, 5, 6, 7] print(lst[1:3:1]) #[2,3] s = slice(1, 3, 1) # 切片用的 print(lst[s]) #[2,3]<br>（3）字符串  </p>
+<p>lst &#x3D; “你好啊” it &#x3D; reversed(lst) # 不会改变原列表. 返回一个迭代器, 设计上的一个规则 print(list(it)) #[‘啊’, ‘好’, ‘你’] lst &#x3D; [1, 2, 3, 4, 5, 6, 7] print(lst[1:3:1]) #[2,3] s &#x3D; slice(1, 3, 1) # 切片用的 print(lst[s]) #[2,3]<br>（3）字符串  </p>
 <ul>
 <li>str() 将数据转化成字符串</li>
 </ul>
-<p>print(str(123)+’456’) #123456 format() 与具体数据相关, 用于计算各种小数, 精算等. s = “hello world!” print(format(s, “^20”)) #剧中 print(format(s, “<20")) #左对齐 print(format(s, ">20”)) #右对齐 # hello world! # hello world! # hello world! print(format(3, ‘b’ )) # 二进制:11 print(format(97, ‘c’ )) # 转换成unicode字符:a print(format(11, ‘d’ )) # ⼗进制:11 print(format(11, ‘o’ )) # 八进制:13 print(format(11, ‘x’ )) # 十六进制(⼩写字母):b print(format(11, ‘X’ )) # 十六进制(大写字母):B print(format(11, ‘n’ )) # 和d⼀样:11 print(format(11)) # 和d⼀样:11 print(format(123456789, ‘e’ )) # 科学计数法. 默认保留6位小数:1.234568e+08 print(format(123456789, ‘0.2e’ )) # 科学计数法. 保留2位小数(小写):1.23e+08 print(format(123456789, ‘0.2E’ )) # 科学计数法. 保留2位小数(大写):1.23E+08 print(format(1.23456789, ‘f’ )) # 小数点计数法. 保留6位小数:1.234568 print(format(1.23456789, ‘0.2f’ )) # 小数点计数法. 保留2位小数:1.23 print(format(1.23456789, ‘0.10f’)) # 小数点计数法. 保留10位小数:1.2345678900 print(format(1.23456789e+3, ‘F’)) # 小数点计数法. 很大的时候输出INF:1234.567890  </p>
+<p>print(str(123)+’456’) #123456 format() 与具体数据相关, 用于计算各种小数, 精算等. s &#x3D; “hello world!” print(format(s, “^20”)) #剧中 print(format(s, “&lt;20”)) #左对齐 print(format(s, “&gt;20”)) #右对齐 # hello world! # hello world! # hello world! print(format(3, ‘b’ )) # 二进制:11 print(format(97, ‘c’ )) # 转换成unicode字符:a print(format(11, ‘d’ )) # ⼗进制:11 print(format(11, ‘o’ )) # 八进制:13 print(format(11, ‘x’ )) # 十六进制(⼩写字母):b print(format(11, ‘X’ )) # 十六进制(大写字母):B print(format(11, ‘n’ )) # 和d⼀样:11 print(format(11)) # 和d⼀样:11 print(format(123456789, ‘e’ )) # 科学计数法. 默认保留6位小数:1.234568e+08 print(format(123456789, ‘0.2e’ )) # 科学计数法. 保留2位小数(小写):1.23e+08 print(format(123456789, ‘0.2E’ )) # 科学计数法. 保留2位小数(大写):1.23E+08 print(format(1.23456789, ‘f’ )) # 小数点计数法. 保留6位小数:1.234568 print(format(1.23456789, ‘0.2f’ )) # 小数点计数法. 保留2位小数:1.23 print(format(1.23456789, ‘0.10f’)) # 小数点计数法. 保留10位小数:1.2345678900 print(format(1.23456789e+3, ‘F’)) # 小数点计数法. 很大的时候输出INF:1234.567890  </p>
 <ul>
 <li>bytes() 把字符串转化成bytes类型</li>
 </ul>
-<p>bs = bytes(“今天吃饭了吗”, encoding=”utf-8”) print(bs) #b’\\xe4\\xbb\\x8a\\xe5\\xa4\\xa9\\xe5\\x90\\x83\\xe9\\xa5\\xad\\xe4\\xba\\x86\\xe5\\x90\\x97’ bytearray() 返回一个新字节数组. 这个数字的元素是可变的, 并且每个元素的值得范围是[0,256) ret = bytearray(“alex” ,encoding =’utf-8’) print(ret[0]) #97 print(ret) #bytearray(b’alex’) ret[0] = 65 #把65的位置A赋值给ret[0] print(str(ret)) #bytearray(b’Alex’)  </p>
+<p>bs &#x3D; bytes(“今天吃饭了吗”, encoding&#x3D;”utf-8”) print(bs) #b’\xe4\xbb\x8a\xe5\xa4\xa9\xe5\x90\x83\xe9\xa5\xad\xe4\xba\x86\xe5\x90\x97’ bytearray() 返回一个新字节数组. 这个数字的元素是可变的, 并且每个元素的值得范围是[0,256) ret &#x3D; bytearray(“alex” ,encoding &#x3D;’utf-8’) print(ret[0]) #97 print(ret) #bytearray(b’alex’) ret[0] &#x3D; 65 #把65的位置A赋值给ret[0] print(str(ret)) #bytearray(b’Alex’)  </p>
 <ul>
 <li>ord() 输入字符找带字符编码的位置</li>
 <li>chr() 输入位置数字找出对应的字符</li>
 <li>ascii() 是ascii码中的返回该值 不是就返回u</li>
 </ul>
-<p>print(ord(‘a’)) # 字母a在编码表中的码位:97 print(ord(‘中’)) # ‘中’字在编码表中的位置:20013 print(chr(65)) # 已知码位,求字符是什么:A print(chr(19999)) #丟 for i in range(65536): #打印出0到65535的字符 print(chr(i), end=” “) print(ascii(“@”)) #’@’  </p>
+<p>print(ord(‘a’)) # 字母a在编码表中的码位:97 print(ord(‘中’)) # ‘中’字在编码表中的位置:20013 print(chr(65)) # 已知码位,求字符是什么:A print(chr(19999)) #丟 for i in range(65536): #打印出0到65535的字符 print(chr(i), end&#x3D;” “) print(ascii(“@”)) #‘@’  </p>
 <ul>
 <li>repr() 返回一个对象的string形式</li>
 </ul>
-<p>s = “今天\\n吃了%s顿\\t饭” % 3 print(s)#今天# 吃了3顿 饭 print(repr(s)) # 原样输出,过滤掉转义字符 \\n \\t \\r 不管百分号% #’今天\\n吃了3顿\\t饭’<br><strong>2. 数据集合</strong>  </p>
+<p>s &#x3D; “今天\n吃了%s顿\t饭” % 3 print(s)#今天# 吃了3顿 饭 print(repr(s)) # 原样输出,过滤掉转义字符 \n \t \r 不管百分号% #’今天\n吃了3顿\t饭’<br><strong>2. 数据集合</strong>  </p>
 <ul>
 <li>字典：dict 创建一个字典</li>
 <li>集合：set 创建一个集合</li>
@@ -170,17 +98,17 @@
 <li>len() 返回一个对象中的元素的个数</li>
 <li>sorted() 对可迭代对象进行排序操作 (lamda)</li>
 </ul>
-<p>语法：sorted(Iterable, key=函数(排序规则), reverse=False)  </p>
+<p>语法：sorted(Iterable, key&#x3D;函数(排序规则), reverse&#x3D;False)  </p>
 <ul>
 <li>Iterable: 可迭代对象</li>
 <li>key: 排序规则(排序函数), 在sorted内部会将可迭代对象中的每一个元素传递给这个函数的参数. 根据函数运算的结果进行排序</li>
 <li>reverse: 是否是倒叙. True: 倒叙, False: 正序</li>
 </ul>
-<p>lst = [5,7,6,12,1,13,9,18,5] lst.sort() # sort是list里面的一个方法 print(lst) #[1, 5, 5, 6, 7, 9, 12, 13, 18] ll = sorted(lst) # 内置函数. 返回给你一个新列表 新列表是被排序的 print(ll) #[1, 5, 5, 6, 7, 9, 12, 13, 18] l2 = sorted(lst,reverse=True) #倒序 print(l2) #[18, 13, 12, 9, 7, 6, 5, 5, 1] #根据字符串长度给列表排序 lst = [‘one’, ‘two’, ‘three’, ‘four’, ‘five’, ‘six’] def f(s): return len(s) l1 = sorted(lst, key=f, ) print(l1) #[‘one’, ‘two’, ‘six’, ‘four’, ‘five’, ‘three’]  </p>
+<p>lst &#x3D; [5,7,6,12,1,13,9,18,5] lst.sort() # sort是list里面的一个方法 print(lst) #[1, 5, 5, 6, 7, 9, 12, 13, 18] ll &#x3D; sorted(lst) # 内置函数. 返回给你一个新列表 新列表是被排序的 print(ll) #[1, 5, 5, 6, 7, 9, 12, 13, 18] l2 &#x3D; sorted(lst,reverse&#x3D;True) #倒序 print(l2) #[18, 13, 12, 9, 7, 6, 5, 5, 1] #根据字符串长度给列表排序 lst &#x3D; [‘one’, ‘two’, ‘three’, ‘four’, ‘five’, ‘six’] def f(s): return len(s) l1 &#x3D; sorted(lst, key&#x3D;f, ) print(l1) #[‘one’, ‘two’, ‘six’, ‘four’, ‘five’, ‘three’]  </p>
 <ul>
 <li>enumerate() 获取集合的枚举对象</li>
 </ul>
-<p>lst = [‘one’,’two’,’three’,’four’,’five’] for index, el in enumerate(lst,1): # 把索引和元素一起获取,索引默认从0开始. 可以更改 print(index) print(el) # 1 # one # 2 # two # 3 # three # 4 # four # 5 # five  </p>
+<p>lst &#x3D; [‘one’,’two’,’three’,’four’,’five’] for index, el in enumerate(lst,1): # 把索引和元素一起获取,索引默认从0开始. 可以更改 print(index) print(el) # 1 # one # 2 # two # 3 # three # 4 # four # 5 # five  </p>
 <ul>
 <li>all() 可迭代对象中全部是True, 结果才是True</li>
 <li>any() 可迭代对象中有一个是True, 结果就是True</li>
@@ -189,45 +117,45 @@
 <ul>
 <li>zip() 函数用于将可迭代的对象作为参数, 将对象中对应的元素打包成一个元组, 然后返回由这些元组组成的列表. 如果各个迭代器的元素个数不一致, 则返回列表长度与最短的对象相同</li>
 </ul>
-<p>lst1 = [1, 2, 3, 4, 5, 6] lst2 = [‘醉乡民谣’, ‘驴得水’, ‘放牛班的春天’, ‘美丽人生’, ‘辩护人’, ‘被嫌弃的松子的一生’] lst3 = [‘美国’, ‘中国’, ‘法国’, ‘意大利’, ‘韩国’, ‘日本’] print(zip(lst1, lst1, lst3)) #<zip object at 0x00000256CA6C7A88> for el in zip(lst1, lst2, lst3): print(el) # (1, ‘醉乡民谣’, ‘美国’) # (2, ‘驴得水’, ‘中国’) # (3, ‘放牛班的春天’, ‘法国’) # (4, ‘美丽人生’, ‘意大利’) # (5, ‘辩护人’, ‘韩国’) # (6, ‘被嫌弃的松子的一生’, ‘日本’)  </p>
+<p>lst1 &#x3D; [1, 2, 3, 4, 5, 6] lst2 &#x3D; [‘醉乡民谣’, ‘驴得水’, ‘放牛班的春天’, ‘美丽人生’, ‘辩护人’, ‘被嫌弃的松子的一生’] lst3 &#x3D; [‘美国’, ‘中国’, ‘法国’, ‘意大利’, ‘韩国’, ‘日本’] print(zip(lst1, lst1, lst3)) #&lt;zip object at 0x00000256CA6C7A88&gt; for el in zip(lst1, lst2, lst3): print(el) # (1, ‘醉乡民谣’, ‘美国’) # (2, ‘驴得水’, ‘中国’) # (3, ‘放牛班的春天’, ‘法国’) # (4, ‘美丽人生’, ‘意大利’) # (5, ‘辩护人’, ‘韩国’) # (6, ‘被嫌弃的松子的一生’, ‘日本’)  </p>
 <ul>
 <li>fiter() 过滤 (lamda)</li>
 </ul>
-<p>语法：fiter(function. Iterable)<br>function: 用来筛选的函数. 在ﬁlter中会自动的把iterable中的元素传递给function. 然后根据function返回的True或者False来判断是否保留留此项数据 , Iterable: 可迭代对象<br>def func(i): # 判断奇数 return i % 2 == 1 lst = [1,2,3,4,5,6,7,8,9] l1 = filter(func, lst) #l1是迭代器 print(l1) #<filter object at 0x000001CE3CA98AC8> print(list(l1)) #[1, 3, 5, 7, 9]  </p>
+<p>语法：fiter(function. Iterable)<br>function: 用来筛选的函数. 在ﬁlter中会自动的把iterable中的元素传递给function. 然后根据function返回的True或者False来判断是否保留留此项数据 , Iterable: 可迭代对象<br>def func(i): # 判断奇数 return i % 2 &#x3D;&#x3D; 1 lst &#x3D; [1,2,3,4,5,6,7,8,9] l1 &#x3D; filter(func, lst) #l1是迭代器 print(l1) #&lt;filter object at 0x000001CE3CA98AC8&gt; print(list(l1)) #[1, 3, 5, 7, 9]  </p>
 <ul>
 <li>map() 会根据提供的函数对指定序列列做映射(lamda)</li>
 </ul>
-<p>语法 : map(function, iterable)<br>可以对可迭代对象中的每一个元素进行映射. 分别去执行 function<br>def f(i): return i lst = [1,2,3,4,5,6,7,] it = map(f, lst) # 把可迭代对象中的每一个元素传递给前面的函数进行处理. 处理的结果会返回成迭代器print(list(it)) #[1, 2, 3, 4, 5, 6, 7]<br><strong>和作用域相关</strong>  </p>
+<p>语法 : map(function, iterable)<br>可以对可迭代对象中的每一个元素进行映射. 分别去执行 function<br>def f(i): return i lst &#x3D; [1,2,3,4,5,6,7,] it &#x3D; map(f, lst) # 把可迭代对象中的每一个元素传递给前面的函数进行处理. 处理的结果会返回成迭代器print(list(it)) #[1, 2, 3, 4, 5, 6, 7]<br><strong>和作用域相关</strong>  </p>
 <ul>
 <li>locals() 返回当前作用域中的名字</li>
 <li>globals() 返回全局作用域中的名字</li>
 </ul>
-<p>def func(): a = 10 print(locals()) # 当前作用域中的内容 print(globals()) # 全局作用域中的内容 print(“今天内容很多”) func() # {‘a’: 10} # {‘__name__‘: ‘__main__‘, ‘__doc__‘: None, ‘__package__‘: None, ‘__loader__‘: # &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000026F8D566080&gt;, # ‘__spec__‘: None, ‘__annotations__‘: {}, ‘__builtins__‘: <module 'builtins' # (built-in)>, ‘__file__‘: ‘D:/pycharm/练习/week03/new14.py’, ‘__cached__‘: None, # ‘func’: <function func at 0x0000026F8D6B97B8>} # 今天内容很多<br><strong>和迭代器生成器相关</strong>  </p>
+<p>def func(): a &#x3D; 10 print(locals()) # 当前作用域中的内容 print(globals()) # 全局作用域中的内容 print(“今天内容很多”) func() # {‘a’: 10} # {‘__name__‘: ‘__main__‘, ‘__doc__‘: None, ‘__package__‘: None, ‘__loader__‘: # &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000026F8D566080&gt;, # ‘__spec__‘: None, ‘__annotations__‘: {}, ‘__builtins__‘: &lt;module ‘builtins’ # (built-in)&gt;, ‘__file__‘: ‘D:&#x2F;pycharm&#x2F;练习&#x2F;week03&#x2F;new14.py’, ‘__cached__‘: None, # ‘func’: &lt;function func at 0x0000026F8D6B97B8&gt;} # 今天内容很多<br><strong>和迭代器生成器相关</strong>  </p>
 <ul>
 <li>range() 生成数据</li>
 <li>next() 迭代器向下执行一次, 内部实际使⽤用了__ next__()⽅方法返回迭代器的下一个项目</li>
 <li>iter() 获取迭代器, 内部实际使用的是__ iter__()⽅方法来获取迭代器</li>
 </ul>
-<p>for i in range(15,-1,-5): print(i) # 15 # 10 # 5 # 0 lst = [1,2,3,4,5] it = iter(lst) # __iter__()获得迭代器 print(it.__next__()) #1 print(next(it)) #2 __next__() print(next(it)) #3 print(next(it)) #4<br><strong>字符串类型代码的执行</strong>  </p>
+<p>for i in range(15,-1,-5): print(i) # 15 # 10 # 5 # 0 lst &#x3D; [1,2,3,4,5] it &#x3D; iter(lst) # __iter__()获得迭代器 print(it.__next__()) #1 print(next(it)) #2 __next__() print(next(it)) #3 print(next(it)) #4<br><strong>字符串类型代码的执行</strong>  </p>
 <ul>
 <li>eval() 执行字符串类型的代码. 并返回最终结果</li>
 <li>exec() 执行字符串类型的代码</li>
 <li>compile() 将字符串类型的代码编码. 代码对象能够通过exec语句来执行或者eval()进行求值</li>
 </ul>
-<p>s1 = input(“请输入a+b:”) #输入:8+9 print(eval(s1)) # 17 可以动态的执行代码. 代码必须有返回值 s2 = “for i in range(5): print(i)” a = exec(s2) # exec 执行代码不返回任何内容 # 0 # 1 # 2 # 3 # 4 print(a) #None # 动态执行代码 exec(“”” def func(): print(“ 我是周杰伦”) “”” ) func() #我是周杰伦 code1 = “for i in range(3): print(i)” com = compile(code1, “”, mode=”exec”) # compile并不会执行你的代码.只是编译 exec(com) # 执行编译的结果 # 0 # 1 # 2 code2 = “5+6+7” com2 = compile(code2, “”, mode=”eval”) print(eval(com2)) # 18 code3 = “name = input(‘请输入你的名字:’)” #输入:hello com3 = compile(code3, “”, mode=”single”) exec(com3) print(name) #hello<br><strong>输入输出</strong>  </p>
+<p>s1 &#x3D; input(“请输入a+b:”) #输入:8+9 print(eval(s1)) # 17 可以动态的执行代码. 代码必须有返回值 s2 &#x3D; “for i in range(5): print(i)” a &#x3D; exec(s2) # exec 执行代码不返回任何内容 # 0 # 1 # 2 # 3 # 4 print(a) #None # 动态执行代码 exec(“”” def func(): print(“ 我是周杰伦”) “”” ) func() #我是周杰伦 code1 &#x3D; “for i in range(3): print(i)” com &#x3D; compile(code1, “”, mode&#x3D;”exec”) # compile并不会执行你的代码.只是编译 exec(com) # 执行编译的结果 # 0 # 1 # 2 code2 &#x3D; “5+6+7” com2 &#x3D; compile(code2, “”, mode&#x3D;”eval”) print(eval(com2)) # 18 code3 &#x3D; “name &#x3D; input(‘请输入你的名字:’)” #输入:hello com3 &#x3D; compile(code3, “”, mode&#x3D;”single”) exec(com3) print(name) #hello<br><strong>输入输出</strong>  </p>
 <ul>
 <li>print() : 打印输出</li>
 <li>input() : 获取用户输出的内容</li>
 </ul>
-<p>print(“hello”, “world”, sep=”*“, end=”@”) # sep:打印出的内容用什么连接,end:以什么为结尾 #hello*world@<br><strong>内存相关</strong><br>hash() : 获取到对象的哈希值(int, str, bool, tuple). hash算法:(1) 目的是唯一性 (2) dict 查找效率非常高, hash表.用空间换的时间 比较耗费内存<br>s = ‘alex’print(hash(s)) #-168324845050430382lst = [1, 2, 3, 4, 5]print(hash(lst)) #报错,列表是不可哈希的 id() : 获取到对象的内存地址s = ‘alex’print(id(s)) #2278345368944<br><strong>文件操作相关</strong>  </p>
+<p>print(“hello”, “world”, sep&#x3D;”*“, end&#x3D;”@”) # sep:打印出的内容用什么连接,end:以什么为结尾 #hello*world@<br><strong>内存相关</strong><br>hash() : 获取到对象的哈希值(int, str, bool, tuple). hash算法:(1) 目的是唯一性 (2) dict 查找效率非常高, hash表.用空间换的时间 比较耗费内存<br>s &#x3D; ‘alex’print(hash(s)) #-168324845050430382lst &#x3D; [1, 2, 3, 4, 5]print(hash(lst)) #报错,列表是不可哈希的 id() : 获取到对象的内存地址s &#x3D; ‘alex’print(id(s)) #2278345368944<br><strong>文件操作相关</strong>  </p>
 <ul>
 <li>open() : 用于打开一个文件, 创建一个文件句柄</li>
 </ul>
-<p>f = open(‘file’,mode=’r’,encoding=’utf-8’) f.read() f.close()<br><strong>模块相关</strong>  </p>
+<p>f &#x3D; open(‘file’,mode&#x3D;’r’,encoding&#x3D;’utf-8’) f.read() f.close()<br><strong>模块相关</strong>  </p>
 <ul>
 <li>__ import__() : 用于动态加载类和函数</li>
 </ul>
-<p># 让用户输入一个要导入的模块 import os name = input(“请输入你要导入的模块:”) __import__(name) # 可以动态导入模块<br><strong>帮 助</strong>  </p>
+<p># 让用户输入一个要导入的模块 import os name &#x3D; input(“请输入你要导入的模块:”) __import__(name) # 可以动态导入模块<br><strong>帮 助</strong>  </p>
 <ul>
 <li>help() : 函数用于查看函数或模块用途的详细说明</li>
 </ul>
@@ -235,518 +163,11 @@
 <ul>
 <li>callable() : 用于检查一个对象是否是可调用的. 如果返回True, object有可能调用失败, 但如果返回False. 那调用绝对不会成功</li>
 </ul>
-<p>a = 10 print(callable(a)) #False 变量a不能被调用 # def f(): print(“hello”) print(callable(f)) # True 函数是可以被调用的<br><strong>查看内置属性</strong>  </p>
+<p>a &#x3D; 10 print(callable(a)) #False 变量a不能被调用 # def f(): print(“hello”) print(callable(f)) # True 函数是可以被调用的<br><strong>查看内置属性</strong>  </p>
 <ul>
 <li>dir() : 查看对象的内置属性, 访问的是对象中的__dir__()方法</li>
 </ul>
 <p>print(dir(tuple)) #查看元组的方法</p>
 <p><strong>我是猿子，一起加油！</strong></p>
-<p><img src="./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg" alt=""></p>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          打赏
-        </div>
-      </div>
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/03/16/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            蓝桥题目汇总21-40
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2024/03/15/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">蓝桥题目汇总1-20</div>
-      </a>
-    
-  </nav>
-
-  
-   
-  
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
-</article>
-
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2024
-        <i class="ri-heart-fill heart_icon"></i> zdx
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true,
-  };
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
- 
-<script src="/js/clickLove.js"></script>
- 
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
- 
-<script src="/js/dz.js"></script>
- 
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
-  }
-</script>
-
-
-    
-    
-<script>
-  const password = "65535";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
-
-  </div>
-</body>
-
-</html>
+<p class='item-img' data-src='/./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg'><img src="/./../images/python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/v2-65d3d47b28450bebb6c5d80e4455f1e4_b.jpg"></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/">← Next 蓝桥题目汇总21-40</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/15/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB1-20/">蓝桥题目汇总1-20 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

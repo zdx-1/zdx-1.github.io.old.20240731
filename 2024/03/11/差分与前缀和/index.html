@@ -1,117 +1,43 @@
-<!DOCTYPE html>
-
-
-<html lang="zh-CN">
-  
-
-    <head>
-      <meta charset="utf-8" />
-        
-      <meta name="description" content="learn" />
-      
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>差分与前缀和 |  Zdx-1</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
-      
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
-        }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-差分与前缀和"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  差分与前缀和
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/11/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" class="article-date">
-  <time datetime="2024-03-11T08:45:34.000Z" itemprop="datePublished">2024-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AFNote/">蓝桥杯Note</a>
-  </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">4.3k</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">18 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="差分与前缀和"><a href="#差分与前缀和" class="headerlink" title="差分与前缀和"></a>差分与前缀和</h2><p>差分与前缀和是一对互逆的操作，常常用于处理区间问题，差分法是解决区间加减问题，前缀和是解决区间求和问题的常用办法。</p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>差分与前缀和 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>差分与前缀和</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-03-11T08:45:34.000Z" id="date"> 2024-03-11</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-03-31T12:54:42.000Z" id="updated"> 2024-03-31</time></div></span></div></div><hr><div id="post-content"><h2 id="差分与前缀和"><a href="#差分与前缀和" class="headerlink" title="差分与前缀和"></a>差分与前缀和</h2><p>差分与前缀和是一对互逆的操作，常常用于处理区间问题，差分法是解决区间加减问题，前缀和是解决区间求和问题的常用办法。</p>
 <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
 <li>差分算法</li>
 <li>前缀和算法</li>
@@ -129,17 +55,19 @@
 </ol>
 <p><strong>差分算法解题的基本思路：</strong></p>
 <ol>
-<li>设定 $b[1]=a[1]$；</li>
-<li>对于第 2 项到第 n 项，利用差分式 $b[i]=a[i]-a[i-1]$；</li>
+<li>设定 $b[1]&#x3D;a[1]$；</li>
+<li>对于第 2 项到第 n 项，利用差分式 $b[i]&#x3D;a[i]-a[i-1]$；</li>
 <li>对于区间端点进行加减操作；</li>
 <li>进行差分还原（即前缀和）；</li>
-<li>注意，这里从 1 开始。如果从 0 开始，还需讨论 $i=0$ 的情况。使用 1 的话，$b[1]=a[1]-a[0]=a[1]$。</li>
+<li>注意，这里从 1 开始。如果从 0 开始，还需讨论 $i&#x3D;0$ 的情况。使用 1 的话，$b[1]&#x3D;a[1]-a[0]&#x3D;a[1]$。</li>
 </ol>
 <p><strong>差分法的一般步骤：</strong></p>
 <p>假设有一个数组：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">a = [1, 2, 3, 4, 5, 7, 2]<br></code></pre></td></tr></table></figure>
+
 <p>差分后：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">b = [1, 1, 1, 1, 1, 2, -5]<br></code></pre></td></tr></table></figure>
+
 <p>一般应用场景是对区间 $[l,r]$ 进行 $N$ 次加减操作。例如：</p>
 <ul>
 <li>从第二个元素到第五个元素每个加 $3$</li>
@@ -149,19 +77,25 @@
 <p>对于每个 $[l,r]$ 区间的加减操作都可转化为对端点 $l$ 和 $r+1$ 的操作。例如，从第二个元素到第五个元素每个加 $3$，可转化为 $[l]$ 加 $3$ 且 $[r+1]$ 减 $3$。</p>
 <p>原序列变成了：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 1 1 1 1 2 -5<br>1 4 1 1 1 -1 -5<br></code></pre></td></tr></table></figure>
-<p>然后按照 $b[i]=b[i]+b[i-1]$ 复原：</p>
+
+<p>然后按照 $b[i]&#x3D;b[i]+b[i-1]$ 复原：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 5 6 7 8 7 2<br></code></pre></td></tr></table></figure>
+
 <p>去掉最后一项，跟原序列对比：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 2 3 4 5 7 2<br>1 5 6 7 8 7 2<br></code></pre></td></tr></table></figure>
+
 <p>确实是都加上了 $3$。</p>
 <p>继续操作：</p>
 <p>从第二个元素到第四个元素每个减 $2$，可转化为 $[l]$ 减 $2$ 且 $[r+1]$ 加 $2$。</p>
 <p>序列变成了：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 4 1 1 1 -1 -5<br>1 2 1 1 3 -1 -5<br></code></pre></td></tr></table></figure>
-<p>然后按照 $b[i]=b[i]+b[i-1]$ 复原：</p>
+
+<p>然后按照 $b[i]&#x3D;b[i]+b[i-1]$ 复原：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 3 4 5 8 7 2<br></code></pre></td></tr></table></figure>
+
 <p>与上次复原后对比：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 5 6 7 8 7 2 <br>1 3 4 5 8 7 2<br></code></pre></td></tr></table></figure>
+
 <p>确实是按照操作执行了。</p>
 <p>注意，不需要每次都复原，只需在最后一次复原即可。</p>
 <p>最后直接做三次，最后还原：</p>
@@ -172,6 +106,7 @@
 </ul>
 <p>原序列差分后：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">b = [1 1 1 1 1 2 -5]<br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>第 2 个元素加 3</li>
 <li>第 6 个元素减 3</li>
@@ -182,10 +117,13 @@
 </ul>
 <p>差分序列变成：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">2 2 1 0 3 -1 -5<br></code></pre></td></tr></table></figure>
+
 <p>复原后：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">2 4 5 5 8 7 5<br></code></pre></td></tr></table></figure>
+
 <p>与原序列对比：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1 2 3 4 5 7 2 <br>2 4 5 5 8 7 5<br></code></pre></td></tr></table></figure>
+
 <p>所以，差分算法是非常方便快捷的。</p>
 <p>差分与前缀和是逆操作，常在一起出现，但是先做差分还是先做前缀和就是两种不同的算法，做不做另一种操作也决定了算法不同，所以大家要根据题目分析，具体学会使用。</p>
 <h3 id="大学里的树木要打药"><a href="#大学里的树木要打药" class="headerlink" title="大学里的树木要打药"></a>大学里的树木要打药</h3><p><strong>题目描述:</strong></p>
@@ -197,25 +135,30 @@
 <p>现在已知共有 $M$ 个这样的区间，并且给你每个区间花的钱，请问最后，这些树木花了多少药费。</p>
 <p><strong>输入:</strong></p>
 <p>输入描述:</p>
-<p>每组输入的第一行有两个整数 $N（1 &lt;= N&lt;= 1000000）$和 $M（1 &lt;= M &lt;= 100000）$。</p>
+<p>每组输入的第一行有两个整数 $N（1 &lt;&#x3D; N&lt;&#x3D; 1000000）$和 $M（1 &lt;&#x3D; M &lt;&#x3D; 100000）$。</p>
 <p>$N$ 代表马路的共计多少棵树，$M$代表区间的数目，$N$ 和 $M$ 之间用一个空格隔开。</p>
 <p>接下来的 $M$ 行每行包含三个不同的整数，用一个空格隔开，表示一个区域的起始点 $L$ 和终止点 $R$ 的坐标，以及花费。</p>
 <p>输入样例:</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">500 3<br>150 300 4<br>100 200 20<br>470 471 19<br></code></pre></td></tr></table></figure>
+
 <p><strong>输出描述:</strong></p>
 <p>输出包括一行，这一行只包含一个整数，所有的花费。</p>
 <p><strong>输出样例:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2662<br></code></pre></td></tr></table></figure>
+
 <p><strong>样例:</strong></p>
 <p><strong>输入样例:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs txt">3000 8<br>150 1130 2<br>1020 1200 3<br>470 2071 1<br>1123  211 6<br>12 222 2<br>13 23 2<br>1  213 4<br>1232  2523 6<br></code></pre></td></tr></table></figure>
+
 <p><strong>输出样例:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2662<br></code></pre></td></tr></table></figure>
+
 <p><strong>运行限制:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">1. 最大运行时间：1s 2. 最大运行内存：128M<br></code></pre></td></tr></table></figure>
+
 <p><strong>题目解析：</strong></p>
 <ol>
-<li><p>利用$b[i]=a[i]-a[i-1]$ 差分式。</p>
+<li><p>利用$b[i]&#x3D;a[i]-a[i-1]$ 差分式。</p>
 <p>这里由于开始时都是 $0$，可以用，但是用完都还是 $0$，所以没有意义，所以直接跳过即可。</p>
 </li>
 <li><p>依次读入区间的值，然后将对于区间的操作转化为对于区间端点操作加减。 由于我们从 $1$ 开始，所以数目整体区间要右移 $1$ 位。</p>
@@ -225,15 +168,20 @@
 </li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)<br>     b[i] = a[i] - a[i - <span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
+
 <p>差分算法解决区间加减问题通用框架如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//读入原始数据 n,m,a</span><br><br>输入n,<span class="hljs-function">m</span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-title">for</span><span class="hljs-params">(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)</span></span>&#123;<br><br>    输入a[i]<br>&#125;<br><br><span class="hljs-comment">//差分</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br><br>    b[i]=a[i]-a[i<span class="hljs-number">-1</span>]<br><br><span class="hljs-comment">//区间操作</span><br><span class="hljs-keyword">while</span>(m--)<br>&#123;<br>    输入l,r,value<br>    b[l]+value<br>    b[r+<span class="hljs-number">1</span>]-value<br>&#125;<br><br><span class="hljs-comment">//前缀和还原</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)<br><br>    b[i]=b[i]+b[i<span class="hljs-number">-1</span>]<br></code></pre></td></tr></table></figure>
+
 <h4 id="答案解析"><a href="#答案解析" class="headerlink" title="答案解析"></a>答案解析</h4><p>C++ 代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> b[<span class="hljs-number">100005</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> n; <span class="hljs-comment">//n层</span><br>    <span class="hljs-type">int</span> m; <span class="hljs-comment">// m个区间</span><br>    cin &gt;&gt; n &gt;&gt; m;<br><br>    <span class="hljs-keyword">while</span> (m--)<br>    &#123;<br>        <span class="hljs-type">int</span> l, r, value;<br>        cin &gt;&gt; l &gt;&gt; r &gt;&gt; value;<br>        b[l+<span class="hljs-number">1</span>] += value;<br>        b[r + <span class="hljs-number">1</span>+<span class="hljs-number">1</span>] -= value;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        b[i] = b[i] + b[i - <span class="hljs-number">1</span>];<br>    <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        sum += b[i];<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    也可以一次性搞定</span><br><span class="hljs-comment">    int sum=b[1];</span><br><span class="hljs-comment">    for(int i=1; i&lt;=n; i++)&#123;</span><br><span class="hljs-comment">    b[i]=b[i]+b[i-1];</span><br><span class="hljs-comment">    sum+=b[i]</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    */</span><br>    cout &lt;&lt; sum &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p><strong>Python 解题代码</strong></p>
 <p>递推算法代码：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs py">b = [<span class="hljs-number">0</span>] * <span class="hljs-number">100005</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    nm = <span class="hljs-built_in">input</span>().split()<br>    n = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">0</span>])<br>    m = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">while</span> (m &gt; <span class="hljs-number">0</span>):<br>        m -= <span class="hljs-number">1</span><br>        lrv = <span class="hljs-built_in">input</span>().split()<br>        l = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">0</span>])<br>        r = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">1</span>])<br>        value = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">2</span>])<br>        b[l+<span class="hljs-number">1</span>] += value<br>        b[r + <span class="hljs-number">1</span>+<span class="hljs-number">1</span>] -= value<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>        b[i] = b[i - <span class="hljs-number">1</span>] + b[i]<br>    <span class="hljs-built_in">sum</span> = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n+<span class="hljs-number">1</span>):<br>        <span class="hljs-built_in">sum</span> += b[i]<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">sum</span>)<br><br>    <span class="hljs-comment">#或者一次性解决</span><br>    <span class="hljs-comment"># sum = a[0]</span><br>    <span class="hljs-comment">#</span><br>    <span class="hljs-comment"># for i in range(1, n+1):</span><br>    <span class="hljs-comment">#</span><br>    <span class="hljs-comment">#     a[i] = a[i - 1] + a[i]</span><br>    <span class="hljs-comment">#</span><br>    <span class="hljs-comment">#     sum += a[0]</span><br>    <span class="hljs-comment"># print(sum)</span><br></code></pre></td></tr></table></figure>
+
 <p><strong>Java 解题代码</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>  <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> b[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">100005</span>];<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>      <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>      <span class="hljs-type">int</span> n; <span class="hljs-comment">//n层</span><br>      <span class="hljs-type">int</span> m; <span class="hljs-comment">// m个区间</span><br>      n = in.nextInt();<br>      m = in.nextInt();<br>      <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)<br>      &#123;<br>          m--;<br>          <span class="hljs-type">int</span> l,r,value ;<br>          l = in.nextInt();<br>          r = in.nextInt();<br>          value = in.nextInt();<br>          b[l+<span class="hljs-number">1</span>]+=value;<br>          b[r+<span class="hljs-number">1</span>+<span class="hljs-number">1</span>]-=value;<br>      &#125;<br>      <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>; i&lt;=n; i++)<br>          b[i]=b[i]+b[i-<span class="hljs-number">1</span>];<br><br>      <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>      <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>          sum+=b[i];<br>  <span class="hljs-comment">/*</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">  也可以一次性搞定</span><br><span class="hljs-comment">  int sum=a[0];</span><br><span class="hljs-comment">  for(int i=1; i&lt;n; i++)&#123;</span><br><span class="hljs-comment">  a[i]=a[i]+a[i-1];</span><br><span class="hljs-comment">  sum+=a[i]</span><br><span class="hljs-comment">  &#125;</span><br><span class="hljs-comment">  */</span><br>      System.out.println(sum);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h2><p>前缀和法的应用主要也是用于处理区间问题。</p>
 <p>前缀和是指某序列的前 $n$ 项和，可以把它理解为数学上的数列的前 $n$ 项和。当对于某一数组区间进行多次询问，$[L,r]$ 的和时，如果正常处理，那么我们每次都要 $[l,r]$。查询 $N$ 次，那么时间复杂度也是 $O(nm)$ 也是平方阶的。</p>
 <p>如果我们采用前缀和，构造出一个前缀和数组，通过对于端点的值的减法操作就能 $O(1)$ 的求出 $[l,r]$ 的和。然后 $N$ 次查询的，就将复杂度降低为 $O(n)$。</p>
@@ -247,569 +195,76 @@
 </ol>
 <p><strong>前缀和算法解题的基本思路：</strong></p>
 <ol>
-<li>利用 $\text{sum}[i]=a[i]+\text{sum}[i-1]$ 差分式；</li>
+<li>利用 $\text{sum}[i]&#x3D;a[i]+\text{sum}[i-1]$ 差分式；</li>
 <li>从第 1 项到 $n$ 项，且第 $0$ 项无数据默认为 $0$；</li>
 <li>对于区间求和的操作转化为端点值相减。</li>
 </ol>
 <p><strong>前缀和的一般解题过程：</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs txt">首先假设有一个数组：<br><br>1 2 3 4 5 7 2<br><br>前缀和后：<br><br>0 1 3 6 10 15 22 24<br><br>一般应用场景：<br><br>让你对区间 [l,r] 求和操作N次<br><br>如：<br><br>从第二个元素到第五个元素的和<br>从第二个元素到第四个元素的和<br>从第一个元素到第三个元素的和<br>....<br><br>这里我们先演示前三个：<br><br>对于每个 [l,r] 区间的求和操作转化为区间端点的加减操作<br><br>sum[l,r] =[r]-[l-1]<br><br>从第二个元素到第五个元素的和：<br><br>转化为：[5]-[1]<br><br>那么Sum[2,5]=[5]-[1]=14<br><br>且 2+3+4+5=14<br><br>确实是相等的，就是这么神奇。<br><br>我们继续操作：<br><br>从第二个元素到第四个元素的和<br><br>转化为：[4]-[1]<br><br>那么Sum[2,4]=[4]-[1]=9<br><br>且 2+3+4=9<br><br>我们继续操作：<br><br>从第一个元素到第三个元素的和<br><br>转化为：[3]-[0]<br><br>那么Sum[1,3]=[3]-[0]=6<br><br>且 1+2+3=6<br><br>符合题意，验证结束，咱么做个题目看一看<br></code></pre></td></tr></table></figure>
+
 <h3 id="大学里的树木要维护"><a href="#大学里的树木要维护" class="headerlink" title="大学里的树木要维护"></a>大学里的树木要维护</h3><p><strong>题目描述:</strong></p>
 <p>教室外有 $N$ 棵树，根据不同的位置和树种，学校已经对其进行了多年的维护。因为树的排列成线性，且非常长，我们可以将它们看作一条直线给他们编号。</p>
 <p>树的编号从 $1-N$ 且 $N&lt;1e6$。由于已经维护了多年，每一个树都由学校的园艺人员进行了维护费用的统计。</p>
 <p>每棵树的前期维护费用各不相同，但是由于未来需要要打药，所以有些树木的维护费用太高的话，就要重新种植。由于维护费用也称区间分布，所以常常需要统一个区间里的树木的维护开销。</p>
 <p>现在园艺人员想知道，某个区间内的树木维护开销是多少。共计 $M$ 个区间需要查询。</p>
 <p><strong>输入描述:</strong></p>
-<p>每组输入的第一行有两个整数 $N（1 &lt;= N&lt;= 1000000）$和 $M（1 &lt;= M &lt;= 100000）$。</p>
+<p>每组输入的第一行有两个整数 $N（1 &lt;&#x3D; N&lt;&#x3D; 1000000）$和 $M（1 &lt;&#x3D; M &lt;&#x3D; 100000）$。</p>
 <p>$N$ 代表马路的共计多少棵树，$M$ 代表区间的数目，$N$ 和 $M$ 之间用一个空格隔开。接下来的一行，包含 $N$ 个数，每个数之间用空格隔开。</p>
 <p>接下来的$M$行每行包含两个不同的整数，用一个空格隔开，表示一个区域的起始点$L$和终止点$R$的坐标。</p>
 <p><strong>输入样例:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 3<br>7 5 6 4 2 5 0 8 5 3<br>1 5<br>2 6<br>3 7<br></code></pre></td></tr></table></figure>
+
 <p><strong>输出描述:</strong></p>
 <p>输出包括 $M$ 行，每一行只包含一个整数，所有的花费。</p>
 <p><strong>输出样例:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">24<br>22<br>17<br></code></pre></td></tr></table></figure>
+
 <p><strong>样例:</strong></p>
 <p>输入样例</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs txt">30 28<br>172 723 580 822 718 798 941 625 450 716 540 252 16 666 115 679 274 323 875 233 99 538 881 486 610 462 319 878 930 735<br>6 22<br>7 21<br>3 16<br>7 20<br>9 17<br>0 21<br>13 27<br>7 19<br>10 23<br>2 14<br>21 22<br>15 17<br>6 13<br>16 23<br>21 21<br>11 15<br>5 12<br>9 11<br>8 22<br>10 16<br>3 8<br>15 27<br>5 16<br>4 8<br>0 27<br>4 8<br>7 21<br>20 21<br></code></pre></td></tr></table></figure>
 <p>输出样例</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs txt">8140<br>6804<br>7918<br>6705<br>3708<br>10617<br>6576<br>6472<br>6207<br>7847<br>637<br>1068<br>4338<br>3902<br>99<br>1589<br>5040<br>1706<br>6401<br>2984<br>4484<br>5894<br>6516<br>3904<br>13913<br>3904<br>6804<br>332<br></code></pre></td></tr></table></figure>
+
 <p><strong>运行限制:</strong></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">1. 最大运行时间：1s<br>2. 最大运行内存：128M<br></code></pre></td></tr></table></figure>
+
 <p><strong>题目解析：</strong></p>
 <ol>
-<li>利用$sum[i]=a[i]+sum[i-1]$ 前缀和式在输入时求出前缀和；</li>
+<li>利用$sum[i]&#x3D;a[i]+sum[i-1]$ 前缀和式在输入时求出前缀和；</li>
 <li>依次读入区间的值，然后将对于区间的求和操作转化为对于区间端点操作加减，对于每个 [l,r] 区间的求和操作都转化为对端点[r]-[l-1]的操作。</li>
 <li>输出答案。</li>
 </ol>
 <p><strong>前缀和一般解题过程：</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp">输 入 N 和 M<br><br>输入 N 个值 并计算前缀和<br><span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=N;i++)<br>    输入a[i]<br>    并计算sum[i]=sum[i<span class="hljs-number">-1</span>]+a[i]<br><br>输入 M 个区间，计算结果<br><br><span class="hljs-keyword">while</span>(M)<br>    M-=<span class="hljs-number">1</span><br>    输入 L , R<br>    计算 [r]-[l<span class="hljs-number">-1</span>]，并输出<br></code></pre></td></tr></table></figure>
+
 <h4 id="答案解析-1"><a href="#答案解析-1" class="headerlink" title="答案解析"></a>答案解析</h4><p>C++ 代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> a[<span class="hljs-number">100005</span>];<br><span class="hljs-type">int</span> sum[<span class="hljs-number">100005</span>];<br><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> n;<br>    <span class="hljs-type">int</span> m;<br>    cin &gt;&gt; n &gt;&gt; m;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>    &#123;<br>        cin &gt;&gt; a[i];<br>        sum[i] = a[i] + sum[i - <span class="hljs-number">1</span>];<br>    &#125;<br><br>    <span class="hljs-keyword">while</span> (m &gt; <span class="hljs-number">0</span>)<br>    &#123;<br>        m -= <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> l, r;<br>        cin &gt;&gt; l &gt;&gt; r;<br>        cout &lt;&lt; sum[r] - sum[l - <span class="hljs-number">1</span>] &lt;&lt; endl;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p>这个代码有个问题，虽然是能通过的，但是他是一个输入对应一个输出的，我们之前讲过，这对大部分的测评机是没问题。</p>
 <p>终端输出：</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 3<br>7 5 6 4 2 5 0 8 5 3<br>1 5<br>24<br>2 6<br>22<br>3 7<br>17<br><br>Process returned 0 (0x0)   execution time : 1.741 s<br>Press any key to continue.<br></code></pre></td></tr></table></figure>
+
 <p>但是如果有想要规规矩矩的处理，或者说题目要求必须全部读入后输出。我们可这样操作。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> a[<span class="hljs-number">100005</span>];<br><span class="hljs-type">int</span> sum[<span class="hljs-number">100005</span>];<br>vector&lt;<span class="hljs-type">int</span>&gt;ss;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-type">int</span> n ;<br>    <span class="hljs-type">int</span> m;<br>    cin&gt;&gt;n&gt;&gt;m;<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>    &#123;<br>        cin&gt;&gt;a[i];<br>        sum[i]=a[i]+sum[i<span class="hljs-number">-1</span>];<br><br>    &#125;<br><br>    <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)<br>    &#123;<br>        m-=<span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> l,r;<br>        cin&gt;&gt;l&gt;&gt;r;<br>        ss.<span class="hljs-built_in">push_back</span>(sum[r]-sum[l<span class="hljs-number">-1</span>]);<br>    &#125;<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> sss:ss) cout&lt;&lt;sss&lt;&lt;endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p>终端输出：</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 3<br>7 5 6 4 2 5 0 8 5 3<br>1 5<br>2 6<br>3 7<br>24<br>22<br>17<br><br>Process returned 0 (0x0)   execution time : 6.235 s<br>Press any key to continue.<br></code></pre></td></tr></table></figure>
+
 <p>都可以，大家看自己需求和心情选择即可。</p>
 <p><strong>Python 解题代码</strong></p>
 <p>普通代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">0</span>] * <span class="hljs-number">100005</span><br>sum1 = [<span class="hljs-number">0</span>] * <span class="hljs-number">100005</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    nm = <span class="hljs-built_in">input</span>().split()<br>    n = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">0</span>])<br>    m = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">1</span>])<br>    a = <span class="hljs-built_in">input</span>().split()<br>    a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, a))<br>    <span class="hljs-comment"># split 分割后都是 字符 这里是转化成数字</span><br>    <span class="hljs-comment">#print(a)</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># print(i)</span><br>        sum1[i] = sum1[i - <span class="hljs-number">1</span>]<br>        sum1[i] += a[i - <span class="hljs-number">1</span>]  <span class="hljs-comment"># 分割完后，a[]是从0开始,所以要减1</span><br><br>    <span class="hljs-keyword">while</span> m &gt; <span class="hljs-number">0</span>:<br><br>        m -= <span class="hljs-number">1</span><br>        lrv = <span class="hljs-built_in">input</span>().split()<br>        l = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">0</span>])<br>        r = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">1</span>])<br>        <span class="hljs-built_in">print</span>(sum1[r] - sum1[l - <span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+
 <p>特殊代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">0</span>] * <span class="hljs-number">100005</span><br>sum1 = [<span class="hljs-number">0</span>] * <span class="hljs-number">100005</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    nm = <span class="hljs-built_in">input</span>().split()<br>    n = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">0</span>])<br>    m = <span class="hljs-built_in">int</span>(nm[<span class="hljs-number">1</span>])<br>    a = <span class="hljs-built_in">input</span>().split()<br><br>    a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, a))<br>    <span class="hljs-comment"># split 分割后都是 字符 这里是转化成数字</span><br>    <span class="hljs-comment"># print(a)</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># print(i)</span><br>        sum1[i] = sum1[i - <span class="hljs-number">1</span>]<br>        sum1[i] += a[i - <span class="hljs-number">1</span>]  <span class="hljs-comment"># 分割完后，a[]是从0开始,所以要减1</span><br><br>    ans = []<br>    <span class="hljs-keyword">while</span> m &gt; <span class="hljs-number">0</span>:<br><br>        m -= <span class="hljs-number">1</span><br>        lrv = <span class="hljs-built_in">input</span>().split()<br>        l = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">0</span>])<br>        r = <span class="hljs-built_in">int</span>(lrv[<span class="hljs-number">1</span>])<br>        ans.append(sum1[r] - sum1[l - <span class="hljs-number">1</span>])<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ans:<br>        <span class="hljs-built_in">print</span>(i)<br></code></pre></td></tr></table></figure>
+
 <p><strong>Java 解题代码</strong></p>
 <p>普通算法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> a[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">100005</span>];<br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> sum[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">100005</span>];<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//n层</span><br>        <span class="hljs-type">int</span> m; <span class="hljs-comment">// m个区间</span><br>        n = in.nextInt();<br>        m = in.nextInt();<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        &#123;<br>            a[i]= in.nextInt();<br>            sum[i]=a[i]+sum[i-<span class="hljs-number">1</span>];<br><br>        &#125;<br><br>        <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)<br>        &#123;<br>            m--;<br>            <span class="hljs-type">int</span> l,r;<br>            l = in.nextInt();<br>            r = in.nextInt();<br>            System.out.println((sum[r]-sum[l-<span class="hljs-number">1</span>]));<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p>特殊代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">import</span> java.util.Vector;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br><br><br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> a[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">100005</span>];<br>    <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> sum[]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [<span class="hljs-number">100005</span>];<br>    <span class="hljs-keyword">static</span> Vector ans=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Vector</span>&lt;Integer&gt;();<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br>        <span class="hljs-type">int</span> n; <span class="hljs-comment">//n层</span><br>        <span class="hljs-type">int</span> m; <span class="hljs-comment">// m个区间</span><br>        n = in.nextInt();<br>        m = in.nextInt();<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        &#123;<br>             a[i]= in.nextInt();<br>            sum[i]=a[i]+sum[i-<span class="hljs-number">1</span>];<br><br>        &#125;<br><br>        <span class="hljs-keyword">while</span>(m&gt;<span class="hljs-number">0</span>)<br>        &#123;<br>            m--;<br>            <span class="hljs-type">int</span> l,r;<br>            l = in.nextInt();<br>            r = in.nextInt();<br>            ans.addElement(sum[r]-sum[l-<span class="hljs-number">1</span>]);<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(Object ab:ans)&#123;<br>            System.out.println(ab);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们这节课讲了差分和前缀和的知识点，并且也讲了怎样使用差分，怎样使前缀和，也讲了差分和前缀和最常见的两种情况。</p>
 <p>差分和前缀和是很多思维题的解题技巧，必须要掌握熟练才能拿到简单题目的全部分数。</p>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          打赏
-        </div>
-      </div>
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/03/11/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" rel="tag">差分与前缀和</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2024/03/11/%E5%B9%B6%E6%9F%A5%E9%9B%86/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            并查集
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2024/03/11/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">工具函数模板</div>
-      </a>
-    
-  </nav>
-
-  
-   
-  
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
-</article>
-
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2024
-        <i class="ri-heart-fill heart_icon"></i> zdx
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true,
-  };
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
- 
-<script src="/js/clickLove.js"></script>
- 
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
- 
-<script src="/js/dz.js"></script>
- 
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
-  }
-</script>
-
-
-    
-    
-<script>
-  const password = "65535";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
-
-  </div>
-</body>
-
-</html>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/11/%E5%B9%B6%E6%9F%A5%E9%9B%86/">← Next 并查集</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/11/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">工具函数模板 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C"><span class="toc-number">1.</span> <span class="toc-text">差分与前缀和</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.0.1.</span> <span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">差分法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E9%87%8C%E7%9A%84%E6%A0%91%E6%9C%A8%E8%A6%81%E6%89%93%E8%8D%AF"><span class="toc-number">2.1.</span> <span class="toc-text">大学里的树木要打药</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90"><span class="toc-number">2.1.1.</span> <span class="toc-text">答案解析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C"><span class="toc-number">3.</span> <span class="toc-text">前缀和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E9%87%8C%E7%9A%84%E6%A0%91%E6%9C%A8%E8%A6%81%E7%BB%B4%E6%8A%A4"><span class="toc-number">3.1.</span> <span class="toc-text">大学里的树木要维护</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%94%E6%A1%88%E8%A7%A3%E6%9E%90-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">答案解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.2.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

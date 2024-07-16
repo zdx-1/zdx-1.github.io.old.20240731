@@ -1,125 +1,55 @@
-<!DOCTYPE html>
-
-
-<html lang="zh-CN">
-  
-
-    <head>
-      <meta charset="utf-8" />
-        
-      <meta name="description" content="learn" />
-      
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>Ubuntu部署记录 |  Zdx-1</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
-      
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
-        }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-Ubuntu部署记录"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Ubuntu部署记录
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/07/09/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time datetime="2024-07-09T11:08:01.000Z" itemprop="datePublished">2024-07-09</time>
-</a>   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">886</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="ubuntu-20-04-6-live-server-amd64"><a href="#ubuntu-20-04-6-live-server-amd64" class="headerlink" title="ubuntu-20.04.6-live-server-amd64"></a>ubuntu-20.04.6-live-server-amd64</h1><h2 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h2><h3 id="1-制作一个U盘启动盘"><a href="#1-制作一个U盘启动盘" class="headerlink" title="1. 制作一个U盘启动盘"></a>1. 制作一个U盘启动盘</h3><p><strong>Ubuntu</strong> iso<strong>下载地址</strong></p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ubuntu部署记录 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Ubuntu部署记录</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-07-09T11:08:01.000Z" id="date"> 2024-07-09</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-07-09T13:29:37.733Z" id="updated"> 2024-07-09</time></div></span></div></div><hr><div id="post-content"><h1 id="ubuntu-20-04-6-live-server-amd64"><a href="#ubuntu-20-04-6-live-server-amd64" class="headerlink" title="ubuntu-20.04.6-live-server-amd64"></a>ubuntu-20.04.6-live-server-amd64</h1><h2 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h2><h3 id="1-制作一个U盘启动盘"><a href="#1-制作一个U盘启动盘" class="headerlink" title="1. 制作一个U盘启动盘"></a>1. 制作一个U盘启动盘</h3><p><strong>Ubuntu</strong> iso<strong>下载地址</strong></p>
 <p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a></p>
 <p><a target="_blank" rel="noopener" href="https://cn.ubuntu.com/download">官网下载</a></p>
 <p><strong>制作工具下载</strong></p>
 <p><del>推荐使用rufus，因为免费</del></p>
 <p><a target="_blank" rel="noopener" href="https://rufus.org.cn/">安装地址</a></p>
 <p>准备一个U盘，插上U盘，打开rufus，选择镜像文件，具体配置如下：</p>
-<p><img src="./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/image-20240709200710588.png" alt="image-20240709200710588"></p>
+<p class='item-img' data-src='/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/image-20240709200710588.png'><img src="/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/image-20240709200710588.png" alt="image-20240709200710588"></p>
 <p>然后点击开始就行了</p>
 <p>等U盘制作完成就可以开始下一步了</p>
-<h3 id="2-设置开机启动项"><a href="#2-设置开机启动项" class="headerlink" title="2. 设置开机启动项"></a>2. 设置开机启动项</h3><h4 id="对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下："><a href="#对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下：" class="headerlink" title="对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下："></a>对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下：</h4><p><img src="./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/SouthEast.png" alt="img"></p>
+<h3 id="2-设置开机启动项"><a href="#2-设置开机启动项" class="headerlink" title="2. 设置开机启动项"></a>2. 设置开机启动项</h3><h4 id="对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下："><a href="#对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下：" class="headerlink" title="对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下："></a>对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下：</h4><p class='item-img' data-src='/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/SouthEast.png'><img src="/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/SouthEast.png" alt="img"></p>
 <p>笔记本电脑<br>主要按键：Delete, ESC, F1, F2, F10</p>
-<p>品牌笔记本电脑<br>ibm/thinkpad（冷开机按f1，部分新型号可以在重新启动时启动按f1，少数机型是Fn+F1或F2）</p>
+<p>品牌笔记本电脑<br>ibm&#x2F;thinkpad（冷开机按f1，部分新型号可以在重新启动时启动按f1，少数机型是Fn+F1或F2）</p>
 <p>惠普hp（启动和重新启动时按f2或者F10，或者先按ESC再按F10）</p>
 <p>索尼sony（启动和重新启动时按f2或者ASSIST键）</p>
 <p>戴尔dell（启动和重新启动时按f2）</p>
@@ -137,7 +67,7 @@
 <p>组装机不同主板台式机<br>Award BIOS：按“Del”键</p>
 <p>AMI BIOS：按“Del”或“ESC”键</p>
 <p>Phoenix BIOS：按“F2”键</p>
-<p>品牌台式机<br>ibm/thinkpad（冷开机按f1，部分新型号可以在重新启动时启动按f1）</p>
+<p>品牌台式机<br>ibm&#x2F;thinkpad（冷开机按f1，部分新型号可以在重新启动时启动按f1）</p>
 <p>惠普hp（启动和重新启动时按f2或者F10）</p>
 <p>索尼sony（启动和重新启动时按f2）</p>
 <p>戴尔dell（启动和重新启动时按f2）</p>
@@ -151,7 +81,7 @@
 <p>大多数中国大陆国产和台湾品牌（启动和重新启动时按f2）</p>
 <h4 id="进入BIOS之后，设置启动方式为移动盘启动"><a href="#进入BIOS之后，设置启动方式为移动盘启动" class="headerlink" title="进入BIOS之后，设置启动方式为移动盘启动"></a>进入BIOS之后，设置启动方式为移动盘启动</h4><p><a target="_blank" rel="noopener" href="http://www.kqidong.com/bios/2718.html">用u盘装系统bios怎么设置u盘启动_快启动官网 (kqidong.com)</a></p>
 <p>我测试的时候使用的电脑不支持UEFI,所以选择的是下面这个：（Remouable Dev.移动盘启动)</p>
-<p><img src="./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/1495707536719160_w3m.png" alt="1st Boot Device"></p>
+<p class='item-img' data-src='/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/1495707536719160_w3m.png'><img src="/./../images/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/1495707536719160_w3m.png" alt="1st Boot Device"></p>
 <p>设置好之后，按F10进行保存重启，进入下一步</p>
 <h3 id="3-系统安装"><a href="#3-系统安装" class="headerlink" title="3. 系统安装"></a>3. 系统安装</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huizhipeng/p/18089881">参考文章</a></p>
 <h3 id="4-设置允许ssh使用22端口连接"><a href="#4-设置允许ssh使用22端口连接" class="headerlink" title="4. 设置允许ssh使用22端口连接"></a>4. 设置允许ssh使用22端口连接</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ychgyyn/article/details/90215522#:~:text=%E8%BE%93%E5%85%A5%20passwd%20%EF%BC%8C%E8%BE%93%E5%85%A5%E4%BD%A0%E6%83%B3%E8%A6%81%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E5%AF%86%E7%A0%81%20%E8%BE%93%E5%85%A5%20su,yyn%20%E5%88%87%E6%8D%A2%E5%9B%9E%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E7%84%B6%E5%90%8E%E5%9C%A8%E8%BE%93%E5%85%A5%20su%20root%20%E5%90%8E%E8%BE%93%E5%85%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E5%AF%86%E7%A0%81%E5%88%87%E6%8D%A2%E5%9B%9EROOT%E7%94%A8%E6%88%B7%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F">参考文章</a></p>
@@ -160,514 +90,9 @@
 <h1 id="使用宝塔面板进行管理"><a href="#使用宝塔面板进行管理" class="headerlink" title="使用宝塔面板进行管理"></a>使用宝塔面板进行管理</h1><p><a target="_blank" rel="noopener" href="https://www.bt.cn/">宝塔面板官网</a></p>
 <p>安装脚本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec<br></code></pre></td></tr></table></figure>
+
 <p>在ubuntu命令行中运行即可安装</p>
 <h1 id="使用1panel面板进行管理"><a href="#使用1panel面板进行管理" class="headerlink" title="使用1panel面板进行管理"></a>使用1panel面板进行管理</h1><p><a target="_blank" rel="noopener" href="https://1panel.cn/">1panel官网链接</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh<br></code></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          打赏
-        </div>
-      </div>
-      
-    </div>
-    
 
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/07/09/Ubuntu%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/" rel="tag">系统部署</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2024/07/09/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Kivy中文说明文档v1.0
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2024/07/01/vue/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">vue</div>
-      </a>
-    
-  </nav>
-
-  
-   
-  
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
-</article>
-
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2024
-        <i class="ri-heart-fill heart_icon"></i> zdx
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true,
-  };
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
- 
-<script src="/js/clickLove.js"></script>
- 
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
- 
-<script src="/js/dz.js"></script>
- 
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
-  }
-</script>
-
-
-    
-    
-<script>
-  const password = "65535";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
-
-  </div>
-</body>
-
-</html>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/07/09/Kivy%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3v1-0/">← Next Kivy中文说明文档v1.0</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/07/01/vue/">vue Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu-20-04-6-live-server-amd64"><span class="toc-number">1.</span> <span class="toc-text">ubuntu-20.04.6-live-server-amd64</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">1.1.</span> <span class="toc-text">安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAU%E7%9B%98%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 制作一个U盘启动盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 设置开机启动项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E4%B8%8D%E5%90%8C%E7%9A%84%E7%94%B5%E8%84%91%EF%BC%8C%E5%BC%80%E6%9C%BAboot%E6%96%B9%E6%B3%95%E4%B8%8D%E5%90%8C%EF%BC%8C%E6%A0%B9%E6%8D%AE%E4%B8%BB%E6%9D%BF%E5%93%81%E7%89%8C%EF%BC%8C%E5%A4%A7%E8%87%B4%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">对于不同的电脑，开机boot方法不同，根据主板品牌，大致如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5BIOS%E4%B9%8B%E5%90%8E%EF%BC%8C%E8%AE%BE%E7%BD%AE%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F%E4%B8%BA%E7%A7%BB%E5%8A%A8%E7%9B%98%E5%90%AF%E5%8A%A8"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">进入BIOS之后，设置启动方式为移动盘启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 系统安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8ssh%E4%BD%BF%E7%94%A822%E7%AB%AF%E5%8F%A3%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 设置允许ssh使用22端口连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu-20-04-6-desktop-amd64-iso"><span class="toc-number">2.</span> <span class="toc-text">ubuntu-20.04.6-desktop-amd64.iso</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E8%BF%9B%E8%A1%8C%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">使用宝塔面板进行管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A81panel%E9%9D%A2%E6%9D%BF%E8%BF%9B%E8%A1%8C%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">使用1panel面板进行管理</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

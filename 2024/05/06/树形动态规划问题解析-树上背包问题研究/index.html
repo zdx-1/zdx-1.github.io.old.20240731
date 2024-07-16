@@ -1,113 +1,43 @@
-<!DOCTYPE html>
-
-
-<html lang="zh-CN">
-  
-
-    <head>
-      <meta charset="utf-8" />
-        
-      <meta name="description" content="learn" />
-      
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>树形动态规划问题解析&amp;树上背包问题研究 |  Zdx-1</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
-
-      
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
-
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
-       
- 
-
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
-      <!-- mermaid -->
-      
-      <style>
-        .swal2-styled.swal2-confirm {
-          font-size: 1.6rem;
-        }
-      </style>
-    <link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
-</head>
-  </html>
-</html>
-
-
-<body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-树形动态规划问题解析-树上背包问题研究"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  树形动态规划问题解析&amp;树上背包问题研究
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/05/06/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/" class="article-date">
-  <time datetime="2024-05-06T03:34:14.000Z" itemprop="datePublished">2024-05-06</time>
-</a>   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">4k</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">19 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-树上DP概述"><a href="#1-树上DP概述" class="headerlink" title="1. 树上DP概述"></a>1. 树上DP概述</h2><p>树形 DP，即在树上进行的 DP。由于树固有的递归性质，树形 DP 一般都是递归进行的。</p>
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>树形动态规划问题解析&amp;树上背包问题研究 | Zdx-1</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Zdx-1" type="application/atom+xml">
+</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>树形动态规划问题解析&amp;树上背包问题研究</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-05-06T03:34:14.000Z" id="date"> 2024-05-06</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-05-06T03:34:58.000Z" id="updated"> 2024-05-06</time></div></span></div></div><hr><div id="post-content"><h2 id="1-树上DP概述"><a href="#1-树上DP概述" class="headerlink" title="1. 树上DP概述"></a>1. 树上DP概述</h2><p>树形 DP，即在树上进行的 DP。由于树固有的递归性质，树形 DP 一般都是递归进行的。</p>
 <p>大部分的树形 DP 都是线性的，并且由于树本身就是有序的，所以具有十分良好的性质，例如子结构性质等。</p>
 <p>树形 DP 在算法竞赛中考察多样，但是简单的可以分为：</p>
 <ol>
@@ -123,17 +53,17 @@
 <p>接下来，我们将通过几个问题来描述这三种问题的解法。</p>
 <h2 id="2-树上决策问题"><a href="#2-树上决策问题" class="headerlink" title="2. 树上决策问题"></a>2. 树上决策问题</h2><p>树上决策问题，往往是子节点向父节点转移时，只取最优的解，这一点与线性 DP 十分相似。</p>
 <p>看一道例题：</p>
-<h3 id="2-1-生命之树-真题"><a href="#2-1-生命之树-真题" class="headerlink" title="2. 1 生命之树-真题"></a>2. 1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/131/learning/">生命之树-真题</a></h3><p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713417459185.png" alt="图片描述"></p>
+<h3 id="2-1-生命之树-真题"><a href="#2-1-生命之树-真题" class="headerlink" title="2. 1 生命之树-真题"></a>2. 1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/131/learning/">生命之树-真题</a></h3><p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713417459185.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713417459185.png" alt="图片描述"></p>
 <p>这题看着挺玄乎，其实并没有那么复杂。</p>
 <p>我们观察题目要求：给定一棵树，选出一个非空集合，使得对于任意两个元素 $a, b$，都存在一个序列 $a, v_1, …v_k, b$ 是这个集合里的元素，并且相邻两个点之间有一条边。</p>
 <p>本来可以一句话说清楚的事情，但是偏偏要给出数学定义，所以要考察大家的归纳整理能力。</p>
 <p>实际上，就是要在树中选出一个连通块即可，并且满足连通块的和值最大。</p>
 <p>为什么呢？</p>
 <p>我们观察一幅图，相信大家能理解了：</p>
-<p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419773909.png" alt="图片描述"></p>
+<p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419773909.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419773909.png" alt="图片描述"></p>
 <p>绿色的代表我们选择的点集合。这些点是连通的，所以满足要求。</p>
 <p>如果换成这个样子：</p>
-<p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419870334.png" alt="图片描述"></p>
+<p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419870334.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713419870334.png" alt="图片描述"></p>
 <p>这样就不满足题目要求了。</p>
 <p>所以大家可以体会出来，题目的要求，其实就是找一个树上的连通块。</p>
 <p>那么我们的问题就变成了在树上找最大的连通块了。</p>
@@ -146,27 +76,31 @@
 <p>$dp_i$ 表示，对于节点为 $i$ 的子树，我们找到的以 $i$ 为根的连通块和值最大是 $dp_i$。</p>
 <p>那么我们的转移的意义就是：对于 $i$ 来说，由于 $i$ 一定存在连通块中，所以，我们要找到他的儿子中，哪些是和 $i$ 连着的。</p>
 <p>有一种贪心方案，对于 $i$ 的儿子 $v \in son(i)$ ，如果 $dp_v \ge 0$，我们就将他接入父亲即可。</p>
-<p>所以，我们的转移方程就是： <script type="math/tex">dp\_i = w\_i + \\sum \_{dp\_j \\ge 0 & j \\in son(i)} dp\_j</script> 代码如下：</p>
+<p>所以，我们的转移方程就是： $$ dp_i &#x3D; w_i + \sum _{dp_j \ge 0 &amp; j \in son(i)} dp_j $$ 代码如下：</p>
 <ul>
 <li>C++</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span> #<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span> using namespace std; const int N = 1e5+100; typedef long long ll; vector<span class="hljs-string">&lt;int&gt;</span> G[N]; int w[N]; ll dp[N], ans = -1e18; int n; void dfs(int u, int f) &#123; dp[u] = w[u]; for (int v : G[u]) &#123; <span class="hljs-keyword">if</span> (v == f) continue; dfs(v, u); <span class="hljs-keyword">if</span> (dp[v] &gt; 0) &#123; dp[u] += dp[v]; &#125; &#125; ans = max(ans, dp[u]); &#125; int main() &#123; cin &gt;&gt; n; for (int i = 1; i <span class="hljs-string">&lt;= n; ++i) &#123; cin &gt;</span>&gt; w[i]; &#125; int u, v; for (int i = 1; i <span class="hljs-string">&lt; n; ++i) &#123; cin &gt;</span>&gt; u &gt;&gt; v; G[u].push_back(v); G[v].push_back(u); &#125; dfs(1, 0); cout &lt;&lt; ans &lt;&lt; endl; return 0; &#125;</span><br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Java</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*; <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">N</span> <span class="hljs-operator">=</span> (<span class="hljs-type">int</span>) (<span class="hljs-number">1e5</span> + <span class="hljs-number">100</span>); <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">long</span>[] dp; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] w; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> List&lt;List&lt;Integer&gt;&gt; G; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">long</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> Long.MIN_VALUE; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> n; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> f)</span> &#123; dp[u] = w[u]; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G.get(u)) &#123; <span class="hljs-keyword">if</span> (v == f) <span class="hljs-keyword">continue</span>; dfs(v, u); <span class="hljs-keyword">if</span> (dp[v] &gt; <span class="hljs-number">0</span>) &#123; dp[u] += dp[v]; &#125; &#125; ans = Math.max(ans, dp[u]); &#125; <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123; <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in); n = scanner.nextInt(); w = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[N]; G = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;(); <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; N; i++) &#123; G.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;()); &#125; dp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">long</span>[N]; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) &#123; w[i] = scanner.nextInt(); &#125; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">1</span>; i++) &#123; <span class="hljs-type">int</span> <span class="hljs-variable">u</span> <span class="hljs-operator">=</span> scanner.nextInt() - <span class="hljs-number">1</span>; <span class="hljs-comment">// 0-indexed in Java int v = scanner.nextInt() - 1; G.get(u).add(v); G.get(v).add(u); &#125; dfs(0, -1); System.out.println(ans); scanner.close(); &#125; &#125;</span><br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Python</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys sys.setrecursionlimit(<span class="hljs-number">100000</span>) n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()) aList = [<span class="hljs-number">0</span>] + [<span class="hljs-built_in">int</span>(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">input</span>().split()] tree = [[]<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>)] ans = <span class="hljs-number">0</span> dp = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>)] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>): m, n =<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()) tree[m].append(n) tree[n].append(m) <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">u,f</span>): <span class="hljs-keyword">global</span> ans dp[u] = aList[u] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> tree[u]: <span class="hljs-keyword">if</span> i !=f: dp[i] = dfs(i, u) <span class="hljs-keyword">if</span> dp[i]&gt;<span class="hljs-number">0</span>: dp[u] += dp[i] ans=<span class="hljs-built_in">max</span>(ans, dp[u]) <span class="hljs-keyword">return</span> dp[u] dfs(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>) <span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
 <h2 id="3-树上背包问题"><a href="#3-树上背包问题" class="headerlink" title="3. 树上背包问题"></a>3. 树上背包问题</h2><p>树上背包问题，本质上还是背包，可以看成在树上进行的背包。</p>
 <p>每次转移都是在父亲与儿子之间进行了一次经典背包转移。</p>
-<h3 id="3-1-小明的背包6"><a href="#3-1-小明的背包6" class="headerlink" title="3.1 小明的背包6"></a>3.1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/131/learning/">小明的背包6</a></h3><p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421022535.png" alt="图片描述"></p>
+<h3 id="3-1-小明的背包6"><a href="#3-1-小明的背包6" class="headerlink" title="3.1 小明的背包6"></a>3.1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/131/learning/">小明的背包6</a></h3><p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421022535.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421022535.png" alt="图片描述"></p>
 <p>这个是典型的依赖背包问题。</p>
 <p>并且依赖关系构成了一棵树。</p>
 <p>我们看样例：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>6 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>15<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>4 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>3 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421190949.png" alt="图片描述"></p>
+
+<p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421190949.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713421190949.png" alt="图片描述"></p>
 <p>依赖关系如上图所示：上图的含义是如果只有购买了 $1$ 号物品，才能购买 $2, 3, 4$ 号物品。</p>
 <p>记住，我们的目标是划分子问题，也就是说，只要保证了一个子问题的划分是正确的，那么由于树的优良递归性质，其他的也会是正确的。</p>
 <p>复习一下普通的背包问题，用 $dp_i$ 表示，在使用了 $i$ 空间的情况下的最大价值。</p>
@@ -180,24 +114,27 @@
 <li>C ++</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span> #<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span> #<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span> using namespace std; const int N = 1e2+20; vector<span class="hljs-string">&lt;int&gt;</span> G[N]; int n, V; int v[N], w[N]; int dp[N][N]; void dfs(int u) &#123; for (int i = v[u]; i <span class="hljs-string">&lt;= V; ++i) dp[u][i] = w[u]; for (int i : G[u]) &#123; dfs(i); for (int j = V; j &gt;</span>= v[u] + v[i]; --j) &#123; for (int k = v[i]; k <span class="hljs-string">&lt;= j - v[u]; ++k) // 剩余的空间 dp[u][j] = max(dp[u][j - k] + dp[i][k], dp[u][j]); &#125; &#125; &#125; int main() &#123; cin &gt;</span>&gt; n &gt;&gt; V; int s; for (int i = 1; i <span class="hljs-string">&lt;= n; ++i) &#123; cin &gt;</span>&gt; v[i] &gt;&gt; w[i] &gt;&gt; s; G[s].push_back(i); &#125; dfs(0); cout &lt;&lt; dp[0][V] &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>; &#125;</span><br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Java</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList; <span class="hljs-keyword">import</span> java.util.List; <span class="hljs-keyword">import</span> java.util.Scanner; <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> V; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[][] dp; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> List&lt;List&lt;Integer&gt;&gt; G; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] v; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] w; <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> &#123; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> v[u]; i &lt;= V; ++i) &#123; dp[u][i] = w[u]; &#125; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> child : G.get(u)) &#123; dfs(child); <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> V; j &gt;= v[u] + v[child]; --j) &#123; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">k</span> <span class="hljs-operator">=</span> v[child]; k &lt;= j - v[u]; ++k) &#123; dp[u][j] = Math.max(dp[u][j - k] + dp[child][k], dp[u][j]); &#125; &#125; &#125; &#125; <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123; <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in); <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> scanner.nextInt(); V = scanner.nextInt(); G = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;(); <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt;= n; ++i) &#123; G.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;()); &#125; v = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n + <span class="hljs-number">1</span>]; w = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n + <span class="hljs-number">1</span>]; dp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n + <span class="hljs-number">1</span>][V + <span class="hljs-number">1</span>]; <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;= n; ++i) &#123; v[i] = scanner.nextInt(); w[i] = scanner.nextInt(); <span class="hljs-type">int</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> scanner.nextInt(); G.get(s).add(i); &#125; dfs(<span class="hljs-number">0</span>); System.out.println(dp[<span class="hljs-number">0</span>][V]); scanner.close(); &#125; &#125;<br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Python</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>: <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">self, u, dp, G, v, w, V</span>): <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(v[u], V + <span class="hljs-number">1</span>): dp[u][i] = w[u] <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> G[u]: self.dfs(child, dp, G, v, w, V) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(V, v[u] + v[child] - <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>): <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(v[child], j - v[u] + <span class="hljs-number">1</span>): dp[u][j] = <span class="hljs-built_in">max</span>(dp[u][j - k] + dp[child][k], dp[u][j]) <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>(<span class="hljs-params">self</span>): n, V = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()) G = [[] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n + <span class="hljs-number">1</span>)] <span class="hljs-comment"># 0-indexed in Python v = [0] * (n + 1) w = [0] * (n + 1) for i in range(1, n + 1): v[i], w[i], s = map(int, input().split()) G[s].append(i) dp = [[0] * (V + 1) for _ in range(n + 1)] self.dfs(0, dp, G, v, w, V) print(dp[0][V]) # Run the main function solution = Solution() solution.main()</span><br></code></pre></td></tr></table></figure>
+
 <h2 id="4-换根-DP-问题"><a href="#4-换根-DP-问题" class="headerlink" title="4. 换根 DP 问题"></a>4. 换根 DP 问题</h2><p>换根 DP，面对的问题通常是“不定根”问题，也就是说，对于一棵树，他的根不一定是 $1$ 号点，可能是任意某个点。</p>
 <p>或者在某些问题中，我们需要尝试计算以每个点为根的情况，最后维护出最大值。</p>
 <p>我们先看一副图，来理解所谓的“换根”。</p>
-<p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424406656.png" alt="图片描述"></p>
+<p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424406656.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424406656.png" alt="图片描述"></p>
 <p>我们将原来以 $1$ 为根换成了以 $2$ 为根。那么树的形态也就发生了变化。</p>
 <p>如果每次都是选择一个点作为根进行处理，那么总的时间复杂度为 $O(n^2)$，但是如果我们能发现性质，我们可以将复杂度降为 $O(n)$。</p>
 <p>即换一次根的复杂度为 $O(1)$，下面，我们将讲述这种方法。</p>
 <p>在一般的问题中，我们常常是利用dfs来不断的将根转换为根的子节点。</p>
 <p>我们会发现一些事情：</p>
-<p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424716921.png" alt="图片描述"></p>
+<p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424716921.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424716921.png" alt="图片描述"></p>
 <p>我们一次转换的过程，其实有很大一部分并没有发生变化，体现在 DP 转移中，就是这些点的 DP 值也不会发生改变。</p>
 <p>实际上改变的只有改变身份的两个点，其他的点都不会发生变化。</p>
 <p>在换根的问题中，一般的步骤如下：</p>
@@ -206,10 +143,11 @@
 <li>开始以 $1$ 进行换根，并且向下递归，在递归之前，需要将自己变成子节点的身份。</li>
 <li>进入新的根后，按照根的身份，重新进行转移。并且维护答案。</li>
 </ol>
-<h3 id="4-1-卖树"><a href="#4-1-卖树" class="headerlink" title="4.1 卖树"></a>4.1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/3029/learning/">卖树</a></h3><p><img src="./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424080194.png" alt="图片描述"></p>
+<h3 id="4-1-卖树"><a href="#4-1-卖树" class="headerlink" title="4.1 卖树"></a>4.1 <a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/3029/learning/">卖树</a></h3><p class='item-img' data-src='/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424080194.png'><img src="/./../images/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/uid1792586-20240418-1713424080194.png" alt="图片描述"></p>
 <p>本题需要计算以每个点为根的情况下，产生的盈利。</p>
 <p>如果我们确定了一个点为根，我们很容易算出答案，如果确定了根，问题就变成了求最大深度，这个问题只需要一遍DFS就可以完成。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> f, <span class="hljs-type">int</span> dt)</span> </span>&#123; <span class="hljs-comment">// 求出以1为根的原始信息 dep[u] = dt; Mdp[u] = 0; // Mdp即为当前点为根的最大深度 for (int v : G[u]) &#123; if (v == f) continue; dfs(v, u, dt + 1); Mdp[u] = max(Mdp[v] + 1, Mdp[u]); &#125; &#125;</span><br></code></pre></td></tr></table></figure>
+
 <p>因为节点数量太多，我们无法承受 $O(n^2)$ 的复杂度，所以我们需要进行换根，</p>
 <p>基本思想如上述一致：</p>
 <ol>
@@ -221,24 +159,25 @@
 <li>C++</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span> #<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span> using namespace std; const int N = 1e5+10; vector<span class="hljs-string">&lt;int&gt;</span> G[N]; int n, k, c; int dep[N], Mdp[N]; typedef long long ll; ll ans = 0; void dfs(int u, int f, int dt) &#123; <span class="hljs-comment">// 求出以1为根的原始信息 dep[u] = dt; Mdp[u] = 0; for (int v : G[u]) &#123; if (v == f) continue; dfs(v, u, dt + 1); Mdp[u] = max(Mdp[v] + 1, Mdp[u]); &#125; &#125; void dfs2(int u, int f) &#123; // 开始换根 /** * 重新转移 */ int tmpf = 0, Mx1 = 0, Mx2 = 0; for (int v : G[u]) &#123; tmpf = max(tmpf, Mdp[v] + 1); &#125; // 维护答案 ans = max(1ll * tmpf * k - 1ll * dep[u] * c, ans); // 根变儿子步骤 int pre = Mdp[u]; for (int v : G[u]) &#123; if (Mdp[v] + 1 &gt; Mx1) &#123; Mx2 = Mx1; Mx1 = Mdp[v] + 1; &#125; else if (Mdp[v] + 1 &gt; Mx2) &#123; Mx2 = Mdp[v] + 1; &#125; &#125; for (int v : G[u]) &#123; if (v == f) continue; // 由于根要变成儿子，所以要改变原来的转移值 if (Mdp[v] + 1 == Mx1) Mdp[u] = Mx2; else Mdp[u] = Mx1; dfs2(v, u); &#125; // 还原原始的值。 Mdp[u] = pre; &#125; void sol() &#123; for (int i = 1; i &lt;= n; ++i) G[i].clear(); ans = 0; cin &gt;&gt; n &gt;&gt; k &gt;&gt; c; int u, v; for (int i = 1; i &lt; n; ++i) &#123; cin &gt;&gt; u &gt;&gt; v; G[u].push_back(v); G[v].push_back(u); &#125; dfs(1, 0, 0); dfs2(1, 0); cout &lt;&lt; ans &lt;&lt; &#x27;\n&#x27;; &#125; int main() &#123; ios::sync_with_stdio(0); int T; cin &gt;&gt; T; while (T --) &#123; sol(); &#125; return 0; &#125;</span></span><br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Python</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict <span class="hljs-keyword">import</span> sys sys.setrecursionlimit(<span class="hljs-number">100000</span>) N = <span class="hljs-number">100010</span> G = defaultdict(<span class="hljs-built_in">list</span>) n, k, c = <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> dep = [<span class="hljs-number">0</span>] * N Mdp = [<span class="hljs-number">0</span>] * N ans = <span class="hljs-number">0</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">u, f, dt</span>): <span class="hljs-comment"># 求出以1为根的原始信息 global dep, Mdp dep[u] = dt Mdp[u] = 0 for v in G[u]: if v == f: continue dfs(v, u, dt + 1) Mdp[u] = max(Mdp[v] + 1, Mdp[u]) def dfs2(u, f): # 开始换根 global ans, dep, Mdp tmpf = 0 Mx1 = 0 Mx2 = 0 # 重新转移 for v in G[u]: tmpf = max(tmpf, Mdp[v] + 1) # 维护答案 ans = max(ans, tmpf * k - dep[u] * c) # 根变儿子步骤 pre = Mdp[u] for v in G[u]: if Mdp[v] + 1 &gt; Mx1: Mx2 = Mx1 Mx1 = Mdp[v] + 1 elif Mdp[v] + 1 &gt; Mx2: Mx2 = Mdp[v] + 1 for v in G[u]: if v == f: continue # 由于根要变成儿子，所以要改变原来的转移值 if Mdp[v] + 1 == Mx1: Mdp[u] = Mx2 else: Mdp[u] = Mx1 dfs2(v, u) # 还原原始的值。 Mdp[u] = pre def sol(): global n, k, c, ans, G, dep, Mdp n, k, c = map(int, input().split()) G.clear() ans = 0 for _ in range(n - 1): u, v = map(int, input().split()) G[u].append(v) G[v].append(u) dfs(1, 0, 0) dfs2(1, 0) print(ans) T = int(input()) for _ in range(T): sol()</span><br></code></pre></td></tr></table></figure>
+
 <ul>
 <li>Java</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*; <span class="hljs-keyword">import</span> java.io.*; <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123; <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">N</span> <span class="hljs-operator">=</span> <span class="hljs-number">100010</span>; <span class="hljs-keyword">static</span> List&lt;Integer&gt;[] G; <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> n, k, c; <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] dep, Mdp; <span class="hljs-keyword">static</span> <span class="hljs-type">long</span> ans; <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> f, <span class="hljs-type">int</span> dt)</span> &#123; <span class="hljs-comment">// 求出以1为根的原始信息 Mdp[u] = 0; for (int v : G[u]) &#123; if (v == f) continue; dfs(v, u, dt + 1); Mdp[u] = Math.max(Mdp[v] + 1, Mdp[u]); &#125; &#125; static void dfs2(int u, int f) &#123; // 开始换根 int tmpf = 0, Mx1 = 0, Mx2 = 0; /** * 重新转移 */ for (int v : G[u]) &#123; tmpf = Math.max(tmpf, Mdp[v] + 1); &#125; // 维护答案 ans = Math.max(ans, (long) tmpf * k - (long) dep[u] * c); // 根变儿子步骤 int pre = Mdp[u]; for (int v : G[u]) &#123; if (Mdp[v] + 1 &gt; Mx1) &#123; Mx2 = Mx1; Mx1 = Mdp[v] + 1; &#125; else if (Mdp[v] + 1 &gt; Mx2) &#123; Mx2 = Mdp[v] + 1; &#125; &#125; for (int v : G[u]) &#123; if (v == f) continue; // 由于根要变成儿子，所以要改变原来的转移值 if (Mdp[v] + 1 == Mx1) &#123; Mdp[u] = Mx2; &#125; else &#123; Mdp[u] = Mx1; &#125; dfs2(v, u); &#125; // 还原原始的值。 Mdp[u] = pre; &#125; static void sol(Scanner scanner) &#123; for (int i = 1; i &lt;= n; i++) G[i].clear(); ans = 0; n = scanner.nextInt(); k = scanner.nextInt(); c = scanner.nextInt(); int u, v; for (int i = 1; i &lt; n; i++) &#123; u = scanner.nextInt(); v = scanner.nextInt(); G[u].add(v); G[v].add(u); &#125; dfs(1, 0, 0); dfs2(1, 0); System.out.println(ans); &#125; public static void main(String[] args) &#123; G = new ArrayList[N]; for (int i = 0; i &lt; N; i++) &#123; G[i] = new ArrayList&lt;&gt;(); &#125; dep = new int[N]; Mdp = new int[N]; Scanner scanner = new Scanner(System.in); int T = scanner.nextInt(); while (T-- &gt; 0) &#123; sol(scanner); &#125; &#125; &#125;</span><br></code></pre></td></tr></table></figure>
-<h2 id="5-作业"><a href="#5-作业" class="headerlink" title="5. 作业"></a>5. 作业</h2><div class="table-container">
-<table>
+
+<h2 id="5-作业"><a href="#5-作业" class="headerlink" title="5. 作业"></a>5. 作业</h2><table>
 <thead>
 <tr>
 <th>题目</th>
 <th>链接</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>取气球（算法赛）</td>
 <td><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/17024/learning/">https://www.lanqiao.cn/problems/17024/learning/</a></td>
 </tr>
@@ -246,512 +185,5 @@
 <td>左孩子右兄弟（21 年省赛）</td>
 <td><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/1451/learning/">https://www.lanqiao.cn/problems/1451/learning/</a></td>
 </tr>
-</tbody>
-</table>
-</div>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          打赏
-        </div>
-      </div>
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zdx-1.github.io/2024/05/06/%E6%A0%91%E5%BD%A2%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2024/05/22/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            BookShop说明文档
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2024/05/06/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%B8%E5%9E%8B%E9%A2%98%E5%9E%8B%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">状态压缩动态规划的典型题型深入分析</div>
-      </a>
-    
-  </nav>
-
-  
-   
-  
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
-</article>
-
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2024
-        <i class="ri-heart-fill heart_icon"></i> zdx
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-      </li>
-    </ul>
-  </div>
-</footer>    
-    </main>
-    <div class="float_btns">
-      <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-    </div>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Zdx-1"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-3.6.0.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true,
-  };
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-<!-- ClickLove -->
- 
-<script src="/js/clickLove.js"></script>
- 
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
- 
-<!-- CanvasBackground -->
- 
-<script src="/js/dz.js"></script>
- 
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
-  }
-</script>
-
-
-    
-    
-<script>
-  const password = "65535";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
-
-  </div>
-</body>
-
-</html>
+</tbody></table>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/05/22/BookShop%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/">← Next BookShop说明文档</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/05/06/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%B8%E5%9E%8B%E9%A2%98%E5%9E%8B%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90/">状态压缩动态规划的典型题型深入分析 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A0%91%E4%B8%8ADP%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">1. 树上DP概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%91%E4%B8%8A%E5%86%B3%E7%AD%96%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">2. 树上决策问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%94%9F%E5%91%BD%E4%B9%8B%E6%A0%91-%E7%9C%9F%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">2. 1 生命之树-真题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">3. 树上背包问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%B0%8F%E6%98%8E%E7%9A%84%E8%83%8C%E5%8C%856"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 小明的背包6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%8D%A2%E6%A0%B9-DP-%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">4. 换根 DP 问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8D%96%E6%A0%91"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 卖树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BD%9C%E4%B8%9A"><span class="toc-number">5.</span> <span class="toc-text">5. 作业</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
