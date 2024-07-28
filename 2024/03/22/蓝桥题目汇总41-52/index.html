@@ -46,11 +46,12 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>第 $3 \ldots M+2$ 行: 每行 3 个正整数, $u, v, c$, 表示有一条城市 $u$ 到城市 $v$ 的 双向路线仍然开通着, 通过该路线的时间为 $c$</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>第 1 行: 1 个正整数, 表示小明从城市 1 出发到达城市 $N$ 的最短时间（到 达城市 $N$, 不需要计算城市 $N$ 的隔离时间）</p>
 <h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">4 4 <br>5 7 3 4<br>1 2 4 <br>1 3 5<br>2 4 3<br>3 4 5<br></code></pre></td></tr></table></figure>
+
 <h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">13<br></code></pre></td></tr></table></figure>
-<h3 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h3><p class='item-img' data-src='./../images/%E7%BC%96%E7%A8%8B41-%E5%87%BA%E5%B7%AE/wm.png'><img src="./../images/%E7%BC%96%E7%A8%8B41-%E5%87%BA%E5%B7%AE/wm.png" alt="图片描述"></p>
-<h3 id="评测用例规模与约定"><a href="#评测用例规模与约定" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $100 \%$ 的数据, $1 \leq N \leq 1000,1 \leq M \leq 10000,1 \leq C_{i} \leq 200,1 \leq u, v \leq$ $N, 1 \leq c \leq 1000$</p>
-<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h3><p class='item-img' data-src='/./../images/%E7%BC%96%E7%A8%8B41-%E5%87%BA%E5%B7%AE/wm.png'><img src="/./../images/%E7%BC%96%E7%A8%8B41-%E5%87%BA%E5%B7%AE/wm.png" alt="图片描述"></p>
+<h3 id="评测用例规模与约定"><a href="#评测用例规模与约定" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $100 %$ 的数据, $1 \leq N \leq 1000,1 \leq M \leq 10000,1 \leq C_{i} \leq 200,1 \leq u, v \leq$ $N, 1 \leq c \leq 1000$</p>
+<h3 id="运行限制"><a href="#运行限制" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -58,8 +59,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>512M</td>
@@ -79,9 +79,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>512M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="聪明的猴子"><a href="#聪明的猴子" class="headerlink" title="聪明的猴子"></a>聪明的猴子</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>在一个热带雨林中生存着一群猴子，它们以树上的果子为生。昨天下了一场大雨，现在雨过天晴，但整个雨林的地表还是被大水淹没着，部分植物的树冠露在水面上。猴子不会游泳，但跳跃能力比较强，它们仍然可以在露出水面的不同树冠上来回穿梭，以找到喜欢吃的果实。</p>
 <p>现在，在这个地区露出水面的有 $N$ 棵树，假设每棵树本身的直径都很小，可以忽略不计。我们在这块区域上建立直角坐标系，则每一棵树的位置由其所对应的坐标表示(任意两棵树的坐标都不相同)。</p>
 <p>在这个地区住着的猴子有 $M$ 个，下雨时，它们都躲到了茂密高大的树冠中，没有被大水冲走。由于各个猴子的年龄不同、身体素质不同，它们跳跃的能力不同。有的猴子跳跃的距离比较远(当然也可以跳到较近的树上)，而有些猴子跳跃的距离就比较近。这些猴子非常聪明，它们通过目测就可以准确地判断出自己能否跳到对面的树上。</p>
@@ -96,12 +94,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br>1 2 3 4 <br>6<br>0 0 <br>1 0<br>1 2 <br>-1 -1<br>-2 0 <br>2 2<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-1"><a href="#运行限制-1" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -109,8 +108,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -130,9 +128,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="通电"><a href="#通电" class="headerlink" title="通电"></a>通电</h1><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>2015 年，全中国实现了户户通电。作为一名电力建设者，小明正在帮助一带一路上的国家通电。</p>
 <p>这一次，小明要帮助 $n$ 个村庄通电，其中 1 号村庄正好可以建立一个发电站，所发的电足够所有村庄使用。</p>
 <p>现在，这 $n$ 个村庄之间都没有电线相连，小明主要要做的是架设电线连接这些村庄，使得所有村庄都直接或间接的与发电站相通。</p>
@@ -148,12 +144,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">4 <br>1 1 3 <br>9 9 7 <br>8 8 6 <br>4 5 4<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">17.41<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-2"><a href="#运行限制-2" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -161,8 +158,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -182,9 +178,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="机房"><a href="#机房" class="headerlink" title="机房"></a>机房</h1><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>这天, 小明在机房学习。</p>
 <p>他发现机房里一共有 $n$ 台电脑, 编号为 1 到 $n$, 电脑和电脑之间有网线连 接, 一共有 $n-1$ 根网线将 $n$ 台电脑连接起来使得任意两台电脑都直接或者间 接地相连。</p>
 <p>小明发现每台电脑转发、发送或者接受信息需要的时间取决于这台电脑和 多少台电脑直接相连, 而信息在网线中的传播时间可以忽略。比如如果某台电脑 用网线直接连接了另外 $d$ 台电脑, 那么任何经过这台电脑的信息都会延迟 $d$ 单 位时间 (发送方和接收方也会产生这样的延迟, 当然如果发送方和接收方都是 同一台电脑就只会产生一次延迟)。</p>
@@ -194,15 +188,16 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>后面 $m$ 行, 每行两个正整数 $u_{i}, v_{i}$ 表示小明的第 $i$ 个疑问。</p>
 <h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出共 $m$ 行, 第 $i$ 行一个正整数表示小明第 $i$ 个疑问的答案。</p>
 <h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">4 3 <br>1 2 <br>1 3<br>2 4 <br>2 3<br>3 4<br>3 3<br></code></pre></td></tr></table></figure>
+
 <h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">5<br>6<br>1<br></code></pre></td></tr></table></figure>
+
 <h3 id="样例说明-1"><a href="#样例说明-1" class="headerlink" title="样例说明"></a>样例说明</h3><p>这四台电脑各自的延迟分别为 $2,2,1,1$ 。</p>
-<p>对于第一个询问, 从 2 到 3 需要经过 $2,1,3$, 所以时间和为 $2+2+1=5$ 。</p>
-<p>对于第二个询问, 从 3 到 4 需要经过 $3,1,2,4$, 所以时间和为 $1+2+2+1=6$。</p>
+<p>对于第一个询问, 从 2 到 3 需要经过 $2,1,3$, 所以时间和为 $2+2+1&#x3D;5$ 。</p>
+<p>对于第二个询问, 从 3 到 4 需要经过 $3,1,2,4$, 所以时间和为 $1+2+2+1&#x3D;6$。</p>
 <p>对于第三个询问, 从 3 到 3 只会产生一次延迟, 所以时间为 1 。</p>
-<h3 id="评测用例规模与约定-1"><a href="#评测用例规模与约定-1" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30 \%$ 的数据, 保证 $n, m \leq 1000$;</p>
-<p>对于 $100 \%$ 的数据, 保证 $n, m \leq 100000$ 。</p>
-<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+<h3 id="评测用例规模与约定-1"><a href="#评测用例规模与约定-1" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30 %$ 的数据, 保证 $n, m \leq 1000$;</p>
+<p>对于 $100 %$ 的数据, 保证 $n, m \leq 100000$ 。</p>
+<h3 id="运行限制-3"><a href="#运行限制-3" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -210,8 +205,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>512M</td>
@@ -231,12 +225,10 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>512M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="环境治理"><a href="#环境治理" class="headerlink" title="环境治理"></a>环境治理</h1><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>LQ 国拥有 $n$ 个城市, 从 0 到 $n-1$ 编号, 这 $n$ 个城市两两之间都有且仅有 一条双向道路连接, 这意味着任意两个城市之间都是可达的。每条道路都有一 个属性 $D$, 表示这条道路的灰尘度。当从一个城市 $A$ 前往另一个城市 $B$ 时, 可 能存在多条路线, 每条路线的灰尘度定义为这条路线所经过的所有道路的灰尘 度之和, LQ 国的人都很讨厌灰尘, 所以他们总会优先选择灰尘度最小的路线。</p>
 <p>LQ 国很看重居民的出行环境, 他们用一个指标 $P$ 来衡量 LQ 国的出行环 境, $P$ 定义为:</p>
-<p>$P=\sum_{i=0}^{n-1} \sum_{j=0}^{n-1} d(i, j)$</p>
+<p>$P&#x3D;\sum_{i&#x3D;0}^{n-1} \sum_{j&#x3D;0}^{n-1} d(i, j)$</p>
 <p>其中 $d(i, j)$ 表示城市 $i$ 到城市 $j$ 之间灰尘度最小的路线对应的灰尘度的值。 为了改善出行环境, 每个城市都要有所作为, 当某个城市进行道路改善时, 会将与这个城市直接相连的所有道路的灰尘度都减少 1 , 但每条道路都有一个 灰尘度的下限值 $L$, 当灰尘度达到道路的下限值时, 无论再怎么改善, 道路的 灰尘度也不会再减小了。</p>
 <p>具体的计划是这样的:</p>
 <p>第 1 天, 0 号城市对与其直接相连的道路环境进行改善;</p>
@@ -247,16 +239,17 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>第 $n+2$ 天, 1 号城市对与其直接相连的道路环境进行改善;</p>
 <p>LQ 国想要使得 $P$ 指标满足 $P \leq Q$ 。请问最少要经过多少天之后, $P$ 指标 可以满足 $P \leq Q$ 。如果在初始时就已经满足条件, 则输出 0 ; 如果永远不可能 满足, 则输出 $-1$ 。</p>
 <h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入的第一行包含两个整数 $n, Q$, 用一个空格分隔, 分别表示城市个数和 期望达到的 $P$ 指标。</p>
-<p>接下来 $n$ 行, 每行包含 $n$ 个整数, 相邻两个整数之间用一个空格分隔, 其 中第 $i$ 行第 $j$ 列的值 $D_{i j}\left(D_{i j}=D_{j i}, D_{i i}=0\right)$ 表示城市 $i$ 与城市 $j$ 之间直接相连 的那条道路的灰尘度。</p>
-<p>接下来 $n$ 行, 每行包含 $n$ 个整数, 相邻两个整数之间用一个空格分隔, 其 中第 $i$ 行第 $j$ 列的值 $L_{i j}\left(L_{i j}=L_{j i}, L_{i i}=0\right)$ 表示城市 $i$ 与城市 $j$ 之间直接相连的 那条道路的灰尘度的下限值。</p>
+<p>接下来 $n$ 行, 每行包含 $n$ 个整数, 相邻两个整数之间用一个空格分隔, 其 中第 $i$ 行第 $j$ 列的值 $D_{i j}\left(D_{i j}&#x3D;D_{j i}, D_{i i}&#x3D;0\right)$ 表示城市 $i$ 与城市 $j$ 之间直接相连 的那条道路的灰尘度。</p>
+<p>接下来 $n$ 行, 每行包含 $n$ 个整数, 相邻两个整数之间用一个空格分隔, 其 中第 $i$ 行第 $j$ 列的值 $L_{i j}\left(L_{i j}&#x3D;L_{j i}, L_{i i}&#x3D;0\right)$ 表示城市 $i$ 与城市 $j$ 之间直接相连的 那条道路的灰尘度的下限值。</p>
 <h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行包含一个整数表示答条。</p>
 <h3 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">3 10 <br>0 2 4 <br>2 0 1<br>4 1 0 <br>0 2 2<br>2 0 0 <br>2 0 0<br></code></pre></td></tr></table></figure>
+
 <h3 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">2<br></code></pre></td></tr></table></figure>
-<h3 id="评测用例规模与约定-2"><a href="#评测用例规模与约定-2" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30 \%$ 的评测用例, $1 \leq n \leq 10 ， 0 \leq L_{i j} \leq D_{i j} \leq 10$ ；</p>
-<p>对于 $60 \%$ 的评测用例, $1 \leq n \leq 50 ， 0 \leq L_{i j} \leq D_{i j} \leq 100000$;</p>
+
+<h3 id="评测用例规模与约定-2"><a href="#评测用例规模与约定-2" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $30 %$ 的评测用例, $1 \leq n \leq 10 ， 0 \leq L_{i j} \leq D_{i j} \leq 10$ ；</p>
+<p>对于 $60 %$ 的评测用例, $1 \leq n \leq 50 ， 0 \leq L_{i j} \leq D_{i j} \leq 100000$;</p>
 <p>对于所有评测用例, $1 \leq n \leq 100,0 \leq L_{i j} \leq D_{i j} \leq 100000,0 \leq Q \leq 2^{31}-1$ 。</p>
-<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+<h3 id="运行限制-4"><a href="#运行限制-4" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -264,8 +257,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>10s</td>
 <td>512M</td>
@@ -285,18 +277,17 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>10s</td>
 <td>512M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="刷题统计"><a href="#刷题统计" class="headerlink" title="刷题统计"></a>刷题统计</h1><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>小明决定从下周一开始努力刷题准备蓝桥杯竞赛。他计划周一至周五每天 做 $a$ 道题目, 周六和周日每天做 $b$ 道题目。请你帮小明计算, 按照计划他将在 第几天实现做题数大于等于 $n$ 题?</p>
 <h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一行包含三个整数 $a, b$ 和 $n$.</p>
 <h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数代表天数。</p>
 <h3 id="样例输入-3"><a href="#样例输入-3" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">10 </span><span class="hljs-number">20</span> <span class="hljs-number">99</span><br></code></pre></td></tr></table></figure>
+
 <h3 id="样例输出-3"><a href="#样例输出-3" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">8<br></code></pre></td></tr></table></figure>
-<h3 id="评测用例规模与约定-3"><a href="#评测用例规模与约定-3" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $50 \%$ 的评测用例, $1 \leq a, b, n \leq 10^{6}$.</p>
-<p>对于 $100 \%$ 的评测用例, $1 \leq a, b, n \leq 10^{18}$.</p>
-<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="评测用例规模与约定-3"><a href="#评测用例规模与约定-3" class="headerlink" title="评测用例规模与约定"></a>评测用例规模与约定</h3><p>对于 $50 %$ 的评测用例, $1 \leq a, b, n \leq 10^{6}$.</p>
+<p>对于 $100 %$ 的评测用例, $1 \leq a, b, n \leq 10^{18}$.</p>
+<h3 id="运行限制-5"><a href="#运行限制-5" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -304,8 +295,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -325,22 +315,21 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h1><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入 $b，p，k$ 的值，求 $b^p \mod k$ 的值。其中 $2 \leq b,p,k \leq 10^9$ 。</p>
 <h3 id="输入描述-2"><a href="#输入描述-2" class="headerlink" title="输入描述"></a>输入描述</h3><p>三个整数 $b,p,k$。</p>
-<h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出 $b^p \mod k=s$，$s$ 为运算结果。</p>
+<h3 id="输出描述-2"><a href="#输出描述-2" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出 $b^p \mod k&#x3D;s$，$s$ 为运算结果。</p>
 <h3 id="输入输出样例-2"><a href="#输入输出样例-2" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><blockquote>
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2 10 9<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">7<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-6"><a href="#运行限制-6" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -348,8 +337,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -369,9 +357,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="核桃的数量"><a href="#核桃的数量" class="headerlink" title="核桃的数量"></a>核桃的数量</h1><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>小张是软件项目经理，他带领 3 个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p>
 <ol>
 <li><p>各组的核桃数量必须相同</p>
@@ -387,12 +373,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2 4 5<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">20<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-7"><a href="#运行限制-7" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -400,8 +387,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>64M</td>
@@ -421,9 +407,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>64M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="质数"><a href="#质数" class="headerlink" title="质数"></a>质数</h1><h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个正整数 $N$，请你输出 $N$ 以内（不包含 $N$）的质数以及质数的个数。</p>
 <h3 id="输入描述-4"><a href="#输入描述-4" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入一行，包含一个正整数 $N$。 $1\leq N \leq 10^3$</p>
 <h3 id="输出描述-4"><a href="#输出描述-4" class="headerlink" title="输出描述"></a>输出描述</h3><p>共两行。</p>
@@ -433,12 +417,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">10<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">2 3 5 7 <br>4<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-8"><a href="#运行限制-8" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -446,8 +431,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>128M</td>
@@ -467,9 +451,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>128M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="分割立方体"><a href="#分割立方体" class="headerlink" title="分割立方体"></a>分割立方体</h1><h3 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个立方体，边长为 $n$，现将其分割成 $n×n×n$ 个单位立方体。</p>
 <p>分割后任意两个单位立方体，或者有 $2$ 个公共点，或者有 $4$ 个公共点，或者没有公共点。</p>
 <p>请问，没有公共点和有 $2$ 个公共点的立方体，共有多少对？</p>
@@ -479,28 +461,33 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">1<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">0<br></code></pre></td></tr></table></figure>
+
 <h4 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h4><blockquote>
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">16<br></code></pre></td></tr></table></figure>
+
 <h4 id="示例3"><a href="#示例3" class="headerlink" title="示例3"></a>示例3</h4><blockquote>
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">297<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-9"><a href="#运行限制-9" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -508,8 +495,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -529,9 +515,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="糊涂人寄信"><a href="#糊涂人寄信" class="headerlink" title="糊涂人寄信"></a>糊涂人寄信</h1><h3 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h3><p>有一个糊涂人，写了 $n$ 封信和 $n$ 个信封，到了邮寄的时候，把所有的信都装错了信封。求装错信封可能的种类数。</p>
 <h3 id="输入描述-6"><a href="#输入描述-6" class="headerlink" title="输入描述"></a>输入描述</h3><p>有多行读入，每行输入一个正整数 $n$，表示一种情况。($n\leq 20$)</p>
 <h3 id="输出描述-6"><a href="#输出描述-6" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出相应的答案。</p>
@@ -539,12 +523,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">1<br>3<br>4<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">0 <br>2<br>9<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-10"><a href="#运行限制-10" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-10"><a href="#运行限制-10" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -552,8 +537,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -573,9 +557,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h1 id="小蓝吃糖果"><a href="#小蓝吃糖果" class="headerlink" title="小蓝吃糖果"></a>小蓝吃糖果</h1><h3 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h3><p>小蓝有 $n$ 种糖果，每种数量已知。</p>
 <p>小蓝不喜欢连续 $2$ 次吃同样的糖果。问有没有可行的吃糖方案。</p>
 <h3 id="输入描述-7"><a href="#输入描述-7" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行是整数 $n(0&lt;n&lt;1000000)$。</p>
@@ -585,12 +567,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <p>输入</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">3<br>4 1 1<br></code></pre></td></tr></table></figure>
+
 <blockquote>
 <p>输出</p>
 </blockquote>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">No<br></code></pre></td></tr></table></figure>
-<h3 id="运行限制-11"><a href="#运行限制-11" class="headerlink" title="运行限制"></a>运行限制</h3><div class="table-container">
-<table>
+
+<h3 id="运行限制-11"><a href="#运行限制-11" class="headerlink" title="运行限制"></a>运行限制</h3><table>
 <thead>
 <tr>
 <th>语言</th>
@@ -598,8 +581,7 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <th>最大运行内存</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>C++</td>
 <td>1s</td>
 <td>256M</td>
@@ -619,7 +601,5 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
 <td>1s</td>
 <td>256M</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/25/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%B7%9F%E9%81%8D%E5%8E%86%E6%9F%A5%E6%89%BE%E7%9A%84%E5%8C%BA%E5%88%AB/">← Next 二分查找跟遍历查找的区别</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/22/%E8%93%9D%E6%A1%A5%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB21-40/">蓝桥题目汇总21-40 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p>learn</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/zdx-1"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:19546328912@163.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/353147531"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BA%E5%B7%AE"><span class="toc-number">1.</span> <span class="toc-text">出差</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5"><span class="toc-number">1.0.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="toc-number">1.0.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="toc-number">1.0.6.</span> <span class="toc-text">样例说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A"><span class="toc-number">1.0.7.</span> <span class="toc-text">评测用例规模与约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6"><span class="toc-number">1.0.8.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%AA%E6%98%8E%E7%9A%84%E7%8C%B4%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">聪明的猴子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="toc-number">2.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">示例 1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-1"><span class="toc-number">2.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E7%94%B5"><span class="toc-number">3.</span> <span class="toc-text">通电</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">3.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">3.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">3.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="toc-number">3.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-2"><span class="toc-number">3.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E6%88%BF"><span class="toc-number">4.</span> <span class="toc-text">机房</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">4.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">4.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="toc-number">4.0.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="toc-number">4.0.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%AF%B4%E6%98%8E-1"><span class="toc-number">4.0.6.</span> <span class="toc-text">样例说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A-1"><span class="toc-number">4.0.7.</span> <span class="toc-text">评测用例规模与约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-3"><span class="toc-number">4.0.8.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%B2%BB%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">环境治理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">5.0.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">5.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">5.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-2"><span class="toc-number">5.0.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-2"><span class="toc-number">5.0.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A-2"><span class="toc-number">5.0.6.</span> <span class="toc-text">评测用例规模与约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-4"><span class="toc-number">5.0.7.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%B7%E9%A2%98%E7%BB%9F%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text">刷题统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">6.0.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">6.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">6.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-3"><span class="toc-number">6.0.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-3"><span class="toc-number">6.0.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A-3"><span class="toc-number">6.0.6.</span> <span class="toc-text">评测用例规模与约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-5"><span class="toc-number">6.0.7.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%B9%82"><span class="toc-number">7.</span> <span class="toc-text">快速幂</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">7.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">7.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">7.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-2"><span class="toc-number">7.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">7.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-6"><span class="toc-number">7.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B8%E6%A1%83%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-number">8.</span> <span class="toc-text">核桃的数量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">8.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">8.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">8.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-3"><span class="toc-number">8.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">8.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-7"><span class="toc-number">8.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B4%A8%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">质数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">9.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">9.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">9.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-4"><span class="toc-number">9.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">9.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-8"><span class="toc-number">9.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%AB%8B%E6%96%B9%E4%BD%93"><span class="toc-number">10.</span> <span class="toc-text">分割立方体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">10.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">10.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">10.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-5"><span class="toc-number">10.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B1"><span class="toc-number">10.0.4.1.</span> <span class="toc-text">示例1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B2"><span class="toc-number">10.0.4.2.</span> <span class="toc-text">示例2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B3"><span class="toc-number">10.0.4.3.</span> <span class="toc-text">示例3</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-9"><span class="toc-number">10.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%8A%E6%B6%82%E4%BA%BA%E5%AF%84%E4%BF%A1"><span class="toc-number">11.</span> <span class="toc-text">糊涂人寄信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">11.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">11.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">11.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-6"><span class="toc-number">11.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">11.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-10"><span class="toc-number">11.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E8%93%9D%E5%90%83%E7%B3%96%E6%9E%9C"><span class="toc-number">12.</span> <span class="toc-text">小蓝吃糖果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">12.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">12.0.2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">12.0.3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-7"><span class="toc-number">12.0.4.</span> <span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-5"><span class="toc-number">12.0.4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%99%90%E5%88%B6-11"><span class="toc-number">12.0.5.</span> <span class="toc-text">运行限制</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
